@@ -1,0 +1,10 @@
+//- ===== colors ======
+$baseFs: 16;
+
+@function remy($pxsize) {
+  @return ($pxsize / $baseFs) * 1rem;
+}
+
+@function size($pxsize) {
+	@return calc(($pxsize/17))*1vw;
+}

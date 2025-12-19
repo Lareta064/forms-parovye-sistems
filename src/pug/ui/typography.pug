@@ -1,0 +1,80 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Типографика
+
+				.container-dashboard__content
+					.h-48 Заголовок 48 пикс
+					pre.
+						.h-48 Main title
+					br
+					.h-40 Заголовок 40 пикс
+					pre.
+						.h-40 Заголовок 40 пикс
+					br
+					.h-32 Заголовок 32 пикс
+					pre.
+						.h-32 Заголовок 32 пикс
+					br
+					.h-24 Заголовок 24 пикс
+					pre.
+						.h-24 Заголовок 24 пикс
+					br
+					.fs-18 Text 18px
+					pre.
+						.fs-18 Text 18px
+					br
+					.fs-16 Text 16px
+					pre.
+						.fs-16 Text 16px
+					br
+					.fs-15 Text 15px
+					pre.
+						.fs-15 Text 15px
+					br
+					.fs-14 Text 14px
+					pre.
+						.fs-14 Text 14px
+					br
+					.fs-12 Text 12px / 1.25
+					pre.
+						.fs-12 Text 12px /1.25
+					a(href="#!").a-gradient Градиентное подчеркивание
+					pre.
+						a(href="#!").a-gradient Градиентное подчеркивание
+					
+					br
+					.icon-txt
+						svg.svg-gerb
+							use(href='../img/sprite.svg#svg-gerb') 
+						span Входит в&nbsp;реестр российского ПО&nbsp;Минццифры
+					pre.
+						.icon-txt
+							svg.svg-gerb
+								use(href='./img/sprite.svg#svg-gerb') 
+							span Входит в&nbsp;реестр российского ПО&nbsp;Минццифры
+					.header-group
+						h2.h-48 Почему 1C:CRM
+						.fs-16 Планируйте звонки, встречи, письма и напоминания по клиентам из карточки интереса.
+					pre.
+						.header-group
+							h2.h-48 Почему 1C:CRM
+							.fs-16 Планируйте звонки, встречи, письма и напоминания по клиентам из карточки интереса.

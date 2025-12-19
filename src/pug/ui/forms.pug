@@ -1,0 +1,201 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		//- link(rel="stylesheet"  href="../libs/bootstrap/bootstrap.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+		button#close-ui FORMS
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				input.inp(type="text" name="name" placeholder="Text")
+				pre.
+					input.inp(type="text" name="name" placeholder="Text")
+				hr
+				h4 наличие класса .form-item-error
+				ur
+					li делает видимым i.icon-error
+					li задает красный цвет борднра инпуту
+					li задает красный цвет тексту под инпутом
+				.form-item.form-item-error
+					label.form-label Заголовок
+					.form-input
+						input.inp(type="text" name="name" placeholder="Text")
+						span.inp-icons
+							i.icon-error
+					
+						p.fs-12 Подпись
+				pre.
+					.form-item.form-item-error
+						label.form-label Заголовок
+						.form-input
+							input.inp(type="text" name="name" placeholder="Text")
+							
+							span.inp-icons
+								i.icon-error
+						
+							p.fs-12 Подпись
+				
+				.form-item
+					label.form-label Заголовок
+					.form-input
+						input.inp(type="text" name="name" placeholder="Text")
+						
+						span.inp-icons
+							i.icon-error
+						p.fs-12 Подпись
+				
+				pre.
+					.form-item
+						label.form-label Заголовок
+						.form-input
+							input.inp(type="text" name="name" placeholder="Text")
+							span.inp-icons
+								i.icon-error
+						
+							p.fs-12 Подпись
+		
+				hr
+				h4(style="margin-bottom:14px;") Dropdown
+				.dropdown
+					button.dropdown__button(type="button") Вакансия
+					
+					.dropdown__list
+						ul
+							li.dropdown__list-item(data-value="Текст1") Текст 1
+							li.dropdown__list-item(data-value="Текст2") Текст 2
+							li.dropdown__list-item(data-value="Текст3") Текст 3
+							li.dropdown__list-item(data-value="Текст4") Текст 4
+					
+					//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+					input.dropdown__input-hidden(type="hidden", name="")
+		
+				hr
+				h4(style="margin-bottom:14px;") Кастомный чекбокс
+				.form-checkbox
+					label.checkbox-label
+						input.checkbox-inp(type="checkbox" name="name")
+						span.fake-checkbox
+					
+				pre.
+					.form-checkbox
+						label.checkbox-label
+							input.checkbox-inp(type="checkbox" name="name")
+							span.fake-checkbox
+				br
+				h4(style="margin-bottom:14px;") Соглашение с политикой в форме
+				.agree-block
+					.form-checkbox
+						label.checkbox-label
+							input.checkbox-inp(type="checkbox" name="name")
+							span.fake-checkbox
+							span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
+				pre.
+					.agree-block
+						.form-checkbox
+							label.checkbox-label
+								input.checkbox-inp(type="checkbox" name="name")
+								span.fake-checkbox
+								span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
+				br
+				h4(style="margin-bottom:14px;") Красного цвета компонент становится за счет класса form-item-error
+				.form-checkbox.form-item-error
+					label.checkbox-label
+						input.checkbox-inp(type="checkbox" name="name")
+						span.fake-checkbox
+						span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
+				pre.
+					.form-checkbox.form-item-error
+						label.checkbox-label
+							input.checkbox-inp(type="checkbox" name="name")
+							span.fake-checkbox
+							span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
+				.temp-wrapper
+					.download-file-block.d-flex-cy
+						.download-file__name.d-flex-cy
+							svg.svg-pdf
+								use(href='../img/sprite.svg#svg-pdf')
+							p.fs-12.txt-white 1crm-presentation.pdf
+						.download-file__size
+							p.fs-12.txt-white 4,3&nbsp;Mb
+				pre.
+					.download-file-block.d-flex-cy
+						.download-file__name.d-flex-cy
+							svg.svg-pdf
+								use(href='../img/sprite.svg#svg-pdf')
+							p.fs-12.txt-white 1crm-presentation.pdf
+						.download-file__size
+							p.fs-12.txt-white 4,3&nbsp;Mb
+		script.
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelector('#close-ui').addEventListener('click', ()=>{
+					document.body.classList.toggle('active')
+				});
+				
+				// DROP SELECT
+				document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+					const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+					const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+					const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+					const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+					// Клик по кнопке. Открыть/Закрыть select
+					dropDownBtn.addEventListener('click', function (e) {
+					
+						dropDownList.classList.toggle('dropdown__list--visible');
+						this.classList.toggle('dropdown__button--active');
+						dropDownWrapper.classList.toggle('dropdown-active');
+						
+					});
+					
+
+					// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+					dropDownListItems.forEach(function (listItem) {
+						
+						
+						listItem.addEventListener('click', function (e) {
+							e.stopPropagation();
+							const selectListItem = dropDownList.querySelector('.active');
+							if(selectListItem){
+								selectListItem.classList.remove('active');
+							}
+							this.classList.add('active');
+							dropDownBtn.innerText = this.innerText;
+							dropDownBtn.focus();
+							dropDownInput.value = this.dataset.value;
+							
+							dropDownList.classList.remove('dropdown__list--visible');
+							dropDownBtn.classList.remove('dropdown__button--active');
+							dropDownWrapper.classList.remove('dropdown-active');
+						});
+					});
+
+					// Клик снаружи дропдауна. Закрыть дропдаун
+					document.addEventListener('click', function (e) {
+						if (e.target !== dropDownBtn) {
+							dropDownBtn.classList.remove('dropdown__button--active');
+							dropDownList.classList.remove('dropdown__list--visible');
+						}
+					});
+
+					// Нажатие на Tab или Escape. Закрыть дропдаун
+					document.addEventListener('keydown', function (e) {
+						if (e.key === 'Tab' || e.key === 'Escape') {
+							dropDownBtn.classList.remove('dropdown__button--active');
+							dropDownList.classList.remove('dropdown__list--visible');
+						}
+					});
+				});
+			})

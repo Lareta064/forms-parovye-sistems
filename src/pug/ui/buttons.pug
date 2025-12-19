@@ -1,0 +1,72 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Кнопки
+
+				.container-dashboard__content
+					button.btn Подробнее
+					pre.
+						button.btn Подробнее
+					a(href="#!").btn-accent 
+						span Подробнее
+						svg.svg-right
+							use(href='../img/sprite.svg#svg-right')
+
+					pre.
+						a(href="#!").btn-accent 
+							span Подробнее
+							svg.svg-right
+								use(href='../img/sprite.svg#svg-right')
+					span.btn-play
+					pre.
+						span.btn-play
+					
+					br
+					.button-group.lg-w-100
+						a.btn-accent.lg-w-100(href="#!")
+							span Попробовать бесплатно
+							svg.svg-right
+								use(href='../img/sprite.svg#svg-right')
+						.fs-12.txt-blue.txt-center Заполненная база за&nbsp;2&nbsp;недели
+					pre.
+						.button-group.lg-w-100
+							a.btn-accent.lg-w-100(href="#!")
+								span Попробовать бесплатно
+								svg.svg-right
+									use(href='../img/sprite.svg#svg-right')
+							.fs-12.txt-blue.txt-center Заполненная база за&nbsp;2&nbsp;недели
+					br
+					.swiper-button-next
+						svg.svg-carret-right
+							use(href='../img/sprite.svg#svg-carret-right')
+					pre.
+						.swiper-button-next
+							svg.svg-carret-right
+								use(href='./img/sprite.svg#svg-carret-right')
+					
+					br
+					.swiper-button-prev
+						svg.svg-carret-right
+							use(href='../img/sprite.svg#svg-carret-left')
+					pre.
+						.swiper-button-prev
+							svg.svg-carret-right
+								use(href='./img/sprite.svg#svg-carret-left')

@@ -1,0 +1,66 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		//- link(rel="stylesheet"  href="../libs/bootstrap/bootstrap.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+		button#close-ui Toggle
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Табы
+				.container-dashboard__content
+					.container
+						.tabs-container
+							.scroll-x
+								.tabs-nav
+									.tab-button.fs-16.active(data-btn="#a") Button1
+									.tab-button.fs-16(data-btn="#aa") Button2
+									.tab-button.fs-16(data-btn="#aaa") Button3
+
+								.tab-content.active#a
+									h1 h1
+								.tab-content#aa
+									h1 h2
+								.tab-content#aaa
+									h1 h3
+		script.
+			document.addEventListener('DOMContentLoaded', function() {
+				const tabsContainers = document.querySelectorAll('.tabs-container');
+				
+					tabsContainers.forEach(container => {
+					const tabs = container.querySelectorAll('.tab-button');
+					const contents = container.querySelectorAll('.tab-content');
+				
+					tabs.forEach(tab => {
+						tab.addEventListener('click', () => {
+						tabs.forEach(innerTab => innerTab.classList.remove('active'));
+						tab.classList.add('active');
+				
+						contents.forEach(content => content.classList.remove('active'));
+						const activeContent = container.querySelector(tab.getAttribute('data-btn'));
+				
+						// Проверяем, существует ли элемент activeContent перед добавлением класса
+						if (activeContent) {
+							activeContent.classList.add('active');
+						} else {
+							console.error('Ошибка: Нет элемента соответствующего data-btn:', tab.getAttribute('data-btn'));
+						}
+						});
+					});
+					});
+
+
+				});

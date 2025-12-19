@@ -1,0 +1,81 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		style.
+			h3{margin-bottm:8px;}
+			.grid-item{
+				border:3px solid green;
+				height:40px;
+				margin-bottom:12px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 СеткаFLEX
+
+				.container-dashboard__content
+					h4 Класс  .flex создает flex контейнер. Требуемое количество колонок задается дополнительным классом. 
+					ul
+						li преффикс md для точки 744px
+						li преффикс lg для точки 1024px
+						li преффикс xl для точки 1200px
+					hr
+					h3 .flex.flex-2
+					.flex.flex-2
+						.grid-item
+							p  .flex.flex-2
+						.grid-item
+							p  .flex.flex-2
+					hr
+					h2 Преломление от 744px 
+					br
+					h3  .flex.md-flex-2
+					.flex.md-flex-2
+						.grid-item
+							p .flex.md-flex-2
+						.grid-item
+							p .flex.md-flex-2
+					
+					h3 .flex.md-flex-4
+					.flex.md-flex-4
+						.grid-item
+							p .flex.md-flex-4
+						.grid-item
+							p .flex.md-flex-4
+						.grid-item
+							p .flex.md-flex-4
+						.grid-item
+							p .flex.md-flex-4
+						
+					hr
+					h2 Преломление от 1024px 
+					br
+					h3 .flex.lg-flex-3
+					.flex.lg-flex-3
+						.grid-item
+							p .flex.lg-flex-3
+						.grid-item
+							p .flex.lg-flex-3
+						.grid-item
+							p .flex.lg-flex-3
+						
+						
+					

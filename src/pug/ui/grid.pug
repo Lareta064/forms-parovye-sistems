@@ -1,0 +1,148 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		style.
+			h3{margin-bottm:8px;}
+			.grid-item{
+				border:3px solid green;
+				height:40px;
+				margin-bottom:12px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Сетка
+
+				.container-dashboard__content
+					h4 Классы  .grid-12 и  .grid-10 разбивают блок на 12 колонок. Требуемое количество колонок задается дополнительным классом. 
+					ul
+						li преффикс md для точки 744px
+						li преффикс lg для точки 1024px
+						li преффикс xl для точки 1200px
+					hr
+					h3 .grid-12
+					.grid-12
+						.grid-item
+							p grid 12 column
+					hr
+					h2 Преломление от 744px 
+					br
+					h3 .grid-12.md-col-2
+					.grid-12.md-col-2
+						.grid-item
+							p md-col-2
+						.grid-item
+							p md-col-2
+					
+					h3 .grid-12.md-col-3
+					.grid-12.md-col-3
+						.grid-item
+							p md-col-3
+						.grid-item
+							p md-col-3
+						.grid-item
+							p md-col-3
+						
+					
+					h3 .grid-12.md-col-4
+					.grid-12.md-col-4
+						.grid-item
+							p md-col-4
+						.grid-item
+							p md-col-4
+						.grid-item
+							p md-col-4
+						.grid-item
+							p md-col-4
+						
+					h3 .grid-10.md-col-5
+					.grid-10.md-col-5
+						.grid-item
+							p md-col-5
+						.grid-item
+							p md-col-5
+						.grid-item
+							p md-col-5
+						.grid-item
+							p md-col-5
+						.grid-item
+							p md-col-5
+					h3 .grid-12.md-col-6
+					.grid-12.md-col-6
+						.grid-item
+							p md-col-6
+						.grid-item
+							p md-col-6
+						.grid-item
+							p md-col-6
+						.grid-item
+							p md-col-6
+						.grid-item
+							p md-col-6
+						.grid-item
+							p md-col-6
+
+					hr
+					h2 Преломление от 1024px 
+					br
+					h3 .grid-12.lg-col-2
+					.grid-12.lg-col-2
+						.grid-item
+							p lg-col-2
+						.grid-item
+							p lg-col-2
+					hr
+					h2 Преломление от 1200px 
+					br
+					h3 .grid-12.xl-col-2
+					.grid-12.xl-col-2
+						.grid-item
+							p xl-col-2
+						.grid-item
+							p xl-col-2
+					hr
+					h2 Преломление от 1600px 
+					br
+					h3 .grid-12.xxl-col-2
+					.grid-12.xxl-col-2
+						.grid-item
+							p xxl-col-2
+						.grid-item
+							p xxl-col-2
+					br
+					h3 Сетка секции Почему 1C:CRM
+					.grid-12.xxl-col-2
+						.block1(style="background: lightgreen; min-height:100px;")
+						.block2(style="background: white;")
+							.grid-12.lg-col-2
+								.block1(style="background: lightblue; height:80px;")
+								.block1(style="background: yellow; height:80px;")
+								.block1(style="background: orange; height:80px;")
+								.block1(style="background: lightgrey; height:80px;")
+					pre.
+						.grid-12.xxl-col-2
+							.block1(style="background: lightgreen; min-height:100px;")
+							.block2(style="background: white;")
+								.grid-12.lg-col-2
+									.block1(style="background: lightblue; height:80px;")
+									.block1(style="background: lightyellow; height:80px;")
+									.block1(style="background: orange; height:80px;")
+									.block1(style="background: lightgrey; height:80px;")

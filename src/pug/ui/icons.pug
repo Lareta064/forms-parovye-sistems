@@ -1,0 +1,88 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 иконки
+				.container-dashboard__content
+					
+					svg.svg-right
+						use(href='../img/sprite.svg#svg-right')
+					pre.
+						svg.svg-right
+							use(href='./img/sprite.svg#svg-right')
+					br
+					svg.svg-gerb
+						use(href='../img/sprite.svg#svg-gerb')
+					
+					pre.
+						svg.svg-gerb
+							use(href='./img/sprite.svg#svg-gerb')
+					br
+					
+					svg.svg-carret-down
+						use(href='../img/sprite.svg#svg-carret-down')
+					pre.
+						svg.svg-carret-down
+							use(href='./img/sprite.svg#svg-carret-down')
+					br
+					
+					svg.svg-carret-left
+						use(href='../img/sprite.svg#svg-carret-left')
+					pre.
+						svg.svg-carret-left
+							use(href='./img/sprite.svg#svg-carret-left')
+					br
+					
+					svg.svg-carret-right
+						use(href='../img/sprite.svg#svg-carret-right')
+					pre.
+						svg.svg-carret-right
+							use(href='./img/sprite.svg#svg-carret-right')
+					br
+					svg.svg-check
+						use(href='../img/sprite.svg#svg-check')
+					pre.
+						svg.svg-check
+							use(href='./img/sprite.svg#svg-check')
+					br
+					i.icon-check
+					pre.
+						i.icon-check
+					
+					br
+					svg.svg-downl
+						use(href='../img/sprite.svg#svg-downl')
+					pre.
+						svg.svg-downl
+							use(href='./img/sprite.svg#svg-downl')
+					svg.svg-pdf(style="color: blue;")
+						use(href='../img/sprite.svg#svg-pdf')
+					pre.
+						svg.svg-pdf
+							use(href='./img/sprite.svg#svg-pdf')
+					i.icon-pass
+					pre.
+						i.icon-pass
+					br
+					i.icon-error
+					pre.
+						i.icon-error
+					
+					

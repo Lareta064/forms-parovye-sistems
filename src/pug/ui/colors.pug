@@ -1,0 +1,76 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+		
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Цветовая схема
+				.container-dashboard__content
+					ul.color-scheme
+						li
+							span.color-box(style="background-color:#404040;")
+							span.color-name --dark - #404040;
+						li
+							span.color-box(style="background-color:#f5f5f5;")
+							span.color-name --grey-1 - #f5f5f5;
+						li
+							span.color-box(style="background-color:#f3f3f3;")
+							span.color-name --colors-grey-1 - #f3f3f3;
+						li
+							span.color-box(style="background-color:#eaeaea;")
+							span.color-name --grey-2 - #eaeaea;				
+						li
+							span.color-box(style="background-color: #d71920;")
+							span.color-name --red - #d71920;
+						
+						li
+							span.color-box(style="background-color:#ef281e;")
+							span.color-name  --colors-red-1 - #ef281e;
+						li
+							span.color-box(style="background-color:#fad54d;")
+							span.color-name --colors-yellow-1 - #fad54d;
+						li
+							span.color-box(style="background-color:#ffcd04;")
+							span.color-name  --hover:  - #ffcd04;
+						li
+							span.color-box(style="background-color:#FFF;")
+							span.color-name --colors-white-1 - #FFFFFF;
+						li
+							span.color-box(style="background-color:#2c2c2c;")
+							span.color-name --colors-black-1 - #2c2c2c;
+						li
+							span.color-box(style="background-color:#6b6b6b;")
+							span.color-name --colors-black-2 - #6b6b6b;
+						li
+							span.color-box(style="background-color:#0d75f3;")
+							span.color-name --colors-blue-1-  #0d75f3;
+						li
+							span.color-box(style="background-color:#e4ecf3;")
+							span.color-name --colors-blue-2 - #e4ecf3;
+					
+					br
+					.dark-bg(style="height:100px;")
+					pre.
+						.dark-bg
+					br
+					.grey-bg(style="height:100px;")
+					pre.
+						.grey-bg
+					.lightgrey-bg(style="height:100px;")
+					pre.
+						.lightgrey-bg(style="height:100px;")

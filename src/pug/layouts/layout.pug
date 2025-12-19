@@ -1,0 +1,52 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		//- link(rel="stylesheet"  href="./libs/bootstrap/bootstrap.min.css")
+		//========= swiper slide ========
+		link(rel="stylesheet"  href="./libs/swiper/swiper.min.css")
+		//========= fancybox ========
+		//- link(rel="stylesheet"  href="./libs/fancybox/fancybox.css")
+		//========= input range  ========
+		//- link(href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css" rel="stylesheet")
+		
+		//========= custom styles ========
+		link(rel="stylesheet"  href="./css/main.css")
+		title !{title}
+		//-style.
+
+			!{customStyle}
+	
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+		
+
+		
+		block content
+		
+		
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		//- script(src="./libs/bootstrap/bootstrap-bundle.js")
+		//- script(src="./libs/bootstrap/bootstrap.min.js")
+		//Swiper
+		script(src="./libs/swiper/swiper.js")
+		//fancybox
+		//- script(src="./libs/fancybox/fancybox.umd.js")
+		//========= input range  ========
+		//- script(src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js")
+		// Подключение API RuTube, VK
+		script(src='https://rutube.ru/static/player/api.js')
+		
+		script(src="https://vk.com/js/api/videoplayer.js")
+		script(src="./js/video-providers.js")
+		
+		script(src="./js/main.js")
+	
+	

@@ -1,0 +1,38 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Хлебные крошки
+
+				.container-dashboard__content
+					
+					.breadcrumbs
+						a(href="index.html").breadcrumb-item Главная
+						a(href="#!").breadcrumb-item Услуги
+						a(href="#!").breadcrumb-item Каталог
+						a(href="#!").breadcrumb-item Рыбы
+					
+					pre.
+						.breadcrumbs
+							a(href="index.html").breadcrumb-item Главная
+							a(href="#!").breadcrumb-item Услуги
+							a(href="#!").breadcrumb-item Каталог
+							a(href="#!").breadcrumb-item Рыбы
+					

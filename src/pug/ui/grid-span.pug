@@ -1,0 +1,78 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		style.
+			h3{margin-bottom:8px;}
+			.grid-item{
+				border:3px solid green;
+				height:40px;
+				margin-bottom:12px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Сетка
+
+				.container-dashboard__content
+					h4 Классы  .grid-12 и  .grid-10 разбивают блок на 12 колонок. Количество колонок задается дочернему компоненту
+					ul
+						li .span-xl-4: от 1200 - 4 колонки
+						li .span-xl-8: от 1200 - 8 колонок
+						
+					hr
+					h3 Блок от 1200px = 8 колонок + 4 колонки
+					.grid-12
+						.grid-item.span-xl-4
+							p span-xl-4
+						.grid-item.span-xl-8
+							p span-xl-4
+					pre.
+						.grid-12
+							.span-xl-4
+								p span-xl-4
+							.span-xl-8
+								p span-xl-4
+					hr
+					h3 Блок от 1440px = 8 колонок + 4 колонки
+					.grid-12
+						.grid-item.span-xxl-4
+							p span-xl-4
+						.grid-item.span-xxl-8
+							p span-xl-4
+					pre.
+						.grid-12
+							.span-xxl-4
+								p span-xl-4
+							.span-xxl-8
+								p span-xl-4
+					  
+					h3 Реверс блокот 1200px = 8 колонок + 4 колонки
+					.grid-12.xl-reverse
+						.span-xl-8
+						.span-xl-4
+							
+					pre.
+						.grid-12.xl-reverse
+							.span-xl-8
+								p span-xl-8
+							.span-xl-4
+								p .span-xl-4
+						
