@@ -1,14 +1,89 @@
 extends ../layouts/layout.pug
 
 block content
-	.page-content
-		include ../sections/_header.pug
-		main.main-page
-			svg.svg-right
-				use(href='./img/sprite.svg#right')
-			
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Регулирующий клапан
+		form.custom-form
+			//BLOCK
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
 					
-		include ../sections/_footer.pug
-			
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Город*
+						.form-item
+							input.form-inp(type="email" name="email" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Количество
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+							span.form-span шт
+
+			//BLOCK
+			.fieldset
+				.fieldset-title 2. Условия эксплуатации (рабочие условия)
+				.fieldset-group
+					.fieldset-group-title Продукт
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Наименование и состав
+							.form-item
+								input.form-inp(type="text" name="inp_name" )
+								
+						//single form item
+						.form-item-group
+							.form-label Температура продукта, в рабочем режима
+							.form-item
+								input.form-inp(type="text" name="name" )
+					
+						//single form item
+						.form-item-group
+							.form-label Примеси/твердые частицы (концентрация, размеры)
+							.form-item
+								input.form-inp(type="text" name="name")
+								
+						//single form item
+						.form-item-group
+							.form-label Агрегатное состояние
+							.dropdown
+								button.dropdown__button(type="button") Вакансия
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+								
 block variables
 	-var title = "Project";

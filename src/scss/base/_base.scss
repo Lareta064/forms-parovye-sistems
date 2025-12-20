@@ -30,6 +30,7 @@ body{font-family: var(--font-family);}
 	--grey:#999; 
 	--prim:#3180dd;
 	--font-family: 'Montserrat';
+    box-sizing: border-box;
 	*, *:after, *:before {
 		box-sizing: border-box;
 		background-repeat: no-repeat;

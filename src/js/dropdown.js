@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-	document.querySelector('#close-ui').addEventListener('click', ()=>{
-		document.body.classList.toggle('active')
-	});
 	
 	// DROP SELECT
 	document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
