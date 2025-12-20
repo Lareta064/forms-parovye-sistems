@@ -310,8 +310,9 @@
 	.fieldset-sticky-row{
 		display: grid;
 		align-items: center;
-		grid-template-columns: 2fr 3fr;
-		gap:20px;
+		grid-template-columns: 350px 1fr;
+		column-gap:15px;
+		row-gap:20px;
 	}
 	.fieldset-sticky-row.align-self-start{align-items: flex-start;}
 	.fieldset-sticky-cols{
@@ -320,10 +321,10 @@
 		gap:15px;
 	}
 	.fieldset-sticky-cols .inner-row{
-		display: grid;
-		grid-template-columns:repeat(3, 1fr);
-		gap:15px;
+		display: flex;
+		column-gap:15px;
 	}
+	.inner-row .fieldset-cell{flex:1;}
 	.fieldset-sticky-title{
 		font-weight: 600;
 		font-size: 20px;
