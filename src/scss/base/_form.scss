@@ -81,6 +81,7 @@
 	}
 	.form-inp, .form-textarea{
 		display: block;
+		width: 100%;
 		flex:1;
 		height: 50px;
 		border-radius: 4px;
@@ -251,9 +252,7 @@
   }
   
 // fake checkbocx
-.form-checkbox, .form-radio{
-	
-}
+
 .form-checkbox-label,
 .form-radio-label{
 	position: relative;
@@ -305,8 +304,31 @@
 	}
 	
 }
-.form-item-error{
-	
-}
 
+}
+.custom-form{
+	.fieldset-sticky-row{
+		display: grid;
+		align-items: center;
+		grid-template-columns: 2fr 3fr;
+		gap:20px;
+	}
+	.fieldset-sticky-row.align-self-start{align-items: flex-start;}
+	.fieldset-sticky-cols{
+		display: grid;
+		grid-template-columns:1fr;
+		gap:15px;
+	}
+	.fieldset-sticky-cols .inner-row{
+		display: grid;
+		grid-template-columns:repeat(3, 1fr);
+		gap:15px;
+	}
+	.fieldset-sticky-title{
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 130%;
+		color: #333;
+		text-align: center;
+	}
 }

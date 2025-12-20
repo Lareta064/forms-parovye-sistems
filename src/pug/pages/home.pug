@@ -4,7 +4,7 @@ block content
 	.form-wrapper
 		.form-wrapper-title Опросный лист. Регулирующий клапан
 		form.custom-form
-			//BLOCK
+			//BLOCK №1
 			.fieldset
 				.fieldset-title 1. Контактная информация
 				.form-two-cols
@@ -30,24 +30,25 @@ block content
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="email" data-required)
+							input.form-inp(type="email" name="email")
 							
 					//single form item
 					.form-item-group
 						.form-label Город*
 						.form-item
-							input.form-inp(type="email" name="email" data-required)
+							input.form-inp(type="email" name="email")
 							
 					//single form item
 					.form-item-group
 						.form-label Количество
 						.form-item
-							input.form-inp.phone(type="text" name="phone" data-required)
+							input.form-inp.phone(type="text" name="phone")
 							span.form-span шт
-
-			//BLOCK
+			
+			//BLOCK №2
 			.fieldset
 				.fieldset-title 2. Условия эксплуатации (рабочие условия)
+				//группа внутри одного fieldset
 				.fieldset-group
 					.fieldset-group-title Продукт
 					.form-two-cols
@@ -84,6 +85,129 @@ block content
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
+				
+				//группа внутри одного fieldset
+				.fieldset-group.fieldset-sticky-header
+					
+					//ряд
+					.fieldset-sticky-title.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-group-title Режим работы
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell I
+								.fieldset-cell II
+								.fieldset-cell III
+					
+					//ряд
+					.fieldset-sticky-row.align-self-start
+						//Левая колонка
+						.fieldset-cell-name Расход#[br] #[span.fs-15 (для газа расход указан при стандартных условиях -20°C, 101,325кPа (ГОСТ2939))]
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span min
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span min
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span min
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span nom
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span nom
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span nom
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span max
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span max
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span max
+
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Давление до клапана, избыточное
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+					
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Максимальный перепад давления
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+					
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Перепад давления
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									span.form-span bar
+				
+			//BLOCK №3
+			.fieldset
+				.fieldset-title 3. Установка
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Размер трубопровода, толщина стенки
+						.form-item
+							input.form-inp(type="text" name="inp_name")
+					
+					//single form item
+					.form-item-group
+						.form-label Материал трубопровода
+						.form-item
+							input.form-inp(type="text" name="name")
+							span.form-span Ø х мм
 								
 block variables
 	-var title = "Project";
