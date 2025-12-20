@@ -1,0 +1,68 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+		button#close-ui FORMS
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard(style="padding-top:80px;")
+				.custom-form
+					.fieldset
+						.fieldset-title 1. Контактная информация
+						.form-two-cols
+							
+							//Left column
+							.fieldset-content
+								//single form item
+								.form-item-group
+									.form-label Название компании*
+									.form-item
+										input.form-inp(type="text" name="inp_name" data-required)
+										
+								//single form item
+								.form-item-group
+									.form-label Контактное лицо*
+									.form-item
+										input.form-inp(type="text" name="name" data-required)
+										
+								//single form item
+								.form-item-group
+									.form-label Телефон/факс*
+									.form-item
+										input.form-inp.phone(type="text" name="phone" data-required)
+										
+
+							//Right column
+							.fieldset-content
+								//single form item
+								.form-item-group
+									.form-label E-mail*
+									.form-item
+										input.form-inp(type="email" name="email" data-required)
+										
+								//single form item
+								.form-item-group
+									.form-label Город*
+									.form-item
+										input.form-inp(type="email" name="email" data-required)
+										
+								//single form item
+								.form-item-group
+									.form-label Количество
+									.form-item
+										input.form-inp.phone(type="text" name="phone" data-required)
+										span.form-span шт

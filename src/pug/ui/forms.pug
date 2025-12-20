@@ -53,9 +53,44 @@ html(lang="ru")
 						.form-item
 							input.form-inp(type="text" name="inp_name" data-required)
 							span.form-span °C
+				br
+				br
 
+				h4(style="margin-bottom:14px;") Кастомный чекбокс
+				.form-checkbox
+					label.form-checkbox-label
+						input(type="checkbox" name="check1")
+						span.fake-checkbox
+						span.form-checkbox-name Да
+					
+				pre.
+					.form-checkbox
+						label.form-checkbox-label
+							input(type="checkbox" name="check1")
+							span.fake-checkbox
+							span.form-checkbox-name Да
 				br
 				br
+				
+				h4(style="margin-bottom:14px;") Кастомный radio button
+				.form-radio
+					label.form-radio-label
+						input(type="radio" name="radio1")
+						span.fake-radio
+						span.form-radio-name Да
+				
+				.form-radio
+					label.form-radio-label
+						input(type="radio" name="radio1")
+						span.fake-radio
+						span.form-radio-name Нет
+					
+				pre.
+					.form-radio
+						label.form-radio-label
+							input(type="radio" name="radio1")
+							span.fake-radio
+							span.form-radio-name Нет
 				.dropdown
 					button.dropdown__button(type="button") Вакансия
 					
@@ -69,20 +104,7 @@ html(lang="ru")
 					//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 					input.dropdown__input-hidden(type="hidden", name="")
 		
-				br
-				br
-
-				h4(style="margin-bottom:14px;") Кастомный чекбокс
-				.form-checkbox
-					label.checkbox-label
-						input.checkbox-inp(type="checkbox" name="name")
-						span.fake-checkbox
-					
-				pre.
-					.form-checkbox
-						label.checkbox-label
-							input.checkbox-inp(type="checkbox" name="name")
-							span.fake-checkbox
+				
 				br
 				h4(style="margin-bottom:14px;") Соглашение с политикой в форме
 				.agree-block
