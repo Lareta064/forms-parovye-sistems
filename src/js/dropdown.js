@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				dropDownInput.value = this.dataset.value;
 				
 				dropDownList.classList.remove('dropdown__list--visible');
+				dropDownList.style.height = 0;
 				dropDownBtn.classList.remove('dropdown__button--active');
+				
 				dropDownWrapper.classList.remove('dropdown-active');
 			});
 		});
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (e.target !== dropDownBtn) {
 				dropDownBtn.classList.remove('dropdown__button--active');
 				dropDownList.classList.remove('dropdown__list--visible');
+				dropDownList.style.height = 0;
 			}
 		});
 
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (e.key === 'Tab' || e.key === 'Escape') {
 				dropDownBtn.classList.remove('dropdown__button--active');
 				dropDownList.classList.remove('dropdown__list--visible');
+				dropDownList.style.height = 0;
 			}
 		});
 	});

@@ -21,7 +21,7 @@
 	.fieldset{
         display: grid;
 		grid-template-columns: 1fr;
-		gap:30px;
+		gap:25px;
 	}
 	.fieldset-content{
 		display: grid;
@@ -43,16 +43,18 @@
 		 row-gap:20px;
 		}
 	}
+	.fieldset-group.fieldset-sticky-header{ row-gap:20px;}
 	.fieldset-group-title{
 		font-weight: 600;
 		font-size: 20px;
 		line-height: 1.3;
 		color: #333
 	}
+	.fieldset-cell-name{line-height: 1;}
 	@media (max-width: 1023px) {
 	   font-size: 15px;
 	   gap: 40px;
-	   .fieldset{gap:25px;}
+	   .fieldset{gap:20px;}
 	   .fieldset-content{gap:20px;}
 	   .fieldset-title{font-size: 18px;}
 	   .fieldset-group-title{font-size: 15px;}
@@ -88,7 +90,8 @@
 		height: 50px;
 		border-radius: 4px;
 		padding: 14px 12px;
-		font-style: 18px;
+		font-size: 18px;
+		resize: none;
 		color: var(--text);
 		@media (max-width: 1023px) {
 		  padding-inline: 12px;
@@ -97,6 +100,9 @@
 	}
 	.form-textarea{
 		height: 100px;
+		min-height: 100px;
+		border:1px solid var(--prim);
+		border-radius: 4px;
 	}
 	.fs-15{font-size: 15px;}
 	.fs-18{font-size: 18px;}
@@ -106,6 +112,7 @@
 		width: fit-content;
 		padding-right: 12px;
 		color: #949494;
+		font-size: 15px;
 		
 	}
 	@media (max-width: 1023px) {
@@ -252,7 +259,10 @@
 	display: flex;
 	align-items: center;
 	gap:30px;
-	min-height: 52px;;
+	min-height: 50px;
+	@media (max-width: 767px) {
+	min-height: unset;
+	}
 }
 .form-checkbox-label,
 .form-radio-label{
@@ -332,7 +342,7 @@
 		  column-gap:10px;
 		}
 	}
-	.inner-row .fieldset-cell{flex:1;}
+	.inner-row .fieldset-cell{flex:1; height: 46px;}
 	.fieldset-sticky-title{
 		font-weight: 600;
 		font-size: 20px;
@@ -343,14 +353,15 @@
 		padding-bottom: 8px;
 		background-color: #fff;
 		@media (max-width: 1023px) {
-		row-gap:10px;
+		  row-gap:10px;
 		}
 	}
+	.fieldset-sticky-title .fieldset-cell{display: flex;align-items: center; justify-content: center;}
 	.fieldset-group.fieldset-sticky-header{
 		position: sticky;
 		top:0;
 	}
-	
+	.txt-grey{color: var(--grey);}
 }
 .custom-form .fieldset-sticky-title.is-fixed {
   position: fixed;
@@ -361,4 +372,51 @@
 .custom-form .fieldset-sticky-title.is-bottom {
   position: absolute;
   z-index: 1000;
+}
+.custom-form .form-button-wrapper{
+	display: flex;
+	justify-content: center;
+}
+.custom-form .form-button{
+	height: 48px;
+	display: inline-flex;
+	padding: 0;
+	padding-left: 36px;
+	padding-right: 36px;
+	align-items: center;
+	cursor: pointer;
+	font-family: inherit;
+	border-radius: 4px;
+	color: white;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 131%;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	background-color: var(--prim);
+	transition: .3s; 
+	
+}
+.custom-form .agree-block{
+	font-style: 15px;
+	input[type="checkbox"]{
+		width: 18px;
+		height: 18px;
+		flex-shrink: 0;
+		display: block;
+	}
+	.agree-block-label{display: flex; column-gap:23px; max-width: 580px; margin-inline: auto;
+	}
+	@media (max-width: 1023px) {
+	font-size: 13px;
+	}
+}
+.custom-form .form-footer{
+	display: flex;
+	flex-direction: column;
+	row-gap:30px;
+	p{margin: 0;}
+	@media (max-width: 1023px) {
+	row-gap:20px;
+	}
 }

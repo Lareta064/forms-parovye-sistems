@@ -48,7 +48,7 @@ block content
 			//BLOCK №2
 			.fieldset
 				.fieldset-title 2. Условия эксплуатации (рабочие условия)
-				//группа внутри одного fieldset
+				//группа Продукт
 				.fieldset-group
 					.fieldset-group-title Продукт
 					.form-two-cols
@@ -252,7 +252,6 @@ block content
 								.fieldset-cell.form-item
 									input.form-inp(type="text")
 									span.form-span bar
-								
 				
 			//BLOCK №3
 			.fieldset
@@ -270,6 +269,7 @@ block content
 						.form-item
 							input.form-inp(type="text" name="name")
 							span.form-span Ø х мм
+			
 			//BLOCK №4
 			.fieldset
 				.fieldset-title 4. Клапан
@@ -424,7 +424,7 @@ block content
 							.form-item
 								input.form-inp(type="text" name="name")
 			
-				//группа внутри одного fieldset
+				//группа Исполнительный механизм
 				.fieldset-group
 					.fieldset-group-title Исполнительный механизм
 					.form-two-cols
@@ -460,18 +460,204 @@ block content
 							.form-label.form-label Ручной дублёр
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio1" value="yes")
+									input(type="radio" checked name="radio6" value="yes")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio1" value="no")
+									input(type="radio" name="radio6" value="no")
+									span.fake-radio
+									span.form-radio-name Нет
+				
+				//группа Позиционер
+				.fieldset-group
+					.fieldset-group-title Позиционер
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Тип
+							.dropdown
+								button.dropdown__button(type="button") Пневматический
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Входной сигнал
+							.dropdown
+								button.dropdown__button(type="button") 4-20mA
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Степень защиты оболочки IP
+							.form-item
+								input.form-inp(type="text" name="inp_name" )
+						
+						//single form item
+						.form-item-group
+							.form-label.form-label Требования по взрывозащите
+							.form-radio-row
+								label.form-radio-label
+									input(type="radio" checked name="radio2" value="yes")
+									span.fake-radio
+									span.form-radio-name Да
+								
+								label.form-radio-label
+									input(type="radio" name="radio2" value="no")
 									span.fake-radio
 									span.form-radio-name Нет
 
+				//группа Соленоид
+				.fieldset-group
+					.fieldset-group-title Соленоид
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Напряжение питания
+							.dropdown
+								button.dropdown__button(type="button") 24V DC
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label.form-label Требования по взрывозащите
+							.form-radio-row
+								label.form-radio-label
+									input(type="radio" checked name="radio3" value="yes")
+									span.fake-radio
+									span.form-radio-name Да
+								
+								label.form-radio-label
+									input(type="radio" name="radio3" value="no")
+									span.fake-radio
+									span.form-radio-name Нет
+						
+						//single form item
+						.form-item-group
+							.form-label Степень защиты оболочки IP
+							.form-item
+								input.form-inp(type="text" name="inp_name" )
+				
+				//группа Конечные выключатели
+				.fieldset-group
+					.fieldset-group-title Конечные выключатели
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Назначение
+							.dropdown
+								button.dropdown__button(type="button") Для открытого положения
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label.form-label Требования по взрывозащите
+							.form-radio-row
+								label.form-radio-label
+									input(type="radio" checked name="radio4" value="yes")
+									span.fake-radio
+									span.form-radio-name Да
+								
+								label.form-radio-label
+									input(type="radio" name="radio4" value="no")
+									span.fake-radio
+									span.form-radio-name Нет
+						
+						//single form item
+						.form-item-group
+							.form-label Тип
+							.dropdown
+								button.dropdown__button(type="button") Пневматический
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Степень защиты оболочки IP
+							.form-item
+								input.form-inp(type="text" name="inp_name" )
 
+						
+						//single form item
+						.form-item-group
+							.form-label Принадлежности
+							.dropdown
+								button.dropdown__button(type="button") Ответные фланцы
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
 
-
-
+						//single form item
+						.form-item-group
+							.form-label.form-label Фильтр-редуктор
+							.form-radio-row
+								label.form-radio-label
+									input(type="radio" checked name="radio5" value="yes")
+									span.fake-radio
+									span.form-radio-name Да
+								
+								label.form-radio-label
+									input(type="radio" name="radio5" value="no")
+									span.fake-radio
+									span.form-radio-name Нет
+						
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
 block variables
 	-var title = "Project";
