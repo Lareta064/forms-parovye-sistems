@@ -9,17 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// Клик по кнопке. Открыть/Закрыть select
 		dropDownBtn.addEventListener('click', function (e) {
-		
-			dropDownList.classList.toggle('dropdown__list--visible');
-			this.classList.toggle('dropdown__button--active');
-			dropDownWrapper.classList.toggle('dropdown-active');
-			
+			if(dropDownList.classList.contains('dropdown__list--visible')){
+				dropDownList.classList.remove('dropdown__list--visible');
+				dropDownList.style.height = 0;
+				this.classList.remove('dropdown__button--active');
+				dropDownWrapper.classList.remove('dropdown-active');
+			}else{
+
+				dropDownList.style.height = dropDownList.scrollHeight + 'px';
+				dropDownList.classList.add('dropdown__list--visible');
+				this.classList.add('dropdown__button--active');
+				dropDownWrapper.classList.add('dropdown-active');
+			}
 		});
-		
 
 		// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
 		dropDownListItems.forEach(function (listItem) {
-			
 			
 			listItem.addEventListener('click', function (e) {
 				e.stopPropagation();
