@@ -38,8 +38,10 @@
 	.fieldset-group{
 		display: grid;
 		grid-template-columns: 1fr;
-		
 		gap:15px;
+		@media (max-width: 1023px) {
+		 row-gap:20px;
+		}
 	}
 	.fieldset-group-title{
 		font-weight: 600;
@@ -89,7 +91,7 @@
 		font-style: 18px;
 		color: var(--text);
 		@media (max-width: 1023px) {
-		  padding-inline: 16px;
+		  padding-inline: 12px;
 		  font-size: 16px;
 		}
 	}
@@ -102,11 +104,9 @@
 		display: flex;
 		align-items: center;
 		width: fit-content;
-		padding-inline: 12px;
+		padding-right: 12px;
 		color: #949494;
-		@media (max-width: 1023px) {
-		  padding-inline: 16px;
-		}
+		
 	}
 	@media (max-width: 1023px) {
 	   font-style: 16px;
@@ -313,6 +313,10 @@
 		grid-template-columns: 350px 1fr;
 		column-gap:15px;
 		row-gap:20px;
+		@media (max-width: 1023px) {
+		  grid-template-columns: 1fr;
+		  row-gap:6px;
+		}
 	}
 	.fieldset-sticky-row.align-self-start{align-items: flex-start;}
 	.fieldset-sticky-cols{
@@ -323,6 +327,9 @@
 	.fieldset-sticky-cols .inner-row{
 		display: flex;
 		column-gap:15px;
+		@media (max-width: 1023px) {
+		  column-gap:10px;
+		}
 	}
 	.inner-row .fieldset-cell{flex:1;}
 	.fieldset-sticky-title{
@@ -331,5 +338,26 @@
 		line-height: 130%;
 		color: #333;
 		text-align: center;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		background-color: #fff;
+		@media (max-width: 1023px) {
+		row-gap:10px;
+		}
 	}
+	.fieldset-group.fieldset-sticky-header{
+		position: sticky;
+		top:0;
+	}
+	
+}
+.custom-form .fieldset-sticky-title.is-fixed {
+  position: fixed;
+  z-index: 1000;
+  /* top зададим из JS (offset) */
+}
+
+.custom-form .fieldset-sticky-title.is-bottom {
+  position: absolute;
+  z-index: 1000;
 }

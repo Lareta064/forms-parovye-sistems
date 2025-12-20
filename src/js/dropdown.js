@@ -54,4 +54,4 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
-})
+});
