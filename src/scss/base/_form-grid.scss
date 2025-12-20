@@ -1,0 +1,25 @@
+.custom-form{
+	width: 100%;
+	max-width: 1042px;
+	margin-inline: auto;
+	.form-two-cols{
+		display: grid;
+		gap:60px;
+		grid-template-columns: repeat(12, 1fr);
+		@media (max-width: 1199px) {
+		 gap:20px;
+		}
+		
+	}
+	.form-two-cols >*{
+		grid-column: span 6;
+	}
+	@media (max-width: 767px) {
+		.form-two-cols{grid-template-columns: 1fr;}
+			
+		
+	.form-two-cols >*{
+		grid-column: span 6;
+	}
+	}
+}

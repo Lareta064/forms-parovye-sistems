@@ -10,7 +10,7 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
-		//- link(rel="stylesheet"  href="../libs/bootstrap/bootstrap.min.css")
+		
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
@@ -19,56 +19,43 @@ html(lang="ru")
 		include ui-navigation.pug
 
 		block content
-			.container-dashboard
-				input.inp(type="text" name="name" placeholder="Text")
-				pre.
-					input.inp(type="text" name="name" placeholder="Text")
-				hr
-				h4 наличие класса .form-item-error
-				ur
-					li делает видимым i.icon-error
-					li задает красный цвет борднра инпуту
-					li задает красный цвет тексту под инпутом
-				.form-item.form-item-error
-					label.form-label Заголовок
-					.form-input
-						input.inp(type="text" name="name" placeholder="Text")
-						span.inp-icons
-							i.icon-error
-					
-						p.fs-12 Подпись
-				pre.
-					.form-item.form-item-error
-						label.form-label Заголовок
-						.form-input
-							input.inp(type="text" name="name" placeholder="Text")
-							
-							span.inp-icons
-								i.icon-error
-						
-							p.fs-12 Подпись
-				
+			.container-dashboard.custom-form(style="padding-top:80px;")
 				.form-item
-					label.form-label Заголовок
-					.form-input
-						input.inp(type="text" name="name" placeholder="Text")
-						
-						span.inp-icons
-							i.icon-error
-						p.fs-12 Подпись
-				
+					input.form-inp(type="text" name="inp_name")
+					span.form-span °C
 				pre.
 					.form-item
-						label.form-label Заголовок
-						.form-input
-							input.inp(type="text" name="name" placeholder="Text")
-							span.inp-icons
-								i.icon-error
-						
-							p.fs-12 Подпись
-		
-				hr
-				h4(style="margin-bottom:14px;") Dropdown
+						input.form-inp(type="text" name="inp_name")
+						span.form-span °C
+				br
+				
+				.form-item-group
+					.form-label Название компании*
+					.form-item
+						input.form-inp(type="text" name="inp_name" data-required)
+						span.form-span °C
+				pre.
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+							span.form-span °C
+				br
+				br
+				.form-two-cols
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+							span.form-span °C
+					.form-item-group
+						.form-label Очень длинный label, который может растянуться на две строки*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+							span.form-span °C
+
+				br
+				br
 				.dropdown
 					button.dropdown__button(type="button") Вакансия
 					
@@ -82,7 +69,9 @@ html(lang="ru")
 					//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 					input.dropdown__input-hidden(type="hidden", name="")
 		
-				hr
+				br
+				br
+
 				h4(style="margin-bottom:14px;") Кастомный чекбокс
 				.form-checkbox
 					label.checkbox-label
@@ -109,35 +98,8 @@ html(lang="ru")
 								input.checkbox-inp(type="checkbox" name="name")
 								span.fake-checkbox
 								span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
-				br
-				h4(style="margin-bottom:14px;") Красного цвета компонент становится за счет класса form-item-error
-				.form-checkbox.form-item-error
-					label.checkbox-label
-						input.checkbox-inp(type="checkbox" name="name")
-						span.fake-checkbox
-						span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
-				pre.
-					.form-checkbox.form-item-error
-						label.checkbox-label
-							input.checkbox-inp(type="checkbox" name="name")
-							span.fake-checkbox
-							span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
-				.temp-wrapper
-					.download-file-block.d-flex-cy
-						.download-file__name.d-flex-cy
-							svg.svg-pdf
-								use(href='../img/sprite.svg#svg-pdf')
-							p.fs-12.txt-white 1crm-presentation.pdf
-						.download-file__size
-							p.fs-12.txt-white 4,3&nbsp;Mb
-				pre.
-					.download-file-block.d-flex-cy
-						.download-file__name.d-flex-cy
-							svg.svg-pdf
-								use(href='../img/sprite.svg#svg-pdf')
-							p.fs-12.txt-white 1crm-presentation.pdf
-						.download-file__size
-							p.fs-12.txt-white 4,3&nbsp;Mb
+				
+				
 		script.
 			document.addEventListener("DOMContentLoaded", function () {
 				document.querySelector('#close-ui').addEventListener('click', ()=>{
