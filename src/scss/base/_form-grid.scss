@@ -4,7 +4,8 @@
 	margin-inline: auto;
 	.form-two-cols{
 		display: grid;
-		gap:60px;
+		column-gap:60px;
+		row-gap: 20px;
 		align-items:flex-start;
 		grid-template-columns: repeat(12, 1fr);
 		@media (max-width: 1199px) {
