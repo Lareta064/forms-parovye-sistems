@@ -1,0 +1,163 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Конденсатный насос и станция сбора и возврата конденсата
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+			//BLOCK №2
+			.fieldset
+				.fieldset-title 2. Параметры
+				//группа Продукт
+				.fieldset-group
+					.form-item-group
+						.form-label Расход пара
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span nom
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					
+					.form-item-group
+						.form-label Давление пара
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					.form-item-group
+						.form-label Температура пара на входе
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					
+					.form-two-cols
+						.form-item-group
+							.form-label Температура пара на выходе
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+									span.form-span °С
+					
+						.form-item-group
+							.form-label Располагаемое давление охлаждающей воды
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+									//- span.form-span
+						.form-item-group
+							.form-label Температура охлаждающей воды
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+									span.form-span °С
+							
+						.form-item-group
+							.form-label Противодавление в конденсатопроводе
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Место расположения 
+							.dropdown
+								button.dropdown__button(type="button") На улице
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") В помещении
+										li.dropdown__list-item(data-value="Текст2") На улице
+									//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+									input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Если необходима комплектация охладителя регулирующим клапаном: тип привода регулирующего клапана на линии охлаждения
+							.dropdown
+								button.dropdown__button(type="button") электрический
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") электрический
+										li.dropdown__list-item(data-value="Текст2") певматический
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Комплектация устройствами КИП: 
+							.dropdown
+								button.dropdown__button(type="button") шкаф управления
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") шкаф управления
+										li.dropdown__list-item(data-value="Текст2") датчик температуры
+										li.dropdown__list-item(data-value="Текст2") термометры
+										li.dropdown__list-item(data-value="Текст2") манометры
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						//single form item
+						.form-item-group
+							.form-label Дополнительная комплектация
+							.dropdown
+								button.dropdown__button(type="button") шкаф управления
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") запорная арматура
+										li.dropdown__list-item(data-value="Текст2") теплоизоляция для арматуры 
+										li.dropdown__list-item(data-value="Текст2") ответные фланцы, крепеж 
+										li.dropdown__list-item(data-value="Текст2") конденсатоотводчик
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Охладитель пара";

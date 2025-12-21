@@ -74,7 +74,7 @@
 		gap:20px;
 		.h-20.txt-center {
 			padding-top: 20px;
-			padding-bottom: 10px;
+			// padding-bottom: 10px;
 		}
 	}
 	.fieldset-group.gap-10{
@@ -170,7 +170,11 @@
 .form-label{
 	display: inline-flex;
 }
-
+.inputs-row{
+	display: flex;
+	gap:15px;
+	&>*{flex:1;}
+}
 
 // DROPDOWN
 .dropdown {
@@ -237,7 +241,7 @@
 	scrollbar-width: thin;
 	scrollbar-color: #EAEAEA transparent;
 	z-index: 1;
-	transition: height .1s; 
+	transition: height .2s; 
 	color: var(--text);
 	scrollbar-gutter: stable;
 	&::-webkit-scrollbar{
@@ -258,6 +262,7 @@
 	}
 	@media (max-width: 767px) {
 	   position: relative;
+	   top: auto;
 	  
 	}
  } 
