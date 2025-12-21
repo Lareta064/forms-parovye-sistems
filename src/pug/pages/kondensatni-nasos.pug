@@ -1,12 +1,248 @@
 extends ../layouts/layout.pug
 
 block content
-	.page-content
-		include ../sections/_header.pug
-		main.main-page
-			
+	.form-wrapper
+		.form-wrapper-title Конденсатный насос и станция сбора и возврата конденсата
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
 					
-		include ../sections/_footer.pug
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+							
+					//single form item
+					.form-item-group
+						.form-label Город*
+						.form-item
+							input.form-inp(type="text" name="city")
+							
+					//single form item
+					.form-item-group
+						.form-label Количество
+						.form-item
+							input.form-inp.phone(type="text" name="phone")
+							span.form-span шт
 			
+			//BLOCK №2
+			.fieldset
+				.fieldset-title 2. Параметры
+				//группа Продукт
+				.fieldset-group
+					.fieldset-group-title Продукт
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Максимальный расход конденсата
+							.form-item
+								input.form-inp(type="text" name="inp_name" )
+								span.form-span кг/ч
+						//single form item
+						.form-item-group
+							.form-label Количество источников конденсата
+							.form-item
+								input.form-inp(type="text" name="name" )
+								span.form-span шт
+					
+						//single form item
+						.form-item-group
+							.form-label Расход на каждом источнике
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span кг/ч
+
+						//single form item
+						.form-item-group
+							.form-label Расход на каждом источнике
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span °С
+								
+						//single form item
+						.form-item-group
+							.form-label Для электрического насоса указать требуемое давление на выходе насоса
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span bar
+						//single form item
+						.form-item-group
+							.form-label Для механического насоса указать величину противодавления в конденсатной линии
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span bar
+						
+						
+						//single form item
+						.form-item-group
+							.form-label Место расположения 
+							.dropdown
+								button.dropdown__button(type="button") На улице
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						//single form item
+						.form-item-group
+							.form-label Комплектация
+							.dropdown
+								button.dropdown__button(type="button") Только насос
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+				
+				
+				
+			//BLOCK №3
+			.fieldset
+				.fieldset-title 3. Тип насоса
+				//Тип Электрический
+				.fieldset-group
+					.fieldset-group-title Электрический
+					
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Комплектация
+							.dropdown
+								button.dropdown__button(type="button") Только насос
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						.form-item-group
+							.form-label.form-label Количество насосов
+							.form-radio-row
+								label.form-radio-label
+									input(type="radio" checked name="radio1" value="1")
+									span.fake-radio
+									span.form-radio-name 1
+								
+								label.form-radio-label
+									input(type="radio" name="radio1" value="2")
+									span.fake-radio
+									span.form-radio-name 2
+								
+								label.form-radio-label
+									input(type="radio" name="radio1" value="3")
+									span.fake-radio
+									span.form-radio-name 3
+						
+						//single form item
+						.form-item-group
+							.form-label Визуальный контроль уровня в конденсатной емкости
+							.form-item
+								input.form-inp(type="text" name="name")
+								
+						
+						//single form item
+						.form-item-group
+							.form-label Выходной сигнал уровня
+							.dropdown
+								button.dropdown__button(type="button") 0(4)…20мА
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+			
+				//Тип Механический
+				.fieldset-group
+					.fieldset-group-title Механический
+					
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Рабочая среда
+							.dropdown
+								button.dropdown__button(type="button") Пар
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Текст 1
+										li.dropdown__list-item(data-value="Текст2") Текст 2
+										li.dropdown__list-item(data-value="Текст3") Текст 3
+										li.dropdown__list-item(data-value="Текст4") Текст 4
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Располагаемое давление 
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span bar
+						//single form item
+						.form-item-group
+							.form-label Температура
+							.form-item
+								input.form-inp(type="text" name="name")
+								span.form-span °С
+						
+					//single form item
+					.form-item-group.checkbox-group-rows
+						label.form-checkbox-label
+							input(type="checkbox" name="chbox1" value="")
+							span.form-checkbox-name Визуальный контроль уровня конденсата в насосе 
+						
+						label.form-checkbox-label
+							input(type="checkbox" name="chbox2" value="")
+							span.form-checkbox-name Счетчик импульсов для подсчета объема перекаченного конденсата
+					
+						
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
 block variables
-	-var title = "Project";
+	-var title = "Конденсатный насос";
