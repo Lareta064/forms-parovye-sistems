@@ -1,0 +1,197 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист Эжектор
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+					
+			
+			//BLOCK №2
+			.fieldset
+				.fieldset-title 2. Параметры
+				//single form item
+				.form-item-group
+					.form-label.form-label Ручной дублёр
+					.form-radio-row.row-mobile
+						label.form-radio-label
+							input(type="radio" checked name="radio1" value="")
+							span.fake-radio
+							span.form-radio-name.fs-16 Термокомпрессор
+						
+						label.form-radio-label
+							input(type="radio" name="radio1" value="")
+							span.fake-radio
+							span.form-radio-name.fs-16 Циркуляционный эжектор
+			
+				//группа внутри одного fieldset
+				.fieldset-group.fieldset-sticky-header
+					
+					//ряд
+					.fieldset-sticky-title.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-group-title Параметр
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.fs-15 Пар низкого давления
+								.fieldset-cell.fs-15 Пар среднего давления
+								.fieldset-cell.fs-15 Пар высокого давления
+					
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Давление
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span бар изб
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span бар изб
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span бар изб
+					
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Температура
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Температура
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span кг/ч
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span кг/ч
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span кг/ч
+		
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Максимальное рабочее давление пара
+						.form-item
+							input.form-inp(type="text" name="inp_name" )
+							span.form-span бар изб
+					
+					//single form item
+					.form-item-group
+						.form-label Максимальная рабочая температура пара
+						.form-item
+							input.form-inp(type="number" name="name" )
+							spqn.form-span °C
+					
+					//single form item
+					.form-item-group
+						.form-label Материал корпуса
+						.form-item
+							input.form-inp(type="number" name="name" )
+					
+					//single form item
+					.form-item-group
+						.form-label Исполнение эжектора
+						.dropdown
+							button.dropdown__button(type="button") регулируемый – с приводом
+							
+							.dropdown__list
+								ul
+									li.dropdown__list-item(data-value="Текст1") Текст 1
+									li.dropdown__list-item(data-value="Текст2") Текст 2
+									li.dropdown__list-item(data-value="Текст3") Текст 3
+									li.dropdown__list-item(data-value="Текст4") Текст 4
+							
+							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+							input.dropdown__input-hidden(type="hidden", name="")
+					
+					//single form item
+					.form-item-group
+						.form-label Тип присоединения
+						.dropdown
+							button.dropdown__button(type="button") Резьбовой
+							
+							.dropdown__list
+								ul
+									li.dropdown__list-item(data-value="Текст1") Текст 1
+									li.dropdown__list-item(data-value="Текст2") Текст 2
+									li.dropdown__list-item(data-value="Текст3") Текст 3
+									li.dropdown__list-item(data-value="Текст4") Текст 4
+							
+							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+							input.dropdown__input-hidden(type="hidden", name="")
+					
+					//single form item
+					.form-item-group
+						.form-label.form-label Количество насосов
+						.form-radio-row
+							label.form-radio-label
+								input(type="radio" checked name="radio2" value="")
+								span.fake-radio
+								span.form-radio-name DIN
+							
+							label.form-radio-label
+								input(type="radio" name="radio2" value="")
+								span.fake-radio
+								span.form-radio-name ANSI / ASME
+				
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Эжектор";

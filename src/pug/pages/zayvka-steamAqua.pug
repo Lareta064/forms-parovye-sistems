@@ -1,0 +1,155 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Заявка на установку Автоматической станции ГВС SteamAqua
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+							
+
+			.fieldset.form-description
+				.form-two-cols
+					.form-list
+						.form-list-title.h-20 Преимущества автоматической станции горячего водоснабжения:
+						ul
+							li Быстрый нагрев воды
+							li Отсутствие колебаний температуры на выходе
+							li Компактные размеры
+							li Сенсорная цветная панель управления
+							li Съемные защитные панели
+							li Регулирующий клапан со встроенным циклонным сепаратором, фильтром и конденсатоотводчиком
+							li Предподогреватель воды на входе
+							li Встроенный перекачивающий конденсатоотводчик
+					.form-image
+						img(src='./img/img.webp', srcset='./img/img@2x.webp 2x' width='430' height='305' loading='lazy' alt='img')
+			
+			//BLOCK №2
+			.fieldset.border-0
+				.fieldset-title 2. Параметры
+				//группа Пар
+				.fieldset-group
+					.fieldset-group-title Пар
+					.form-two-cols.form-two-cols--xs
+						//single form item
+						.form-item-group
+							.form-label Давление
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span бар изб
+						
+						//single form item
+						.form-item-group
+							.form-label Температура
+							.form-item
+								input.form-inp(type="number" name="name" )
+								span.form-span °С
+				//группа
+				.form-two-cols.form-two-cols--xs
+					.fieldset-group
+						.fieldset-group-title Вода на выходе
+						.form-item-group
+							.form-label Температура
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span °С
+						
+					.fieldset-group
+						.fieldset-group-title Сжатый воздух
+						.form-item-group
+							.form-label Давление
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span бар изб
+				//группа		
+				.fieldset-group
+					.fieldset-group-title Вода на входе
+					.form-two-cols.form-two-cols--xs
+						.form-item-group
+							.form-label Расход
+							.form-item
+								input.form-inp(type="number" name="name")
+								span.form-span кг/ч
+
+						//single form item
+						.form-item-group
+							.form-label Давление
+							.form-item
+								input.form-inp(type="number" name="name")
+								span.form-span бар изб
+						
+						.form-item-group.span-xs-100
+							.form-label Температура
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span °С
+				//группа
+				.fieldset-group
+					.fieldset-group-title Противодавление в конденсатной линии 
+					.form-two-cols
+						.form-item-group
+							.form-label Давление
+							.form-item
+								input.form-inp(type="number" name="name")
+								span.form-span бар изб
+
+						
+				// Дополнительно
+				.fieldset-group
+					.fieldset-group-title Дополнительно
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Максимальное рабочее давление пара
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span бар изб
+						
+						//single form item
+						.form-item-group
+							.form-label Максимальна рабочая температура пара
+							.form-item
+								input.form-inp(type="number" name="name" )
+								span.form-span °С	
+						
+						
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Конденсатный насос";
