@@ -74,17 +74,7 @@
 		&:focus, &:active{outline: none;}
 		
 	}
-	input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active,
-	textarea:-webkit-autofill,
-	textarea:-webkit-autofill:hover,
-	textarea:-webkit-autofill:focus,
-	textarea:-webkit-autofill:active {
-		-webkit-box-shadow: 0 0 0px 1000px white inset !important; 
-		-webkit-text-fill-color: #333 !important; 
-	}
+	
 	.form-inp, .form-textarea{
 		display: block;
 		width: 100%;
@@ -442,7 +432,31 @@
 		color: #dd3134;
 	}
 }
-/*
- git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-*/
+.custom-form {
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active,
+	textarea:-webkit-autofill,
+	textarea:-webkit-autofill:hover,
+	textarea:-webkit-autofill:focus,
+	textarea:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0px 1000px white inset !important; 
+		-webkit-text-fill-color: #333 !important; 
+	}
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0; 
+	}
+
+	input[type=number] {
+		-moz-appearance: textfield; 
+	}
+
+	input[type=number] {
+		appearance: textfield;
+		-webkit-appearance: textfield;
+		-moz-appearance: textfield;
+	}
+}

@@ -2,9 +2,9 @@ extends ../layouts/layout.pug
 
 block content
 	.form-wrapper
-		.form-wrapper-title Опросный лист. Регулирующий клапан
+		.form-wrapper-title Опросный лист Конденсатоотводчик
 		form.custom-form.js-validate-form
-			//BLOCK №1
+			//BLOCK №1 Контактная информация
 			.fieldset
 				.fieldset-title 1. Контактная информация
 				.form-two-cols
@@ -47,45 +47,7 @@ block content
 			
 			//BLOCK №2
 			.fieldset
-				.fieldset-title 2. Условия эксплуатации (рабочие условия)
-				//группа Продукт
-				.fieldset-group
-					.fieldset-group-title Продукт
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Наименование и состав
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-								
-						//single form item
-						.form-item-group
-							.form-label Температура продукта, в рабочем режима
-							.form-item
-								input.form-inp(type="number" name="name" )
-								spqn.form-span °C
-
-						//single form item
-						.form-item-group
-							.form-label Примеси/твердые частицы (концентрация, размеры)
-							.form-item
-								input.form-inp(type="text" name="name")
-								
-						//single form item
-						.form-item-group
-							.form-label Агрегатное состояние
-							.dropdown
-								button.dropdown__button(type="button") Выбрать
-								
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+				.fieldset-title 2. Параметры
 				
 				//группа внутри одного fieldset
 				.fieldset-group.fieldset-sticky-header
@@ -93,69 +55,119 @@ block content
 					//ряд
 					.fieldset-sticky-title.fieldset-sticky-row
 						//Левая колонка
-						.fieldset-group-title Режим работы
+						.fieldset-group-title Параметр
 						//Три правые колонки
 						.fieldset-sticky-cols
 							.inner-row
-								.fieldset-cell I
-								.fieldset-cell II
-								.fieldset-cell III
+								.fieldset-cell Конденсато&shy;отводчик №1
+								.fieldset-cell Конденсато&shy;отводчик №2
+								.fieldset-cell Конденсато&shy;отводчик №3
 					
 					//ряд
-					.fieldset-sticky-row.align-self-start
+					.fieldset-sticky-row
 						//Левая колонка
-						.fieldset-cell-name Расход#[br] #[span.fs-15 (для газа расход указан при стандартных условиях -20°C, 101,325кPа (ГОСТ2939))]
+						.fieldset-cell-name Расход конденсата:
 						
 						//Три правые колонки
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span min
+									span.form-span кг/ч
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span min
+									span.form-span кг/ч
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span min
+									span.form-span кг/ч
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Давление перед конденсатоотводчиком
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span nom
+									span.form-span бар изб
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span nom
+									span.form-span бар изб
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span nom
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span max
-								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span max
-								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span max
+									span.form-span бар изб
 
 					//ряд
 					.fieldset-sticky-row
 						//Левая колонка
-						.fieldset-cell-name Давление до клапана, избыточное
+						.fieldset-cell-name Давление за конденсатоотводчиком #[span.fs-15 (противодавление в конденсатной линии)]
 						
 						//Три правые колонки
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span bar
+									span.form-span бар изб
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span bar
+									span.form-span бар изб
 								.fieldset-cell.form-item
 									input.form-inp(type="number")
-									span.form-span bar
+									span.form-span бар изб
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Мин. температура окружающей среды
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+					
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Температура пара #[span.fs-15 (указать только если пар перегретый)]
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+								.fieldset-cell.form-item
+									input.form-inp(type="number")
+									span.form-span °С
+							
+					//ряд
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Место установки: #[span.fs-15 дренаж паропровода, теплообменник,  пароспутник, другое #[strong (указать)]]
+						
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									
+								.fieldset-cell.form-item
+									input.form-inp(type="text")
+									
 					
 					//ряд
 					.fieldset-sticky-row
@@ -166,13 +178,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 					
 					//ряд
@@ -184,13 +196,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 
 					//ряд
@@ -202,14 +214,14 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span кг/м3
+									input.form-inp(type="text")
+									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span кг/м3
+									input.form-inp(type="text")
+									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span кг/м3
+									input.form-inp(type="text")
+									span.form-span min
 					//ряд
 					.fieldset-sticky-row
 						//Левая колонка
@@ -219,14 +231,14 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span bar
+									input.form-inp(type="text")
+									span.form-span кг/м3
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span bar
+									input.form-inp(type="text")
+									span.form-span кг/м3
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
-									span.form-span bar
+									input.form-inp(type="text")
+									span.form-span кг/м3
 					//ряд
 					.fieldset-sticky-row
 						//Левая колонка
@@ -236,10 +248,10 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span min, °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span maх, °С
 					
 					//ряд
@@ -251,7 +263,7 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="text")
 									span.form-span bar
 				
 			//BLOCK №3
@@ -268,7 +280,7 @@ block content
 					.form-item-group
 						.form-label Материал трубопровода
 						.form-item
-							input.form-inp(type="number" name="name")
+							input.form-inp(type="text" name="name")
 							span.form-span Ø х мм
 			
 			//BLOCK №4
@@ -297,13 +309,13 @@ block content
 						.form-item-group
 							.form-label Номинальный диаметр, DN
 							.form-item
-								input.form-inp(type="number" name="name" )
+								input.form-inp(type="text" name="name" )
 								span.form-span мм
 						//single form item
 						.form-item-group
 							.form-label Номинальное давление, PN
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="text" name="name")
 								span.form-span bar
 						//single form item
 						.form-item-group
@@ -662,4 +674,4 @@ block content
 					.form-button-wrapper
 						button.form-button(type="submit") Отправить
 block variables
-	-var title = "Опросный лист";
+	-var title = "Конденсатоотводчик";
