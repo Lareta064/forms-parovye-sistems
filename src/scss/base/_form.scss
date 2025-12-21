@@ -23,6 +23,9 @@
 	color: var(--text);
 	display: grid;
 	grid-template-columns: 1fr;
+	.txt-center{
+		text-align: center;
+	}
 	.h-20{
 		font-weight: 600;
 		font-size: 20px;
@@ -33,6 +36,7 @@
 		font-size: 16px;
 		}
 	}
+	
 	.fs-16{
 		font-size: 16px;
 		@media (max-width: 767px) {
@@ -67,10 +71,14 @@
 	.fieldset-group{
 		display: grid;
 		grid-template-columns: 1fr;
+		gap:20px;
+		.h-20.txt-center {
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+	}
+	.fieldset-group.gap-10{
 		gap:10px;
-		// @media (max-width: 1023px) {
-		//  row-gap:20px;
-		// }
 	}
 	.fieldset-group.fieldset-sticky-header{ row-gap:20px;}
 	.fieldset-group-title{
@@ -136,6 +144,7 @@
 		padding-right: 12px;
 		color: #949494;
 		font-size: 15px;
+		white-space: nowrap;
 		
 	}
 	@media (max-width: 1023px) {
@@ -357,6 +366,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap:20px;
 	}
 	}
 }
@@ -402,8 +412,14 @@
 		display: flex;
 		justify-content: center;
 		align-items:center;
+		column-gap: 20px;
 	}
-
+   .fieldset-cell--column .fieldset-cell{
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items:center;
+		gap: 15px;
+   }
 	.inner-row .fieldset-cell .form-inp{height: 46px;}
 	.fieldset-sticky-title{
 		font-weight: 600;

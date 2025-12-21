@@ -53,7 +53,7 @@ block content
 			.fieldset.border-0
 				.fieldset-title 2. Параметры
 				//группа Пар
-				.fieldset-group
+				.fieldset-group.gap-10
 					.fieldset-group-title Пар
 					.form-two-cols.form-two-cols--xs
 						//single form item
@@ -71,7 +71,7 @@ block content
 								span.form-span °С
 				//группа
 				.form-two-cols.form-two-cols--xs
-					.fieldset-group
+					.fieldset-group.gap-10
 						.fieldset-group-title Вода на выходе
 						.form-item-group
 							.form-label Температура
@@ -79,15 +79,15 @@ block content
 								input.form-inp(type="number" name="inp_name" )
 								span.form-span °С
 						
-					.fieldset-group
+					.fieldset-group.gap-10
 						.fieldset-group-title Сжатый воздух
-						.form-item-group
+						.form-item-group.gap-10
 							.form-label Давление
 							.form-item
 								input.form-inp(type="number" name="inp_name" )
 								span.form-span бар изб
 				//группа		
-				.fieldset-group
+				.fieldset-group.gap-10
 					.fieldset-group-title Вода на входе
 					.form-two-cols.form-two-cols--xs
 						.form-item-group
@@ -109,7 +109,7 @@ block content
 								input.form-inp(type="number" name="inp_name" )
 								span.form-span °С
 				//группа
-				.fieldset-group
+				.fieldset-group.gap-10
 					.fieldset-group-title Противодавление в конденсатной линии 
 					.form-two-cols
 						.form-item-group
@@ -120,7 +120,7 @@ block content
 
 						
 				// Дополнительно
-				.fieldset-group
+				.fieldset-group.gap-10
 					.fieldset-group-title Дополнительно
 					.form-two-cols
 						//single form item
@@ -152,4 +152,4 @@ block content
 					.form-button-wrapper
 						button.form-button(type="submit") Отправить
 block variables
-	-var title = "Конденсатный насос";
+	-var title = "Заявка на SteamAqua";

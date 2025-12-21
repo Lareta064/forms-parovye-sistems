@@ -1,0 +1,212 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист Обвязка калорифера
+		form.custom-form.js-validate-form
+			//BLOCK №1 Контактная информация
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+
+			
+			//BLOCK №2
+			.fieldset.border-0
+				.fieldset-title 2. Параметры
+				
+				//группа внутри одного fieldset
+				.fieldset-group.fieldset-sticky-header
+					//ряд
+					.fieldset-sticky-title.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-group-title Параметр
+						//Три правые колонки
+						.fieldset-sticky-cols
+							.inner-row
+								.fieldset-cell.fs-15 Установка №1
+								.fieldset-cell.fs-15 Установка №2
+								.fieldset-cell.fs-15 Установка №3
+					
+					//Греющая сторона – пар
+					.fieldset-group
+						.h-20.txt-center Греющая сторона – пар
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Тепловая мощность #[span.fs-15 (или расход воздуха – поз. 6)]
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span кВт
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span кВт
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span кВт
+						//ряд
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Давление пара
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span бар изб.
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span бар изб.
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span бар изб.
+
+						//ряд
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Противодавление в конденсатной линии/ высота подъема конденсатопровода
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span м.в.ст.
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span м.в.ст.
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span м.в.ст.
+						//ряд
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Требуется ли автоматическое регулирование  температуры воздуха?
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row.fieldset-cell--column
+									.fieldset-cell
+										label.form-radio-label
+											input(type="radio" name="radio1" value="")
+											span.fake-radio
+											span.form-radio-name Да
+										label.form-radio-label
+											input(type="radio" name="radio1" value="")
+											span.fake-radio
+											span.form-radio-name Нет
+									.fieldset-cell
+										label.form-radio-label
+											input(type="radio" name="radio2" value="")
+											span.fake-radio
+											span.form-radio-name Да
+										label.form-radio-label
+											input(type="radio" name="radio2" value="")
+											span.fake-radio
+											span.form-radio-name Нет
+									.fieldset-cell
+										label.form-radio-label
+											input(type="radio" name="radio3" value="")
+											span.fake-radio
+											span.form-radio-name Да
+										label.form-radio-label
+											input(type="radio" name="radio3" value="")
+											span.fake-radio
+											span.form-radio-name Нет
+					
+					//Нагреваемая сторона – воздух
+					.fieldset-group
+						.h-20.txt-center Нагреваемая сторона – воздух
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Расход воздуха
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+						//ряд
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Температура воздуха на входе #[span.fs-15 (минимальная)]
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span °С
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span °С
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span °С
+
+						//ряд
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Температура воздуха на выходе #[span.fs-15 (требуемая)]
+							
+							//Три правые колонки
+							.fieldset-sticky-cols
+								.inner-row
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+									.fieldset-cell.form-item
+										input.form-inp(type="number")
+										span.form-span тыс. м3/ч
+						
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиденциальности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Конденсатоотводчик";
