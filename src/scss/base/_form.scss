@@ -1,3 +1,7 @@
+.form-grey-wrapper{
+	background: #f8f9fb;
+	padding-block: 40px 60px;
+}
 .form-wrapper-title{
 	font-family: 'Montserrat';
 	font-weight: 400;
@@ -20,6 +24,16 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	gap:60px;
+	.h-20{
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.3;
+		color: #333;
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+		font-size: 16px;
+		}
+	}
 	.fieldset{
         display: grid;
 		grid-template-columns: 1fr;
@@ -52,7 +66,10 @@
 		line-height: 1.3;
 		color: #333
 	}
-	.fieldset-cell-name{line-height: 1;}
+	.fieldset-cell-name{
+		line-height: 1.2;
+		.fs-15{display: block;}
+	}
 	@media (max-width: 1023px) {
 	   font-size: 15px;
 	   gap: 40px;
@@ -95,6 +112,7 @@
 		min-height: 100px;
 		border:1px solid var(--prim);
 		border-radius: 4px;
+		background: #fff; 
 	}
 	.fs-15{font-size: 15px;}
 	.fs-18{font-size: 18px;}
@@ -136,8 +154,7 @@
 .dropdown {
 	position: relative;
 	width: 100%;
-	border: 1px solid var(--prim);
-  }
+	border: 1px solid var(--prim);background: #fff;  }
   
   .dropdown__button {
 	position: relative;
@@ -298,12 +315,31 @@
 		width: 20px;height: 20px;
 		border-radius: 4px;
 		border:1px solid var(--grey);
-	    background-color: #fff;
+	   background: #f8f9fb;
 	}
 	input:checked{
 		border:1px solid var(--prim);
 	}
 
+}
+.special-checkbox-wrapper{
+	.inner-row-title{
+		font-size: 15px;
+		line-height: 1.2;
+		color: #333;
+		margin-bottom: -4px;
+		display: none;
+	}
+	@media (max-width: 767px) {
+		row-gap: 10px;
+	.inner-row-title{display: block;}
+	.form-checkbox-name{display: none;}
+	.fieldset-cell{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	}
 }
 .checkbox-group-rows{
 	display: grid;
@@ -317,6 +353,7 @@
 		display: grid;
 		align-items: center;
 		grid-template-columns: 350px 1fr;
+		grid-template-columns: 282px 1fr;
 		column-gap:15px;
 		row-gap:20px;
 		@media (max-width: 1023px) {
@@ -337,7 +374,17 @@
 		  column-gap:10px;
 		}
 	}
-	.inner-row .fieldset-cell{flex:1; height: 46px;}
+	.inner-row .fieldset-cell{
+		flex:1;
+		min-height: 46px;
+	}
+	.inner-row.h-auto  .fieldset-cell{min-height: unset}
+	.fieldset-cell--center .fieldset-cell{
+		display: flex;
+		justify-content: center;
+		align-items:center;
+	}
+
 	.inner-row .fieldset-cell .form-inp{height: 46px;}
 	.fieldset-sticky-title{
 		font-weight: 600;
@@ -347,16 +394,15 @@
 		text-align: center;
 		padding-top: 8px;
 		padding-bottom: 8px;
-		background-color: #fff;
+		background: #f8f9fb;
+		position: sticky;
+		top:0;
 		@media (max-width: 1023px) {
 		  row-gap:10px;
 		}
 	}
 	.fieldset-sticky-title .fieldset-cell{display: flex;align-items: center; justify-content: center;}
-	.fieldset-group.fieldset-sticky-header{
-		position: sticky;
-		top:0;
-	}
+	
 	.txt-grey{color: var(--grey);}
 }
 .custom-form .fieldset-sticky-title.is-fixed {
@@ -402,7 +448,7 @@
 		flex-shrink: 0;
 		display: block;
 	}
-	.agree-block-label{display: flex; column-gap:23px; max-width: 580px; margin-inline: auto;
+	.agree-block-label{display: flex; column-gap:12px; max-width: 580px; margin-inline: auto;
 	}
 	@media (max-width: 1023px) {
 	font-size: 13px;

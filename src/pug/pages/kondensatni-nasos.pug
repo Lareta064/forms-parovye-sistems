@@ -32,18 +32,7 @@ block content
 						.form-item
 							input.form-inp(type="email" name="email")
 							
-					//single form item
-					.form-item-group
-						.form-label Город*
-						.form-item
-							input.form-inp(type="text" name="city")
-							
-					//single form item
-					.form-item-group
-						.form-label Количество
-						.form-item
-							input.form-inp.phone(type="text" name="phone")
-							span.form-span шт
+
 			
 			//BLOCK №2
 			.fieldset
@@ -56,40 +45,40 @@ block content
 						.form-item-group
 							.form-label Максимальный расход конденсата
 							.form-item
-								input.form-inp(type="text" name="inp_name" )
+								input.form-inp(type="number" name="inp_name" )
 								span.form-span кг/ч
 						//single form item
 						.form-item-group
 							.form-label Количество источников конденсата
 							.form-item
-								input.form-inp(type="text" name="name" )
+								input.form-inp(type="number" name="name" )
 								span.form-span шт
 					
 						//single form item
 						.form-item-group
 							.form-label Расход на каждом источнике
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span кг/ч
 
 						//single form item
 						.form-item-group
-							.form-label Расход на каждом источнике
+							.form-label Температура конденсата
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span °С
 								
 						//single form item
 						.form-item-group
 							.form-label Для электрического насоса указать требуемое давление на выходе насоса
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span bar
 						//single form item
 						.form-item-group
 							.form-label Для механического насоса указать величину противодавления в конденсатной линии
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span bar
 						
 						
@@ -134,9 +123,9 @@ block content
 					.form-two-cols
 						//single form item
 						.form-item-group
-							.form-label Комплектация
+							.form-label Напряжение питания
 							.dropdown
-								button.dropdown__button(type="button") Только насос
+								button.dropdown__button(type="button") 1 X 230В
 								.dropdown__list
 									ul
 										li.dropdown__list-item(data-value="Текст1") Текст 1
@@ -211,13 +200,13 @@ block content
 						.form-item-group
 							.form-label Располагаемое давление 
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span bar
 						//single form item
 						.form-item-group
 							.form-label Температура
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="name")
 								span.form-span °С
 						
 					//single form item

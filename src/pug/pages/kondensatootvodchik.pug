@@ -31,19 +31,7 @@ block content
 						.form-label E-mail*
 						.form-item
 							input.form-inp(type="email" name="email")
-							
-					//single form item
-					.form-item-group
-						.form-label Город*
-						.form-item
-							input.form-inp(type="text" name="city")
-							
-					//single form item
-					.form-item-group
-						.form-label Количество
-						.form-item
-							input.form-inp.phone(type="number" name="")
-							span.form-span шт
+
 			
 			//BLOCK №2
 			.fieldset
@@ -51,7 +39,6 @@ block content
 				
 				//группа внутри одного fieldset
 				.fieldset-group.fieldset-sticky-header
-					
 					//ряд
 					.fieldset-sticky-title.fieldset-sticky-row
 						//Левая колонка
@@ -59,9 +46,9 @@ block content
 						//Три правые колонки
 						.fieldset-sticky-cols
 							.inner-row
-								.fieldset-cell Конденсато&shy;отводчик №1
-								.fieldset-cell Конденсато&shy;отводчик №2
-								.fieldset-cell Конденсато&shy;отводчик №3
+								.fieldset-cell.fs-15 Конденсато&shy;отводчик №1
+								.fieldset-cell.fs-15 Конденсато&shy;отводчик №2
+								.fieldset-cell.fs-15 Конденсато&shy;отводчик №3
 					
 					//ряд
 					.fieldset-sticky-row
@@ -169,497 +156,149 @@ block content
 									input.form-inp(type="text")
 									
 					
-					//ряд
-					.fieldset-sticky-row
-						//Левая колонка
-						.fieldset-cell-name Максимальный перепад давления
-						
-						//Три правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
 					
-					//ряд
 					.fieldset-sticky-row
 						//Левая колонка
-						.fieldset-cell-name Перепад давления
+						.fieldset-cell-name Тип присоединения
 						
 						//Три правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-
+						.fieldset-sticky-cols.special-checkbox-wrapper
+							.inner-row-title Резьбовой
+							.inner-row.h-auto
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox1" value="")
+										span.form-checkbox-name Резьбовой
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox2" value="")
+										span.form-checkbox-name Резьбовой
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox3" value="")
+										span.form-checkbox-name Резьбовой
+							
+							.inner-row-title Фланцевый
+							.inner-row.h-auto
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox4" value="")
+										span.form-checkbox-name  Фланцевый
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox5" value="")
+										span.form-checkbox-name Фланцевый
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox6" value="")
+										span.form-checkbox-name  Фланцевый
+							
+							.inner-row-title Приварной
+							.inner-row.h-auto
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox7" value="")
+										span.form-checkbox-name Приварной
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox8" value="")
+										span.form-checkbox-name Приварной
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox9" value="")
+										span.form-checkbox-name Приварной
+									
+									
 					//ряд
-					.fieldset-sticky-row
-						//Левая колонка
-						.fieldset-cell-name Плотность продукта#[br] #[span.fs-15  (для газов плотность указана при стандартных условиях -20°С, 101,325kPa (ГОСТ2939))]
-						
-						//Три правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span min
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span min
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span min
-					//ряд
-					.fieldset-sticky-row
-						//Левая колонка
-						.fieldset-cell-name Максимальная температура продукта
-						
-						//Три правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span кг/м3
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span кг/м3
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span кг/м3
-					//ряд
-					.fieldset-sticky-row
-						//Левая колонка
-						.fieldset-cell-name Температура окружающей среды
-						
-						// правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span min, °С
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span maх, °С
-					
-					//ряд
-					.fieldset-sticky-row
-						//Левая колонка
-						.fieldset-cell-name Максимальное давление #[span.fs-15 (избыточное)]
-						
-						// правые колонки
-						.fieldset-sticky-cols
-							.inner-row
-								.fieldset-cell.form-item
-									input.form-inp(type="text")
-									span.form-span bar
-				
-			//BLOCK №3
-			.fieldset
-				.fieldset-title 3. Установка
-				.form-two-cols
-					//single form item
-					.form-item-group
-						.form-label Размер трубопровода, толщина стенки
-						.form-item
-							input.form-inp(type="text" name="inp_name")
-					
-					//single form item
-					.form-item-group
-						.form-label Материал трубопровода
-						.form-item
-							input.form-inp(type="text" name="name")
-							span.form-span Ø х мм
-			
-			//BLOCK №4
-			.fieldset
-				.fieldset-title 4. Клапан
-				//группа внутри одного fieldset
-				.fieldset-group
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Модификация
-							.dropdown
-								button.dropdown__button(type="button") 2-х ходовой
-								
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-								
-						//single form item
-						.form-item-group
-							.form-label Номинальный диаметр, DN
-							.form-item
-								input.form-inp(type="text" name="name" )
-								span.form-span мм
-						//single form item
-						.form-item-group
-							.form-label Номинальное давление, PN
-							.form-item
-								input.form-inp(type="text" name="name")
-								span.form-span bar
-						//single form item
-						.form-item-group
-							.form-label Класс по ANSI
-							.form-item
-								input.form-inp(type="text" name="name")
-						
-						//single form item
-						.form-item-group
-							.form-label Пропускная способность, Kvs**
-							.form-item
-								input.form-inp(type="text" name="name")
-								span.form-span 	м3/ч
-
-						//single form item
-						.form-item-group
-							.form-label Класс герметичности
-							.form-item
-								input.form-inp(type="text" name="name")
-						
-						//single form item
-						.form-item-group
-							.form-label Назначение клапана
-							.dropdown
-								button.dropdown__button(type="button") Регулирование
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Пропускная характеристика
-							.dropdown
-								button.dropdown__button(type="button") Равнопроцентная
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Равнопроцентная") Равнопроцентная
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+					.fieldset-sticky-subgroup
+						.sticky-subgroup-title.h-20 Дополнительное оборудование:
+						//row
+						.fieldset-sticky-row
+							//Левая колонка
+							.fieldset-cell-name Фильтр
+							
+							//Три правые колонки
+							.fieldset-sticky-cols.fieldset-cell--center
+								.inner-row
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox10" value="")
+									.fieldset-cell
 										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Уплотнение штока плунжера
-							.dropdown
-								button.dropdown__button(type="button") Сальник (стандарт)
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Сальник (стандарт)") Сальник (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox11" value="")
+									.fieldset-cell
 										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Положение при отсутствии питания
-							.dropdown
-								button.dropdown__button(type="button") Открыт
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Открыт") Открыт
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox12" value="")
+						//row
+						.fieldset-sticky-row
+							.fieldset-cell-name Обратный клапан
+							//Три правые колонки
+							.fieldset-sticky-cols.fieldset-cell--center
+								.inner-row
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox13" value="")
+									.fieldset-cell
 										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Способ монтажа
-							.dropdown
-								button.dropdown__button(type="button") Фланцевый
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Фланцевый") Фланцевый
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox14" value="")
+									.fieldset-cell
 										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Уплотнение затвора
-							.dropdown
-								button.dropdown__button(type="button") Металл по металлу (стандарт) 
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Металл по металлу (стандарт)") Металл по металлу (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox15" value="")
+						//row
+						.fieldset-sticky-row
+							.fieldset-cell-name Отсечные вентили / байпасный вентиль
+							//Три правые колонки
+							.fieldset-sticky-cols.fieldset-cell--center
+								.inner-row
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox16" value="")
+									.fieldset-cell
 										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-								
-						//single form item
-						.form-item-group
-							.form-label Материал корпуса клапана
-							.form-item
-								input.form-inp(type="text" name="name")
-						//single form item
-						.form-item-group
-							.form-label Форма уплотнительной поверхности фланцев
-							.form-item
-								input.form-inp(type="text" name="name")
-			
-				//группа Исполнительный механизм
-				.fieldset-group
-					.fieldset-group-title Исполнительный механизм
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Тип
-							.dropdown
-								button.dropdown__button(type="button") Пневматический
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Давление питания, bar
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-						
-						//single form item
-						.form-item-group
-							.form-label Напряжение питания
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-						
-						//single form item
-						.form-item-group
-							.form-label.form-label Ручной дублёр
-							.form-radio-row
-								label.form-radio-label
-									input(type="radio" checked name="radio6" value="yes")
-									span.fake-radio
-									span.form-radio-name Да
-								
-								label.form-radio-label
-									input(type="radio" name="radio6" value="no")
-									span.fake-radio
-									span.form-radio-name Нет
-				
-				//группа Позиционер
-				.fieldset-group
-					.fieldset-group-title Позиционер
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Тип
-							.dropdown
-								button.dropdown__button(type="button") Пневматический
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Входной сигнал
-							.dropdown
-								button.dropdown__button(type="button") 4-20mA
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Степень защиты оболочки IP
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-						
-						//single form item
-						.form-item-group
-							.form-label.form-label Требования по взрывозащите
-							.form-radio-row
-								label.form-radio-label
-									input(type="radio" checked name="radio2" value="yes")
-									span.fake-radio
-									span.form-radio-name Да
-								
-								label.form-radio-label
-									input(type="radio" name="radio2" value="no")
-									span.fake-radio
-									span.form-radio-name Нет
-
-				//группа Соленоид
-				.fieldset-group
-					.fieldset-group-title Соленоид
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Напряжение питания
-							.dropdown
-								button.dropdown__button(type="button") 24V DC
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label.form-label Требования по взрывозащите
-							.form-radio-row
-								label.form-radio-label
-									input(type="radio" checked name="radio3" value="yes")
-									span.fake-radio
-									span.form-radio-name Да
-								
-								label.form-radio-label
-									input(type="radio" name="radio3" value="no")
-									span.fake-radio
-									span.form-radio-name Нет
-						
-						//single form item
-						.form-item-group
-							.form-label Степень защиты оболочки IP
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-				
-				//группа Конечные выключатели
-				.fieldset-group
-					.fieldset-group-title Конечные выключатели
-					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Назначение
-							.dropdown
-								button.dropdown__button(type="button") Для открытого положения
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label.form-label Требования по взрывозащите
-							.form-radio-row
-								label.form-radio-label
-									input(type="radio" checked name="radio4" value="yes")
-									span.fake-radio
-									span.form-radio-name Да
-								
-								label.form-radio-label
-									input(type="radio" name="radio4" value="no")
-									span.fake-radio
-									span.form-radio-name Нет
-						
-						//single form item
-						.form-item-group
-							.form-label Тип
-							.dropdown
-								button.dropdown__button(type="button") Пневматический
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Степень защиты оболочки IP
-							.form-item
-								input.form-inp(type="text" name="inp_name" )
-
-						
-						//single form item
-						.form-item-group
-							.form-label Принадлежности
-							.dropdown
-								button.dropdown__button(type="button") Ответные фланцы
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-
-						//single form item
-						.form-item-group
-							.form-label.form-label Фильтр-редуктор
-							.form-radio-row
-								label.form-radio-label
-									input(type="radio" checked name="radio5" value="yes")
-									span.fake-radio
-									span.form-radio-name Да
-								
-								label.form-radio-label
-									input(type="radio" name="radio5" value="no")
-									span.fake-radio
-									span.form-radio-name Нет
-								
-						
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox17" value="")
+											
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox18" value="")
+						//row
+						.fieldset-sticky-row
+							.fieldset-cell-name Продувочный кран
+							//Три правые колонки
+							.fieldset-sticky-cols.fieldset-cell--center
+								.inner-row
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox19" value="")
+											
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox20" value="")
+											
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox21" value="")
+						//row
+						.fieldset-sticky-row
+							.fieldset-cell-name Прерыватель вакуума
+							//Три правые колонки
+							.fieldset-sticky-cols.fieldset-cell--center
+								.inner-row
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox22" value="")
+									.fieldset-cell
+										
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox23" value="")
+									.fieldset-cell
+										label.form-checkbox-label
+											input(type="checkbox" name="chbox24" value="")
+							
 				//Поле комментария
 				.fieldset-group 
 					.form-item-group
