@@ -3,7 +3,7 @@ extends ../layouts/layout.pug
 block content
 	.form-wrapper
 		.form-wrapper-title Опросный лист. Регулирующий клапан
-		form.custom-form
+		form.custom-form.js-validate-form
 			//BLOCK №1
 			.fieldset
 				.fieldset-title 1. Контактная информация
@@ -36,7 +36,7 @@ block content
 					.form-item-group
 						.form-label Город*
 						.form-item
-							input.form-inp(type="email" name="email")
+							input.form-inp(type="text" name="city")
 							
 					//single form item
 					.form-item-group

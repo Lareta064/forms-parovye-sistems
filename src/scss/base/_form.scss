@@ -89,7 +89,7 @@
 		flex:1;
 		height: 50px;
 		border-radius: 4px;
-		padding: 14px 12px;
+		padding-inline:12px;
 		font-size: 18px;
 		resize: none;
 		color: var(--text);
@@ -343,6 +343,7 @@
 		}
 	}
 	.inner-row .fieldset-cell{flex:1; height: 46px;}
+	.inner-row .fieldset-cell .form-inp{height: 46px;}
 	.fieldset-sticky-title{
 		font-weight: 600;
 		font-size: 20px;
@@ -418,5 +419,20 @@
 	p{margin: 0;}
 	@media (max-width: 1023px) {
 	row-gap:20px;
+	}
+}
+.custom-form .form-item.error{
+	position: relative;
+	border-color: #dd3134;
+	.error-text{
+		position: absolute;
+		display: block;
+		left:0;
+		bottom: -17px;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 1.1;
+		letter-spacing: -0.03em;
+		color: #dd3134;
 	}
 }
