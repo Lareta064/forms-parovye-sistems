@@ -12,25 +12,25 @@ block content
 					.form-item-group
 						.form-label Название компании*
 						.form-item
-							input.form-inp(type="text" name="inp_name" data-required)
+							input.form-inp(type="text" name="COMPANY_TITLE" data-required)
 					
 					//single form item
 					.form-item-group
 						.form-label Контактное лицо*
 						.form-item
-							input.form-inp(type="text" name="name" data-required)
+							input.form-inp(type="text" name="NAME" data-required)
 							
 					//single form item
 					.form-item-group
 						.form-label Телефон/факс*
 						.form-item
-							input.form-inp.phone(type="text" name="phone" data-required)
+							input.form-inp.phone(type="text" name="PHONE" data-required)
 				
 					//single form item
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="email")
+							input.form-inp(type="email" name="EMAIL")
 			//BLOCK №2
 			.fieldset
 				.fieldset-title 2. Параметры
@@ -42,27 +42,27 @@ block content
 						.form-item-group
 							.form-label Максимальный расход конденсата
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="trashod" id="trashod")
 								span.form-span кг/ч
 						//single form item
 						.form-item-group
 							.form-label Количество источников конденсата
 							.form-item
-								input.form-inp(type="number" name="name" )
+								input.form-inp(type="number" name="tkolist" id="tkolist")
 								span.form-span шт
 					
 						//single form item
 						.form-item-group
 							.form-label Расход на каждом источнике
-							.form-item
-								input.form-inp(type="number" name="name")
+							.form-item.error
+								input.form-inp.error(type="number" name="" )
 								span.form-span кг/ч
 
 						//single form item
 						.form-item-group
 							.form-label Температура конденсата
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp.error(type="number" name="name")
 								span.form-span °С
 								
 						//single form item
@@ -75,7 +75,7 @@ block content
 						.form-item-group
 							.form-label Для механического насоса указать величину противодавления в конденсатной линии
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="number" name="tdavlenie" id="tdavlenie")
 								span.form-span bar
 						
 						
@@ -86,11 +86,11 @@ block content
 								button.dropdown__button(type="button") На улице
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="На улице") На улице
-										li.dropdown__list-item(data-value="В помещении") В помещении
+										li.dropdown__list-item(data-value="1" id="place-01") В помещении
+										li.dropdown__list-item(data-value="2" id="place-02") На улице
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+								input.dropdown__input-hidden(type="hidden", name="rrasp")
 						//single form item
 						.form-item-group
 							.form-label Комплектация
@@ -121,26 +121,26 @@ block content
 								button.dropdown__button(type="button") 1 X 230В
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") 1х230В
-										li.dropdown__list-item(data-value="Текст2") 3х380В
+										li.dropdown__list-item(data-value="1" id="vol-01") 1х230В
+										li.dropdown__list-item(data-value="2" id="vol-02") 3х380В
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+								input.dropdown__input-hidden(type="hidden", name="rvolt")
 						
 						.form-item-group
 							.form-label Количество насосов
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio1" value="1")
+									input(type="radio" checked id="pamp-01" name="rpamp" value="1")
 									span.fake-radio
 									span.form-radio-name 1
 								
 								label.form-radio-label
-									input(type="radio" name="radio1" value="2")
+									input(type="radio" id="pamp-02" name="rpamp" value="2")
 									span.fake-radio
 									span.form-radio-name 2
 								
 								label.form-radio-label
-									input(type="radio" name="radio1" value="3")
+									input(type="radio" id="pamp-03" name="rpamp" value="3")
 									span.fake-radio
 									span.form-radio-name 3
 						
@@ -148,7 +148,7 @@ block content
 						.form-item-group
 							.form-label Визуальный контроль уровня в конденсатной емкости
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name="cvizkontr1" value="1")
 								
 						
 						//single form item
@@ -158,13 +158,13 @@ block content
 								button.dropdown__button(type="button") 0(4)…20мА
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") 0(4)…20мА
-										li.dropdown__list-item(data-value="Текст2") 0 (2)…10В
-										li.dropdown__list-item(data-value="Текст3") Дискретные сигналы предельных уровней
+										li.dropdown__list-item(data-value="1") 0(4)…20мА
+										li.dropdown__list-item(data-value="2") 0 (2)…10В
+										li.dropdown__list-item(data-value="3") Дискретные сигналы предельных уровней
 										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+								input.dropdown__input-hidden(type="hidden", name="exitlevel")
 			
 				//Тип Механический
 				.fieldset-group
@@ -178,18 +178,18 @@ block content
 								button.dropdown__button(type="button") Пар
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Пар
-										li.dropdown__list-item(data-value="Текст2") Сжатый воздух
+										li.dropdown__list-item(data-value="1") Пар
+										li.dropdown__list-item(data-value="2") Сжатый воздух
 										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+								input.dropdown__input-hidden(type="hidden", name="rsreda")
 						
 						//single form item
 						.form-item-group
 							.form-label Располагаемое давление 
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="number" name="tdav" value="" id="input2")
 								span.form-span bar
 						//single form item
 						.form-item-group
@@ -201,11 +201,11 @@ block content
 					//single form item
 					.form-item-group.checkbox-group-rows
 						label.form-checkbox-label
-							input(type="checkbox" name="chbox1" value="")
+							input(type="checkbox"  name="cvizkontr" value="1")
 							span.form-checkbox-name Визуальный контроль уровня конденсата в насосе 
 						
 						label.form-checkbox-label
-							input(type="checkbox" name="chbox2" value="")
+							input(type="checkbox"  name="cimpcounter" value="1")
 							span.form-checkbox-name Счетчик импульсов для подсчета объема перекаченного конденсата
 					
 						
