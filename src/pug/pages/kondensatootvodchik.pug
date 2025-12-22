@@ -59,13 +59,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="krashod1")
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="krashod2")
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="krashod3")
 									span.form-span кг/ч
 					//ряд
 					.fieldset-sticky-row
@@ -76,13 +76,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="davpered1")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="davpered2")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="davpered3")
 									span.form-span бар изб
 
 					//ряд
@@ -94,13 +94,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="davza1")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="davza2")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="davza3")
 									span.form-span бар изб
 					//ряд
 					.fieldset-sticky-row
@@ -111,13 +111,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="mint1")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="mint2")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="mint3")
 									span.form-span °С
 					
 					//ряд
@@ -129,13 +129,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="part1")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="part2")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="part3")
 									span.form-span °С
 							
 					//ряд
@@ -147,13 +147,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="text")
+									input.form-inp(type="text"  name="mplace1")
 									
 								.fieldset-cell.form-item
-									input.form-inp(type="text")
+									input.form-inp(type="text"  name="mplace2")
 									
 								.fieldset-cell.form-item
-									input.form-inp(type="text")
+									input.form-inp(type="text"  name="mplace3")
 									
 					
 					
@@ -167,46 +167,53 @@ block content
 							.inner-row.h-auto
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox1" value="")
-										span.form-checkbox-name Резьбовой
+										input(type="radio"  name="tipp1" value="1")
+										span.fake-radio
+										span.form-radio-name Резьбовой
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox2" value="")
-										span.form-checkbox-name Резьбовой
+										input(type="radio"  name="tipp2" value="1")
+										span.form-radio-name Резьбовой
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox3" value="")
-										span.form-checkbox-name Резьбовой
+										input(type="radio"  name="tipp3" value="1")
+										span.form-radio-name Резьбовой
 							
 							.inner-row-title Фланцевый
 							.inner-row.h-auto
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox4" value="")
-										span.form-checkbox-name  Фланцевый
+										input(type="radio"  name="tipp1" value="2")
+										span.fake-radio
+										span.form-radio-name Фланцевый
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox5" value="")
-										span.form-checkbox-name Фланцевый
+										input(type="radio"  name="tipp2" value="2")
+										span.fake-radio
+										span.form-radio-name Фланцевый
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox6" value="")
-										span.form-checkbox-name  Фланцевый
+										input(type="radio"  name="tipp3" value="2")
+										span.fake-radio
+										span.form-radio-name Фланцевый
 							
 							.inner-row-title Приварной
 							.inner-row.h-auto
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox7" value="")
-										span.form-checkbox-name Приварной
+										input(type="radio"  name="tipp1" value="3")
+										span.fake-radio
+										span.form-radio-name Приварной
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox8" value="")
-										span.form-checkbox-name Приварной
+										input(type="radio"  name="tipp2" value="3")
+										span.fake-radio
+										span.form-radio-name Приварной
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox9" value="")
-										span.form-checkbox-name Приварной
+										input(type="radio"  name="tipp3" value="3")
+										span.fake-radio
+										span.form-radio-name Приварной
 									
 									
 					//ряд
@@ -222,15 +229,15 @@ block content
 								.inner-row
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox10" value="")
+											input(type="checkbox"  name="filter1" value="1")
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox11" value="")
+											input(type="checkbox"  name="filter2" value="1")
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox12" value="")
+											input(type="checkbox" name="filter3" value="1")
 						//row
 						.fieldset-sticky-row
 							.fieldset-cell-name Обратный клапан
@@ -239,15 +246,15 @@ block content
 								.inner-row
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox13" value="")
+											input(type="checkbox"  name="obrklap1" value="1")
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox14" value="")
+											input(type="checkbox"  name="obrklap2" value="1")
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox15" value="")
+											input(type="checkbox"  name="obrklap3" value="1")
 						//row
 						.fieldset-sticky-row
 							.fieldset-cell-name Отсечные вентили / байпасный вентиль
@@ -256,15 +263,15 @@ block content
 								.inner-row
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox16" value="")
+											input(type="checkbox"  name="ventil1" value="1")
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox17" value="")
+											input(type="checkbox"  name="ventil2" value="1")
 											
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox18" value="")
+											input(type="checkbox"  name="ventil3" value="1")
 						//row
 						.fieldset-sticky-row
 							.fieldset-cell-name Продувочный кран
@@ -273,15 +280,15 @@ block content
 								.inner-row
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox19" value="")
+											input(type="checkbox" name="prokran1" value="1")
 											
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox20" value="")
+											input(type="checkbox" name="prokran2" value="1")
 											
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox21" value="")
+											input(type="checkbox" name="prokran3" value="1")
 						//row
 						.fieldset-sticky-row
 							.fieldset-cell-name Прерыватель вакуума
@@ -290,20 +297,20 @@ block content
 								.inner-row
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox22" value="")
+											input(type="checkbox" name="prervak1" value="1" )
 									.fieldset-cell
 										
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox23" value="")
+											input(type="checkbox" name="prervak2" value="1" )
 									.fieldset-cell
 										label.form-checkbox-label
-											input(type="checkbox" name="chbox24" value="")
+											input(type="checkbox" name="prervak3" value="1" )
 							
 				//Поле комментария
 				.fieldset-group 
 					.form-item-group
 						.form-label Примечание
-						textarea.form-textarea(name="message")
+						textarea.form-textarea(name="COMMENTS" id="input")
 				.form-footer
 					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
 					.agree-block
