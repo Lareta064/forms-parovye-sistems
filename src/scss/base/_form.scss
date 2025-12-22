@@ -190,8 +190,11 @@
 }
 .inputs-row{
 	display: flex;
-	gap:15px;
+	gap:60px;
 	&>*{flex:1;}
+	@media (max-width: 1199px) {gap:20px;}
+		 
+		
 }
 
 // DROPDOWN

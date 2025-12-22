@@ -1,0 +1,198 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Регулятор прямого действия
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+			.fieldset.border-0
+				.fieldset-title 2. Параметры
+				//группа Продукт
+				.fieldset-group
+					.form-item-group
+						.form-label Расход пара (кг/ч)
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					.form-two-cols
+						.form-item-group
+							.form-label Давление пара #[span.hide-xl (бар изб)]
+							.form-item
+								input.form-inp(type="number" name="name")
+								span.form-span.hide-xs бар изб
+						.form-item-group
+							.form-label Настройка (или диапазон настройки) #[span.hide-xl (бар изб./°С)]
+							.form-item
+								input.form-inp(type="number" name="name")
+								span.form-span.hide-xs бар изб./°С
+						
+						.form-item-group
+							.form-label Минимальная температура окружающей среды
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span °С
+						
+						.form-item-group
+							.form-label Температура пара (указать только если пар перегретый)
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span °С
+						
+					
+						.form-item-group
+							.form-label Место установки: магистральный паропровод, теплообменник, калорифер, другое (указать)
+							.inputs-row
+								.form-item
+									input.form-inp(type="text" name="inp_name")
+						
+						//single form item
+						.form-item-group
+							.form-label Тип присоединения
+							.dropdown
+								button.dropdown__button(type="button") Резьбовой
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Резьбовой
+										li.dropdown__list-item(data-value="Текст2") Фланцевый
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+				
+
+				.fieldset-sticky-subgroup
+					.sticky-subgroup-title.h-20 Дополнительное оборудование:
+					//row
+					.fieldset-sticky-row
+						//Левая колонка
+						.fieldset-cell-name Фильтр
+						
+						//Три правые колонки
+						.fieldset-sticky-cols.fieldset-cell--center
+							.inner-row
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox10" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox11" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox12" value="")
+					//row
+					.fieldset-sticky-row
+						.fieldset-cell-name Предохранительный клапан
+						//Три правые колонки
+						.fieldset-sticky-cols.fieldset-cell--center
+							.inner-row
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox13" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox14" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox15" value="")
+					//row
+					.fieldset-sticky-row
+						.fieldset-cell-name Отсечные вентили / байпасный вентиль
+						//Три правые колонки
+						.fieldset-sticky-cols.fieldset-cell--center
+							.inner-row
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox16" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox17" value="")
+										
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox18" value="")
+					//row
+					.fieldset-sticky-row
+						.fieldset-cell-name Конденсатоотводчик дренажа паропровода 
+						//Три правые колонки
+						.fieldset-sticky-cols.fieldset-cell--center
+							.inner-row
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox19" value="")
+										
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox20" value="")
+										
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox21" value="")
+					//row
+					.fieldset-sticky-row
+						.fieldset-cell-name Термометры / манометры
+						//Три правые колонки
+						.fieldset-sticky-cols.fieldset-cell--center
+							.inner-row
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox22" value="")
+								.fieldset-cell
+									
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox23" value="")
+								.fieldset-cell
+									label.form-checkbox-label
+										input(type="checkbox" name="chbox24" value="")
+							
+				
+				
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Регулятор прямого действия";
