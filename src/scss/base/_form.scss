@@ -153,6 +153,7 @@
 		@media (max-width: 767px) {
 		  padding-right: 5px;
 		  font-size: 12px;
+		  &.hide-xs{display: none;}
 		}
 		
 	}
@@ -175,9 +176,17 @@
 	height: 100%;
 	.form-item{flex-shrink: 0;}
 	.form-label{flex:1; align-items: flex-end;}
+	@media (max-width: 767px) {
+	.form-label{display: block;}
+	}
 }
 .form-label{
 	display: inline-flex;
+	align-items: center;
+	.hide-xl{display: none; font-size: 12px;}
+	@media (max-width: 767px) {
+	  .hide-xl{display:inline-block; padding-left:2px; color: #777}
+	}
 }
 .inputs-row{
 	display: flex;
