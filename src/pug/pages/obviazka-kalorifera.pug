@@ -56,7 +56,6 @@ block content
 						.fieldset-sticky-row
 							//Левая колонка
 							.fieldset-cell-name Тепловая мощность #[span.fs-15 (или расход воздуха – поз. 6)]
-							
 							//Три правые колонки
 							.fieldset-sticky-cols
 								.inner-row
@@ -73,37 +72,39 @@ block content
 						.fieldset-sticky-row
 							//Левая колонка
 							.fieldset-cell-name Давление пара
+								span.hide-xl (бар изб.)
 							
 							//Три правые колонки
 							.fieldset-sticky-cols
 								.inner-row
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span бар изб.
+										span.form-span.hide-xs бар изб.
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span бар изб.
+										span.form-span.hide-xs бар изб.
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span бар изб.
+										span.form-span.hide-xs бар изб.
 
 						//ряд
 						.fieldset-sticky-row
 							//Левая колонка
 							.fieldset-cell-name Противодавление в конденсатной линии/ высота подъема конденсатопровода
+								span.hide-xl (м.в.ст.)
 							
 							//Три правые колонки
 							.fieldset-sticky-cols
 								.inner-row
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span м.в.ст.
+										span.form-span.hide-xs м.в.ст.
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span м.в.ст.
+										span.form-span.hide-xs м.в.ст.
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span м.в.ст.
+										span.form-span.hide-xs м.в.ст.
 						//ряд
 						.fieldset-sticky-row
 							//Левая колонка
@@ -146,19 +147,19 @@ block content
 						.fieldset-sticky-row
 							//Левая колонка
 							.fieldset-cell-name Расход воздуха
-							
+								span.hide-xl (тыс. м3/ч)
 							//Три правые колонки
 							.fieldset-sticky-cols
 								.inner-row
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 						//ряд
 						.fieldset-sticky-row
 							//Левая колонка
@@ -180,20 +181,20 @@ block content
 						//ряд
 						.fieldset-sticky-row
 							//Левая колонка
-							.fieldset-cell-name Температура воздуха на выходе #[span.fs-15 (требуемая)]
-							
+							.fieldset-cell-name Температура воздуха на выходе #[span.fs-15 (требуемая) #[span.hide-xl (тыс. м3/ч)] ]
+								
 							//Три правые колонки
 							.fieldset-sticky-cols
 								.inner-row
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 									.fieldset-cell.form-item
 										input.form-inp(type="number")
-										span.form-span тыс. м3/ч
+										span.form-span.hide-xs тыс. м3/ч
 						
 				//Поле комментария
 				.fieldset-group 
@@ -205,7 +206,7 @@ block content
 					.agree-block
 						label.agree-block-label
 							input(type="checkbox")
-							span Принимаю условия политики конфиденциальности и обработки персональных данных
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
 					.form-button-wrapper
 						button.form-button(type="submit") Отправить
 block variables

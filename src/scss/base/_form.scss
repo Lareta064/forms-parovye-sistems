@@ -180,13 +180,13 @@
 	.form-label{display: block;}
 	}
 }
+.hide-xl{display: none; font-size: 12px;}
+  @media (max-width: 767px) {
+	  .hide-xl{display:inline-block; padding-left:2px; color: #777}
+	}
 .form-label{
 	display: inline-flex;
 	align-items: center;
-	.hide-xl{display: none; font-size: 12px;}
-	@media (max-width: 767px) {
-	  .hide-xl{display:inline-block; padding-left:2px; color: #777}
-	}
 }
 .inputs-row{
 	display: flex;
