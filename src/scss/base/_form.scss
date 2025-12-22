@@ -125,7 +125,12 @@
 		color: var(--text);
 		@media (max-width: 1023px) {
 		  padding-inline: 12px;
-		  font-size: 16px;
+		   font-size: 16px;
+		}
+	}
+	.form-inp{
+		@media (max-width: 767px) {
+		  padding-inline: 5px;
 		}
 	}
 	.form-textarea{
@@ -145,6 +150,10 @@
 		color: #949494;
 		font-size: 15px;
 		white-space: nowrap;
+		@media (max-width: 767px) {
+		  padding-right: 5px;
+		  font-size: 12px;
+		}
 		
 	}
 	@media (max-width: 1023px) {
@@ -194,6 +203,9 @@
 	cursor: pointer;
 	font-size: 18px;
 	color: var(--text);
+	@media (max-width: 1023px) {
+	font-size: 16px;
+	}
   }
   
   .dropdown__button::after {
@@ -251,18 +263,21 @@
 		&-thumb{background-color: #EAEAEA;}
  
 	 }
-	
+	@media (max-width: 767px) {
+	  scrollbar-width: none;
+	  &::-webkit-scrollbar{display:none;}
+	}
 	ul{
 	  margin: 0;
 	  list-style-type: none;
 	  padding-left: 0;
-	 
-	  height: 0;
 	  transition: .3s; 
 	}
 	@media (max-width: 767px) {
 	   position: relative;
 	   top: auto;
+	   left: 0;
+	   right: 0;
 	  
 	}
  } 
@@ -270,7 +285,7 @@
   .dropdown__list--visible {
 	max-height: 150px;
 	z-index: 5;
-	border: 1px solid var(--prim);
+	border-top: 1px solid var(--prim);
 }
   
   .dropdown__list-item {

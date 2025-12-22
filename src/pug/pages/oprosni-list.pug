@@ -62,27 +62,27 @@ block content
 						.form-item-group
 							.form-label Температура продукта, в рабочем режима
 							.form-item
-								input.form-inp(type="number" name="name" )
+								input.form-inp(type="number" name=" " )
 								spqn.form-span °C
 
 						//single form item
 						.form-item-group
 							.form-label Примеси/твердые частицы (концентрация, размеры)
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name=" ")
 								
 						//single form item
 						.form-item-group
 							.form-label Агрегатное состояние
 							.dropdown
-								button.dropdown__button(type="button") Выбрать
+								button.dropdown__button(type="button") Жидкость
 								
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
+										li.dropdown__list-item(data-value="Жидкость") Жидкость
+										li.dropdown__list-item(data-value="Газ") Газ
+										li.dropdown__list-item(data-value="Водяной пар") Водяной пар
+										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
@@ -285,10 +285,9 @@ block content
 								
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
+										li.dropdown__list-item(data-value="Текст1") 2-х ходовой
+										li.dropdown__list-item(data-value="Текст2") 3-х ходовой
+										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
@@ -331,10 +330,8 @@ block content
 								button.dropdown__button(type="button") Регулирование
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
+										li.dropdown__list-item(data-value="Текст1") Регулирование
+										li.dropdown__list-item(data-value="Текст2") Открыт/закрыт
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
@@ -362,8 +359,7 @@ block content
 								.dropdown__list
 									ul
 										li.dropdown__list-item(data-value="Сальник (стандарт)") Сальник (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										li.dropdown__list-item(data-value="Запорная") Сильфон
 										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
@@ -377,9 +373,8 @@ block content
 								.dropdown__list
 									ul
 										li.dropdown__list-item(data-value="Открыт") Открыт
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
-										
+										li.dropdown__list-item(data-value="Запорная") Закрыт
+										li.dropdown__list-item(data-value="Линейная") Сохраняет положение
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
@@ -392,8 +387,8 @@ block content
 								.dropdown__list
 									ul
 										li.dropdown__list-item(data-value="Фланцевый") Фланцевый
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										li.dropdown__list-item(data-value="Запорная") Под приварку
+										li.dropdown__list-item(data-value="Линейная") Резьбовой
 										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
@@ -407,8 +402,8 @@ block content
 								.dropdown__list
 									ul
 										li.dropdown__list-item(data-value="Металл по металлу (стандарт)") Металл по металлу (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
+										li.dropdown__list-item(data-value="Запорная") Мягкое уплотнение(PTFE)
+										
 										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
@@ -436,10 +431,9 @@ block content
 								button.dropdown__button(type="button") Пневматический
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Текст 1
-										li.dropdown__list-item(data-value="Текст2") Текст 2
-										li.dropdown__list-item(data-value="Текст3") Текст 3
-										li.dropdown__list-item(data-value="Текст4") Текст 4
+										li.dropdown__list-item(data-value="Текст1") Пневматический
+										li.dropdown__list-item(data-value="Текст2") Электрический
+										
 								
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
