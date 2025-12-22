@@ -2,7 +2,7 @@ extends ../layouts/layout.pug
 
 block content
 	.form-wrapper
-		.form-wrapper-title Конденсатный насос и станция сбора и возврата конденсата
+		.form-wrapper-title Охладитель пара
 		form.custom-form.js-validate-form
 			//BLOCK №1
 			.fieldset
@@ -112,11 +112,11 @@ block content
 						.form-item-group
 							.form-label Если необходима комплектация охладителя регулирующим клапаном: тип привода регулирующего клапана на линии охлаждения
 							.dropdown
-								button.dropdown__button(type="button") электрический
+								button.dropdown__button(type="button") Электрический
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") электрический
-										li.dropdown__list-item(data-value="Текст2") певматический
+										li.dropdown__list-item(data-value="Текст1") Электрический
+										li.dropdown__list-item(data-value="Текст2") Певматический
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
 						
@@ -124,26 +124,26 @@ block content
 						.form-item-group
 							.form-label Комплектация устройствами КИП: 
 							.dropdown
-								button.dropdown__button(type="button") шкаф управления
+								button.dropdown__button(type="button") Шкаф управления
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") шкаф управления
-										li.dropdown__list-item(data-value="Текст2") датчик температуры
-										li.dropdown__list-item(data-value="Текст2") термометры
-										li.dropdown__list-item(data-value="Текст2") манометры
+										li.dropdown__list-item(data-value="Текст1") Шкаф управления
+										li.dropdown__list-item(data-value="Текст2") Датчик температуры
+										li.dropdown__list-item(data-value="Текст2") Термометры
+										li.dropdown__list-item(data-value="Текст2") Манометры
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
 						//single form item
 						.form-item-group
 							.form-label Дополнительная комплектация
 							.dropdown
-								button.dropdown__button(type="button") шкаф управления
+								button.dropdown__button(type="button") Запорная арматура
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") запорная арматура
-										li.dropdown__list-item(data-value="Текст2") теплоизоляция для арматуры 
-										li.dropdown__list-item(data-value="Текст2") ответные фланцы, крепеж 
-										li.dropdown__list-item(data-value="Текст2") конденсатоотводчик
+										li.dropdown__list-item(data-value="Текст1") Запорная арматура
+										li.dropdown__list-item(data-value="Текст2") Теплоизоляция для арматуры 
+										li.dropdown__list-item(data-value="Текст2") Ответные фланцы, крепеж 
+										li.dropdown__list-item(data-value="Текст2") Конденсатоотводчик
 								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 								input.dropdown__input-hidden(type="hidden", name="")
 				//Поле комментария
