@@ -1,0 +1,151 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Паровой теплообменник
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+					
+			
+			//BLOCK №2
+			.fieldset
+				.fieldset-title 2. Параметры
+				.fieldset-group
+					.fieldset-group-title Греющая сторона - пар
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Тепловая нагрузка максимальная
+								span.hide-xl кВт/Гкал/ч
+							.form-item
+								input.form-inp(type="number" name="product_name" )
+								span.form-span.hide-xs кВт/Гкал/ч
+						//single form item
+						.form-item-group
+							.form-label Тепловая нагрузка минимальная
+								span.hide-xl кВт/Гкал/ч
+							.form-item
+								input.form-inp(type="number" name="product_name" )
+								span.form-span.hide-xs кВт/Гкал/ч
+						
+						//single form item
+						.form-item-group
+							.form-label Тип нагрузки
+							.dropdown
+								button.dropdown__button(type="button") Отопление 
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Отопление 
+										li.dropdown__list-item(data-value="Текст2") Вентиляция
+										li.dropdown__list-item(data-value="Текст3") ГВС
+										li.dropdown__list-item(data-value="Текст3") Технологические нужды
+								
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Давление пара
+								span.hide-xl (бар изб.)
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span.hide-xs бар изб.
+						
+						//single form item
+						.form-item-group
+							.form-label Температура пара (для перегретого пара)
+							.form-item
+								input.form-inp(type="number" name="" )
+								span.form-span °C
+			
+				.fieldset-group
+					.fieldset-group-title Нагреваемая сторона - 
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Нагреваемая сторона
+							.form-item
+								input.form-inp(type="text" name="product_name" placeholder="Укажите какая")
+
+						.form-item-group
+							.form-label Максимальные лопустимые потери давления на теплообменнике
+								span.hide-xl (м.в.ст.)
+							.form-item
+								input.form-inp(type="number" name="" )
+								span.form-span.hide-xs м.в.ст.
+						
+
+						//single form item
+						.form-item-group
+							.form-label Температура на входе
+							.form-item
+								input.form-inp(type="number" name="" )
+								span.form-span °C
+						
+						//single form item
+						.form-item-group
+							.form-label Температура на выходе
+							.form-item
+								input.form-inp(type="number" name="" )
+								span.form-span °C
+				
+				.fieldset-group
+					.fieldset-group-title Требования к теплообменнику
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Максимальная рабочая температура
+							.form-item
+								input.form-inp(type="number" name="" )
+								span.form-span °C
+								
+						//single form item
+						.form-item-group
+							.form-label Максимальное рабочее давление
+								span.hide-xl (бар изб.)		
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span.hide-xs бар изб.
+				
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Паровой теплообменник";
