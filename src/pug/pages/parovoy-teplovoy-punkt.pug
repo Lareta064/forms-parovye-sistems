@@ -1,0 +1,150 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Паровой тепловой пункт
+		form.custom-form.js-validate-form(action="" )
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="company_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="user_name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+
+			
+			//BLOCK №2
+			.fieldset
+				.fieldset-title 2. Греющая сторона
+				
+				.fieldset-group
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Давление пара
+							.form-item
+								input.form-inp(type="number" name="product_name" )
+								
+						//single form item
+						.form-item-group
+							.form-label Температура пара (для перегретого пара)
+							.form-item
+								input.form-inp(type="number" name="" )
+								spqn.form-span °C
+
+						//single form item
+						.form-item-group
+							.form-label Давление в конденсатопроводе (противодавление)
+							.form-item
+								input.form-inp(type="number" name="")
+						
+			.fieldset
+				.fieldset-title 3. Габариты помещения
+				
+				.fieldset-group
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Габариты помещения
+							.form-item
+								input.form-inp(type="number" name="product_name" )
+			.fieldset
+				.fieldset-title 4. Отопление
+				
+				.fieldset-group
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Теплоноситель
+							.form-item
+								input.form-inp(type="text" name="product_name" )
+								
+						//single form item
+						.form-item-group
+							.form-label Мощность
+							.form-item
+								input.form-inp(type="number" name="" )
+								spqn.form-span кВт
+
+						//single form item
+						.form-item-group
+							.form-label Температурный график
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span °С
+						//single form item
+						.form-item-group
+							.form-label Максимальное рабочее давление
+								span.hide-xl (кг/см #[sup 2])
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span.hide-xs кг/см #[sup 2]
+						//single form item
+						.form-item-group
+							.form-label Потери давления в системе
+								span.hide-xl (кг/см#[sup 2])
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span.hide-xs кг/см#[sup 2]
+						
+						//single form item
+						.form-item-group
+							.form-label Высота верхней точки системы
+								
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span м.
+						
+						//single form item
+						.form-item-group
+							.form-label Объем системы
+								
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span м#[sup 3]
+						//single form item
+						.form-item-group
+							.form-label Давление в линии подпитки
+								span.hide-xl (кг/см#[sup 2])
+							.form-item
+								input.form-inp(type="number" name="")
+								span.form-span.hide-xs кг/см#[sup 2]
+				
+			//Поле комментария	
+				
+				
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = " Паровой тепловой пункт";
