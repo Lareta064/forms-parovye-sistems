@@ -1,0 +1,137 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Техническая экспертиза
+		form.custom-form.js-validate-form(action="" )
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="company_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="user_name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+							
+					//single form item
+					.form-item-group
+						.form-label Город*
+						.form-item
+							input.form-inp(type="text" name="city")
+							
+					//single form item
+					.form-item-group
+						.form-label Количество
+						.form-item
+							input.form-inp.phone(type="number" name="product_quantity")
+							span.form-span шт
+			
+			//BLOCK №2
+			.fieldset.border-0
+				
+				//группа Продукт
+				.fieldset-group
+					
+					.form-item-group
+						.form-label Источник пара
+							
+						.form-radio-row
+							label.form-radio-label
+								input(type="radio" checked name="radio5" value="yes")
+								span.fake-radio
+								span.form-radio-name собственная котельная
+							
+							label.form-radio-label
+								input(type="radio" name="radio5" value="no")
+								span.fake-radio
+								span.form-radio-name Внешний источник
+					
+					
+					.form-item-group
+						.form-label Рассматриваемый потребитель:
+							
+						.form-radio-row
+							label.form-radio-label
+								input(type="radio" checked name="radio5" value="yes")
+								span.fake-radio
+								span.form-radio-name Завод
+							
+							label.form-radio-label
+								input(type="radio" name="radio5" value="no")
+								span.fake-radio
+								span.form-radio-name Цех, участок
+							label.form-radio-label
+								input(type="radio" name="radio5" value="no")
+								span.fake-radio
+								span.form-radio-name Участок
+					
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Стоимость
+								span.hide-xl (гкал/ч)
+							.form-item
+								input.form-inp(type="number" name="operating_temperature" )
+								span.form-span.hide-xs гкал/ч
+								
+						//single form item
+						.form-item-group
+							.form-label Распологаемые давление и температура пара от источника
+							.form-item
+								input.form-inp(type="number" name="")
+					
+						//single form item
+						.form-item-group
+							.form-label Расход пара на потребителе
+							.form-item
+								input.form-inp(type="number" name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Желаемые сроки выполнения
+							.form-item
+								input.form-inp(type="text" name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Краткое описание задачи
+							input.form-textarea( name="")
+				
+						//single form item
+						.form-item-group
+							.form-label Прочие условия
+							input.form-textarea( name="")
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "Техническая экспертиза";

@@ -151,8 +151,8 @@
 		font-size: 15px;
 		white-space: nowrap;
 		@media (max-width: 767px) {
-		  padding-right: 5px;
-		  font-size: 12px;
+		  padding-right: 8px;
+		  font-size: 13px;
 		  &.hide-xs{display: none;}
 		}
 		
@@ -327,9 +327,17 @@
 	flex-wrap: wrap;
 	row-gap:15px;
 	gap:30px;
+	min-height: 40px;
+	@media (max-width: 767px) {
+	  min-height: unset;
+	  gap:20px;
+	  padding-top: 10px;
+	}
+}
+.form-two-cols .form-radio-row{
 	min-height: 50px;
 	@media (max-width: 767px) {
-	min-height: unset;
+	  min-height: unset;
 	}
 }
 .form-radio-row.row-mobile{
@@ -362,8 +370,7 @@
 		border-radius: 50%;
 		border: 1px solid var(--grey);
 		transition: border .3s; 
-		flex-shrink:0;
-	}
+		flex-shrink:0;background-color: #fff;}
 	input[type="radio"]:checked + .fake-radio{
 		border:5px solid var(--prim);
 	}
@@ -378,7 +385,7 @@
 		width: 20px;height: 20px;
 		border-radius: 4px;
 		border:1px solid var(--grey);
-	   background: #f8f9fb;
+	   background: #fff;
 	}
 	input:checked{
 		border:1px solid var(--prim);
@@ -602,5 +609,10 @@
 		li{color: #777;}
 		li::marker{font-size: 10px;}
 		li+li{margin-top: 8px;}
+	}
+}
+.custom-form{
+	.form-info-text{
+		
 	}
 }

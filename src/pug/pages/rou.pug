@@ -1,0 +1,173 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-wrapper
+		.form-wrapper-title Опросный лист. Редукционно-охладительная Установка/охладительная установка
+		form.custom-form.js-validate-form
+			//BLOCK №1
+			.fieldset
+				.fieldset-title 1. Контактная информация
+				.form-two-cols
+					//single form item
+					.form-item-group
+						.form-label Название компании*
+						.form-item
+							input.form-inp(type="text" name="inp_name" data-required)
+					
+					//single form item
+					.form-item-group
+						.form-label Контактное лицо*
+						.form-item
+							input.form-inp(type="text" name="name" data-required)
+							
+					//single form item
+					.form-item-group
+						.form-label Телефон/факс*
+						.form-item
+							input.form-inp.phone(type="text" name="phone" data-required)
+				
+					//single form item
+					.form-item-group
+						.form-label E-mail*
+						.form-item
+							input.form-inp(type="email" name="email")
+			.fieldset.border-0
+				.fieldset-title 2. Параметры
+				//группа Продукт
+				.fieldset-group
+					.form-item-group
+						.form-label Расход пара
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span nom
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					
+					.form-item-group
+						.form-label Давление пара
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					
+					.form-item-group
+						.form-label Температура пара на входе
+						.inputs-row
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span min
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span max
+					
+					.form-two-cols
+						.form-item-group
+							.form-label Давление пара на выходе
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+						
+						.form-item-group
+							.form-label Температура пара на выходе
+							.form-item
+								input.form-inp(type="number" name="inp_name" )
+								span.form-span °С
+					
+						.form-item-group
+							.form-label Располагаемое давление охлаждающей воды
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+									//- span.form-span
+						.form-item-group
+							.form-label Температура охлаждающей воды
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+									span.form-span °С
+							
+						.form-item-group
+							.form-label Противодавление в конденсатопроводе
+							.inputs-row
+								.form-item
+									input.form-inp(type="number" name="inp_name" )
+
+					
+						.form-item-group
+							.form-label Место расположения 
+							.dropdown
+								button.dropdown__button(type="button") На улице
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") В помещении
+										li.dropdown__list-item(data-value="Текст2") На улице
+									//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+									input.dropdown__input-hidden(type="hidden", name="")
+						
+						//single form item
+						.form-item-group
+							.form-label Тип привода регулирующих клапанов
+							.dropdown
+								button.dropdown__button(type="button") Электрический
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Электрический
+										li.dropdown__list-item(data-value="Текст2") Певматический
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						
+					.form-info-text
+						p Вы можете заказать только устройства для снижения давления / температуры, либо комплектную установку со всеми необходимыми устройствами управления и безопасности:
+					
+					.form-two-cols
+						//single form item
+						.form-item-group
+							.form-label Комплектация устройствами КИП:
+							.dropdown
+								button.dropdown__button(type="button") Шкаф управления
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Шкаф управления
+										li.dropdown__list-item(data-value="Текст2") Датчик температуры
+										li.dropdown__list-item(data-value="Текст2") Термометры
+										li.dropdown__list-item(data-value="Текст2") Манометры
+										li.dropdown__list-item(data-value="Текст2") Датчик давления
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+						//single form item
+						.form-item-group
+							.form-label Дополнительная комплектация
+							.dropdown
+								button.dropdown__button(type="button") Запорная арматура
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Текст1") Запорная арматура
+										li.dropdown__list-item(data-value="Текст2") Теплоизоляция для арматуры 
+										li.dropdown__list-item(data-value="Текст2") Ответные фланцы, крепеж 
+										li.dropdown__list-item(data-value="Текст2") Конденсатоотводчик
+										li.dropdown__list-item(data-value="Текст2") Предохранительный клапан
+										
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="")
+				//Поле комментария
+				.fieldset-group 
+					.form-item-group
+						.form-label Примечание
+						textarea.form-textarea(name="message")
+				.form-footer
+					p.fs-15.txt-grey * Если вы затрудняетесь в определении каких-либо значений, свяжитесь с нами, мы поможем их определить, основываясь на дополнительной информации о процессе / установке. Поля, отмеченные *, являются обязательными для заполнения.
+					.agree-block
+						label.agree-block-label
+							input(type="checkbox")
+							span Принимаю условия политики конфиден&shy;ци&shy;аль&shy;ности и обработки персональных данных
+					.form-button-wrapper
+						button.form-button(type="submit") Отправить
+block variables
+	-var title = "РОУ";
