@@ -1,7 +1,10 @@
-.custom-form{
-	width: 100%;
+.form-wrapper{
+    width: 100%;
 	max-width: 920px;
 	margin-inline: auto;
+}
+.custom-form{
+	
 	.form-two-cols{
 		display: grid;
 		column-gap:60px;

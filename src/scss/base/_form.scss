@@ -276,16 +276,19 @@
 	@media (max-width: 767px) {
 	   position: relative;
 	   top: auto;
-	   left: 0;
-	   right: 0;
-	  
+	  left: 0;
+	  right: 0;
 	}
  } 
   
   .dropdown__list--visible {
 	max-height: 150px;
 	z-index: 5;
-	border-top: 1px solid var(--prim);
+	border: 1px solid var(--prim);
+	@media (max-width: 767px) {
+		border: 0;
+		border-top: 1px solid var(--prim);
+	}
 }
   
   .dropdown__list-item {
