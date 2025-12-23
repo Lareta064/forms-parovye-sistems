@@ -103,7 +103,19 @@ html(lang="ru")
 					//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 					input.dropdown__input-hidden(type="hidden", name="")
 		
-				
+				br
+				.dropdown
+					button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
+					.dropdown__list
+						ul
+							li.dropdown__list-item
+								label.form-radio-label
+									input(type="radio"  name=""  value="" checked )
+									span.form-radio-name 
+							li.dropdown__list-item
+								label.form-radio-label
+									input(type="radio"  name=""  value="" )
+									span.form-radio-name 
 				br
 				h4(style="margin-bottom:14px;") Соглашение с политикой в форме
 				.agree-block
