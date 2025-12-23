@@ -43,20 +43,20 @@ block content
 						.form-item-group
 							.form-label Давление пара
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p1" required)
 								
 						//single form item
 						.form-item-group
 							.form-label Температура пара (для перегретого пара)
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p2" required)
 								span.form-span °C
 
 						//single form item
 						.form-item-group
 							.form-label Давление в конденсатопроводе (противодавление)
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p3" required)
 						
 			
 				.fieldset-group
@@ -66,7 +66,7 @@ block content
 						.form-item-group
 							.form-label Габариты помещения
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p4" required)
 				
 				.fieldset-group
 					.fieldset-group-title Отопление
@@ -75,34 +75,34 @@ block content
 						.form-item-group
 							.form-label Теплоноситель
 							.form-item
-								input.form-inp(type="text" name="product_name" )
+								input.form-inp(type="text" name="p5" required)
 								
 						//single form item
 						.form-item-group
 							.form-label Мощность
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p6" required)
 								span.form-span кВт
 
 						//single form item
 						.form-item-group
 							.form-label Температурный график
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p7" required)
 								span.form-span °С
 						//single form item
 						.form-item-group
 							.form-label Максимальное рабочее давление
 								span.hide-xl (кг/см #[sup 2])
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p8" required)
 								span.form-span.hide-xs кг/см #[sup 2]
 						//single form item
 						.form-item-group
 							.form-label Потери давления в системе
 								span.hide-xl (кг/см#[sup 2])
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p9")
 								span.form-span.hide-xs кг/см#[sup 2]
 						
 						//single form item
@@ -110,7 +110,7 @@ block content
 							.form-label Высота верхней точки системы
 								
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p10" required)
 								span.form-span м.
 						
 						//single form item
@@ -118,14 +118,14 @@ block content
 							.form-label Объем системы
 								
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p11" required)
 								span.form-span м#[sup 3]
 						//single form item
 						.form-item-group
 							.form-label Давление в линии подпитки
 								span.hide-xl (кг/см#[sup 2])
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p12" required)
 								span.form-span.hide-xs кг/см#[sup 2]
 			
 				.fieldset-group
@@ -135,39 +135,39 @@ block content
 						.form-item-group
 							.form-label Мощность кВт (или пиковый расход м3/час)
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p13" required)
 								
 						//single form item
 						.form-item-group
 							.form-label Температура на входе / выходе
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p14" required)
 								span.form-span °С
 						
 						//single form item
 						.form-item-group
 							.form-label Давление горячей воды
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number"  name="p15"  required)
 
 						//single form item
 						.form-item-group
 							.form-label Давление холодной воды
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p16"  required)
 								
 						//single form item
 						.form-item-group
 							.form-label Расход циркуляционной воды
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p17"  required)
 								
 						
 						//single form item
 						.form-item-group
 							.form-label Падение давления на линии циркуляции ГВС
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p18"  required)
 								
 						
 						//single form item
@@ -175,7 +175,7 @@ block content
 							.form-label Объем системы
 								
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number"  name="p19"  required)
 								span.form-span м#[sup 3]
 					
 				.fieldset-group
@@ -185,13 +185,13 @@ block content
 						.form-item-group
 							.form-label Мощность кВт (или пиковый расход м3/час)
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p20"  required)
 								
 						//single form item
 						.form-item-group
 							.form-label Температура на входе / выходе
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p21"  required)
 								span.form-span °С
 						
 						//single form item
@@ -199,7 +199,7 @@ block content
 							.form-label Максимальное рабочее давление
 								span.hide-xl (кг/см#[sup 2])
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p22"  required)
 								span.form-span.hide-xs кг/см#[sup 2]
 						
 						//single form item
@@ -207,14 +207,14 @@ block content
 							.form-label Перепад давления
 								span.hide-xl (кг/см#[sup 2])
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p23"  required)
 								span.form-span.hide-xs кг/см#[sup 2]
 								
 						//single form item
 						.form-item-group
 							.form-label Высота верхней точки системы
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p24"  required)
 								span.form-span.hide-xs  м.
 								
 						
@@ -222,7 +222,7 @@ block content
 						.form-item-group
 							.form-label Объем системы
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p25"  required)
 								span.form-span м#[sup 3]
 				
 				//Поле комментария
