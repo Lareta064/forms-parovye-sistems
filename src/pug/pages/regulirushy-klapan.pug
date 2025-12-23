@@ -281,145 +281,153 @@ block content
 						//single form item
 						.form-item-group
 							.form-label Модификация
+							
 							.dropdown
-								button.dropdown__button(type="button") 2-х ходовой
-								
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") 2-х ходовой
-										li.dropdown__list-item(data-value="Текст2") 3-х ходовой
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_33"  value="1" checked )
+												span.form-radio-name 2-х ходовой
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_33"  value="2" )
+												span.form-radio-name 3-х ходовой
 								
 						//single form item
 						.form-item-group
 							.form-label Номинальный диаметр, DN
 							.form-item
-								input.form-inp(type="number" name="name" )
+								input.form-inp(type="number"  name="form_35" value="<?= $data['form_35'] ?>")
 								span.form-span мм
 						//single form item
 						.form-item-group
 							.form-label Номинальное давление, PN
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="number" name="form_36" value="<?= $data['form_36'] ?>")
 								span.form-span bar
 						//single form item
 						.form-item-group
 							.form-label Класс по ANSI
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name="form_37" value="<?= $data['form_37'] ?>")
 						
 						//single form item
 						.form-item-group
 							.form-label Пропускная способность, Kvs**
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="number" name="form_38" value="<?= $data['form_38'] ?>")
 								span.form-span 	м3/ч
 
 						//single form item
 						.form-item-group
 							.form-label Класс герметичности
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name="form_47" value="<?= $data['form_47'] ?>")
 						
-						//single form item
-						.form-item-group
-							.form-label Назначение клапана
-							.dropdown
-								button.dropdown__button(type="button") Регулирование
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Регулирование
-										li.dropdown__list-item(data-value="Текст2") Открыт/закрыт
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Пропускная характеристика
-							.dropdown
-								button.dropdown__button(type="button") Равнопроцентная
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Равнопроцентная") Равнопроцентная
-										li.dropdown__list-item(data-value="Запорная") Запорная
-										li.dropdown__list-item(data-value="Линейная") Линейная
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+					//single form item
+					.form-item-group
+						.form-label Назначение клапана
+						.form-checkbox-row
+							label.form-checkbox-label
+								input(type="checkbox" name="form_39"  value="1" checked)
+								span Регулирование
+							label.form-checkbox-label
+								input(type="checkbox"  name="form_40"  value="1" )
+								span.form-radio-name Открыт/закрыт
+					
+					//single form item
+					.form-item-group
+						.form-label Пропускная характеристика
+						.form-checkbox-row
+							label.form-checkbox-label
+								input(type="checkbox" name="form_41"  value="1" checked)
+								span Равнопроцентная
+							label.form-checkbox-label
+								input(type="checkbox"  name="form_42"  value="1" )
+								span.form-radio-name  Линейная
+							label.form-checkbox-label
+								input(type="checkbox"  name="form_43"  value="1" )
+								span.form-radio-name Запорная
+							
+					//single form item
+					.form-item-group
+						.form-label Положение при отсутствии питания
+						.form-checkbox-row
+							label.form-checkbox-label
+								input(type="checkbox" name="form_44"  value="1" checked)
+								span Открыт
+							label.form-checkbox-label
+								input(type="checkbox"  name="form_45"  value="1" )
+								span.form-radio-name  Закрыт
+							label.form-checkbox-label
+								input(type="checkbox"  name="form_436"  value="1" )
+								span.form-radio-name Сохраняет положение
+					
+					.form-two-cols
 						//single form item
 						.form-item-group
 							.form-label Уплотнение штока плунжера
 							.dropdown
-								button.dropdown__button(type="button") Сальник (стандарт)
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Сальник (стандарт)") Сальник (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Сильфон
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Положение при отсутствии питания
-							.dropdown
-								button.dropdown__button(type="button") Открыт
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Открыт") Открыт
-										li.dropdown__list-item(data-value="Запорная") Закрыт
-										li.dropdown__list-item(data-value="Линейная") Сохраняет положение
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_48"  value="1" checked )
+												span.form-radio-name Сальник (стандарт)
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_48"  value="2" )
+												span.form-radio-name Сильфон
+									
 						//single form item
 						.form-item-group
 							.form-label Способ монтажа
 							.dropdown
-								button.dropdown__button(type="button") Фланцевый
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Фланцевый") Фланцевый
-										li.dropdown__list-item(data-value="Запорная") Под приварку
-										li.dropdown__list-item(data-value="Линейная") Резьбовой
-										
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_49"  value="1" checked )
+												span.form-radio-name Фланцевый
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_49"  value="2" )
+												span.form-radio-name Под приварку
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_49"  value="3" )
+												span.form-radio-name Резьбовой
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
 						//single form item
 						.form-item-group
 							.form-label Уплотнение затвора
 							.dropdown
-								button.dropdown__button(type="button") Металл по металлу (стандарт) 
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Металл по металлу (стандарт)") Металл по металлу (стандарт)
-										li.dropdown__list-item(data-value="Запорная") Мягкое уплотнение(PTFE)
-										
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_50"  value="1" checked )
+												span.form-radio-name  Металл по металлу (стандарт) 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_50"  value="2" )
+												span.form-radio-name Мягкое уплотнение(PTFE)
 								
 						//single form item
 						.form-item-group
 							.form-label Материал корпуса клапана
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name="form_52" value="<?= $data['form_52'] ?>")
 						//single form item
 						.form-item-group
 							.form-label Форма уплотнительной поверхности фланцев
 							.form-item
-								input.form-inp(type="text" name="name")
+								input.form-inp(type="text" name="form_51" value="<?= $data['form_51'] ?>")
 			
 				//группа Исполнительный механизм
 				.fieldset-group
