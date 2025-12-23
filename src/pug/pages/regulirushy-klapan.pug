@@ -51,13 +51,14 @@ block content
 				//группа Продукт
 				.fieldset-group
 					.fieldset-group-title Продукт
+					
+					//single form item
+					.form-item-group
+						.form-label Наименование и состав
+						.form-item
+							input.form-inp(type="text" name="form_1" )
+					
 					.form-two-cols
-						//single form item
-						.form-item-group
-							.form-label Наименование и состав
-							.form-item
-								input.form-inp(type="text" name="form_1" )
-								
 						//single form item
 						.form-item-group
 							.form-label Температура продукта, в рабочем режима
@@ -71,45 +72,22 @@ block content
 							.form-item
 								input.form-inp(type="text" name="form_2")
 								
-						//single form item
-						.form-item-group
-							.form-label Агрегатное состояние (Жидкость (м3/ч), Газ нм3 /ч, Водяной пар кг/ч)
-							
-							//- .dropdown
-							//- 	button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Жидкость
+					//single form item
+					.form-item-group
+						.form-label Агрегатное состояние
+						
+						.form-three-cols
+							label.form-checkbox-label
+								input(type="checkbox" name="form_4" value="Жидкость, м3/ч")
+								span Жидкость (м3/ч)
 
-							//- 	.dropdown__list
-							//- 		ul
-							//- 			li.dropdown__list-item
-							//- 				label
-							//- 					input(type="radio"  name="form_4" value="Жидкость, м3/ч" checked)
-							//- 					span Жидкость (м3/ч)
-							//- 			li.dropdown__list-item
-							//- 				label
-							//- 					input(type="radio" name="form_5" value="Газ нм3 /ч")
-							//- 					span Газ
-							//- 			li.dropdown__list-item
-							//- 				label
-							//- 					input(type="radio" name="form_6" value="Водяной пар кг/ч")
-							//- 					span Водяной пар
-							
-							.dropdown(data-placeholder="Выберите варианты")
-								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Выберите варианты
-
-								.dropdown__list
-									ul
-										li.dropdown__list-item
-											label
-												input(type="checkbox" name="form_4" value="Жидкость, м3/ч")
-												span Жидкость
-										li.dropdown__list-item
-											label
-												input(type="checkbox"  name="form_5" value="Газ нм3 /ч")
-												span Газ
-										li.dropdown__list-item
-											label
-												input(type="checkbox" name="form_6" value="Водяной пар кг/ч")
-												span Водяной пар
+							label.form-checkbox-label
+								input(type="checkbox" name="form_5" value="Газ нм3 /ч")
+								span Газ (нм3 /ч)
+							label.form-checkbox-label
+								input(type="checkbox" name="form_6" value="Водяной пар кг/ч")
+								span Водяной пар (кг/ч)
+						
 				//группа внутри одного fieldset
 				.fieldset-group.fieldset-sticky-header
 					
@@ -133,33 +111,33 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_7" value="")
+									input.form-inp(type="number" name="form_7"  value="<?= $data['form_7'] ?>")
 									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_8" value="")
+									input.form-inp(type="number" name="form_8"  value="<?= $data['form_8'] ?>")
 									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_9" value="")
+									input.form-inp(type="number" name="form_9"  value="<?= $data['form_9'] ?>")
 									span.form-span min
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_10" value="")
+									input.form-inp(type="number" name="form_10"  value="<?= $data['form_10'] ?>")
 									span.form-span nom
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_11" value="")
+									input.form-inp(type="number" name="form_11"  value="<?= $data['form_11'] ?>")
 									span.form-span nom
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_12" value="")
+									input.form-inp(type="number" name="form_12"  value="<?= $data['form_12'] ?>")
 									span.form-span nom
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_13" value="")
+									input.form-inp(type="number" name="form_13"  value="<?= $data['form_13'] ?>")
 									span.form-span max
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_14" value="")
+									input.form-inp(type="number" name="form_14"  value="<?= $data['form_14'] ?>")
 									span.form-span max
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_15" value="")
+									input.form-inp(type="number" name="form_15"  value="<?= $data['form_15'] ?>")
 									span.form-span max
 
 					//ряд
@@ -171,13 +149,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_16" value="")
+									input.form-inp(type="number" name="form_16"  value="<?= $data['form_16'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_17" value="")
+									input.form-inp(type="number" name="form_17"  value="<?= $data['form_17'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_18" value="")
+									input.form-inp(type="number" name="form_18"  value="<?= $data['form_18'] ?>")
 									span.form-span bar
 					
 					//ряд
@@ -189,13 +167,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" )
+									input.form-inp(type="number" name="form_19" value="<?= $data['form_19'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" )
+									input.form-inp(type="number" name="form_20" value="<?= $data['form_20'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" )
+									input.form-inp(type="number" name="form_21" value="<?= $data['form_21'] ?>")
 									span.form-span bar
 					
 					//ряд
@@ -207,13 +185,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_19" value="")
+									input.form-inp(type="number" name="" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_20" value="")
+									input.form-inp(type="number" name="" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="form_21" value="")
+									input.form-inp(type="number" name="" value="")
 									span.form-span bar
 
 					//ряд
@@ -225,13 +203,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_22" value="<?= $data['form_22'] ?>")
 									span.form-span кг/м3
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_22" value="<?= $data['form_22'] ?>")
 									span.form-span кг/м3
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_22" value="<?= $data['form_22'] ?>")
 									span.form-span кг/м3
 					//ряд
 					.fieldset-sticky-row
@@ -242,13 +220,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="form_28" value="<?= $data['form_28'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="form_28" value="<?= $data['form_28'] ?>")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number"  name="form_28" value="<?= $data['form_28'] ?>")
 									span.form-span bar
 					//ряд
 					.fieldset-sticky-row
@@ -274,7 +252,7 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_27" value="<?= $data['form_27'] ?>")
 									span.form-span bar
 				
 			//BLOCK №3
@@ -285,13 +263,13 @@ block content
 					.form-item-group
 						.form-label Размер трубопровода, толщина стенки
 						.form-item
-							input.form-inp(type="text" name="inp_name")
+							input.form-inp(type="number" name="form_31" value="<?= $data['form_31'] ?>")
 					
 					//single form item
 					.form-item-group
 						.form-label Материал трубопровода
 						.form-item
-							input.form-inp(type="number" name="name")
+							input.form-inp(type="text" name="form_32" value="<?= $data['form_32'] ?>")
 							span.form-span Ø х мм
 			
 			//BLOCK №4
