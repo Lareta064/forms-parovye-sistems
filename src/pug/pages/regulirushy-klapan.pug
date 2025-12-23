@@ -437,51 +437,67 @@ block content
 						.form-item-group
 							.form-label Тип
 							.dropdown
-								button.dropdown__button(type="button") Пневматический
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Пневматический
-										li.dropdown__list-item(data-value="Текст2") Электрический
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="form_53"  value="1" checked )
+												span.form-radio-name Пневматический
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_53" value="2" )
+												span.form-radio-name Электрический
+
 						
 						//single form item
 						.form-item-group
 							.form-label Давление питания, bar
 							.form-item
-								input.form-inp(type="text" name="inp_name" )
+								input.form-inp(type="text"  name="form_54" value="<?= $data['form_54'] ?>")
 						
 						//single form item
 						.form-item-group
 							.form-label Напряжение питания
 							.dropdown
-								button.dropdown__button(type="button") 400V 50Hz 3~
-								
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="400V 50Hz 3~") 400V 50Hz 3~
-										li.dropdown__list-item(data-value="230V 50 Hz 1~") 230V 50 Hz 1~
-										li.dropdown__list-item(data-value="115V 50 Hz 1~") 115V 50 Hz 1~
-										li.dropdown__list-item(data-value="115V 50 Hz 1~") 115V 50 Hz 1~
-										li.dropdown__list-item(data-value="24V 50 Hz 1~") 24V 50 Hz 1~ 
-										li.dropdown__list-item(data-value="24V DC") 24V DC
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="1" checked )
+												span.form-radio-name 400V 50Hz 3~
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="2")
+												span.form-radio-name 230V 50 Hz 1~
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="3" )
+												span.form-radio-name 115V 50 Hz 1~
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="4")
+												span.form-radio-name 115V 50 Hz 1~
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="5")
+												span.form-radio-name 24V 50 Hz 1~ 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_55"  value="6")
+												span.form-radio-name 24V DC
 						//single form item
 						.form-item-group
 							.form-label Ручной дублёр
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio6" value="yes")
+									input(type="radio" checked name="form_56"  value="1")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio6" value="no")
+									input(type="radio" name="form_56"  value="2")
 									span.fake-radio
 									span.form-radio-name Нет
 				
@@ -493,47 +509,52 @@ block content
 						.form-item-group
 							.form-label Тип
 							.dropdown
-								button.dropdown__button(type="button") Пневматический
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Пневматический
-										li.dropdown__list-item(data-value="Текст2") Электрический
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_57"  value="1" checked )
+												span.form-radio-name Пневматический
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_57"  value="2" )
+												span.form-radio-name Электрический
 						
 						//single form item
 						.form-item-group
 							.form-label Входной сигнал
 							.dropdown
-								button.dropdown__button(type="button") 4-20 mA
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") 4-20 mA
-										li.dropdown__list-item(data-value="Текст2") 3-х точечный
-										
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_58"  value="1" checked )
+												span.form-radio-name 4-20 mA
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="form_58"  value="2" )
+												span.form-radio-name 3-х точечный
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+								
 						//single form item
 						.form-item-group
 							.form-label Степень защиты оболочки IP
 							.form-item
-								input.form-inp(type="text" name="inp_name" )
+								input.form-inp(type="text" name="form_60" value="<?= $data['form_60'] ?>")
 						
 						//single form item
 						.form-item-group
 							.form-label Требования по взрывозащите
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio2" value="yes")
+									input(type="radio" checked  name="form_59"  value="1")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio2" value="no")
+									input(type="radio" name="form_59"  value="2")
 									span.fake-radio
 									span.form-radio-name Нет
 
@@ -545,26 +566,29 @@ block content
 						.form-item-group
 							.form-label Напряжение питания
 							.dropdown
-								button.dropdown__button(type="button") 24V DC
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") 24V DC
-										li.dropdown__list-item(data-value="Текст2") 230V AC
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_61"  value="1" checked )
+												span.form-radio-name 24V DC
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_61"  value="2" )
+												span.form-radio-name 230V AC
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
 						//single form item
 						.form-item-group
 							.form-label Требования по взрывозащите
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio3" value="yes")
+									input(type="radio" checked  name="form_62" value="1")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio3" value="no")
+									input(type="radio"  name="form_62" value="2")
 									span.fake-radio
 									span.form-radio-name Нет
 						
@@ -572,7 +596,7 @@ block content
 						.form-item-group
 							.form-label Степень защиты оболочки IP
 							.form-item
-								input.form-inp(type="text" name="inp_name" )
+								input.form-inp(type="text"  name="form_63" value="<?= $data['form_63'] ?>")
 				
 				//группа Конечные выключатели
 				.fieldset-group
@@ -582,27 +606,28 @@ block content
 						.form-item-group
 							.form-label Назначение
 							.dropdown
-								button.dropdown__button(type="button") Для открытого положения
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Для открытого положения
-										li.dropdown__list-item(data-value="Текст2") Для закрытого положения
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_64"  value="1" checked )
+												span.form-radio-name Для открытого положения
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_64" value="2" )
+												span.form-radio-name Для закрытого положения
 						//single form item
 						.form-item-group
 							.form-label Требования по взрывозащите
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio4" value="yes")
+									input(type="radio" checked name="form_65" value="1")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio4" value="no")
+									input(type="radio" name="form_65" value="2")
 									span.fake-radio
 									span.form-radio-name Нет
 						
@@ -610,49 +635,59 @@ block content
 						.form-item-group
 							.form-label Тип
 							.dropdown
-								button.dropdown__button(type="button") Механические
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Механические
-										li.dropdown__list-item(data-value="Текст2") Индуктивные  
-										
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_64"  value="1" checked )
+												span.form-radio-name Механические
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_64" value="2" )
+												span.form-radio-name Индуктивные 
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+								
 						//single form item
 						.form-item-group
 							.form-label Степень защиты оболочки IP
 							.form-item
-								input.form-inp(type="text" name="inp_name" )
+								input.form-inp(type="text" name="form_67" value="<?= $data['form_67'] ?>")
 
 						
 						//single form item
 						.form-item-group
 							.form-label Принадлежности
 							.dropdown
-								button.dropdown__button(type="button") Ответные фланцы
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Ответные фланцы 
-										li.dropdown__list-item(data-value="Текст2") Прокладки
-										li.dropdown__list-item(data-value="Текст2") ПБолты, гайки
-										 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="form_69" value="1" checked )
+												span.form-radio-name Ответные фланцы 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_69" value="2" )
+												span.form-radio-name Прокладки
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"   name="form_69" value="3" )
+												span.form-radio-name Болты, гайки
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+								
 
 						//single form item
 						.form-item-group
 							.form-label Фильтр-редуктор
 							.form-radio-row
 								label.form-radio-label
-									input(type="radio" checked name="radio5" value="yes")
+									input(type="radio" checked name="form_68" value="1")
 									span.fake-radio
 									span.form-radio-name Да
 								
 								label.form-radio-label
-									input(type="radio" name="radio5" value="no")
+									input(type="radio" name="form_68" value="2")
 									span.fake-radio
 									span.form-radio-name Нет
 								
