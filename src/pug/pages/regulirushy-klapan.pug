@@ -74,19 +74,24 @@ block content
 						//single form item
 						.form-item-group
 							.form-label Агрегатное состояние
+							
 							.dropdown
-								button.dropdown__button(type="button") Жидкость
-								
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Жидкость
+
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Жидкость") Жидкость
-										li.dropdown__list-item(data-value="Газ") Газ
-										li.dropdown__list-item(data-value="Водяной пар") Водяной пар
-										
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-				
+										li.dropdown__list-item
+											label
+												input(type="radio" name="connection_type" value="rezb" checked)
+												span Жидкость
+										li.dropdown__list-item
+											label
+												input(type="radio" name="connection_type" value="flan")
+												span Газ
+										li.dropdown__list-item
+											label
+												input(type="radio" name="connection_type" value="priv")
+												span Водяной пар
 				//группа внутри одного fieldset
 				.fieldset-group.fieldset-sticky-header
 					
