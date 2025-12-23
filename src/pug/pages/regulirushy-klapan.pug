@@ -36,13 +36,13 @@ block content
 					.form-item-group
 						.form-label Город*
 						.form-item
-							input.form-inp(type="text" name="city")
+							input.form-inp(type="text" name="CITY")
 							
 					//single form item
 					.form-item-group
 						.form-label Количество
 						.form-item
-							input.form-inp.phone(type="number" name="product_quantity")
+							input.form-inp.phone(type="number" name="CNT")
 							span.form-span шт
 			
 			//BLOCK №2
@@ -56,41 +56,59 @@ block content
 						.form-item-group
 							.form-label Наименование и состав
 							.form-item
-								input.form-inp(type="text" name="product_name" )
+								input.form-inp(type="text" name="form_1" )
 								
 						//single form item
 						.form-item-group
 							.form-label Температура продукта, в рабочем режима
 							.form-item
-								input.form-inp(type="number" name="operating_temperature" )
+								input.form-inp(type="number" name="form_7" value="")
 								span.form-span °C
 
 						//single form item
 						.form-item-group
 							.form-label Примеси/твердые частицы (концентрация, размеры)
 							.form-item
-								input.form-inp(type="text" name="primecy")
+								input.form-inp(type="text" name="form_2")
 								
 						//single form item
 						.form-item-group
-							.form-label Агрегатное состояние
+							.form-label Агрегатное состояние (Жидкость (м3/ч), Газ нм3 /ч, Водяной пар кг/ч)
 							
-							.dropdown
-								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Жидкость
+							//- .dropdown
+							//- 	button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Жидкость
+
+							//- 	.dropdown__list
+							//- 		ul
+							//- 			li.dropdown__list-item
+							//- 				label
+							//- 					input(type="radio"  name="form_4" value="Жидкость, м3/ч" checked)
+							//- 					span Жидкость (м3/ч)
+							//- 			li.dropdown__list-item
+							//- 				label
+							//- 					input(type="radio" name="form_5" value="Газ нм3 /ч")
+							//- 					span Газ
+							//- 			li.dropdown__list-item
+							//- 				label
+							//- 					input(type="radio" name="form_6" value="Водяной пар кг/ч")
+							//- 					span Водяной пар
+							
+							.dropdown(data-placeholder="Выберите варианты")
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Выберите варианты
 
 								.dropdown__list
 									ul
 										li.dropdown__list-item
 											label
-												input(type="radio" name="connection_type" value="rezb" checked)
+												input(type="checkbox" name="form_4" value="Жидкость, м3/ч")
 												span Жидкость
 										li.dropdown__list-item
 											label
-												input(type="radio" name="connection_type" value="flan")
+												input(type="checkbox"  name="form_5" value="Газ нм3 /ч")
 												span Газ
 										li.dropdown__list-item
 											label
-												input(type="radio" name="connection_type" value="priv")
+												input(type="checkbox" name="form_6" value="Водяной пар кг/ч")
 												span Водяной пар
 				//группа внутри одного fieldset
 				.fieldset-group.fieldset-sticky-header
@@ -115,33 +133,33 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_7" value="")
 									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_8" value="")
 									span.form-span min
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_9" value="")
 									span.form-span min
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_10" value="")
 									span.form-span nom
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_11" value="")
 									span.form-span nom
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_12" value="")
 									span.form-span nom
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_13" value="")
 									span.form-span max
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_14" value="")
 									span.form-span max
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_15" value="")
 									span.form-span max
 
 					//ряд
@@ -153,13 +171,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_16" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_17" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_18" value="")
 									span.form-span bar
 					
 					//ряд
@@ -171,13 +189,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" )
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" )
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" )
 									span.form-span bar
 					
 					//ряд
@@ -189,13 +207,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_19" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_20" value="")
 									span.form-span bar
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="form_21" value="")
 									span.form-span bar
 
 					//ряд
