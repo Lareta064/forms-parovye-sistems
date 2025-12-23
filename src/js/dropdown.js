@@ -98,9 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getLabelText(input) {
       const label = input.closest('label');
-      if (!label) return '';
-      const span = label.querySelector('span');
-      return (span ? span.innerText : label.innerText).trim();
+		if (!label) return '';
+
+		const textEl = label.querySelector('.form-radio-name');
+		if (textEl) {
+			return textEl.innerText.trim();
+		}
+
+		// fallback на случай другой разметки
+		return label.innerText.trim();
     }
 
     function updateButtonText() {

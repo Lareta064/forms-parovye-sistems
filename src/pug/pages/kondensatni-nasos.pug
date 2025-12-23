@@ -42,13 +42,13 @@ block content
 						.form-item-group
 							.form-label Максимальный расход конденсата
 							.form-item
-								input.form-inp(type="number" name="trashod" id="trashod")
+								input.form-inp(type="number" id="trashod" name="trashod" value="<?= $data['trashod'] ?>" )
 								span.form-span кг/ч
 						//single form item
 						.form-item-group
 							.form-label Количество источников конденсата
 							.form-item
-								input.form-inp(type="number" name="tkolist" id="tkolist")
+								input.form-inp(type="number" name="tkolist" value="<?= $data['tkolist'] ?>"  id="tkolist")
 								span.form-span шт
 					
 						//single form item
@@ -81,16 +81,22 @@ block content
 						
 						//single form item
 						.form-item-group
-							.form-label Место расположения 
+							.form-label Место расположения
 							.dropdown
-								button.dropdown__button(type="button") На улице
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") В помещении
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="1" id="place-01") В помещении
-										li.dropdown__list-item(data-value="2" id="place-02") На улице
-								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="rrasp")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="rrasp"  value="2" checked id="place-02")
+												span.fake-radio
+												span.form-radio-name В помещении
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="rrasp"  value="1"  id="place-02")
+												.fake-radio
+												span.form-radio-name На улице
+										
 						//single form item
 						.form-item-group
 							.form-label Комплектация
