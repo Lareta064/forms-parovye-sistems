@@ -51,20 +51,47 @@ block content
 								input.form-inp(type="number" name="tkolist" value="<?= $data['tkolist'] ?>"  id="tkolist")
 								span.form-span шт
 					
-						//single form item
-						.form-item-group
-							.form-label Расход на каждом источнике
+					//single form item
+					.form-item-group.four-inputs
+						.form-label Расход на каждом источнике
+						.inputs-row
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="trashod1" id="trashod1")
 								span.form-span кг/ч
-
-						//single form item
-						.form-item-group
-							.form-label Температура конденсата
+						
 							.form-item
-								input.form-inp.error(type="number" name="name")
+								input.form-inp(type="number" name="trashod2" id="trashod2" )
+								span.form-span кг/ч
+						
+							.form-item
+								input.form-inp(type="number" name="trashod3" id="trashod3")
+								span.form-span кг/ч
+						
+							.form-item
+								input.form-inp(type="number" name="trashod4" id="trashod4")
+								span.form-span кг/ч
+					
+					//single form item
+					.form-item-group.four-inputs
+						.form-label Температура конденсата
+						.inputs-row
+							.form-item
+								input.form-inp.error(type="number" name="ttemp1" id="ttemp1")
 								span.form-span °С
-								
+							
+							.form-item
+								input.form-inp.error(type="number" name="ttemp2" id="ttemp2")
+								span.form-span °С
+							
+							.form-item
+								input.form-inp.error(type="number" name="ttemp3" id="ttemp3")
+								span.form-span °С
+							
+							.form-item
+								input.form-inp.error(type="number" name="ttemp4" id="ttemp4")
+								span.form-span °С
+					
+					.form-two-cols
 						//single form item
 						.form-item-group
 							.form-label Для электрического насоса указать требуемое давление на выходе насоса

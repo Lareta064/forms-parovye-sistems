@@ -35,93 +35,84 @@ block content
 				.fieldset-title 2. Параметры
 				//группа Продукт
 				.fieldset-group
-					.form-item-group
-						.form-label Расход пара
-						.inputs-row
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span min
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span nom
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span max
-					
-					.form-item-group
-						.form-label Давление пара
-						.inputs-row
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span min
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span max
-					
-					.form-item-group
-						.form-label Температура пара на входе
-						.inputs-row
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span min
-							.form-item
-								input.form-inp(type="number" name="inp_name" )
-								span.form-span max
-					
 					.form-two-cols
+						.form-item-group
+							.form-label Расход пара(min/nom/max)
+							.form-item
+								input.form-inp(type="text" name="steamr" required)
+						
+						.form-item-group
+							.form-label Давление пара(min/max)
+							.form-item
+								input.form-inp(type="text"  name="steampress" required)
+						
+						.form-item-group
+							.form-label Температура пара на входе
+							.form-item
+								input.form-inp(type="text"  name="steamtstart" required)
+						
 						.form-item-group
 							.form-label Давление пара на выходе
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="steamtpressstop" required)
 						
 						.form-item-group
 							.form-label Температура пара на выходе
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number"  name="steamtstop" required)
 								span.form-span °С
 					
 						.form-item-group
 							.form-label Располагаемое давление охлаждающей воды
 							.inputs-row
 								.form-item
-									input.form-inp(type="number" name="inp_name" )
+									input.form-inp(type="number" name="vaterpress"  required)
 									//- span.form-span
 						.form-item-group
 							.form-label Температура охлаждающей воды
 							.inputs-row
 								.form-item
-									input.form-inp(type="number" name="inp_name" )
+									input.form-inp(type="number" name="vatert"  required)
 									span.form-span °С
 							
 						.form-item-group
 							.form-label Противодавление в конденсатопроводе
 							.inputs-row
 								.form-item
-									input.form-inp(type="number" name="inp_name" )
+									input.form-inp(type="number" name="antipress" )
 
 					
 						.form-item-group
 							.form-label Место расположения 
+							
 							.dropdown
-								button.dropdown__button(type="button") На улице
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") В помещении
-										li.dropdown__list-item(data-value="Текст2") На улице
-									//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-									input.dropdown__input-hidden(type="hidden", name="")
-						
-						//single form item
-						.form-item-group
-							.form-label Тип привода регулирующих клапанов
-							.dropdown
-								button.dropdown__button(type="button") Электрический
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Текст1") Электрический
-										li.dropdown__list-item(data-value="Текст2") Певматический
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="raspol" value="1" checked )
+												span.form-radio-name В помещении
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="raspol" value="2" )
+												span.form-radio-name На улице
+							
+							//single form item
+							.form-item-group
+								.form-label Тип привода регулирующих клапанов
+								.dropdown
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="typeklap" value="1" checked )
+													span.form-radio-name Электрический
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="typeklap" value="2")
+													span.form-radio-name Певматический
 						
 					.form-info-text
 						p Вы можете заказать только устройства для снижения давления / температуры, либо комплектную установку со всеми необходимыми устройствами управления и безопасности:
@@ -131,31 +122,59 @@ block content
 						.form-item-group
 							.form-label Комплектация устройствами КИП:
 							.dropdown
-								button.dropdown__button(type="button") Шкаф управления
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Шкаф управления
-										li.dropdown__list-item(data-value="Текст2") Датчик температуры
-										li.dropdown__list-item(data-value="Текст2") Термометры
-										li.dropdown__list-item(data-value="Текст2") Манометры
-										li.dropdown__list-item(data-value="Текст2") Датчик давления
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="kip" value="1" checked )
+												span.form-radio-name Шкаф управления
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="kip" value="2" )
+												span.form-radio-name Датчик температуры
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="kip" value="3" )
+												span.form-radio-name Термометры
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="kip" value="4" )
+												span.form-radio-name Манометры
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="kip" value="5" )
+												span.form-radio-name Датчик давления
+							
+							
 						//single form item
 						.form-item-group
 							.form-label Дополнительная комплектация
 							.dropdown
-								button.dropdown__button(type="button") Запорная арматура
-								.dropdown__list
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 									ul
-										li.dropdown__list-item(data-value="Текст1") Запорная арматура
-										li.dropdown__list-item(data-value="Текст2") Теплоизоляция для арматуры 
-										li.dropdown__list-item(data-value="Текст2") Ответные фланцы, крепеж 
-										li.dropdown__list-item(data-value="Текст2") Конденсатоотводчик
-										li.dropdown__list-item(data-value="Текст2") Предохранительный клапан
-										
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="dopkomp" value="1" checked )
+												span.form-radio-name Запорная арматура
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="dopkomp" value="2" )
+												span.form-radio-name Теплоизоляция для арматуры 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="dopkomp" value="3" )
+												span.form-radio-name Ответные фланцы, крепеж
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="dopkomp" value="4" )
+												span.form-radio-name Конденсатоотводчик
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="dopkomp" value="5" )
+												span.form-radio-name Предохранительный клапан
+							
+							
 				//Поле комментария
 				.fieldset-group 
 					.form-item-group

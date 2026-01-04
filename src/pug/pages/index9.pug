@@ -2,7 +2,7 @@ extends ../layouts/layout.pug
 
 block content
 	.form-wrapper
-		.form-wrapper-title Опросный лист Эжектор
+		.form-wrapper-title Опросный лист. Эжектор
 		form.custom-form.js-validate-form
 			//BLOCK №1
 			.fieldset
@@ -38,15 +38,15 @@ block content
 				.fieldset-title 2. Параметры
 				//single form item
 				.form-item-group
-					.form-label Ручной дублёр
+					.form-label Тип оборудования:
 					.form-radio-row.row-mobile
 						label.form-radio-label
-							input(type="radio" checked name="radio1" value="")
+							input(type="radio" checked name="type" value="1")
 							span.fake-radio
 							span.form-radio-name.fs-16 Термокомпрессор
 						
 						label.form-radio-label
-							input(type="radio" name="radio1" value="")
+							input(type="radio" name="type" value="2")
 							span.fake-radio
 							span.form-radio-name.fs-16 Циркуляционный эжектор
 			
@@ -73,13 +73,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pn1" required)
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pm1" required)
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pv1" required)
 									span.form-span бар изб
 					
 					.fieldset-sticky-row
@@ -89,28 +89,28 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pn2" required)
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pm2" required)
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pv2" required)
 									span.form-span °С
 					.fieldset-sticky-row
 						//Левая колонка
-						.fieldset-cell-name Температура
+						.fieldset-cell-name Расход
 						//Три правые колонки
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pn3" required)
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pm3" required)
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number")
+									input.form-inp(type="number" name="pv3" required)
 									span.form-span кг/ч
 		
 				.form-two-cols
@@ -118,62 +118,71 @@ block content
 					.form-item-group
 						.form-label Максимальное рабочее давление пара
 						.form-item
-							input.form-inp(type="text" name="inp_name" )
+							input.form-inp(type="text"  name="p1" required)
 							span.form-span бар изб
 					
 					//single form item
 					.form-item-group
 						.form-label Максимальная рабочая температура пара
 						.form-item
-							input.form-inp(type="number" name="name" )
+							input.form-inp(type="number" name="p2" required)
 							span.form-span °C
 					
 					//single form item
 					.form-item-group
 						.form-label Материал корпуса
 						.form-item
-							input.form-inp(type="number" name="name" )
+							input.form-inp(type="number"  name="p3" required)
 					
 					//single form item
 					.form-item-group
 						.form-label Исполнение эжектора
 						.dropdown
-							button.dropdown__button(type="button") Регулируемый -с приводом
-							
+							button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
 							.dropdown__list
 								ul
-									li.dropdown__list-item(data-value="Текст1") Регулируемый -с приводом
-									li.dropdown__list-item(data-value="Текст2") Нерегулируемый - без привода
-									
-							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-							input.dropdown__input-hidden(type="hidden", name="")
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" name="isp" value="1" checked )
+											span.form-radio-name Регулируемый -с приводом
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" name="isp" value="2" )
+											span.form-radio-name Нерегулируемый - без привода
+							
 					
 					//single form item
 					.form-item-group
 						.form-label Тип присоединения
 						.dropdown
-							button.dropdown__button(type="button") Резьбовой
-							
+							button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 							.dropdown__list
 								ul
-									li.dropdown__list-item(data-value="Текст1") Резьбовой
-									li.dropdown__list-item(data-value="Текст2") Фланцевый
-									li.dropdown__list-item(data-value="Текст3") Приварной
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio"  name="typep"  value="1" checked )
+											span.form-radio-name Резьбовой
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" name="typep"  value="2" )
+											span.form-radio-name Фланцевый
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio"  name="typep"  value="3" )
+											span.form-radio-name Приварной
 							
-							//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-							input.dropdown__input-hidden(type="hidden", name="")
-					
+							
 					//single form item
 					.form-item-group
-						.form-label Количество насосов
+						.form-label Стандарт исполнения присоединения
 						.form-radio-row
 							label.form-radio-label
-								input(type="radio" checked name="radio2" value="")
+								input(type="radio" checked name="standpri" value="1")
 								span.fake-radio
 								span.form-radio-name DIN
 							
 							label.form-radio-label
-								input(type="radio" name="radio2" value="")
+								input(type="radio" name="standpri" value="2")
 								span.fake-radio
 								span.form-radio-name ANSI / ASME
 				
