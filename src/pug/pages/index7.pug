@@ -12,25 +12,25 @@ block content
 					.form-item-group
 						.form-label Название компании*
 						.form-item
-							input.form-inp(type="text" name="COMPANY_TITLE" data-required)
+							input.form-inp(type="text" name="COMPANY_TITLE" value="<?= $data['COMPANY_TITLE'] ?>" data-required)
 					
 					//single form item
 					.form-item-group
 						.form-label Контактное лицо*
 						.form-item
-							input.form-inp(type="text" name="NAME" data-required)
+							input.form-inp(type="text" name="NAME" value="<?= $data['NAME'] ?>"  data-required)
 							
 					//single form item
 					.form-item-group
 						.form-label Телефон/факс*
 						.form-item
-							input.form-inp.phone(type="text" name="PHONE" data-required)
+							input.form-inp.phone(type="text" name="PHONE" value="<?= $data['PHONE'] ?>" data-required)
 				
 					//single form item
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="EMAIL")
+							input.form-inp(type="email" name="EMAIL" value="<?= $data['EMAIL'] ?>" data-required)
 			.fieldset.border-0
 				.fieldset-title 2. Параметры
 				//группа Продукт
@@ -39,34 +39,34 @@ block content
 						.form-label Расход пара (кг/ч)
 						.inputs-row
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="p11" )
 								span.form-span min
 							
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="p12" )
 								span.form-span max
 					.form-two-cols
 						.form-item-group
 							.form-label Давление пара #[span.hide-xl (бар изб)]
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="number" name="p2"  required)
 								span.form-span.hide-xs бар изб
 						.form-item-group
 							.form-label Настройка (или диапазон настройки) #[span.hide-xl (бар изб./°С)]
 							.form-item
-								input.form-inp(type="number" name="name")
+								input.form-inp(type="text"  name="p3" required)
 								span.form-span.hide-xs бар изб./°С
 						
 						.form-item-group
 							.form-label Минимальная температура окружающей среды
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="p4" required)
 								span.form-span °С
 						
 						.form-item-group
 							.form-label Температура пара (указать только если пар перегретый)
 							.form-item
-								input.form-inp(type="number" name="inp_name" )
+								input.form-inp(type="number" name="p5" required)
 								span.form-span °С
 						
 					
@@ -74,21 +74,27 @@ block content
 							.form-label Место установки: магистральный паропровод, теплообменник, калорифер, другое (указать)
 							.inputs-row
 								.form-item
-									input.form-inp(type="text" name="inp_name")
+									input.form-inp(type="text" name="p6" required)
 						
 						//single form item
 						.form-item-group
 							.form-label Тип присоединения
 							.dropdown
-								button.dropdown__button(type="button") Резьбовой
-								
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") В помещении
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Резьбовой
-										li.dropdown__list-item(data-value="Текст2") Фланцевый
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-				
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="tipp1" value="1"  checked )
+												span.fake-radio
+												span.form-radio-name Резьбовой
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="tipp1"  value="2")
+												span.fake-radio
+												span.form-radio-name Фланцевый
+								
+								
 
 				.fieldset-sticky-subgroup
 					.sticky-subgroup-title.h-20 Дополнительное оборудование:
@@ -102,15 +108,15 @@ block content
 							.inner-row
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox10" value="")
+										input(type="checkbox" name="filter1" value="1" )
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox11" value="")
+										input(type="checkbox" name="filter1" value="2")
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox12" value="")
+										input(type="checkbox" name="filter1" value="3")
 					//row
 					.fieldset-sticky-row
 						.fieldset-cell-name Предохранительный клапан
@@ -119,15 +125,15 @@ block content
 							.inner-row
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox13" value="")
+										input(type="checkbox" name="predk1" value="1")
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox14" value="")
+										input(type="checkbox" name="predk1" value="2")
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox15" value="")
+										input(type="checkbox" name="cpredk1" value="3")
 					//row
 					.fieldset-sticky-row
 						.fieldset-cell-name Отсечные вентили / байпасный вентиль
@@ -136,15 +142,15 @@ block content
 							.inner-row
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox16" value="")
+										input(type="checkbox" name="ventil1" value="1")
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox17" value="")
+										input(type="checkbox" name="ventil1" value="2")
 										
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox18" value="")
+										input(type="checkbox" name="ventil1" value="3")
 					//row
 					.fieldset-sticky-row
 						.fieldset-cell-name Конденсатоотводчик дренажа паропровода 
@@ -153,15 +159,15 @@ block content
 							.inner-row
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox19" value="")
+										input(type="checkbox" name="kond1" value="1")
 										
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox20" value="")
+										input(type="checkbox" name="kond1" value="2")
 										
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox21" value="")
+										input(type="checkbox" name="kond1" value="3")
 					//row
 					.fieldset-sticky-row
 						.fieldset-cell-name Термометры / манометры
@@ -170,14 +176,14 @@ block content
 							.inner-row
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox22" value="")
+										input(type="checkbox" name="term1" value="1")
 								.fieldset-cell
 									
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox23" value="")
+										input(type="checkbox" name="term1" value="2")
 								.fieldset-cell
 									label.form-checkbox-label
-										input(type="checkbox" name="chbox24" value="")
+										input(type="checkbox" name="term1" value="3")
 							
 				
 				

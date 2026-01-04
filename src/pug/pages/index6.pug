@@ -12,25 +12,25 @@ block content
 					.form-item-group
 						.form-label Название компании*
 						.form-item
-							input.form-inp(type="text" name="COMPANY_TITLE" data-required)
+							input.form-inp(type="text" name="COMPANY_TITLE" value="<?= $data['COMPANY_TITLE'] ?>" data-required)
 					
 					//single form item
 					.form-item-group
 						.form-label Контактное лицо*
 						.form-item
-							input.form-inp(type="text" name="NAME" data-required)
+							input.form-inp(type="text" name="NAME" value="<?= $data['NAME'] ?>"  data-required)
 							
 					//single form item
 					.form-item-group
 						.form-label Телефон/факс*
 						.form-item
-							input.form-inp.phone(type="text" name="PHONE" data-required)
+							input.form-inp.phone(type="text" name="PHONE" value="<?= $data['PHONE'] ?>" data-required)
 				
 					//single form item
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="EMAIL")
+							input.form-inp(type="email" name="EMAIL" value="<?= $data['EMAIL'] ?>" data-required)
 			
 			//BLOCK №2
 			.fieldset.border-0
@@ -43,45 +43,58 @@ block content
 							.form-label Тепловая нагрузка максимальная
 								span.hide-xl кВт/Гкал/ч
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p1" required )
 								span.form-span.hide-xs кВт/Гкал/ч
 						//single form item
 						.form-item-group
 							.form-label Тепловая нагрузка минимальная
 								span.hide-xl кВт/Гкал/ч
 							.form-item
-								input.form-inp(type="number" name="product_name" )
+								input.form-inp(type="number" name="p2" required)
 								span.form-span.hide-xs кВт/Гкал/ч
 						
 						//single form item
 						.form-item-group
 							.form-label Тип нагрузки
 							.dropdown
-								button.dropdown__button(type="button") Отопление 
-								
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") В помещении
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Текст1") Отопление 
-										li.dropdown__list-item(data-value="Текст2") Вентиляция
-										li.dropdown__list-item(data-value="Текст3") ГВС
-										li.dropdown__list-item(data-value="Текст3") Технологические нужды
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="nagrtype" value="1"  checked )
+												span.fake-radio
+												span.form-radio-name Отопление 
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="nagrtype" value="2")
+												.fake-radio
+												span.form-radio-name Вентиляция
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="nagrtype" value="3")
+												.fake-radio
+												span.form-radio-name ГВС
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio" name="nagrtype" value="4")
+												.fake-radio
+												span.form-radio-name Технологические нужды
 								
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="")
-						
+									
 						//single form item
 						.form-item-group
 							.form-label Давление пара
 								span.hide-xl (бар изб.)
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p4" required)
 								span.form-span.hide-xs бар изб.
 						
 						//single form item
 						.form-item-group
 							.form-label Температура пара (для перегретого пара)
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p5" required)
 								span.form-span °C
 			
 				.fieldset-group
@@ -91,13 +104,13 @@ block content
 						.form-item-group
 							.form-label Нагреваемая сторона
 							.form-item
-								input.form-inp(type="text" name="product_name" placeholder="Укажите какая")
+								input.form-inp(type="text" name="storona" required  placeholder="Укажите какая")
 
 						.form-item-group
 							.form-label Максимальные лопустимые потери давления на теплообменнике
 								span.hide-xl (м.в.ст.)
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p8")
 								span.form-span.hide-xs м.в.ст.
 						
 
@@ -105,14 +118,14 @@ block content
 						.form-item-group
 							.form-label Температура на входе
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p6" required)
 								span.form-span °C
 						
 						//single form item
 						.form-item-group
 							.form-label Температура на выходе
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p7" required)
 								span.form-span °C
 				
 				.fieldset-group
@@ -122,7 +135,7 @@ block content
 						.form-item-group
 							.form-label Максимальная рабочая температура
 							.form-item
-								input.form-inp(type="number" name="" )
+								input.form-inp(type="number" name="p9")
 								span.form-span °C
 								
 						//single form item
@@ -130,7 +143,7 @@ block content
 							.form-label Максимальное рабочее давление
 								span.hide-xl (бар изб.)		
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p10")
 								span.form-span.hide-xs бар изб.
 				
 				//Поле комментария

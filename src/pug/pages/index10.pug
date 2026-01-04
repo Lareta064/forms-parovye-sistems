@@ -12,25 +12,25 @@ block content
 					.form-item-group
 						.form-label Название компании*
 						.form-item
-							input.form-inp(type="text" name="COMPANY_TITLE" data-required)
+							input.form-inp(type="text" name="COMPANY_TITLE" value="<?= $data['COMPANY_TITLE'] ?>" data-required)
 					
 					//single form item
 					.form-item-group
 						.form-label Контактное лицо*
 						.form-item
-							input.form-inp(type="text" name="NAME" data-required)
+							input.form-inp(type="text" name="NAME" value="<?= $data['NAME'] ?>"  data-required)
 							
 					//single form item
 					.form-item-group
 						.form-label Телефон/факс*
 						.form-item
-							input.form-inp.phone(type="text" name="PHONE" data-required)
+							input.form-inp.phone(type="text" name="PHONE" value="<?= $data['PHONE'] ?>" data-required)
 				
 					//single form item
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="EMAIL")
+							input.form-inp(type="email" name="EMAIL" value="<?= $data['EMAIL'] ?>" data-required)
 			
 			//BLOCK №2
 			.fieldset.border-0
@@ -43,12 +43,12 @@ block content
 							
 						.form-radio-row
 							label.form-radio-label
-								input(type="radio" checked name="radio5" value="yes")
+								input(type="radio" checked name="type" value="1")
 								span.fake-radio
 								span.form-radio-name собственная котельная
 							
 							label.form-radio-label
-								input(type="radio" name="radio5" value="no")
+								input(type="radio" name="type" value="2")
 								span.fake-radio
 								span.form-radio-name Внешний источник
 					
@@ -58,16 +58,16 @@ block content
 							
 						.form-radio-row
 							label.form-radio-label
-								input(type="radio" checked name="radio5" value="yes")
+								input(type="radio" checked  name="p4" value="1")
 								span.fake-radio
 								span.form-radio-name Завод
 							
 							label.form-radio-label
-								input(type="radio" name="radio5" value="no")
+								input(type="radio"  name="p4" value="2")
 								span.fake-radio
 								span.form-radio-name Цех, участок
 							label.form-radio-label
-								input(type="radio" name="radio5" value="no")
+								input(type="radio"  name="p4" value="3")
 								span.fake-radio
 								span.form-radio-name Участок
 					
@@ -77,36 +77,36 @@ block content
 							.form-label Стоимость
 								span.hide-xl (гкал/ч)
 							.form-item
-								input.form-inp(type="number" name="operating_temperature" )
+								input.form-inp(type="number" name="p2" required)
 								span.form-span.hide-xs гкал/ч
 								
 						//single form item
 						.form-item-group
 							.form-label Распологаемые давление и температура пара от источника
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p3" required)
 					
 						//single form item
 						.form-item-group
 							.form-label Расход пара на потребителе
 							.form-item
-								input.form-inp(type="number" name="")
+								input.form-inp(type="number" name="p5" required)
 						
 						//single form item
 						.form-item-group
 							.form-label Желаемые сроки выполнения
 							.form-item
-								input.form-inp(type="text" name="")
+								input.form-inp(type="text" name="p7" required)
 						
 						//single form item
 						.form-item-group
 							.form-label Краткое описание задачи
-							input.form-textarea( name="")
+							input.form-textarea( type="text"  name="p6"  required)
 				
 						//single form item
 						.form-item-group
 							.form-label Прочие условия
-							input.form-textarea( name="")
+							input.form-textarea(  name="p8")
 				//Поле комментария
 				.fieldset-group 
 					.form-item-group

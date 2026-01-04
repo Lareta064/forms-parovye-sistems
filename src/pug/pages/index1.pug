@@ -12,25 +12,25 @@ block content
 					.form-item-group
 						.form-label Название компании*
 						.form-item
-							input.form-inp(type="text" name="COMPANY_TITLE" data-required)
+							input.form-inp(type="text" name="COMPANY_TITLE" value="<?= $data['COMPANY_TITLE'] ?>" data-required)
 					
 					//single form item
 					.form-item-group
 						.form-label Контактное лицо*
 						.form-item
-							input.form-inp(type="text" name="NAME" data-required)
+							input.form-inp(type="text" name="NAME" value="<?= $data['NAME'] ?>"  data-required)
 							
 					//single form item
 					.form-item-group
 						.form-label Телефон/факс*
 						.form-item
-							input.form-inp.phone(type="text" name="PHONE" data-required)
+							input.form-inp.phone(type="text" name="PHONE" value="<?= $data['PHONE'] ?>" data-required)
 				
 					//single form item
 					.form-item-group
 						.form-label E-mail*
 						.form-item
-							input.form-inp(type="email" name="EMAIL")
+							input.form-inp(type="email" name="EMAIL" value="<?= $data['EMAIL'] ?>" data-required)
 
 			
 			//BLOCK №2
@@ -59,13 +59,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="krashod1")
+									input.form-inp(type="number" name="krashod1" value="<?= $data['krashod1'] ?>")
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="krashod2")
+									input.form-inp(type="number" name="krashod2" value="<?= $data['krashod2'] ?>")
 									span.form-span кг/ч
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="krashod3")
+									input.form-inp(type="number" name="krashod3" value="<?= $data['krashod3'] ?>")
 									span.form-span кг/ч
 					//ряд
 					.fieldset-sticky-row
@@ -76,13 +76,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="davpered1")
+									input.form-inp(type="number" name="davpered1"  value="<?= $data['davpered1'] ?>")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="davpered2")
+									input.form-inp(type="number" name="davpered2"  value="<?= $data['davpered2'] ?>")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="davpered3")
+									input.form-inp(type="number" name="davpered3"  value="<?= $data['davpered3'] ?>")
 									span.form-span бар изб
 
 					//ряд
@@ -94,13 +94,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number"  name="davza1")
+									input.form-inp(type="number"  name="davza1" value="<?= $data['davza1'] ?>")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number"  name="davza2")
+									input.form-inp(type="number"  name="davza2" value="<?= $data['davza2'] ?>")
 									span.form-span бар изб
 								.fieldset-cell.form-item
-									input.form-inp(type="number"  name="davza3")
+									input.form-inp(type="number"  name="davza3" value="<?= $data['davza3'] ?>")
 									span.form-span бар изб
 					//ряд
 					.fieldset-sticky-row
@@ -111,13 +111,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="mint1")
+									input.form-inp(type="number" name="mint1" value="<?= $data['mint1'] ?>" )
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="mint2")
+									input.form-inp(type="number" name="mint2" value="<?= $data['mint2'] ?>" )
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="mint3")
+									input.form-inp(type="number" name="mint3" value="<?= $data['mint3'] ?>" )
 									span.form-span °С
 					
 					//ряд
@@ -129,13 +129,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="part1")
+									input.form-inp(type="number" name="part1" value="<?= $data['part1'] ?>")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="part2")
+									input.form-inp(type="number" name="part2" value="<?= $data['part2'] ?>")
 									span.form-span °С
 								.fieldset-cell.form-item
-									input.form-inp(type="number" name="part3")
+									input.form-inp(type="number" name="part3" value="<?= $data['part3'] ?>")
 									span.form-span °С
 							
 					//ряд
@@ -147,13 +147,13 @@ block content
 						.fieldset-sticky-cols
 							.inner-row
 								.fieldset-cell.form-item
-									input.form-inp(type="text"  name="mplace1")
+									input.form-inp(type="text"  name="mplace1"  value="<?= $data['mplace1'] ?>")
 									
 								.fieldset-cell.form-item
-									input.form-inp(type="text"  name="mplace2")
+									input.form-inp(type="text"  name="mplace2"  value="<?= $data['mplace2'] ?>")
 									
 								.fieldset-cell.form-item
-									input.form-inp(type="text"  name="mplace3")
+									input.form-inp(type="text"  name="mplace3"  value="<?= $data['mplace3'] ?>")
 									
 					
 					
@@ -166,33 +166,35 @@ block content
 							.inner-row-title Резьбовой
 							.inner-row.h-auto
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp1" value="1")
 										span.fake-radio
 										span.form-radio-name Резьбовой
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp2" value="1")
+										span.fake-radio
 										span.form-radio-name Резьбовой
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp3" value="1")
+										span.fake-radio
 										span.form-radio-name Резьбовой
 							
 							.inner-row-title Фланцевый
 							.inner-row.h-auto
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp1" value="2")
 										span.fake-radio
 										span.form-radio-name Фланцевый
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp2" value="2")
 										span.fake-radio
 										span.form-radio-name Фланцевый
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp3" value="2")
 										span.fake-radio
 										span.form-radio-name Фланцевый
@@ -200,17 +202,17 @@ block content
 							.inner-row-title Приварной
 							.inner-row.h-auto
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp1" value="3")
 										span.fake-radio
 										span.form-radio-name Приварной
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp2" value="3")
 										span.fake-radio
 										span.form-radio-name Приварной
 								.fieldset-cell
-									label.form-checkbox-label
+									label.form-radio-label
 										input(type="radio"  name="tipp3" value="3")
 										span.fake-radio
 										span.form-radio-name Приварной
