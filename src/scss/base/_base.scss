@@ -33,8 +33,9 @@ body{font-family: var(--font-family);}
 
 .custom-form{
 	--text:  #333;
-	--grey:#999; 
 	--prim:#3180dd;
+	--grey:#999; 
+    --blue:#468DE4;
 	--font-family: 'Montserrat';
     box-sizing: border-box;
 	*, *:after, *:before {

@@ -1,0 +1,117 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2.db-h2 Кнопки
+
+				.container-dashboard__content
+					nav.calc-menu
+						.acc.acc--level-1.is-open
+							button.acc__head.acc__head--level-1(type='button')
+								span Пар
+								span.acc__icon(aria-hidden='true')
+							.acc__body
+								.acc__body-inner
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+									.acc.acc--level-2.is-open
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+						.acc.acc--level-1
+							button.acc__head.acc__head--level-1(type='button')
+								span Возврат конденсата
+								span.acc__icon(aria-hidden='true')
+							.acc__body
+								.acc__body-inner
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+									.acc.acc--level-2.is-open
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+									.acc.acc--level-2
+										button.acc__head.acc__head--level-2(type='button')
+											span.acc__icon(aria-hidden='true')
+											span Проектирование трубопроводов
+										.acc__body
+											.acc__body-inner
+												a.acc__link(href='#') Расчет замера трубы по размерам давления
+												a.acc__link(href='#') Потери давления в трубопроводе
+												a.acc__link.is-active(href='#') Скорость прохождения воды через трубопровод
+
+			script.
+				document.querySelectorAll(".acc__head").forEach((button) => {
+					button.addEventListener("click", () => {
+						const currentAcc = button.closest(".acc");
+						const parentBody = currentAcc.parentElement;
+
+						// Если нужно поведение именно аккордеона:
+						// закрываем соседей на этом же уровне
+						parentBody.querySelectorAll(":scope > .acc.is-open").forEach((acc) => {
+						if (acc !== currentAcc) {
+							acc.classList.remove("is-open");
+						}
+						});
+
+						currentAcc.classList.toggle("is-open");
+					});
+				});
