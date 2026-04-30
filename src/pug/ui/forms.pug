@@ -91,18 +91,45 @@ html(lang="ru")
 							span.fake-radio
 							span.form-radio-name Нет
 				.dropdown
-					button.dropdown__button(type="button") Вакансия
+					button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Вакансия
 					
 					.dropdown__list
 						ul
-							li.dropdown__list-item(data-value="Текст1") Текст 1
-							li.dropdown__list-item(data-value="Текст2") Текст 2
-							li.dropdown__list-item(data-value="Текст3") Текст 3
-							li.dropdown__list-item(data-value="Текст4") Текст 4
+							li.dropdown__list-item
+								label.form-radio-label
+									input(type="radio"  id="exlevel-01" name="exitlevel0" value="1" checked )
+									span.form-radio-name 0(4)…20мА
+							li.dropdown__list-item
+								label.form-radio-label
+									input(type="radio" id="exlevel-01" name="exitlevel0" value="2")
+									span.form-radio-name 0 (2)…10В
+							li.dropdown__list-item
+								label.form-radio-label
+									input(type="radio" id="exlevel-01" name="exitlevel0" value="3")
+									span.form-radio-name Дискретные сигналы предельных уровней
 					
 					//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 					input.dropdown__input-hidden(type="hidden", name="")
 		
+				br
+				.form-item-group
+					.form-label Выходной сигнал уровня
+					.dropdown
+						button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 0(4)…20мА
+						.dropdown__list
+							ul
+								li.dropdown__list-item
+									label.form-radio-label
+										input(type="radio"  id="exlevel-01" name="exitlevel" value="1" checked )
+										span.form-radio-name 0(4)…20мА
+								li.dropdown__list-item
+									label.form-radio-label
+										input(type="radio" id="exlevel-01" name="exitlevel" value="2")
+										span.form-radio-name 0 (2)…10В
+								li.dropdown__list-item
+									label.form-radio-label
+										input(type="radio" id="exlevel-01" name="exitlevel" value="3")
+										span.form-radio-name Дискретные сигналы предельных уровней
 				br
 				.dropdown
 					button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 
@@ -110,12 +137,12 @@ html(lang="ru")
 						ul
 							li.dropdown__list-item
 								label.form-radio-label
-									input(type="radio"  name=""  value="" checked )
-									span.form-radio-name 
+									input(type="radio"  name="name_01"  value="val_01" checked )
+									span.form-radio-name  List item name
 							li.dropdown__list-item
 								label.form-radio-label
-									input(type="radio"  name=""  value="" )
-									span.form-radio-name 
+									input(type="radio"  name="name_01"  value="val_02" )
+									span.form-radio-name  List item name
 				br
 				h4(style="margin-bottom:14px;") Соглашение с политикой в форме
 				.agree-block
@@ -133,64 +160,6 @@ html(lang="ru")
 								span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
 				
 				
-		script.
-			document.addEventListener("DOMContentLoaded", function () {
-				document.querySelector('#close-ui').addEventListener('click', ()=>{
-					document.body.classList.toggle('active')
-				});
-				
-				// DROP SELECT
-				document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-					const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-					const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-					const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-					const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-
-					// Клик по кнопке. Открыть/Закрыть select
-					dropDownBtn.addEventListener('click', function (e) {
-					
-						dropDownList.classList.toggle('dropdown__list--visible');
-						this.classList.toggle('dropdown__button--active');
-						dropDownWrapper.classList.toggle('dropdown-active');
-						
-					});
-					
-
-					// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-					dropDownListItems.forEach(function (listItem) {
-						
-						
-						listItem.addEventListener('click', function (e) {
-							e.stopPropagation();
-							const selectListItem = dropDownList.querySelector('.active');
-							if(selectListItem){
-								selectListItem.classList.remove('active');
-							}
-							this.classList.add('active');
-							dropDownBtn.innerText = this.innerText;
-							dropDownBtn.focus();
-							dropDownInput.value = this.dataset.value;
-							
-							dropDownList.classList.remove('dropdown__list--visible');
-							dropDownBtn.classList.remove('dropdown__button--active');
-							dropDownWrapper.classList.remove('dropdown-active');
-						});
-					});
-
-					// Клик снаружи дропдауна. Закрыть дропдаун
-					document.addEventListener('click', function (e) {
-						if (e.target !== dropDownBtn) {
-							dropDownBtn.classList.remove('dropdown__button--active');
-							dropDownList.classList.remove('dropdown__list--visible');
-						}
-					});
-
-					// Нажатие на Tab или Escape. Закрыть дропдаун
-					document.addEventListener('keydown', function (e) {
-						if (e.key === 'Tab' || e.key === 'Escape') {
-							dropDownBtn.classList.remove('dropdown__button--active');
-							dropDownList.classList.remove('dropdown__list--visible');
-						}
-					});
-				});
-			})
+		script(src="../js/main.js")
+			
+			

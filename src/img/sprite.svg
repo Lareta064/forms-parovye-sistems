@@ -8,7 +8,11 @@
 
 		</g>
 	</symbol>
-	
+	<symbol id="svg-minus"  viewBox="0 0 10 2">
+		<g>			
+  			<path d="M0.554688 0.555664H9.44358" stroke="currentColor" stroke-width="1.11111" stroke-linecap="round" />
+		</g>
+	</symbol>
 	
 	<symbol id="svg-gerb"  viewBox="0 0 25 24">
 		<g>
@@ -61,11 +65,7 @@
 		</g>
 	</symbol>
 
-	<symbol id="svg-play" viewBox="0 0 65 72">
-		<g>
-			<path d="M60 27.3397C66.6667 31.1887 66.6667 40.8113 60 44.6603L15 70.641C8.33334 74.49 0 69.6788 0 61.9808V10.0192C0 2.32124 8.33334 -2.49002 15 1.35898L60 27.3397Z" fill="currentColor" />
-		</g>
-	</symbol>
+
 	<symbol id="svg-carret-down" viewBox="0 0 12 7">
 		<g>
 			

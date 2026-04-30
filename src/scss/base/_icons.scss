@@ -1,7 +1,16 @@
-svg{display: inline-block;}
-.svg-right{
-	
+svg{display: inline-block;transition: .3s; }
+.svg-right{	
 	width: 12px;
 	height: 10px;
 	color: blue;
+}
+.svg-minus{
+	width: 10px;
+	height: 2px;
+	color: white;
+}
+.svg-plus{
+	width: 10px;
+	height: 2px;
+	color: white;
 }
