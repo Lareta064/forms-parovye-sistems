@@ -28,8 +28,13 @@ section.inner-promo(
     font-weight: 600;
     font-style: normal;
 }
-
-body{font-family: var(--font-family);}
+*, *:before, *:after{
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{font-family: 'Montserrat', sans-serif;}
 
 .custom-form{
 	--text:  #333;
@@ -42,6 +47,14 @@ body{font-family: var(--font-family);}
 		box-sizing: border-box;
 		background-repeat: no-repeat;
 		background-position: center;
-		
 	}
+}
+.container-1440{
+    width: 100%;
+    margin: 0 auto;    
+    max-width: 1540px;
+    padding: 0 40px;
+       @media (max-width: 1023px) {
+         padding:0 15px;
+    }
 }

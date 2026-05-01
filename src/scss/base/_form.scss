@@ -523,3 +523,118 @@
 		@media (max-width: 479px) {justify-content: flex-start;}
 	}
 }
+.custom-form {
+	.form-item--measure {
+		display: flex;
+		align-items: stretch;
+		overflow: visible;
+
+		border: 1px solid var(--prim);
+		border-radius: 4px;
+		background-color: #fff;
+	}
+
+	.form-inp--measure {
+		min-width: 0;
+		flex: 1;
+		height: 48px;
+		border: 0;
+		border-radius: 4px 0 0 4px;
+		padding-inline: 12px;
+
+		font-size: 18px;
+		color: var(--text);
+		background-color: #fff;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.dropdown--measure {
+		position: relative;
+		flex: 0 0 130px;
+		width: 130px;
+
+		border: 0;
+		border-left: 1px solid var(--prim);
+		border-radius: 0;
+		background-color: var(--prim);
+	}
+
+	.dropdown--measure .dropdown__button {
+		height: 48px;
+		padding-left: 12px;
+		padding-right: 42px;
+		border-radius: 0 3px 3px 0;
+
+		background-color: var(--prim);
+		color: #fff;
+
+		font-size: 15px;
+		line-height: 1;
+	}
+
+	.dropdown--measure .dropdown__button::after {
+		right: 12px;
+		width: 18px;
+		height: 18px;
+		background-size: 18px 18px;
+
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.5 10.5L9 6L13.5 10.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+		transform: translateY(-50%) rotate(180deg);
+	}
+
+	.dropdown--measure .dropdown__button.dropdown__button--active::after {
+		transform: translateY(-50%) rotate(0);
+	}
+
+	.dropdown--measure .dropdown__list {
+		left: -1px;
+		right: -1px;
+		top: 100%;
+
+		border-radius: 0 0 4px 4px;
+		background-color: #fff;
+		color: var(--text);
+
+		z-index: 10;
+	}
+
+	.dropdown--measure .dropdown__list--visible {
+		border: 1px solid var(--prim);
+		border-top: 0;
+		max-height: 170px;
+	}
+
+	.dropdown--measure .dropdown__list-item {
+		font-size: 14px;
+		color: var(--text);
+	}
+
+	.dropdown--measure .dropdown__list-item label {
+		padding: 2px 6px;
+		min-height: 23px;
+	}
+
+	.dropdown--measure .dropdown__list-item input {
+		display: none;
+	}
+
+	.dropdown--measure .dropdown__list-item:has(input:checked) {
+		background-color: rgba(49, 128, 221, 0.2);
+	}
+
+	.dropdown--measure .dropdown__list-item:hover {
+		background-color: rgba(49, 128, 221, 0.2);
+	}
+
+	.dropdown--measure .form-radio-name {
+		display: block;
+		white-space: nowrap;
+	}
+
+	.form-item--measure:focus-within {
+		box-shadow: 0 0 0 2px rgba(70, 141, 228, 0.16);
+	}
+}

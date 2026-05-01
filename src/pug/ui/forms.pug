@@ -159,7 +159,58 @@ html(lang="ru")
 								span.fake-checkbox
 								span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
 				
-				
+				br
+				.form-item-group
+					.form-label Давление пара
+					.form-item.form-item--measure
+						input.form-inp.form-inp--measure(
+							type="text"
+							name="steam_pressure"
+							inputmode="decimal"
+						)
+
+						.dropdown.dropdown--measure
+							button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+							.dropdown__list
+								ul
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+											span.form-radio-name barG
+
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+											span.form-radio-name mmHg abc
+
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-03" name="steam_pressure_unit" value="mmH abc")
+											span.form-radio-name mmH abc
+
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-04" name="steam_pressure_unit" value="mmHg abc 2")
+											span.form-radio-name mmHg abc
+
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-05" name="steam_pressure_unit" value="mmHg abc 3")
+											span.form-radio-name mmHg abc
+
+									li.dropdown__list-item
+										label.form-radio-label
+											input(type="radio" id="steam-pressure-06" name="steam_pressure_unit" value="mmHg abc 4")
+											span.form-radio-name mmHg abc
+								
+				br
+				h4(style="margin-bottom:14px;") Соглашение с политикой в форме
+				.agree-block
+					.form-checkbox
+						label.checkbox-label
+							input.checkbox-inp(type="checkbox" name="name")
+							span.fake-checkbox
+							span.fs-14 Я согласен с #[a.a-gradient(href="#!") политикой конфиденциальности]
 		script(src="../js/main.js")
 			
 			

@@ -1,5 +1,5 @@
 .calc-menu {
-  width: 270px;
+  width: 100%;
   font-family: var(--font-family);
   color: #333;
 }
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
+  border-bottom: 1px solid #e8e8e8;
   font-family: var(--font-family);
   text-align: left;
 }
@@ -44,7 +44,7 @@
 
 .acc__head--level-2 {
   justify-content: flex-start;
-  padding: 5px 0;
+  padding: 9px 0;
 
   font-weight: 400;
   font-size: 13px;

@@ -1,10 +1,14 @@
 
 @use "base/_var" as *;
 @use "base/_base";
-@use "base/_form-grid";
+@use "base/_typography";
+@use "base/_form-grid";/*страницы форм*/
+@use "base/_grids";
 @use "base/_form";
 @use "base/_dropdown";
 @use "blocks/_acordion-menu";
+@use "sections/_calc-page.scss";
+
 // @use "base/_test";
 // @import "base/_grids";
 // @import "base/_typography";
