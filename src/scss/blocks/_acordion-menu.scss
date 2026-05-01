@@ -4,12 +4,11 @@
   color: #333;
 }
 
-/* Общая плашка */
 .acc {
   border-bottom: 1px solid #e8e8e8;
 }
 
-/* Кнопка раскрытия */
+
 .acc__head {
   width: 100%;
   padding: 0;
@@ -26,7 +25,7 @@
   text-align: left;
 }
 
-/* Первый уровень */
+
 .acc__head--level-1 {
   justify-content: space-between;
   padding: 10px 0;
@@ -37,7 +36,7 @@
   letter-spacing: -0.01em;
 }
 
-/* Второй уровень */
+
 .acc--level-2 {
   border-bottom: 0;
 }
@@ -62,25 +61,24 @@
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.554688 5H9.44358' stroke='%23468DE4' stroke-width='1.11111' stroke-linecap='round' /%3e%3cpath d='M5 9.44434L5 0.555447' stroke='%23468DE4' stroke-width='1.11111' stroke-linecap='round' /%3e%3c/svg%3e");
 }
 
-/* Размер иконки первого уровня */
 .acc__head--level-1 .acc__icon {
   width: 20px;
   height: 20px;
 }
 
-/* Размер иконки второго уровня */
+
 .acc__head--level-2 .acc__icon {
   width: 16px;
   height: 16px;
 }
 
-/* Состояние открыто */
+
 .acc.is-open > .acc__head .acc__icon {
   background-color: #468de4;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='2' viewBox='0 0 10 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.554688 0.555664H9.44358' stroke='white' stroke-width='1.11111' stroke-linecap='round' /%3e%3c/svg%3e");
 }
 
-/* Тело аккордеона */
+
 .acc__body {
   display: grid;
   grid-template-rows: 0fr;
@@ -102,7 +100,7 @@
   opacity: 1;
 }
 
-/* Ссылки третьего уровня */
+
 .acc__link {
   display: block;
   padding: 5px 0 5px 32px;
@@ -119,7 +117,7 @@
   color: #468de4;
 }
 
-/* Активная ссылка */
+
 .acc__link.is-active {
   margin-left: 0;
   padding: 5px 10px 5px 32px;
@@ -127,7 +125,7 @@
   color: #fff;
 }
 
-/* Фокус для клавиатуры */
+
 .acc__head:focus-visible,
 .acc__link:focus-visible {
   outline: 2px solid #468de4;

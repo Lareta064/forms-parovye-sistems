@@ -1,0 +1,185 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calculator-single
+		.container-1440
+			.grid-column-left
+				//LEFT SIDEBAR
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					
+					include ../blocks/_acc-menu
+				
+				//RIGHT COLUMN
+				.grid-column-main.custom-form
+					.page-head.mb-60
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Расчет размера труб по потере давления пара
+					.calculator-single-top
+						.semi-24 Начальные данные
+						.calculator-form
+							.calculator-single-measure
+								p.medi-16 Единицы измерения
+								.dropdown
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Imperial
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio"  name="name_01"  value="val_01" checked )
+													span.form-radio-name SI
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio"  name="name_01"  value="val_02" )
+													span.form-radio-name Imperial
+
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio"  name="name_01"  value="val_02" )
+													span.form-radio-name MKS
+					.calculator-fieldset.form-two-cols
+						//ITEM
+						.form-item-group
+							.form-label.has-tooltip
+								span Класс трубопровода
+								.tooltip-wrapper
+									span.tooltip-icon i
+									.tooltip-text
+										p Длина трубопровода — это расстояние между двумя концами трубы (мерная, немерная) или общая протяженность трассы, измеряемая в метрах.
+							.dropdown
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN2448
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="name1" value="1" checked )
+												span.form-radio-name DIN2448
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="name1" value="2")
+												span.form-radio-name DIN2448-55
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="name1" value="3")
+												span.form-radio-name DIN2448
+						//ITEM
+						.form-item-group
+							.form-label Диаметр трубопровода
+								
+							.dropdown
+								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="name2" value="1" checked )
+												span.form-radio-name DN6
+										li.dropdown__list-item
+											label.form-radio-label
+												input(type="radio"  name="name2" value="2")
+												span.form-radio-name DN7
+										
+						//ITEM
+						.form-item-group
+							.form-label Давление пара
+							.form-item.form-item--measure
+								input.form-inp.form-inp--measure(
+									type="text"
+									name="steam_pressure"
+									inputmode="decimal"
+								)
+
+								.dropdown.dropdown--measure
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+													span.form-radio-name barG
+
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+													span.form-radio-name mmHg abc
+
+						//ITEM
+						.form-item-group
+							.form-label Расход пара
+							.form-item.form-item--measure
+								input.form-inp.form-inp--measure(
+									type="text"
+									name="steam_pressure"
+									inputmode="decimal"
+								)
+
+								.dropdown.dropdown--measure
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+													span.form-radio-name barG
+
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+													span.form-radio-name mmHg abc
+
+						//ITEM
+						.form-item-group
+							.form-label Максимально допустимые потери давления
+							.form-item.form-item--measure
+								input.form-inp.form-inp--measure(
+									type="text"
+									name="steam_pressure"
+									inputmode="decimal"
+								)
+
+								.dropdown.dropdown--measure
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+													span.form-radio-name barG
+
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+													span.form-radio-name mmHg abc
+
+						//ITEM
+						.form-item-group
+							.form-label.has-tooltip
+								span Длина трубопровода
+								.tooltip-wrapper
+									span.tooltip-icon i
+									.tooltip-text
+										p Длина трубопровода — это расстояние между двумя концами трубы (мерная, немерная) или общая протяженность трассы, измеряемая в метрах.
+							.form-item.form-item--measure
+								input.form-inp.form-inp--measure(
+									type="text"
+									name="steam_pressure"
+									inputmode="decimal"
+								)
+
+								.dropdown.dropdown--measure
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+													span.form-radio-name barG
+
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+													span.form-radio-name mmHg abc	
+	-var title = "Калькулятор Главная";

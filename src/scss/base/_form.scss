@@ -588,7 +588,7 @@
 	.dropdown--measure .dropdown__button.dropdown__button--active::after {
 		transform: translateY(-50%) rotate(0);
 	}
-
+   .dropdown--measure .dropdown__button.dropdown__button--active{border-radius: 0 3px 3px 0;}
 	.dropdown--measure .dropdown__list {
 		left: -1px;
 		right: -1px;
