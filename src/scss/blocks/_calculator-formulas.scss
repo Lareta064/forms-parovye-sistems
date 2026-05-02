@@ -30,11 +30,12 @@
 		}
 	}
 	.formulas__list{
-		&-item{
+		.formulas__item{
 			font-weight: 500;
 			font-size: 15px;
 			line-height: 1.3;
 			color: #333;
+			margin-bottom: 7px;
 		}
 	}
 	@media (max-width: 1199px) {

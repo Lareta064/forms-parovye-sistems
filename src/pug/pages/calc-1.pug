@@ -1,7 +1,7 @@
 extends ../layouts/layout-white.pug
 
 block content
-	main.calculator-single
+	main.calc-main.calculator-single
 		.container-1440
 			.grid-column-left
 				//LEFT SIDEBAR
@@ -12,8 +12,8 @@ block content
 					include ../blocks/_acc-menu
 				
 				//RIGHT COLUMN
-				.grid-column-main
-					.page-head.mb-60
+				.grid-column-main.grid-column-calc
+					.grid-column-head
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Расчет размера труб по потере давления пара
 					
