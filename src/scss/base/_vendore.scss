@@ -1,0 +1,16 @@
+.ml-auto{margin-left: auto;}
+.mt-20{margin-top: 20px!important;}
+.pt-20{padding-top: 20px!important;}
+
+.d-flex, .flex-center,.flex-column{
+	display: flex;
+	gap:10px;
+}
+.flex-center{
+	justify-content: center;
+	align-items: center;
+}
+.flex-column{
+	flex-direction: column;
+}
+.w-auto{width: fit-content!important;}

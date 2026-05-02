@@ -1,0 +1,29 @@
+.open-hide-btn, .custom-form .open-hide-btn{
+	display: flex;
+	width: fit-content;
+	column-gap:10px;
+	align-items: center;
+	border-bottom: 1px solid #e8e8e8;
+    padding: 4px 5px;
+}
+.is-hide-block {
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+
+	transition:
+	height 0.3s ease,
+	opacity 0.25s ease;
+}
+
+.hide-block-wrapper.is-open .is-hide-block {
+	opacity: 1;
+	padding-top: 20px;
+}
+
+.open-hide-btn {
+	cursor: pointer;
+	@media (max-width: 767px) {
+	font-size: 14px;
+	}
+}

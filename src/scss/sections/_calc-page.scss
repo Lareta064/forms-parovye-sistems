@@ -1,5 +1,9 @@
+.calculator-single{
+	p, ol, ul, h1, h2, h3{margin: 0;}
+}
 .page-head.mb-60{
-	margin-bottom: 60px;
+	margin-bottom: 45px;
+	padding-bottom: 15px;
 	.breadcrumb{margin-bottom: 16px;}
 	@media (max-width: 1439px) {
 	  .page-head{margin-bottom: 30px;}
@@ -7,7 +11,6 @@
 	}
 }
 .main-calc{
-	
 	p{margin: 0;}
 	.grid-column-sidebar{
 		position: sticky;
@@ -79,19 +82,77 @@
 	  grid-template-columns:1fr;
 	}
 }
-.calculator-single-measure, .calculator-single-top{
+.calculator-form{
 	display: flex;
-	
+	flex-direction: column;
+	row-gap: 30px;
+	@media (max-width: 1199px) {
+	  row-gap: 20px;
+	}
+
+}
+.calculator-form__body{
+	width: 100%;
+}
+.calculator-form__measure, .calculator-form__head{
+	display: flex;
 	align-items: center;
+	
 }
-.calculator-single-top{
-justify-content: space-between;
+.calculator-form__head{
+	width: 100%;
+    justify-content: space-between;
+	@media (max-width: 1023px) {
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 10px;
+	}
 }
-.calculator-single-measure{
+.calculator-form__measure{
 	column-gap:10px;
 	.dropdown{
 		width: 125px;
 		flex-shrink: 0;
+	}
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.btn-clear-form{
+	font-weight: 400;
+	font-family: inherit;
+	cursor:pointer;
+	font-size: 15px;
+	line-height: 1.2;
+	color: #999;
+}
+.calculator-form__footer{
+	width: 100%;
+	.form-button{width: fit-content;}
+}
+.calculator-form__result{
+	display: flex;
+	column-gap: 20px;
+	align-items: center;
+	padding-block: 30px;
+	border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	
+	.calculator-result-block{flex-grow: 1;}
+	@media (max-width: 1199px) {
+		padding-block: 20px;
+		.semi-24{font-size: 18px;}
+	}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  align-items: flex-start;
+	  row-gap:10px;
 	}
 }
 .has-tooltip{
@@ -130,6 +191,10 @@ justify-content: space-between;
 		p{
 			margin: 0;
 		}
+		@media (max-width: 767px) {
+			padding: 6px;
+		    font-size: 12px;
+		}
 	}
 }
 .tooltip-wrapper:hover .tooltip-text{
@@ -138,12 +203,8 @@ justify-content: space-between;
 	bottom: 60%;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
+.form-label.has-tooltip{
+	@media (max-width: 1199px) {
+	display: flex!important;
+	}
 }
