@@ -182,4 +182,20 @@ block content
 												label.form-radio-label
 													input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
 													span.form-radio-name mmHg abc	
+	
+					.calculator-fieldset.is-hide-block
+						.form-two-cols
+							.form-item-group
+								.form-label Клапаны с изменяемым направлением потока (вентили и т.п.) (кол-во)
+								.form-item
+									input.form-inp(type="number" name="inp_name1")
+									
+							.form-item-group
+								.form-label Проходные клапаны (задвижки и т.п.) (кол-во)
+								.form-item
+									input.form-inp(type="number" name="inp_name2")
+
+					button.open-hide-block
+						i.icon-add
+
 	-var title = "Калькулятор Главная";
