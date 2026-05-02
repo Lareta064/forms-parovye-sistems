@@ -88,11 +88,11 @@ block content
 														input(type="radio"  name="name2" value="2")
 														span.form-radio-name DN7
 												
-								//ITEM
+								//ITEM. Добавление класса "error"  для form-inp--measure задает красную рамку
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
+										input.form-inp.form-inp--measure.error(
 											type="text"
 											name="steam_pressure"
 											inputmode="decimal"
@@ -187,7 +187,7 @@ block content
 													li.dropdown__list-item
 														label.form-radio-label
 															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
-															span.form-radio-name mmHg abc	
+															span.form-radio-name mmHg abc
 							.hide-block-wrapper
 								.calculator-fieldset.is-hide-block
 									.form-two-cols
@@ -222,10 +222,94 @@ block content
 						//FORM RESULT
 						.calculator-form__result
 							p.semi-24 Результат:
-							.calculator-result-block.medi-16
-								p Пожалуйста введите данные в поля
+							.calculator-result-block
+								p.medi-16 Пожалуйста введите данные в поля
+								
+								//Если поля не заполнены корректно, то красный цвет текста задается при помощи класса  result-error
+								p.result-error [ Максимально допустимые потери давления ]
+								p.result-error Пожалуйста введите значение (n) в пределах следующего диапазона:  0.0 < n kg/h (ТЕКСТ ОШИБКИ)
 
-	
+								
+								//Список результатов
+								
+								//single result row
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход конденсата на разогрев трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(
+											type="text"
+											name="res"
+											value="0.265333"
+											inputmode="decimal"
+											readonly
+										)
+
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															span.form-radio-name barG
+
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															span.form-radio-name mmHg abc
+								//single result row
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход конденсата за счет теплопотерь с поверхности трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(
+											type="text"
+											name="res"
+											value="1.265333"
+											inputmode="decimal"
+											readonly
+										)
+
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") кг
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															span.form-radio-name кг
+
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															span.form-radio-name гр
+								//single result row
+								.calculator-result-row.form-item-group
+									.form-label
+										span Время нагрева
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(
+											type="text"
+											name="res"
+											value="10"
+											inputmode="decimal"
+											readonly
+										)
+
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") мин
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															span.form-radio-name мин
+
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															span.form-radio-name час
 					//formulas
 					.formulas
 						.formulas__title
