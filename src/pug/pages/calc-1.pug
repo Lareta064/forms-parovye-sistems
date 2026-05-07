@@ -49,7 +49,7 @@ block content
 						//FORM HBODY
 						.calculator-form__body
 							.calculator-fieldset.form-two-cols
-								//ITEM
+								//Класс трубопровода
 								.form-item-group
 									.form-label.has-tooltip
 										span Класс трубопровода
@@ -58,13 +58,14 @@ block content
 											.tooltip-text
 												p Длина трубопровода — это расстояние между двумя концами трубы (мерная, немерная) или общая протяженность трассы, измеряемая в метрах.
 									.dropdown
+										//В значение кнопки подставляется то, что прописано в спан рядом с инпутом у которого атрибут checked
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN2448
 										
 										.dropdown__list
 											ul
 												li.dropdown__list-item
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="0" checked )
+														input(type="radio"  name="truboprovod_class" value="0"  )
 														span.form-radio-name JIS-SGP
 												li.dropdown__list-item
 													label.form-radio-label
@@ -92,25 +93,26 @@ block content
 														span.form-radio-name ANSI Sch160		
 												li.dropdown__list-item
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="7")
+														input(type="radio"  name="truboprovod_class" value="7" checked)
 														span.form-radio-name DIN 2448										
 								
+								//Давление пара
 								.form-item-group
-									.form-label Давление пара
+									.form-label Давление пара 555
 									.form-item.form-item--measure
 										input.form-inp.form-inp--measure(
 											type="text"
-											name="steam_pressure"
+											name="current_davlenie_para"
 											inputmode="decimal"
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
 											.dropdown__list
 												ul
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para" value="0" checked)
+															input(type="radio"  name="davlenie_para" value="0" )
 															span.form-radio-name kPa abs
 
 													li.dropdown__list-item
@@ -147,7 +149,7 @@ block content
 															span.form-radio-name psig
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="9")
+															input(type="radio"  name="davlenie_para"  value="9" checked)
 															span.form-radio-name barG
 													li.dropdown__list-item
 														label.form-radio-label
@@ -161,9 +163,9 @@ block content
 					
 								
 								
-								//ITEM
+								//ITEM Температура пара
 								.form-item-group
-									.form-label Расход пара
+									.form-label Температура пара
 									.form-item.form-item--measure
 										input.form-inp.form-inp--measure(
 											type="text"
@@ -177,12 +179,12 @@ block content
 												ul
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															input(type="radio"  name="steam_pressure_unit" value="barG" checked)
 															span.form-radio-name barG
 
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															input(type="radio"  name="steam_pressure_unit" value="mmHg abc")
 															span.form-radio-name mmHg abc
 
 								//ITEM
@@ -230,12 +232,12 @@ block content
 												ul
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															input(type="radio"  name="steam_pressure_unit" value="barG" checked)
 															span.form-radio-name barG
 
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															input(type="radio"  name="steam_pressure_unit" value="mmHg abc")
 															span.form-radio-name mmHg abc
 							.hide-block-wrapper
 								.calculator-fieldset.is-hide-block
