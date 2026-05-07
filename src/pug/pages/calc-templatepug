@@ -94,11 +94,29 @@ block content
 													label.form-radio-label
 														input(type="radio"  name="truboprovod_class" value="7")
 														span.form-radio-name DIN 2448										
-								
+								//ITEM
+								.form-item-group
+									.form-label Диаметр трубопровода
+										
+									.dropdown
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
+										
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio"  name="name2" value="1" checked )
+														span.form-radio-name DN6
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio"  name="name2" value="2")
+														span.form-radio-name DN7
+												
+								//ITEM. Добавление класса "error"  для form-inp--measure задает красную рамку
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
+										input.form-inp.form-inp--measure.error(
 											type="text"
 											name="steam_pressure"
 											inputmode="decimal"
@@ -110,57 +128,14 @@ block content
 												ul
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para" value="0" checked)
-															span.form-radio-name kPa abs
+															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
+															span.form-radio-name barG
 
 													li.dropdown__list-item
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="1")
-															span.form-radio-name MPa abs
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="2")
-															span.form-radio-name psi abs
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="3")
-															span.form-radio-name bar abs
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="4")
-															span.form-radio-name kg/cm² abs
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="5")
-															span.form-radio-name mmHg abs
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="6")
-															span.form-radio-name kPaG
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="7")
-															span.form-radio-name MPaG
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="8")
-															span.form-radio-name psig
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="9")
-															span.form-radio-name barG
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="10")
-															span.form-radio-name kg/cm²G
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="11")
-															span.form-radio-name mmHgG
-								
-					
-								
-								
+															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
+															span.form-radio-name mmHg abc
+
 								//ITEM
 								.form-item-group
 									.form-label Расход пара
