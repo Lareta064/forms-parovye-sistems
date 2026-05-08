@@ -1,176 +1,195 @@
-//sidebar nav
-nav.calc-menu
-	.acc.acc--level-1.is-open
-		button.acc__head.acc__head--level-1(type='button')
-			span Пар
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				.acc.acc--level-2.is-open
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Проектирование трубопроводов
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='calc-1.html') Расчет размера трубы по потерям давления
-							a.acc__link(href='calc-2.html') Расчет размера трубы по скорости
-							a.acc__link(href='#') Расчет размера вестовой трубы
-							a.acc__link(href='calc-3.html') Потери давления в трубопроводе
-							a.acc__link(href='calc-4.html') Скорость пара в трубопроводе
-							a.acc__link(href='calc-5.html') Расход пара в трубопроводе
-							a.acc__link(href='#') Экономичная толщина изоляции
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Клапаны и сопла
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='calc-6.html') Значения пропускной способности Cv и Kv
-							a.acc__link(href='calc-7.html') Расход пара через клапан
-							a.acc__link(href='calc-8.html') Расход пара через сопло
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Расход конденсата
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='calc-9.html') От трубопровода при запуске
-							a.acc__link(href='calc-10.html') При нагреве жидкости (непрерывном)
-							a.acc__link(href='calc-11.html') При нагреве жидкости (фиксированный объем)
-							a.acc__link(href='calc-12.html') При нагреве воздуха
-							a.acc__link(href='calc-13.html') От потери лучистого тепла в трубопроводах
-							a.acc__link(href='#') Точка подтопления
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Улучшенная сухость пара
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') От снижения давления
-							a.acc__link(href='#') От снижения давления и отделения конденсата
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Эффект смеси пара и воздуха
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Падение температуры (на основе % воздуха)
-							a.acc__link(href='#') % воздуха (на основе температуры смеси)
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Стоимость единицы пара и энергии
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Стоимость единицы энергии
-							a.acc__link(href='#') Стоимость единицы пара
-				a.acc__link.acc__link--standalone(href='#') Эффективность котла
+mixin calcMenu(active)
+	-
+		var key = active || '';
+		var l1 = '';
+		var l2 = '';
+		switch (key) {
+			case 'calc-1': case 'calc-2': case 'calc-3': case 'calc-4': case 'calc-5':
+				l1 = 'par'; l2 = 'piping'; break;
+			case 'calc-6': case 'calc-7': case 'calc-8':
+				l1 = 'par'; l2 = 'valves'; break;
+			case 'calc-9': case 'calc-10': case 'calc-11': case 'calc-12': case 'calc-13':
+				l1 = 'par'; l2 = 'kondensat'; break;
+			case 'calc-14':
+				l1 = 'return'; break;
+			case 'calc-15': case 'calc-16': case 'calc-17':
+				l1 = 'tables'; break;
+		}
+		function l1Class(name) { return l1 === name ? 'is-open' : ''; }
+		function l2Class(name) { return l2 === name ? 'is-open' : ''; }
+		function linkClass(k) { return key === k ? 'is-active' : ''; }
+	nav.calc-menu
+		.acc.acc--level-1(class=l1Class('par'))
+			button.acc__head.acc__head--level-1(type='button')
+				span Пар
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					.acc.acc--level-2(class=l2Class('piping'))
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Проектирование трубопроводов
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='calc-1.html' class=linkClass('calc-1')) Расчет размера трубы по потерям давления
+								a.acc__link(href='calc-2.html' class=linkClass('calc-2')) Расчет размера трубы по скорости
+								a.acc__link(href='#') Расчет размера вестовой трубы
+								a.acc__link(href='calc-3.html' class=linkClass('calc-3')) Потери давления в трубопроводе
+								a.acc__link(href='calc-4.html' class=linkClass('calc-4')) Скорость пара в трубопроводе
+								a.acc__link(href='calc-5.html' class=linkClass('calc-5')) Расход пара в трубопроводе
+								a.acc__link(href='#') Экономичная толщина изоляции
+					.acc.acc--level-2(class=l2Class('valves'))
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Клапаны и сопла
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='calc-6.html' class=linkClass('calc-6')) Значения пропускной способности Cv и Kv
+								a.acc__link(href='calc-7.html' class=linkClass('calc-7')) Расход пара через клапан
+								a.acc__link(href='calc-8.html' class=linkClass('calc-8')) Расход пара через сопло
+					.acc.acc--level-2(class=l2Class('kondensat'))
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Расход конденсата
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='calc-9.html' class=linkClass('calc-9')) От трубопровода при запуске
+								a.acc__link(href='calc-10.html' class=linkClass('calc-10')) При нагреве жидкости (непрерывном)
+								a.acc__link(href='calc-11.html' class=linkClass('calc-11')) При нагреве жидкости (фиксированный объем)
+								a.acc__link(href='calc-12.html' class=linkClass('calc-12')) При нагреве воздуха
+								a.acc__link(href='calc-13.html' class=linkClass('calc-13')) От потери лучистого тепла в трубопроводах
+								a.acc__link(href='#') Точка подтопления
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Улучшенная сухость пара
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') От снижения давления
+								a.acc__link(href='#') От снижения давления и отделения конденсата
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Эффект смеси пара и воздуха
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Падение температуры (на основе % воздуха)
+								a.acc__link(href='#') % воздуха (на основе температуры смеси)
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Стоимость единицы пара и энергии
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Стоимость единицы энергии
+								a.acc__link(href='#') Стоимость единицы пара
+					a.acc__link.acc__link--standalone(href='#') Эффективность котла
 
-	.acc.acc--level-1
-		button.acc__head.acc__head--level-1(type='button')
-			span Возврат конденсата
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Экономический анализ
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Открытая система
-							a.acc__link(href='#') Закрытая система
-							a.acc__link(href='#') Теплообменник
-							a.acc__link(href='#') Регенерация выпара
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Расчет размера трубы
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Между оборудованием и конденсатоотводчиком
-							a.acc__link(href='#') Расчет размера трубы конденсатопровода по потерям давления
-							a.acc__link(href='#') Расчет размера трубы конденсатопровода по скорости
-							a.acc__link(href='#') Выпускная линия насоса
-				a.acc__link.acc__link--standalone(href='calc-14.html') Образование выпара
+		.acc.acc--level-1(class=l1Class('return'))
+			button.acc__head.acc__head--level-1(type='button')
+				span Возврат конденсата
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Экономический анализ
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Открытая система
+								a.acc__link(href='#') Закрытая система
+								a.acc__link(href='#') Теплообменник
+								a.acc__link(href='#') Регенерация выпара
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Расчет размера трубы
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Между оборудованием и конденсатоотводчиком
+								a.acc__link(href='#') Расчет размера трубы конденсатопровода по потерям давления
+								a.acc__link(href='#') Расчет размера трубы конденсатопровода по скорости
+								a.acc__link(href='#') Выпускная линия насоса
+					a.acc__link.acc__link--standalone(href='calc-14.html' class=linkClass('calc-14')) Образование выпара
 
-	.acc.acc--level-1
-		button.acc__head.acc__head--level-1(type='button')
-			span Вода
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Проектирование трубопроводов
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Расчет размера трубы по потерям давления
-							a.acc__link(href='#') Расчет размера трубы по скорости
-							a.acc__link(href='#') Потеря давления через трубопровод
-							a.acc__link(href='#') Скорость прохождения воды через трубу
-							a.acc__link(href='#') Расход воды в трубе
-							a.acc__link(href='#') Экономичная толщина изоляции
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Клапаны и сопла
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Значения пропускной способности Cv и Kv
-							a.acc__link(href='#') Расход воды через клапан
-							a.acc__link(href='#') Расход воды через сопло
+		.acc.acc--level-1
+			button.acc__head.acc__head--level-1(type='button')
+				span Вода
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Проектирование трубопроводов
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Расчет размера трубы по потерям давления
+								a.acc__link(href='#') Расчет размера трубы по скорости
+								a.acc__link(href='#') Потеря давления через трубопровод
+								a.acc__link(href='#') Скорость прохождения воды через трубу
+								a.acc__link(href='#') Расход воды в трубе
+								a.acc__link(href='#') Экономичная толщина изоляции
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Клапаны и сопла
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Значения пропускной способности Cv и Kv
+								a.acc__link(href='#') Расход воды через клапан
+								a.acc__link(href='#') Расход воды через сопло
 
-	.acc.acc--level-1
-		button.acc__head.acc__head--level-1(type='button')
-			span Воздух
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Расчет трубопроводов
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Расчет по потерям давления
-							a.acc__link(href='#') Расчет по скорости
-							a.acc__link(href='#') Потеря давления через трубопровод
-							a.acc__link(href='#') Скорость прохождения воздуха через трубопровод
-							a.acc__link(href='#') Расход воздуха в трубе
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Клапаны и сопла
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Значения пропускной способности Cv и Kv
-							a.acc__link(href='#') Расход воздуха через клапан
-							a.acc__link(href='#') Расход воздуха через сопло
-				a.acc__link.acc__link--standalone(href='#') Расход конденсата в системах сжатого воздуха
-				a.acc__link.acc__link--standalone(href='#') Таблица насыщения для влажного воздуха
+		.acc.acc--level-1
+			button.acc__head.acc__head--level-1(type='button')
+				span Воздух
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Расчет трубопроводов
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Расчет по потерям давления
+								a.acc__link(href='#') Расчет по скорости
+								a.acc__link(href='#') Потеря давления через трубопровод
+								a.acc__link(href='#') Скорость прохождения воздуха через трубопровод
+								a.acc__link(href='#') Расход воздуха в трубе
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Клапаны и сопла
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Значения пропускной способности Cv и Kv
+								a.acc__link(href='#') Расход воздуха через клапан
+								a.acc__link(href='#') Расход воздуха через сопло
+					a.acc__link.acc__link--standalone(href='#') Расход конденсата в системах сжатого воздуха
+					a.acc__link.acc__link--standalone(href='#') Таблица насыщения для влажного воздуха
 
-	.acc.acc--level-1
-		button.acc__head.acc__head--level-1(type='button')
-			span Газ
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				.acc.acc--level-2
-					button.acc__head.acc__head--level-2(type='button')
-						span.acc__icon(aria-hidden='true')
-						span Проектирование трубопроводов
-					.acc__body
-						.acc__body-inner
-							a.acc__link(href='#') Потеря давления через трубопровод
+		.acc.acc--level-1
+			button.acc__head.acc__head--level-1(type='button')
+				span Газ
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					.acc.acc--level-2
+						button.acc__head.acc__head--level-2(type='button')
+							span.acc__icon(aria-hidden='true')
+							span Проектирование трубопроводов
+						.acc__body
+							.acc__body-inner
+								a.acc__link(href='#') Потеря давления через трубопровод
 
-	.acc.acc--level-1
-		button.acc__head.acc__head--level-1(type='button')
-			span Паровые таблицы
-			span.acc__icon(aria-hidden='true')
-		.acc__body
-			.acc__body-inner
-				a.acc__link.acc__link--standalone(href='calc-15.html') Таблица свойств насыщенного пара (по давлению)
-				a.acc__link.acc__link--standalone(href='calc-16.html') Таблица свойств насыщенного пара (по температуре)
-				a.acc__link.acc__link--standalone(href='calc-17.html') Таблица свойств перегретого пара
+		.acc.acc--level-1(class=l1Class('tables'))
+			button.acc__head.acc__head--level-1(type='button')
+				span Паровые таблицы
+				span.acc__icon(aria-hidden='true')
+			.acc__body
+				.acc__body-inner
+					a.acc__link.acc__link--standalone(href='calc-15.html' class=linkClass('calc-15')) Таблица свойств насыщенного пара (по давлению)
+					a.acc__link.acc__link--standalone(href='calc-16.html' class=linkClass('calc-16')) Таблица свойств насыщенного пара (по температуре)
+					a.acc__link.acc__link--standalone(href='calc-17.html' class=linkClass('calc-17')) Таблица свойств перегретого пара

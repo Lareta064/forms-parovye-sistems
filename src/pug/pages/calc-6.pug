@@ -10,6 +10,7 @@ block content
 						.font-20 Инженерный калькулятор
 
 					include ../blocks/_acc-menu
+					+calcMenu('calc-6')
 
 				//RIGHT COLUMN
 				.grid-column-main.grid-column-calc
@@ -230,20 +231,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Cv
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_cv" inputmode="decimal" readonly)
-
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Kv
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_kv" inputmode="decimal" readonly)
-
+								p.medi-16 Пожалуйста введите данные в поля
 					//formulas
 					.formulas
 						.formulas__title Формулы:

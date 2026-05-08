@@ -8,6 +8,7 @@ block content
 					.sidebar-title.txt-center
 						.font-20 Инженерный калькулятор
 					include ../blocks/_acc-menu
+					+calcMenu('calc-14')
 
 				.grid-column-main.grid-column-calc
 					.grid-column-head
@@ -93,29 +94,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								.calculator-result-row.form-item-group
-									.form-label
-										span Расход пара вторичного вскипания
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_vypar" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
-											.dropdown__list
-												ul
-													- for (var i = 0; i < fUnits.length; i++)
-														li.dropdown__list-item
-															label.form-radio-label
-																input(type="radio" name="res_vypar_unit" value=i checked=(i===0))
-																span.form-radio-name= fUnits[i]
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Процентное отношение пара вторичного вскипания
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_vypar_percent" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") %
-
+								p.medi-16 Пожалуйста введите данные в поля
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

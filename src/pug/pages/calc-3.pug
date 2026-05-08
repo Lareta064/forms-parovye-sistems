@@ -10,6 +10,7 @@ block content
 						.font-20 Инженерный калькулятор
 
 					include ../blocks/_acc-menu
+					+calcMenu('calc-3')
 
 				//RIGHT COLUMN
 				.grid-column-main.grid-column-calc
@@ -425,121 +426,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Скорость пара
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
-											type="text"
-											name="res_skorost_para"
-											inputmode="decimal"
-											readonly
-										)
-
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
-											.dropdown__list
-												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_skorost_para_unit" value="0" checked)
-															span.form-radio-name m/s
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_skorost_para_unit" value="1")
-															span.form-radio-name km/h
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_skorost_para_unit" value="2")
-															span.form-radio-name ft/s
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_skorost_para_unit" value="3")
-															span.form-radio-name mile/h
-
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Потери давления
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
-											type="text"
-											name="res_poteri_davlenia"
-											inputmode="decimal"
-											readonly
-										)
-
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar
-											.dropdown__list
-												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="0")
-															span.form-radio-name kPa
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="1")
-															span.form-radio-name MPa
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="2")
-															span.form-radio-name psi
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="3" checked)
-															span.form-radio-name bar
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="4")
-															span.form-radio-name kg/cm²
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_unit" value="5")
-															span.form-radio-name mmHg
-
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Потери давления на 100 м трубопровода
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
-											type="text"
-											name="res_poteri_davlenia_100m"
-											inputmode="decimal"
-											readonly
-										)
-
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar/100m
-											.dropdown__list
-												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="0")
-															span.form-radio-name kPa/100m
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="1")
-															span.form-radio-name MPa/100m
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="2")
-															span.form-radio-name psi/100ft
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="3" checked)
-															span.form-radio-name bar/100m
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="4")
-															span.form-radio-name kg/cm²/100m
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_poteri_davlenia_100m_unit" value="5")
-															span.form-radio-name mmHg/100m
-
+								p.medi-16 Пожалуйста введите данные в поля
 					//formulas
 					.formulas
 						.formulas__title Формулы:

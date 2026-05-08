@@ -8,6 +8,7 @@ block content
 					.sidebar-title.txt-center
 						.font-20 Инженерный калькулятор
 					include ../blocks/_acc-menu
+					+calcMenu('calc-10')
 
 				.grid-column-main.grid-column-calc
 					.grid-column-head
@@ -39,7 +40,7 @@ block content
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Вода
 										.dropdown__list
 											ul
-												- var sredaList = ['Вода','Молоко','Растительное масло','Этанол','Глицерин'];
+												- var sredaList = ['Вода','Морская вода','Керосин','Этанол','Глицерин'];
 												- for (var i = 0; i < sredaList.length; i++)
 													li.dropdown__list-item
 														label.form-radio-label
@@ -59,7 +60,7 @@ block content
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg K
 											.dropdown__list
 												ul
-													- var teploUnits = ['kJ/kg K','kcal/kg K','BTU/lb °F'];
+													- var teploUnits = ['kJ/kg K','kcal/kg·°C','BTU/lb °F'];
 													- for (var i = 0; i < teploUnits.length; i++)
 														li.dropdown__list-item
 															label.form-radio-label
@@ -74,7 +75,7 @@ block content
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/h
 											.dropdown__list
 												ul
-													- var qUnits = ['m³/h','L/min','gal/min','ft³/min'];
+													- var qUnits = ['m³/h','l/h','gal/h','GPM'];
 													- for (var i = 0; i < qUnits.length; i++)
 														li.dropdown__list-item
 															label.form-radio-label
@@ -168,22 +169,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								.calculator-result-row.form-item-group
-									.form-label
-										span Расход конденсата
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_rashod_kondensata" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
-											.dropdown__list
-												ul
-													- var fUnits = ['kg/h','t(metric)/h','lb/h'];
-													- for (var i = 0; i < fUnits.length; i++)
-														li.dropdown__list-item
-															label.form-radio-label
-																input(type="radio" name="res_rashod_unit" value=i checked=(i===0))
-																span.form-radio-name= fUnits[i]
-
+								p.medi-16 Пожалуйста введите данные в поля
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

@@ -8,6 +8,7 @@ block content
 					.sidebar-title.txt-center
 						.font-20 Инженерный калькулятор
 					include ../blocks/_acc-menu
+					+calcMenu('calc-9')
 
 				.grid-column-main.grid-column-calc
 					.grid-column-head
@@ -250,30 +251,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								.calculator-result-row.form-item-group
-									.form-label
-										span Расход конденсата на разогрев трубы
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_rashod_razogrev" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
-											.dropdown__list
-												ul
-													- var fUnits = ['kg/h','t(metric)/h','lb/h'];
-													- for (var i = 0; i < fUnits.length; i++)
-														li.dropdown__list-item
-															label.form-radio-label
-																input(type="radio" name="res_unit_1" value=i checked=(i===0))
-																span.form-radio-name= fUnits[i]
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Расход конденсата за счёт теплопотерь
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_rashod_teplopoteri" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
-
+								p.medi-16 Пожалуйста введите данные в поля
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

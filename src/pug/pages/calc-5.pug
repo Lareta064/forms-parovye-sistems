@@ -10,6 +10,7 @@ block content
 						.font-20 Инженерный калькулятор
 
 					include ../blocks/_acc-menu
+					+calcMenu('calc-5')
 
 				//RIGHT COLUMN
 				.grid-column-main.grid-column-calc
@@ -368,35 +369,7 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								//single result row
-								.calculator-result-row.form-item-group
-									.form-label
-										span Расход пара
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
-											type="text"
-											name="res_rashod_para"
-											inputmode="decimal"
-											readonly
-										)
-
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
-											.dropdown__list
-												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_rashod_para_unit" value="0" checked)
-															span.form-radio-name kg/h
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_rashod_para_unit" value="1")
-															span.form-radio-name t(metric)/h
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="res_rashod_para_unit" value="2")
-															span.form-radio-name lb/h
-
+								p.medi-16 Пожалуйста введите данные в поля
 					//formulas
 					.formulas
 						.formulas__title Формулы:

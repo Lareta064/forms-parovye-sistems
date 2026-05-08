@@ -8,6 +8,7 @@ block content
 					.sidebar-title.txt-center
 						.font-20 Инженерный калькулятор
 					include ../blocks/_acc-menu
+					+calcMenu('calc-15')
 
 				.grid-column-main.grid-column-calc
 					.grid-column-head
@@ -54,92 +55,5 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								.calculator-result-row.form-item-group
-									.form-label
-										span Температура насыщения
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_t_sat" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
-											.dropdown__list
-												ul
-													- var tUnits = ['°C','°F','K'];
-													- for (var i = 0; i < tUnits.length; i++)
-														li.dropdown__list-item
-															label.form-radio-label
-																input(type="radio" name="res_t_sat_unit" value=i checked=(i===0))
-																span.form-radio-name= tUnits[i]
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельный объем (жидкость)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_v_liq" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельный объем (пар)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_v_vap" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Плотность (жидкость)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_dens_liq" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/m³
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Плотность (пар)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_dens_vap" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/m³
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельная энтальпия (жидкость)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_h_liq" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельная энтальпия (пар)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_h_vap" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Скрытая теплота парообразования
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_lh" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельная энтропия (жидкость)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_s_liq" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg K
-
-								.calculator-result-row.form-item-group
-									.form-label
-										span Удельная энтропия (пар)
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="res_s_vap" inputmode="decimal" readonly)
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg K
-
+								p.medi-16 Пожалуйста введите данные в поля
 	-var title = "Таблица свойств насыщенного пара по давлению";
