@@ -18,7 +18,10 @@
 	.formulas__block{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: 20px;
+		gap: 20px;
+		@media (max-width: 1023px) {
+		grid-template-columns: 1fr;
+		}
 	}
 	.formulas__image{
 		height: 100%;
