@@ -36,7 +36,7 @@ html{
 }
 body{font-family: 'Montserrat', sans-serif;}
 
-.custom-form{
+.custom-form, .update-page{
 	--text:  #333;
 	--prim:#3180dd;
 	--grey:#999; 
@@ -49,6 +49,7 @@ body{font-family: 'Montserrat', sans-serif;}
 		background-position: center;
 	}
 }
+
 .container-1440{
     width: 100%;
     margin: 0 auto;    

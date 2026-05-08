@@ -8,148 +8,242 @@ block content
 				.grid-column-sidebar
 					.sidebar-title.txt-center
 						.font-20 Инженерный калькулятор
-					
+
 					include ../blocks/_acc-menu
 					+calcMenu('')
-				
+
 				//RIGHT COLUMN
 				.grid-column-main.grid-column-calc
 					.grid-column-head
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Инженерный калькулятор
 					.calc-content
-						//single block
+						//Пар
 						.calc-block
 							.primary-header.txt-center
 								h2.semi-25 Пар
-							//single list
 							.calc-list
 								.calc-list-title
 									.semi-20 Проектирование трубопроводов
 								.calc-list-ul
 									ul
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
+											a.link-underline(href='calc-1.html') Расчет размера трубы по потерям давления
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод трубопровод
+											a.link-underline(href='calc-2.html') Расчет размера трубы по скорости
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод Скорость прохождения
+											a.link-underline(href='#') Расчет размера вестовой трубы
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
-										
-							//single list
-							.calc-list
-								.calc-list-title
-									.semi-20 Проектирование трубопроводов
-								.calc-list-ul
-									ul
+											a.link-underline(href='calc-3.html') Потери давления в трубопроводе
 										li
-											p Скорость прохождения воды через трубопровод
+											a.link-underline(href='calc-4.html') Скорость пара в трубопроводе
 										li
-											p Скорость прохождения воды через трубопровод трубопровод
+											a.link-underline(href='calc-5.html') Расход пара в трубопроводе
 										li
-											p Скорость прохождения воды через трубопровод Скорость прохождения
-										li
-											p Скорость прохождения воды через трубопровод
-										li
-											p Скорость прохождения воды через трубопровод
-							//single list
+											a.link-underline(href='#') Экономичная толщина изоляции
 							.calc-list
 								.calc-list-title
 									.semi-20 Клапаны и сопла
 								.calc-list-ul
 									ul
 										li
-											p От снижения давления
+											a.link-underline(href='calc-6.html') Значения пропускной способности Cv и Kv
 										li
-											p От снижения давления
+											a.link-underline(href='calc-7.html') Расход пара через клапан
+										li
+											a.link-underline(href='calc-8.html') Расход пара через сопло
+							.calc-list
+								.calc-list-title
+									.semi-20 Расход конденсата
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='calc-9.html') От трубопровода при запуске
+										li
+											a.link-underline(href='calc-10.html') При нагреве жидкости (непрерывном)
+										li
+											a.link-underline(href='calc-11.html') При нагреве жидкости (фиксированный объем)
+										li
+											a.link-underline(href='calc-12.html') При нагреве воздуха
+										li
+											a.link-underline(href='calc-13.html') От потери лучистого тепла в трубопроводах
+										li
+											a.link-underline(href='#') Точка подтопления
+							.calc-list
+								.calc-list-title
+									.semi-20 Улучшенная сухость пара
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') От снижения давления
+										li
+											a.link-underline(href='#') От снижения давления и отделения конденсата
+							.calc-list
+								.calc-list-title
+									.semi-20 Эффект смеси пара и воздуха
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Падение температуры (на основе % воздуха)
+										li
+											a.link-underline(href='#') % воздуха (на основе температуры смеси)
+							.calc-list
+								.calc-list-title
+									.semi-20 Стоимость единицы пара и энергии
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Стоимость единицы энергии
+										li
+											a.link-underline(href='#') Стоимость единицы пара
+							.calc-list
+								.calc-list-title
+									.semi-20 Эффективность котла
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Эффективность котла
 
-						//single block
+						//Возврат конденсата
+						.calc-block
+							.primary-header.txt-center
+								h2.semi-25 Возврат конденсата
+							.calc-list
+								.calc-list-title
+									.semi-20 Экономический анализ
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Открытая система
+										li
+											a.link-underline(href='#') Закрытая система
+										li
+											a.link-underline(href='#') Теплообменник
+										li
+											a.link-underline(href='#') Регенерация выпара
+							.calc-list
+								.calc-list-title
+									.semi-20 Расчет размера трубы
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Между оборудованием и конденсатоотводчиком
+										li
+											a.link-underline(href='#') Расчет размера трубы конденсатопровода по потерям давления
+										li
+											a.link-underline(href='#') Расчет размера трубы конденсатопровода по скорости
+										li
+											a.link-underline(href='#') Выпускная линия насоса
+							.calc-list
+								.calc-list-title
+									.semi-20 Образование выпара
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='calc-14.html') Образование выпара
+
+						//Вода
+						.calc-block
+							.primary-header.txt-center
+								h2.semi-25 Вода
+							.calc-list
+								.calc-list-title
+									.semi-20 Проектирование трубопроводов
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Расчет размера трубы по потерям давления
+										li
+											a.link-underline(href='#') Расчет размера трубы по скорости
+										li
+											a.link-underline(href='#') Потеря давления через трубопровод
+										li
+											a.link-underline(href='#') Скорость прохождения воды через трубу
+										li
+											a.link-underline(href='#') Расход воды в трубе
+										li
+											a.link-underline(href='#') Экономичная толщина изоляции
+							.calc-list
+								.calc-list-title
+									.semi-20 Клапаны и сопла
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Значения пропускной способности Cv и Kv
+										li
+											a.link-underline(href='#') Расход воды через клапан
+										li
+											a.link-underline(href='#') Расход воды через сопло
+
+						//Воздух
 						.calc-block
 							.primary-header.txt-center
 								h2.semi-25 Воздух
-							//single list
 							.calc-list
 								.calc-list-title
-									.semi-20 Проектирование трубопроводов
+									.semi-20 Расчет трубопроводов
 								.calc-list-ul
 									ul
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
+											a.link-underline(href='#') Расчет по потерям давления
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод трубопровод
+											a.link-underline(href='#') Расчет по скорости
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод Скорость прохождения
+											a.link-underline(href='#') Потеря давления через трубопровод
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
+											a.link-underline(href='#') Скорость прохождения воздуха через трубопровод
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
-
-							//single list
-							.calc-list
-								.calc-list-title
-									.semi-20 Проектирование трубопроводов
-								.calc-list-ul
-									ul
-										li
-											p Скорость прохождения воды через трубопровод
-										li
-											p Скорость прохождения воды через трубопровод трубопровод
-										li
-											p Скорость прохождения воды через трубопровод Скорость прохождения
-
-							//single list
+											a.link-underline(href='#') Расход воздуха в трубе
 							.calc-list
 								.calc-list-title
 									.semi-20 Клапаны и сопла
 								.calc-list-ul
 									ul
 										li
-											p От снижения давления
+											a.link-underline(href='#') Значения пропускной способности Cv и Kv
 										li
-											p От снижения давления
-						//single block
+											a.link-underline(href='#') Расход воздуха через клапан
+										li
+											a.link-underline(href='#') Расход воздуха через сопло
+							.calc-list
+								.calc-list-title
+									.semi-20 Расход конденсата в системах сжатого воздуха
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Расход конденсата в системах сжатого воздуха
+							.calc-list
+								.calc-list-title
+									.semi-20 Таблица насыщения для влажного воздуха
+								.calc-list-ul
+									ul
+										li
+											a.link-underline(href='#') Таблица насыщения для влажного воздуха
+
+						//Газ
 						.calc-block
 							.primary-header.txt-center
 								h2.semi-25 Газ
-							//single list
 							.calc-list
 								.calc-list-title
 									.semi-20 Проектирование трубопроводов
 								.calc-list-ul
 									ul
 										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
-										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод трубопровод
-										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод Скорость прохождения
-										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
-										li
-											a.link-underline(href="#!") Скорость прохождения воды через трубопровод
+											a.link-underline(href='#') Потеря давления через трубопровод
 
-							//single list
+						//Паровые таблицы
+						.calc-block
+							.primary-header.txt-center
+								h2.semi-25 Паровые таблицы
 							.calc-list
-								.calc-list-title
-									.semi-20 Проектирование трубопроводов
 								.calc-list-ul
 									ul
 										li
-											p Скорость прохождения воды через трубопровод
+											a.link-underline(href='calc-15.html') Таблица свойств насыщенного пара (по давлению)
 										li
-											p Скорость прохождения воды через трубопровод трубопровод
+											a.link-underline(href='calc-16.html') Таблица свойств насыщенного пара (по температуре)
 										li
-											p Скорость прохождения воды через трубопровод Скорость прохождения
+											a.link-underline(href='calc-17.html') Таблица свойств перегретого пара
 
-							//single list
-							.calc-list
-								.calc-list-title
-									.semi-20 Клапаны и сопла
-								.calc-list-ul
-									ul
-										li
-											p От снижения давления
-										li
-											p От снижения давления										
 	-var title = "Калькулятор Главная";

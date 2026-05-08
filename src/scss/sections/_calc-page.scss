@@ -75,7 +75,25 @@
 	line-height: 110%;
 	margin-bottom: 5px;
 }
-
+.sidebar-nav{
+	.sidebar-nav-link{
+		padding: 10px 0;
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 110%;
+		letter-spacing: -0.01em;
+		border-bottom: 1px solid #e8e8e8;
+		display: flex;
+	}
+	.sidebar-nav-link.sidebar-nav-link--accent{
+		padding: 10px;
+		color: white;
+		background-color: var(--prim);
+		border-bottom: 0;
+		transition: .3s; 
+		&:hover{opacity: .8;}
+	}
+}
 .calc-block{
 	width: 100%;
 	min-width: 0;
