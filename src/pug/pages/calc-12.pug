@@ -142,19 +142,26 @@ block content
 							.formulas__image
 								img(src='./img/calc/calc-12.webp' width='600' height='200' loading='lazy' alt='img')
 							.formulas__list
-								.formulas__item
-									p Qa: Расход воздуха (текущий) (m³/min)
-								.formulas__item
-									p T1: Температура воздуха на входе (°C)
-								.formulas__item
-									p T2: Температура воздуха на выходе (°C)
-								.formulas__item
-									p mc: Расход конденсата (kg/h)
-								.formulas__item
-									p ΔH: Скрытая теплота парообразования (kJ/kg)
-								.formulas__item
-									p ca: Удельная теплоемкость воздуха (kJ/kg K)
-								.formulas__item
-									p γa: Удельный вес воздуха (kg/m³)
-
+								table
+									tr
+										td Qa
+										td : Расход воздуха (текущий) (m³/min)
+									tr
+										td T1
+										td : Температура воздуха на входе (°C)
+									tr
+										td T2
+										td : Температура воздуха на выходе (°C)
+									tr
+										td mc
+										td : Расход конденсата (kg/h)
+									tr
+										td ∆H
+										td : Скрытая теплота парообразования (kJ/kg)
+									tr
+										td ca
+										td : Удельная теплоемкость воздуха (kJ/kg K)
+									tr
+										td γa
+										td : Удельный вес воздуха (kg/m³)
 	-var title = "Расход конденсата при нагреве воздуха";

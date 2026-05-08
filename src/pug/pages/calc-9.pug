@@ -262,13 +262,47 @@ block content
 							.formulas__image
 								img(src='./img/calc/calc-9.webp' width='600' height='200' loading='lazy' alt='img')
 							.formulas__list
-								.formulas__item
-									p mc: Расход конденсата (kg/h)
-								.formulas__item
-									p Δt: Время разогрева
-								.formulas__item
-									p T1: Температура окружающей среды
-								.formulas__item
-									p T2: Температура пара
-
+								table
+									tr
+										td Ts
+										td : Температура пара (°C)
+									tr
+										td L
+										td : Толщина теплоизоляционного покрытия (m)
+									tr
+										td l
+										td : Длина трубопровода (m)
+									tr
+										td Tam
+										td : Температура окружающей среды (°C)
+									tr
+										td α
+										td : Коэффициент теплопередачи (W/m²-K)
+									tr
+										td λ
+										td : Коэффициент теплопроводности (W/m-K)
+									tr
+										td tSU
+										td : Время разогрева (min)
+									tr
+										td mh
+										td : Расход конденсата на разогрев трубы (kg)
+									tr
+										td mr
+										td : Расход конденсата за счет теплопотерь с поверхности трубы (kg)
+									tr
+										td mc
+										td : Общий расход конденсата (kg)
+									tr
+										td cp
+										td : Удельная теплоемкость трубы (kJ/kg K)
+									tr
+										td Wp
+										td : Вес трубы (kg/m)
+									tr
+										td d1
+										td : Внешний диаметр трубы (m)
+									tr
+										td ∆H
+										td : Скрытая теплота парообразования (kJ/kg)
 	-var title = "Расход конденсата при запуске";

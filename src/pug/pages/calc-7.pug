@@ -236,13 +236,26 @@ block content
 								img(src='./img/calc/calc-7.webp' width='600' height='200' loading='lazy' alt='img')
 
 							.formulas__list
-								.formulas__item
-									p P1: Давление на входе
-								.formulas__item
-									p P2: Давление на выходе
-								.formulas__item
-									p Kv: Пропускная способность клапана
-								.formulas__item
-									p ms: Расход пара (kg/h)
-
+								table
+									tr
+										td p1
+										td : Давление на входе (kPa abs)
+									tr
+										td p2
+										td : Давление на выходе (kPa abs)
+									tr
+										td Cv
+										td : Kv клапана (Cv)
+									tr
+										td ms
+										td : Расход пара (kg/h)
+									tr
+										td ρ
+										td : Плотность пара (kg/m³)
+									tr
+										td Fγ
+										td : Коэффициент соотношения удельной теплоёмкости
+									tr
+										td xT
+										td : Коэффициент дифференциального давления(=0,72)
 	-var title = "Расход пара через клапан";

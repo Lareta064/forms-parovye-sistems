@@ -191,15 +191,29 @@ block content
 							.formulas__image
 								img(src='./img/calc/calc-11.webp' width='600' height='200' loading='lazy' alt='img')
 							.formulas__list
-								.formulas__item
-									p mc: Расход конденсата (kg/h)
-								.formulas__item
-									p V: Объем жидкости
-								.formulas__item
-									p c: Теплосодержание
-								.formulas__item
-									p T1, T2: Температура жидкости (начало / конец)
-								.formulas__item
-									p t: Время нагрева
-
+								table
+									tr
+										td SG
+										td : Плотность
+									tr
+										td c
+										td : Теплосодержание (kJ/kg K)
+									tr
+										td T1
+										td : Температура жидкости на входе (°C)
+									tr
+										td T2
+										td : Температура жидкости на выходе (°C)
+									tr
+										td V
+										td : Объем жидкости (m³)
+									tr
+										td th
+										td : Время нагрева (h)
+									tr
+										td mc
+										td : Расход конденсата (kg)
+									tr
+										td ∆H
+										td : Скрытая теплота парообразования (kJ/kg)
 	-var title = "Расход конденсата при нагреве жидкости (фиксированный объем)";

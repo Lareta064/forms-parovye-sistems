@@ -172,15 +172,26 @@ block content
 							.formulas__image
 								img(src='./img/calc/calc-13.webp' width='600' height='200' loading='lazy' alt='img')
 							.formulas__list
-								.formulas__item
-									p mc: Расход конденсата (kg/h)
-								.formulas__item
-									p L: Длина трубопровода
-								.formulas__item
-									p T1: Температура окружающей среды
-								.formulas__item
-									p T2: Температура пара (насыщенного)
-								.formulas__item
-									p k: Коэффициент теплопередачи
-
+								table
+									tr
+										td L
+										td : Толщина теплоизоляционного покрытия (m)
+									tr
+										td Tam
+										td : Температура окружающей среды (°C)
+									tr
+										td α
+										td : Коэффициент теплопередачи (W/m²-K)
+									tr
+										td λ
+										td : Коэффициент теплопроводности (W/m-K)
+									tr
+										td mc
+										td : Расход конденсата (kg/h)
+									tr
+										td Qr
+										td : Теплопотери (W/m)
+									tr
+										td d1
+										td : Внешний диаметр трубы (m)
 	-var title = "Расход конденсата за счёт теплопотерь";

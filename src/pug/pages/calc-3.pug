@@ -435,19 +435,26 @@ block content
 								img(src='./img/calc/calc-3.webp' width='600' height='200' loading='lazy' alt='img')
 
 							.formulas__list
-								.formulas__item
-									p v: Скорость пара (m/s)
-								.formulas__item
-									p ms: Расход пара (kg/h)
-								.formulas__item
-									p V: Удельный объем пара (m³/kg)
-								.formulas__item
-									p d: Внутренний диаметр трубопровода (m)
-								.formulas__item
-									p Δp: Потери давления (Pa)
-								.formulas__item
-									p μ: Коэффициент трения
-								.formulas__item
-									p l: Длина трубопровода (m)
-
+								table
+									tr
+										td d
+										td : Внутренний диаметр трубопровода (m)
+									tr
+										td ms
+										td : Расход пара (kg/h)
+									tr
+										td l
+										td : Длина трубопровода (m)
+									tr
+										td v
+										td : Скорость пара (m/s)
+									tr
+										td ∆p
+										td : Потери давления (Pa)
+									tr
+										td μ
+										td : Коэффициент трения
+									tr
+										td V
+										td : Удельный объем (m³/kg)
 	-var title = "Потеря давления пара через трубопровод";

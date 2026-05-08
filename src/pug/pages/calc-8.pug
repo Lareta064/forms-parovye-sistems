@@ -263,15 +263,29 @@ block content
 								img(src='./img/calc/calc-8.webp' width='600' height='200' loading='lazy' alt='img')
 
 							.formulas__list
-								.formulas__item
-									p P1: Давление на входе
-								.formulas__item
-									p P2: Давление на выходе
-								.formulas__item
-									p d: Диаметр проходного сечения
-								.formulas__item
-									p α: Коэффициент расхода
-								.formulas__item
-									p ms: Расход пара (kg/h)
-
+								table
+									tr
+										td p1
+										td : Давление на входе (kPa abs)
+									tr
+										td p2
+										td : Давление на выходе (kPa abs)
+									tr
+										td do
+										td : Диаметр проходного сечения (mm)
+									tr
+										td C
+										td : Коэффициент расхода
+									tr
+										td ms
+										td : Расход пара (kg/h)
+									tr
+										td ρ
+										td : Плотность пара (kg/m³)
+									tr
+										td Fγ
+										td : Коэффициент соотношения удельной теплоёмкости
+									tr
+										td xT
+										td : Коэффициент дифференциального давления(=0,72)
 	-var title = "Расход пара через сопло";
