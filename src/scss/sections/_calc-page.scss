@@ -1,5 +1,8 @@
-.calculator-single{
+.update-page{
 	p, ol, ul, h1, h2, h3{margin: 0;}
+}
+.calc-main .grid-column-left{
+	padding-bottom: 40px;
 }
 .grid-column-calc{
 	padding-left: 60px;
@@ -8,6 +11,7 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 30px;
+	
 	@media (max-width: 1199px) {
 	  padding-left: 40px;
 	  row-gap: 20px;
@@ -15,6 +19,7 @@
 	@media (max-width: 767px) {
 	  padding-left: 0;
 	  border-left: 0;
+	 
 	}
 }
 .calc-main.calculator-single .grid-column-calc{
