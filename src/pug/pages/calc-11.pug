@@ -73,7 +73,7 @@ block content
 										.tooltip-wrapper
 											span.tooltip-icon i
 											.tooltip-text
-												p Температура жидкости перед нагревом
+												p Температура жидкости на входе :<br/>Введите температуру воды перед нагревом
 									.form-item.form-item--measure
 										input.form-inp.form-inp--measure(type="text" name="current_t_in" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
@@ -93,7 +93,7 @@ block content
 										.tooltip-wrapper
 											span.tooltip-icon i
 											.tooltip-text
-												p Конечная температура жидкости после нагрева
+												p Температура жидкости на выходе :<br/>Введите заданную температуру воды
 									.form-item.form-item--measure
 										input.form-inp.form-inp--measure(type="text" name="current_t_out" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
@@ -114,7 +114,7 @@ block content
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³
 											.dropdown__list
 												ul
-													- var vUnits = ['m³','L','gal','ft³'];
+													- var vUnits = ['m³','mm³','cm³(=mL)','dm³(=L)','gal (UK)','gal (US)','in³','ft³','yd³','barrel'];
 													- for (var i = 0; i < vUnits.length; i++)
 														li.dropdown__list-item
 															label.form-radio-label
@@ -144,7 +144,7 @@ block content
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") min
 											.dropdown__list
 												ul
-													- var timeUnits = ['min','h','s'];
+													- var timeUnits = ['sec','min','h'];
 													- for (var i = 0; i < timeUnits.length; i++)
 														li.dropdown__list-item
 															label.form-radio-label
@@ -160,7 +160,7 @@ block content
 												.tooltip-wrapper
 													span.tooltip-icon i
 													.tooltip-text
-														p Температура пара:<br>Для перегретого пара введите температуру выше, чем температура насыщения
+														p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 											.form-item.form-item--measure
 												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
 												.dropdown.dropdown--measure

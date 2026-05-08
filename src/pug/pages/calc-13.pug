@@ -67,12 +67,12 @@ block content
 										.tooltip-wrapper
 											span.tooltip-icon i
 											.tooltip-text
-												p Тип теплоизоляции, влияющий на теплопотери
+												p Изоляция :<br/>Значения теплопроводности в соответствии со стандартами JIS
 									.dropdown
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Минеральная вата Rockwool
 										.dropdown__list
 											ul
-												- var izolList = ['Минеральная вата Rockwool','Стекловата','Без изоляции'];
+												- var izolList = ['Минеральная вата Rockwool','Стекловата','Силикат кальция','Перлит'];
 												- for (var i = 0; i < izolList.length; i++)
 													li.dropdown__list-item
 														label.form-radio-label
@@ -130,7 +130,7 @@ block content
 										.tooltip-wrapper
 											span.tooltip-icon i
 											.tooltip-text
-												p Длина трубопровода:<br>Введите полную длину трубопровода
+												p Длина трубопровода :<br/>Введите полную длину трубопровода
 									.form-item.form-item--measure
 										input.form-inp.form-inp--measure(type="text" name="current_dlina" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
