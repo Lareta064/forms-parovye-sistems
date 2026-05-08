@@ -1,0 +1,264 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				//LEFT SIDEBAR
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+
+					include ../blocks/_acc-menu
+
+				//RIGHT COLUMN
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Значения пропускной способности пара Cv и Kv для клапанов и сопел
+
+					form.calculator-form.custom-form
+						//FORM HEADER
+						.calculator-form__head
+							.semi-24 Начальные данные
+
+							.calculator-form__measure
+								p.medi-16 Единицы измерения
+								.dropdown.dropdown--abs
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="0")
+													span.form-radio-name SI
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="1" checked)
+													span.form-radio-name SI(bar)
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="2")
+													span.form-radio-name Imperial
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="3")
+													span.form-radio-name MKS
+
+						//FORM BODY
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								//Давление на входе
+								.form-item-group
+									.form-label Давление на входе
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_p_in" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_in" value="11")
+															span.form-radio-name mmHgG
+
+								//Давление на выходе
+								.form-item-group
+									.form-label Давление на выходе
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_p_out" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="p_out" value="11")
+															span.form-radio-name mmHgG
+
+								//Расход пара
+								.form-item-group
+									.form-label Расход пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_rashod_para" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="rashod_para" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="rashod_para" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="rashod_para" value="2")
+															span.form-radio-name lb/h
+
+							//СКРЫТЫЕ ДОП ОПЦИИ
+							.hide-block-wrapper
+								.calculator-fieldset.is-hide-block
+									.form-two-cols
+										//Температура пара
+										.form-item-group
+											.form-label.has-tooltip
+												span Температура пара
+												.tooltip-wrapper
+													span.tooltip-icon i
+													.tooltip-text
+														p Температура пара:<br>Для перегретого пара введите температуру выше, чем температура насыщения
+											.form-item.form-item--measure
+												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+												.dropdown.dropdown--measure
+													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+													.dropdown__list
+														ul
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="temperatura_para" value="0" checked)
+																	span.form-radio-name °C
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="temperatura_para" value="1")
+																	span.form-radio-name °F
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="temperatura_para" value="2")
+																	span.form-radio-name K
+
+								button.open-hide-btn.ml-auto.mt-20(type="button")
+									i.plus-minus
+									span.hide-btn-txt.medi-15 Показать дополнительные опции
+
+						//FORM FOOTER
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+
+						//FORM RESULT
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								//single result row
+								.calculator-result-row.form-item-group
+									.form-label
+										span Cv
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_cv" inputmode="decimal" readonly)
+
+								//single result row
+								.calculator-result-row.form-item-group
+									.form-label
+										span Kv
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_kv" inputmode="decimal" readonly)
+
+					//formulas
+					.formulas
+						.formulas__title Формулы:
+						.formulas__block
+							.formulas__image
+								img(src='./img/calc/calc-form-1.webp' width='600' height='200' loading='lazy' alt='img')
+
+							.formulas__list
+								.formulas__item
+									p P1: Давление на входе
+								.formulas__item
+									p P2: Давление на выходе
+								.formulas__item
+									p ms: Расход пара (kg/h)
+								.formulas__item
+									p Cv, Kv: Пропускная способность
+
+	-var title = "Cv и Kv для клапанов и сопел";

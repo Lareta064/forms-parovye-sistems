@@ -19,6 +19,7 @@
 .hide-block-wrapper.is-open .is-hide-block {
 	opacity: 1;
 	padding-top: 20px;
+	overflow: unset;
 }
 
 .open-hide-btn {

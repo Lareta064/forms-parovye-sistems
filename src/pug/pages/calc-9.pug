@@ -1,0 +1,292 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Расход конденсата в трубопроводе при запуске
+
+					form.calculator-form.custom-form
+						.calculator-form__head
+							.semi-24 Начальные данные
+							.calculator-form__measure
+								p.medi-16 Единицы измерения
+								.dropdown.dropdown--abs
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
+									.dropdown__list
+										ul
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="0")
+													span.form-radio-name SI
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="1" checked)
+													span.form-radio-name SI(bar)
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="2")
+													span.form-radio-name Imperial
+											li.dropdown__list-item
+												label.form-radio-label
+													input(type="radio" name="measure" value="3")
+													span.form-radio-name MKS
+
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label
+										span Класс трубопровода
+									.dropdown
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="0")
+														span.form-radio-name JIS-SGP
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="1")
+														span.form-radio-name JIS-STPG Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="2")
+														span.form-radio-name JIS-STPG Sch60
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="3")
+														span.form-radio-name JIS-STPG Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="4")
+														span.form-radio-name ANSI Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="5")
+														span.form-radio-name ANSI Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="6")
+														span.form-radio-name ANSI Sch160
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="truboprovod_class" value="7" checked)
+														span.form-radio-name DIN 2448
+
+								.form-item-group
+									.form-label
+										span Диаметр трубопровода
+									.dropdown
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
+										.dropdown__list
+											ul
+												- for (var i = 0; i < 21; i++)
+													- var dnList = ['DN6','DN8','DN10','DN15','DN20','DN25','DN32','DN40','DN50','DN65','DN80','DN100','DN125','DN150','DN200','DN250','DN300','DN350','DN400','DN450','DN500'];
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="diametr_truboprovoda" value=i checked=(i===0))
+															span.form-radio-name= dnList[i]
+
+								.form-item-group
+									.form-label.has-tooltip
+										span Изоляция
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Тип теплоизоляции, влияющий на теплопотери
+									.dropdown
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Минеральная вата Rockwool
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="izolyatsiya" value="0" checked)
+														span.form-radio-name Минеральная вата Rockwool
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="izolyatsiya" value="1")
+														span.form-radio-name Стекловата
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="izolyatsiya" value="2")
+														span.form-radio-name Без изоляции
+
+								.form-item-group
+									.form-label Давление пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													- var pUnits = ['kPa abs','MPa abs','psi abs','bar abs','kg/cm² abs','mmHg abs','kPaG','MPaG','psig','barG','kg/cm²G','mmHgG'];
+													- for (var i = 0; i < pUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="davlenie_para" value=i checked=(i===9))
+																span.form-radio-name= pUnits[i]
+
+								.form-item-group
+									.form-label.has-tooltip
+										span Температура пара
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Температура пара:<br>Для перегретого пара введите температуру выше, чем температура насыщения
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="temperatura_para" value="0" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="temperatura_para" value="1")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="temperatura_para" value="2")
+															span.form-radio-name K
+
+								.form-item-group
+									.form-label Скорость ветра
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_skorost_vetra" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+											.dropdown__list
+												ul
+													- var vUnits = ['m/s','km/h','ft/s','mile/h'];
+													- for (var i = 0; i < vUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="skorost_vetra" value=i checked=(i===0))
+																span.form-radio-name= vUnits[i]
+
+								.form-item-group
+									.form-label Толщина теплоизоляционного покрытия
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_tolshchina_izol" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
+											.dropdown__list
+												ul
+													- var lUnits = ['mm','cm','m','in','ft','yd'];
+													- for (var i = 0; i < lUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="tolshchina_izol" value=i checked=(i===0))
+																span.form-radio-name= lUnits[i]
+
+								.form-item-group
+									.form-label.has-tooltip
+										span Длина трубопровода
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Длина трубопровода:<br>Введите полную длину трубопровода
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_dlina" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+											.dropdown__list
+												ul
+													- var lUnits2 = ['mm','cm','m','in','ft','yd'];
+													- for (var i = 0; i < lUnits2.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="dlina" value=i checked=(i===2))
+																span.form-radio-name= lUnits2[i]
+
+								.form-item-group
+									.form-label Температура окружающей среды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_temp_okr" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													- var tUnits = ['°C','°F','K'];
+													- for (var i = 0; i < tUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="temp_okr" value=i checked=(i===0))
+																span.form-radio-name= tUnits[i]
+
+								.form-item-group
+									.form-label Время разогрева
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_time_razogreva" inputmode="decimal" value="10")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") min
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="time_razogreva" value="0" checked)
+															span.form-radio-name min
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="time_razogreva" value="1")
+															span.form-radio-name h
+
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход конденсата на разогрев трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_rashod_razogrev" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													- var fUnits = ['kg/h','t(metric)/h','lb/h'];
+													- for (var i = 0; i < fUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="res_unit_1" value=i checked=(i===0))
+																span.form-radio-name= fUnits[i]
+
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход конденсата за счёт теплопотерь
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_rashod_teplopoteri" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+
+					.formulas
+						.formulas__title Формулы:
+						.formulas__block
+							.formulas__image
+								img(src='./img/calc/calc-form-1.webp' width='600' height='200' loading='lazy' alt='img')
+							.formulas__list
+								.formulas__item
+									p mc: Расход конденсата (kg/h)
+								.formulas__item
+									p Δt: Время разогрева
+								.formulas__item
+									p T1: Температура окружающей среды
+								.formulas__item
+									p T2: Температура пара
+
+	-var title = "Расход конденсата при запуске";

@@ -1,102 +1,191 @@
 extends ../layouts/layout-white.pug
 
 block content
+
 	main.calc-main.calculator-single
+
 		.container-1440
+
 			.grid-column-left
+
 				//LEFT SIDEBAR
+
 				.grid-column-sidebar
+
 					.sidebar-title.txt-center
+
 						.font-20 Инженерный калькулятор
-					
+
+
+
 					include ../blocks/_acc-menu
-				
+
+
+
 				//RIGHT COLUMN
+
 				.grid-column-main.grid-column-calc
+
 					.grid-column-head
+
 						p.breadcrumb Тут компонент breadcrumbs
-						h1.h-30 Расчет размера труб по потере давления пара
-					
+
+						h1.h-30 Расчет размера труб по скорости
+
+
+
 					form.calculator-form.custom-form
+
 						//FORM HEADER
+
 						.calculator-form__head
+
 							.semi-24 Начальные данные
-							
+
+
+
 							.calculator-form__measure
+
 								p.medi-16 Единицы измерения
+
 								.dropdown.dropdown--abs
-									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Si(bar)
+
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
+
 									.dropdown__list
+
 										ul
+
 											li.dropdown__list-item
+
 												label.form-radio-label
-													input(type="radio"  name="measure"  value="0" checked )
-													span.form-radio-name Si
+
+													input(type="radio" name="measure" value="0")
+
+													span.form-radio-name SI
+
 											li.dropdown__list-item
+
 												label.form-radio-label
-													input(type="radio"  name="measure"  value="1" checked )
-													span.form-radio-name Si(bar)
+
+													input(type="radio" name="measure" value="1" checked)
+
+													span.form-radio-name SI(bar)
+
 											li.dropdown__list-item
+
 												label.form-radio-label
-													input(type="radio"  name="measure"  value="2" )
+
+													input(type="radio" name="measure" value="2")
+
 													span.form-radio-name Imperial
 
 											li.dropdown__list-item
+
 												label.form-radio-label
-													input(type="radio"  name="measure"  value="3" )
+
+													input(type="radio" name="measure" value="3")
+
 													span.form-radio-name MKS
-						
-						//FORM HBODY
+
+
+
+						//FORM BODY
+
 						.calculator-form__body
+
 							.calculator-fieldset.form-two-cols
+
 								//Класс трубопровода
+
 								.form-item-group
+
 									.form-label
+
 										span Класс трубопровода
-										
+
 									.dropdown
-										//В значение кнопки подставляется то, что прописано в спан рядом с инпутом у которого атрибут checked
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN2448
-										
+
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
+
 										.dropdown__list
+
 											ul
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="0"  )
+
+														input(type="radio" name="truboprovod_class" value="0")
+
 														span.form-radio-name JIS-SGP
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="1")
+
+														input(type="radio" name="truboprovod_class" value="1")
+
 														span.form-radio-name JIS-STPG Sch40
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="2")
+
+														input(type="radio" name="truboprovod_class" value="2")
+
 														span.form-radio-name JIS-STPG Sch60
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="3")
+
+														input(type="radio" name="truboprovod_class" value="3")
+
 														span.form-radio-name JIS-STPG Sch80
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="4")
+
+														input(type="radio" name="truboprovod_class" value="4")
+
 														span.form-radio-name ANSI Sch40
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="5")
+
+														input(type="radio" name="truboprovod_class" value="5")
+
 														span.form-radio-name ANSI Sch80
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="6")
-														span.form-radio-name ANSI Sch160		
+
+														input(type="radio" name="truboprovod_class" value="6")
+
+														span.form-radio-name ANSI Sch160
+
 												li.dropdown__list-item
+
 													label.form-radio-label
-														input(type="radio"  name="truboprovod_class" value="7" checked)
-														span.form-radio-name DIN 2448										
-								
+
+														input(type="radio" name="truboprovod_class" value="7" checked)
+
+														span.form-radio-name DIN 2448
+
+
+
 								//Давление пара
+
 								.form-item-group
+
 									.form-label Давление пара
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_davlenie_para"
@@ -105,174 +194,304 @@ block content
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+
 											.dropdown__list
+
 												ul
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para" value="0" )
+
+															input(type="radio" name="davlenie_para" value="0")
+
 															span.form-radio-name kPa abs
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="1")
+
+															input(type="radio" name="davlenie_para" value="1")
+
 															span.form-radio-name MPa abs
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="2")
+
+															input(type="radio" name="davlenie_para" value="2")
+
 															span.form-radio-name psi abs
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="3")
+
+															input(type="radio" name="davlenie_para" value="3")
+
 															span.form-radio-name bar abs
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="4")
+
+															input(type="radio" name="davlenie_para" value="4")
+
 															span.form-radio-name kg/cm² abs
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="5")
+
+															input(type="radio" name="davlenie_para" value="5")
+
 															span.form-radio-name mmHg abs
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="6")
+
+															input(type="radio" name="davlenie_para" value="6")
+
 															span.form-radio-name kPaG
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="7")
+
+															input(type="radio" name="davlenie_para" value="7")
+
 															span.form-radio-name MPaG
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="8")
+
+															input(type="radio" name="davlenie_para" value="8")
+
 															span.form-radio-name psig
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="9" checked)
+
+															input(type="radio" name="davlenie_para" value="9" checked)
+
 															span.form-radio-name barG
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="10")
+
+															input(type="radio" name="davlenie_para" value="10")
+
 															span.form-radio-name kg/cm²G
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="davlenie_para"  value="11")
+
+															input(type="radio" name="davlenie_para" value="11")
+
 															span.form-radio-name mmHgG
-					
+
+
+
 								//Температура пара
+
 								.form-item-group
+
 									.form-label.has-tooltip
+
 										span Температура пара
+
 										.tooltip-wrapper
+
 											span.tooltip-icon i
+
 											.tooltip-text
-												p Температура пара:<br>Для перегертого пара введите температуру выше, чем температура насыщения
+
+												p Температура пара:<br>Для перегретого пара введите температуру выше, чем температура насыщения
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_temperatura_para"
 											inputmode="decimal"
+											value="(99.9743)"
 										)
 
 										.dropdown.dropdown--measure
+
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+
 											.dropdown__list
+
 												ul
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="temperatura_para" value="0" checked)
+
+															input(type="radio" name="temperatura_para" value="0" checked)
+
 															span.form-radio-name °C
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="temperatura_para" value="1")
+
+															input(type="radio" name="temperatura_para" value="1")
+
 															span.form-radio-name °F
-													
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="temperatura_para" value="2")
+
+															input(type="radio" name="temperatura_para" value="2")
+
 															span.form-radio-name K
+
+
+
 								//Расход пара
+
 								.form-item-group
+
 									.form-label Расход пара
-										
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_rashod_para"
-											inputmode="decimal"
-										)
-
-										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
-											.dropdown__list
-												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="rashod_para" value="0" checked)
-															span.form-radio-name kg/h
-
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="rashod_para" value="1")
-															span.form-radio-name t(metric)/h
-													
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="rashod_para" value="2")
-															span.form-radio-name lb/h
-						
-								//Давление пара
-								.form-item-group
-									.form-label Максимально допустимые потери давления
-									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(
-											type="text"
-											name="current_dopustimye_poteri"
 											inputmode="decimal"
 											value="0"
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false")
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+
 											.dropdown__list
+
 												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri" value="0" )
-															span.form-radio-name kPa
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri"  value="1")
-															span.form-radio-name MPa
+
+															input(type="radio" name="rashod_para" value="0" checked)
+
+															span.form-radio-name kg/h
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri"  value="2")
-															span.form-radio-name psi
+
+															input(type="radio" name="rashod_para" value="1")
+
+															span.form-radio-name t(metric)/h
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri"  value="3"  checked)
-															span.form-radio-name bar
+
+															input(type="radio" name="rashod_para" value="2")
+
+															span.form-radio-name lb/h
+
+
+
+								//Максимально допустимая скорость
+
+								.form-item-group
+
+									.form-label.has-tooltip
+
+										span Максимально допустимая скорость
+
+										.tooltip-wrapper
+
+											span.tooltip-icon i
+
+											.tooltip-text
+
+												p Максимально допустимая скорость:<br>Введите максимально допустимую скорость пара в трубопроводе
+
+									.form-item.form-item--measure
+
+										input.form-inp.form-inp--measure(
+											type="text"
+											name="current_max_skorost"
+											inputmode="decimal"
+											value="30"
+										)
+
+										.dropdown.dropdown--measure
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+
+											.dropdown__list
+
+												ul
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri"  value="4")
-															span.form-radio-name kg/cm²
-													
+
+															input(type="radio" name="max_skorost" value="0" checked)
+
+															span.form-radio-name m/s
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dopustimye_poteri"  value="5")
-															span.form-radio-name mmHg							
-								
+
+															input(type="radio" name="max_skorost" value="1")
+
+															span.form-radio-name km/h
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="max_skorost" value="2")
+
+															span.form-radio-name ft/s
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="max_skorost" value="3")
+
+															span.form-radio-name mile/h
+
+
 
 								//Длина трубопровода
+
 								.form-item-group
+
 									.form-label.has-tooltip
+
 										span Длина трубопровода
+
 										.tooltip-wrapper
+
 											span.tooltip-icon i
+
 											.tooltip-text
+
 												p Длина трубопровода:<br>Введите полную длину трубопровода
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_dlina_truboprovoda"
@@ -281,234 +500,451 @@ block content
 										)
 
 										.dropdown.dropdown--measure
+
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+
 											.dropdown__list
+
 												ul
+
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio"  name="dlina_truboprovoda"  value="0")
+
+															input(type="radio" name="dlina_truboprovoda" value="0")
+
 															span.form-radio-name mm
+
 													li.dropdown__list-item
+
 														label.form-radio-label
+
 															input(type="radio" name="dlina_truboprovoda" value="1")
+
 															span.form-radio-name cm
-													
+
 													li.dropdown__list-item
+
 														label.form-radio-label
+
 															input(type="radio" name="dlina_truboprovoda" value="2" checked)
+
 															span.form-radio-name m
+
 													li.dropdown__list-item
+
 														label.form-radio-label
+
 															input(type="radio" name="dlina_truboprovoda" value="3")
+
 															span.form-radio-name in
+
+													li.dropdown__list-item
+
 														label.form-radio-label
+
 															input(type="radio" name="dlina_truboprovoda" value="4")
+
 															span.form-radio-name ft
+
+													li.dropdown__list-item
+
 														label.form-radio-label
+
 															input(type="radio" name="dlina_truboprovoda" value="5")
+
 															span.form-radio-name yd
-								
-							//СКРЫТЫЕ ДОП ОПЦИИ	
+
+
+
+							//СКРЫТЫЕ ДОП ОПЦИИ
+
 							.hide-block-wrapper
+
 								.calculator-fieldset.is-hide-block
+
 									.form-two-cols
+
 										.form-item-group
+
 											.form-label.has-tooltip
+
 												span Клапаны с изменяемым направлением потока (вентили и т.п.) (кол-во)
+
 												.tooltip-wrapper
+
 													span.tooltip-icon i
+
 													.tooltip-text
+
 														p Клапаны с изменяемым направлением потока (вентили и т.п.) (кол-во):<br>Введите количество клапанов с изменением потока (вентили и пр.)
+
 											.form-item
-												input.form-inp(type="number" name="klapan_1")
-												
+
+												input.form-inp(type="number" name="klapan_1" value="0")
+
 										.form-item-group
-											.form-label Проходные клапаны (задвижки и т.п.) (кол-во)
-											.form-item
-												input.form-inp(type="number" name="klapan_2")
-										.form-item-group
-											.form-label Клапаны с изменяемым направлением потока (вентили и т.п.) (кол-во)
-											.form-item
-												input.form-inp(type="number" name="inp_name1")
-												
-										.form-item-group
+
 											.form-label.has-tooltip
+
+												span Проходные клапаны (задвижки и т.п.) (кол-во)
+
+												.tooltip-wrapper
+
+													span.tooltip-icon i
+
+													.tooltip-text
+
+														p Проходные клапаны (задвижки и т.п.) (кол-во):<br>Введите количество проходных клапанов на трубопроводе
+
+											.form-item
+
+												input.form-inp(type="number" name="klapan_2" value="0")
+
+										.form-item-group
+
+											.form-label.has-tooltip
+
 												span Обратные клапаны (кол-во)
+
 												.tooltip-wrapper
+
 													span.tooltip-icon i
+
 													.tooltip-text
+
 														p Обратные клапаны (кол-во):<br>Введите количество обратных клапанов на трубопроводе
+
 											.form-item
-												input.form-inp(type="number" name="klapan_3")
+
+												input.form-inp(type="number" name="klapan_3" value="0")
+
 										.form-item-group
+
 											.form-label.has-tooltip
+
 												span Отводы (кол-во)
+
 												.tooltip-wrapper
+
 													span.tooltip-icon i
+
 													.tooltip-text
+
 														p Отводы (кол-во):<br>Введите количество отводов
+
 											.form-item
-												input.form-inp(type="number" name="klapan_4")
-										
-										// Возраст трубы
+
+												input.form-inp(type="number" name="klapan_4" value="0")
+
+
+
+										//Возраст трубы
+
 										.form-item-group
+
 											.form-label Возраст трубы влияет на поверхность, делая ее более грубой со временем.
+
 											.form-item.form-item--measure
+
 												input.form-inp.form-inp--measure(
 													type="text"
-													name="current_dlina_truboprovoda"
+													name="current_vozrast_truby"
 													inputmode="decimal"
 													value="0.05"
 												)
 
 												.dropdown.dropdown--measure
+
 													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
+
 													.dropdown__list
+
 														ul
+
 															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio"  name="dlina_truboprovoda"  value="0" checked)
+
+																	input(type="radio" name="vozrast_truby" value="0" checked)
+
 																	span.form-radio-name mm
+
 															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio" name="dlina_truboprovoda" value="1")
+
+																	input(type="radio" name="vozrast_truby" value="1")
+
 																	span.form-radio-name cm
-															
+
 															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio" name="dlina_truboprovoda" value="2")
+
+																	input(type="radio" name="vozrast_truby" value="2")
+
 																	span.form-radio-name m
+
 															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio" name="dlina_truboprovoda" value="3")
+
+																	input(type="radio" name="vozrast_truby" value="3")
+
 																	span.form-radio-name in
+
+															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio" name="dlina_truboprovoda" value="4")
+
+																	input(type="radio" name="vozrast_truby" value="4")
+
 																	span.form-radio-name ft
+
+															li.dropdown__list-item
+
 																label.form-radio-label
-																	input(type="radio" name="dlina_truboprovoda" value="5")
+
+																	input(type="radio" name="vozrast_truby" value="5")
+
 																	span.form-radio-name yd
-								
+
+
+
 								button.open-hide-btn.ml-auto.mt-20(type="button")
+
 									i.plus-minus
-									span.hide-btn-txt.medi-15 Показать дополнительные опции 
-								
-					
+
+									span.hide-btn-txt.medi-15 Показать дополнительные опции
+
+
+
 						//FORM FOOTER
+
 						.calculator-form__footer.flex-column.flex-center
+
 							button.form-button(type="submit") Рассчитать
+
 							button.w-auto.btn-clear-form(type="reset") Очистить
-						
+
+
+
 						//FORM RESULT
+
 						.calculator-form__result
+
 							p.semi-24 Результат:
+
 							.calculator-result-block
-								//- p.medi-16 Пожалуйста введите данные в поля
-								
-								//Если поля не заполнены корректно, то красный цвет текста задается при помощи класса  result-error
-								//- p.result-error [ Максимально допустимые потери давления ]
-								//- p.result-error Пожалуйста введите значение (n) в пределах следующего диапазона:  0.0 < n kg/h (ТЕКСТ ОШИБКИ)
 
-								
-								//Список результатов
-								
 								//single result row
+
 								.calculator-result-row.form-item-group
+
 									.form-label
-										span Расход конденсата на разогрев трубы
+
+										span Внутренний диаметр трубопровода
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
-											name="res"
-											value="0.265333"
+											name="res_diametr"
 											inputmode="decimal"
 											readonly
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
+
 											.dropdown__list
+
 												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
-															span.form-radio-name barG
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
-															span.form-radio-name mmHg abc
+
+															input(type="radio" name="res_diametr_unit" value="mm" checked)
+
+															span.form-radio-name mm
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_diametr_unit" value="in")
+
+															span.form-radio-name in
+
 								//single result row
+
 								.calculator-result-row.form-item-group
+
 									.form-label
-										span Расход конденсата за счет теплопотерь с поверхности трубы
+
+										span Скорость пара
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
-											name="res"
-											value="1.265333"
+											name="res_skorost"
 											inputmode="decimal"
 											readonly
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") кг
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+
 											.dropdown__list
+
 												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
-															span.form-radio-name кг
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
-															span.form-radio-name гр
+
+															input(type="radio" name="res_skorost_unit" value="0" checked)
+
+															span.form-radio-name m/s
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_skorost_unit" value="1")
+
+															span.form-radio-name km/h
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_skorost_unit" value="2")
+
+															span.form-radio-name ft/s
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_skorost_unit" value="3")
+
+															span.form-radio-name mile/h
+
 								//single result row
+
 								.calculator-result-row.form-item-group
+
 									.form-label
-										span Время нагрева
+
+										span Потери давления
+
 									.form-item.form-item--measure
+
 										input.form-inp.form-inp--measure(
 											type="text"
-											name="res"
-											value="10"
+											name="res_poteri_davlenia"
 											inputmode="decimal"
 											readonly
 										)
 
 										.dropdown.dropdown--measure
-											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") мин
+
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar
+
 											.dropdown__list
+
 												ul
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" id="steam-pressure-01" name="steam_pressure_unit" value="barG" checked)
-															span.form-radio-name мин
 
 													li.dropdown__list-item
+
 														label.form-radio-label
-															input(type="radio" id="steam-pressure-02" name="steam_pressure_unit" value="mmHg abc")
-															span.form-radio-name час
+
+															input(type="radio" name="res_poteri_unit" value="0" checked)
+
+															span.form-radio-name kPa
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_poteri_unit" value="1")
+
+															span.form-radio-name MPa
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_poteri_unit" value="2")
+
+															span.form-radio-name psi
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_poteri_unit" value="3" checked)
+
+															span.form-radio-name bar
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_poteri_unit" value="4")
+
+															span.form-radio-name kg/cm²
+
+													li.dropdown__list-item
+
+														label.form-radio-label
+
+															input(type="radio" name="res_poteri_unit" value="5")
+
+															span.form-radio-name mmHg
+
 					//formulas
+
 					.formulas
+
 						.formulas__title Формулы:
+
 						.formulas__block
+
 							.formulas__image
-								img(src='./img/calc/calc-form-1.webp' width='600' height='200' loading='lazy' alt='img')
-							
+
+								img(src='./img/calc/calc-form-2.webp' width='600' height='200' loading='lazy' alt='img')
+
 							.formulas__list
+
 								.formulas__item
+
 									p ms: Расход пара (kg/h)
+
 								.formulas__item
-									p d: Внутренний диаметр трубопровода (m)
+
+									p d: Внутренний диаметр трубопровода (m)
+
 								.formulas__item
-									p v: Скорость пара (m/s)
+
+									p v: Скорость пара (m/s)
+
 								.formulas__item
-									p ∆p: Потери давления (Pa)
+
+									p ∆p: Потери давления (Pa)
+
 								.formulas__item
-									p μ: Коэффициент трения
+
+									p μ: Коэффициент трения
+
 								.formulas__item
-									p V: Удельный объем (m³/kg)
-								
-	-var title = "Калькулятор ПАР_1";
+
+									p V: Удельный объем (m³/kg)
+
+	-var title = "Калькулятор ПАР_2";

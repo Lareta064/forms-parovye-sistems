@@ -1,0 +1,138 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Образование выпара при выпуске конденсата
+
+					form.calculator-form.custom-form
+						.calculator-form__head
+							.semi-24 Начальные данные
+							.calculator-form__measure
+								p.medi-16 Единицы измерения
+								.dropdown.dropdown--abs
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
+									.dropdown__list
+										ul
+											- var measUnits = ['SI','SI(bar)','Imperial','MKS'];
+											- for (var i = 0; i < measUnits.length; i++)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="measure" value=i checked=(i===1))
+														span.form-radio-name= measUnits[i]
+
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label.has-tooltip
+										span Давление конденсата
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Давление конденсата перед сбросом
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_kondensata" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													- var pUnits = ['kPa abs','MPa abs','psi abs','bar abs','kg/cm² abs','mmHg abs','kPaG','MPaG','psig','barG','kg/cm²G','mmHgG'];
+													- for (var i = 0; i < pUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="davlenie_kondensata" value=i checked=(i===9))
+																span.form-radio-name= pUnits[i]
+
+								.form-item-group
+									.form-label.has-tooltip
+										span Расход конденсата
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Массовый расход конденсата
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_rashod_kondensata" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													- var fUnits = ['kg/h','t(metric)/h','lb/h'];
+													- for (var i = 0; i < fUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="rashod_kondensata" value=i checked=(i===0))
+																span.form-radio-name= fUnits[i]
+
+								.form-item-group
+									.form-label Противодавление в конденсатной линии
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_protivodavlenie" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													- for (var i = 0; i < pUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="protivodavlenie" value=i checked=(i===9))
+																span.form-radio-name= pUnits[i]
+
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход пара вторичного вскипания
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_vypar" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													- for (var i = 0; i < fUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="res_vypar_unit" value=i checked=(i===0))
+																span.form-radio-name= fUnits[i]
+
+								.calculator-result-row.form-item-group
+									.form-label
+										span Процентное отношение пара вторичного вскипания
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_vypar_percent" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") %
+
+					.formulas
+						.formulas__title Формулы:
+						.formulas__block
+							.formulas__image
+								img(src='./img/calc/calc-form-1.webp' width='600' height='200' loading='lazy' alt='img')
+							.formulas__list
+								.formulas__item
+									p mc: Расход конденсата (kg/h)
+								.formulas__item
+									p mfs: Расход пара вторичного вскипания (kg/h)
+								.formulas__item
+									p Rfs: Процентное отношение пара вторичного вскипания (%)
+								.formulas__item
+									p hc: Удельная энтальпия конденсата (kJ/kg)
+								.formulas__item
+									p hfc: Удельная энтальпия воды в состоянии насыщения (kJ/kg)
+								.formulas__item
+									p hfg: Скрытая теплота парообразования пара (kJ/kg)
+
+	-var title = "Образование выпара при выпуске конденсата";
