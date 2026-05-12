@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputs = dropDownWrapper.querySelectorAll('input[type="radio"], input[type="checkbox"]');
     if (!inputs.length) return;
 
-    const placeholder = dropDownWrapper.dataset.placeholder || dropDownBtn.innerText.trim();
+    const placeholder = dropDownWrapper.dataset.placeholder || dropDownBtn.textContent.trim();
 
     function openDropdown() {
       dropDownList.style.height = (dropDownList.scrollHeight + 1) + 'px';
@@ -32,17 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		const textEl = label.querySelector('.form-radio-name');
 		if (textEl) {
-			return textEl.innerText.trim();
+			return textEl.textContent.trim();
 		}
 
 		// fallback на случай другой разметки
-		return label.innerText.trim();
+		return label.textContent.trim();
     }
 
     function updateButtonText() {
       const checked = dropDownWrapper.querySelectorAll('input:checked');
       if (!checked.length) {
-        dropDownBtn.innerText = placeholder;
+        dropDownBtn.textContent = placeholder;
         return;
       }
 
@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const isRadio = checked[0].type === 'radio';
 
       if (isRadio) {
-        dropDownBtn.innerText = getLabelText(checked[0]);
+        dropDownBtn.textContent = getLabelText(checked[0]);
       } else {
         const texts = Array.from(checked).map(getLabelText).filter(Boolean);
-        dropDownBtn.innerText = texts.length ? texts.join(', ') : placeholder;
+        dropDownBtn.textContent = texts.length ? texts.join(', ') : placeholder;
       }
     }
 
