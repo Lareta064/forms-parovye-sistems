@@ -10,129 +10,129 @@ block content
 					include ../blocks/_acc-menu
 					+calcMenu('calc-18')
 
-			.grid-column-main.grid-column-calc
-				.grid-column-head
-					p.breadcrumb Тут компонент breadcrumbs
-					h1.h-30 Точка подтопления теплообменника
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Точка подтопления теплообменника
 
-				form.calculator-form.custom-form(data-calc="11350")
-					.calculator-form__head
-						.semi-24 Начальные данные
-						.calculator-form__measure
-							p.medi-16 Единицы измерения
-							.dropdown.dropdown--abs
-								button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
-								.dropdown__list
-									ul
-										- var measUnits = ['SI','SI(bar)','Imperial','MKS'];
-										- for (var i = 0; i < measUnits.length; i++)
-											li.dropdown__list-item
-												label.form-radio-label
-													input(type="radio" name="measure" value=i checked=(i===1))
-													span.form-radio-name= measUnits[i]
+					form.calculator-form.custom-form(data-calc="11350")
+						.calculator-form__head
+							.semi-24 Начальные данные
+							.calculator-form__measure
+								p.medi-16 Единицы измерения
+								.dropdown.dropdown--abs
+									button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") SI(bar)
+									.dropdown__list
+										ul
+											- var measUnits = ['SI','SI(bar)','Imperial','MKS'];
+											- for (var i = 0; i < measUnits.length; i++)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="measure" value=i checked=(i===1))
+														span.form-radio-name= measUnits[i]
 
-					.calculator-form__body
-						.calculator-fieldset.form-two-cols
-							- var pUnits = ['kPa abs','MPa abs','psi abs','bar abs','kg/cm² abs','mmHg abs','kPaG','MPaG','psig','barG','kg/cm²G','mmHgG'];
-							- var tUnits = ['°C','°F','K'];
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								- var pUnits = ['kPa abs','MPa abs','psi abs','bar abs','kg/cm² abs','mmHg abs','kPaG','MPaG','psig','barG','kg/cm²G','mmHgG'];
+								- var tUnits = ['°C','°F','K'];
 
-							.form-item-group
-								.form-label Давление пара
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
-										.dropdown__list
-											ul
-												- for (var i = 0; i < pUnits.length; i++)
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="davlenie_para" value=i checked=(i===9))
-															span.form-radio-name= pUnits[i]
+								.form-item-group
+									.form-label Давление пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													- for (var i = 0; i < pUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="davlenie_para" value=i checked=(i===9))
+																span.form-radio-name= pUnits[i]
 
-							.form-item-group
-								.form-label.has-tooltip
-									span Температура среды на входе
-									.tooltip-wrapper
-										span.tooltip-icon i
-										.tooltip-text
-											p Температура нагреваемой среды (жидкость или воздух) на входе в теплообменник
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" name="current_t_in" data-var="lqdInTemp" data-cat="temp" inputmode="decimal" value="0")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
-										.dropdown__list
-											ul
-												- for (var i = 0; i < tUnits.length; i++)
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="t_in_unit" value=i checked=(i===0))
-															span.form-radio-name= tUnits[i]
+								.form-item-group
+									.form-label.has-tooltip
+										span Температура среды на входе
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Температура нагреваемой среды (жидкость или воздух) на входе в теплообменник
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_t_in" data-var="lqdInTemp" data-cat="temp" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													- for (var i = 0; i < tUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="t_in_unit" value=i checked=(i===0))
+																span.form-radio-name= tUnits[i]
 
-							.form-item-group
-								.form-label.has-tooltip
-									span Температура среды на выходе
-									.tooltip-wrapper
-										span.tooltip-icon i
-										.tooltip-text
-											p Заданная температура нагреваемой среды на выходе
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" name="current_t_out" data-var="lqdOutTemp" data-cat="temp" inputmode="decimal" value="0")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
-										.dropdown__list
-											ul
-												- for (var i = 0; i < tUnits.length; i++)
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="t_out_unit" value=i checked=(i===0))
-															span.form-radio-name= tUnits[i]
+								.form-item-group
+									.form-label.has-tooltip
+										span Температура среды на выходе
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Заданная температура нагреваемой среды на выходе
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_t_out" data-var="lqdOutTemp" data-cat="temp" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													- for (var i = 0; i < tUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="t_out_unit" value=i checked=(i===0))
+																span.form-radio-name= tUnits[i]
 
-							.form-item-group
-								.form-label.has-tooltip
-									span Противодавление
-									.tooltip-wrapper
-										span.tooltip-icon i
-										.tooltip-text
-											p Давление в конденсатной линии за теплообменником (противодавление)
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" name="current_protivodavlenie" data-var="backPress" data-cat="pressureAbs" inputmode="decimal" value="0")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
-										.dropdown__list
-											ul
-												- for (var i = 0; i < pUnits.length; i++)
-													li.dropdown__list-item
-														label.form-radio-label
-															input(type="radio" name="protivodavlenie" value=i checked=(i===9))
-															span.form-radio-name= pUnits[i]
+								.form-item-group
+									.form-label.has-tooltip
+										span Противодавление
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Давление в конденсатной линии за теплообменником (противодавление)
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="current_protivodavlenie" data-var="backPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													- for (var i = 0; i < pUnits.length; i++)
+														li.dropdown__list-item
+															label.form-radio-label
+																input(type="radio" name="protivodavlenie" value=i checked=(i===9))
+																span.form-radio-name= pUnits[i]
 
-							.form-item-group
-								.form-label.has-tooltip
-									span Запас поверхности
-									.tooltip-wrapper
-										span.tooltip-icon i
-										.tooltip-text
-											p Избыточная площадь поверхности теплообменника, % (oversurfacing)
-								.form-item
-									input.form-inp(type="text" name="current_oversur" data-var="oversur" inputmode="decimal" value="40")
+								.form-item-group
+									.form-label.has-tooltip
+										span Запас поверхности
+										.tooltip-wrapper
+											span.tooltip-icon i
+											.tooltip-text
+												p Избыточная площадь поверхности теплообменника, % (oversurfacing)
+									.form-item
+										input.form-inp(type="text" name="current_oversur" data-var="oversur" inputmode="decimal" value="40")
 
-					.calculator-form__footer.flex-column.flex-center
-						button.form-button(type="submit") Рассчитать
-						button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
 
-					.calculator-form__result
-						p.semi-24 Результат:
-						.calculator-result-block
-							p.medi-16(data-result-note)
-							.calculator-result-row.form-item-group
-								.form-label
-									span Точка подтопления (%)
-								.form-item
-									input.form-inp(type="text" name="res_sp" data-out="stallPoint" readonly)
-							.calculator-result-row.form-item-group
-								.form-label
-									span Точка подтопления с запасом поверхности (%)
-								.form-item
-									input.form-inp(type="text" name="res_sp_os" data-out="stallPointOs" readonly)
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Точка подтопления (%)
+									.form-item
+										input.form-inp(type="text" name="res_sp" data-out="stallPoint" readonly)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Точка подтопления с запасом поверхности (%)
+									.form-item
+										input.form-inp(type="text" name="res_sp_os" data-out="stallPointOs" readonly)
 	-var title = "Точка подтопления";

@@ -10,75 +10,75 @@ block content
 					include ../blocks/_acc-menu
 					+calcMenu('conv-pressure')
 
-			.grid-column-main.grid-column-calc
-				.grid-column-head
-					p.breadcrumb Тут компонент breadcrumbs
-					h1.h-30 Конвертер давления
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Конвертер давления
 
-				form.calculator-form.custom-form(data-convert="pressureAbs")
-					.calculator-form__body
-						.calculator-fieldset
-							.form-item-group
-								.form-label Значение
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kPa abs
-										.dropdown__list
-											ul
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="0" checked)
-														span.form-radio-name kPa abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="1")
-														span.form-radio-name MPa abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="2")
-														span.form-radio-name psi abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="3")
-														span.form-radio-name bar abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="4")
-														span.form-radio-name kg/cm² abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="5")
-														span.form-radio-name mmHg abs
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="6")
-														span.form-radio-name kPaG
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="7")
-														span.form-radio-name MPaG
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="8")
-														span.form-radio-name psig
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="9")
-														span.form-radio-name barG
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="10")
-														span.form-radio-name kg/cm²G
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="11")
-														span.form-radio-name mmHgG
+					form.calculator-form.custom-form(data-convert="pressureAbs")
+						.calculator-form__body
+							.calculator-fieldset
+								.form-item-group
+									.form-label Значение
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kPa abs
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="0" checked)
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="9")
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="11")
+															span.form-radio-name mmHgG
 
-					.calculator-form__footer.flex-column.flex-center
-						button.form-button(type="submit") Конвертировать
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Конвертировать
 
-					.calculator-form__result
-						p.semi-24 Результат:
-						.calculator-result-block(data-conv-results="")
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block(data-conv-results="")
 	-var title = "Конвертер давления";

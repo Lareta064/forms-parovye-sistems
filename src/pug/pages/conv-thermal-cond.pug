@@ -10,39 +10,39 @@ block content
 					include ../blocks/_acc-menu
 					+calcMenu('conv-thermal-cond')
 
-			.grid-column-main.grid-column-calc
-				.grid-column-head
-					p.breadcrumb Тут компонент breadcrumbs
-					h1.h-30 Конвертер теплопроводности
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Конвертер теплопроводности
 
-				form.calculator-form.custom-form(data-convert="thermalCond")
-					.calculator-form__body
-						.calculator-fieldset
-							.form-item-group
-								.form-label Значение
-								.form-item.form-item--measure
-									input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
-									.dropdown.dropdown--measure
-										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") W/m K
-										.dropdown__list
-											ul
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="0" checked)
-														span.form-radio-name W/m K
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="1")
-														span.form-radio-name kcal/mh°C
-												li.dropdown__list-item
-													label.form-radio-label
-														input(type="radio" name="conv_unit" value="2")
-														span.form-radio-name BTU/ft h°F
+					form.calculator-form.custom-form(data-convert="thermalCond")
+						.calculator-form__body
+							.calculator-fieldset
+								.form-item-group
+									.form-label Значение
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") W/m K
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="0" checked)
+															span.form-radio-name W/m K
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="1")
+															span.form-radio-name kcal/mh°C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="conv_unit" value="2")
+															span.form-radio-name BTU/ft h°F
 
-					.calculator-form__footer.flex-column.flex-center
-						button.form-button(type="submit") Конвертировать
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Конвертировать
 
-					.calculator-form__result
-						p.semi-24 Результат:
-						.calculator-result-block(data-conv-results="")
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block(data-conv-results="")
 	-var title = "Конвертер теплопроводности";
