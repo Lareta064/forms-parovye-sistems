@@ -322,6 +322,18 @@ input[type=number] {
 	bottom: 60%;
 }
 
+/* Строки результата конвертора единиц */
+.conv-row{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 16px;
+	padding: 8px 0;
+	border-bottom: 1px solid #e6e6e6;
+}
+.conv-row__unit{ color: #6b7280; }
+.conv-row__val{ font-weight: 600; font-variant-numeric: tabular-nums; }
+
 .form-label.has-tooltip{
 	@media (max-width: 1199px) {
 	display: flex!important;

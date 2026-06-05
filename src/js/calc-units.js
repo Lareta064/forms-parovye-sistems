@@ -53,6 +53,24 @@
   var dynVisc = { 'mPa·s': 1, 'Pa·s': 1000, 'cP': 1, 'µPa·s': 0.001 };
   // Тепловой поток / мощность -> Вт.
   var power = { 'W': 1, 'kW': 1000, 'kcal/h': 1.163, 'BTU/h': 0.293071 };
+  // Площадь -> м².
+  var area = { 'm²': 1, 'cm²': 1e-4, 'mm²': 1e-6, 'in²': 6.4516e-4, 'ft²': 0.09290304, 'yd²': 0.83612736 };
+  // Энергия -> кДж.
+  var energy = { 'kJ': 1, 'J': 0.001, 'MJ': 1000, 'kcal': 4.1868, 'kWh': 3600, 'BTU': 1.05505585, 'ft·lbf': 0.001355818 };
+  // Коэффициент теплоотдачи -> Вт/(м²·К).
+  var heatTransfer = { 'W/m²K': 1, 'kcal/m²h°C': 1.163, 'BTU/ft²h°F': 5.678263 };
+  // Теплопроводность -> Вт/(м·К).
+  var thermalCond = { 'W/m K': 1, 'kcal/mh°C': 1.163, 'BTU/ft h°F': 1.730735 };
+  // Разность температур -> К (чистый масштаб, без сдвига). 1 °F-разн = 5/9 К.
+  var tempDiff = { '°C': 1, 'K': 1, '°F': 5 / 9 };
+
+  // Таблица всех категорий для конвертора (символ -> множитель к базовой ед.).
+  var TABLES = {
+    pressureAbs: null, dPress: dPress, temp: null, tempDiff: tempDiff, massFlow: massFlow,
+    mass: mass, length: length, area: area, volume: volume, velocity: velocity, volFlow: volFlow,
+    time: time, specHeat: specHeat, enthalpy: enthalpy, specVol: specVol, dynVisc: dynVisc,
+    energy: energy, power: power, heatTransfer: heatTransfer, thermalCond: thermalCond, cv: cv
+  };
   // Объёмный расход -> м³/ч. Галлоны — US.
   var volFlow = { 'm³/h': 1, 'l/h': 0.001, 'gal/h': 0.00378541, 'GPM': 0.227125, 'm³/min': 60, 'l/min': 0.06, 'L/min': 0.06, 'CFM': 1.69901, 'ft³/min': 1.69901 };
 
@@ -73,6 +91,11 @@
       case 'specVol': return symbol in specVol ? v * specVol[symbol] : NaN;
       case 'dynVisc': return symbol in dynVisc ? v * dynVisc[symbol] : NaN;
       case 'power': return symbol in power ? v * power[symbol] : NaN;
+      case 'area': return symbol in area ? v * area[symbol] : NaN;
+      case 'energy': return symbol in energy ? v * energy[symbol] : NaN;
+      case 'heatTransfer': return symbol in heatTransfer ? v * heatTransfer[symbol] : NaN;
+      case 'thermalCond': return symbol in thermalCond ? v * thermalCond[symbol] : NaN;
+      case 'tempDiff': return symbol in tempDiff ? v * tempDiff[symbol] : NaN;
       case 'volFlow': return symbol in volFlow ? v * volFlow[symbol] : NaN;
       case 'time': return symbol in time ? v * time[symbol] : NaN;
       case 'volume': return symbol in volume ? v * volume[symbol] : NaN;
@@ -100,6 +123,11 @@
       case 'specVol': return symbol in specVol ? si / specVol[symbol] : NaN;
       case 'dynVisc': return symbol in dynVisc ? si / dynVisc[symbol] : NaN;
       case 'power': return symbol in power ? si / power[symbol] : NaN;
+      case 'area': return symbol in area ? si / area[symbol] : NaN;
+      case 'energy': return symbol in energy ? si / energy[symbol] : NaN;
+      case 'heatTransfer': return symbol in heatTransfer ? si / heatTransfer[symbol] : NaN;
+      case 'thermalCond': return symbol in thermalCond ? si / thermalCond[symbol] : NaN;
+      case 'tempDiff': return symbol in tempDiff ? si / tempDiff[symbol] : NaN;
       case 'volFlow': return symbol in volFlow ? si / volFlow[symbol] : NaN;
       case 'time': return symbol in time ? si / time[symbol] : NaN;
       case 'volume': return symbol in volume ? si / volume[symbol] : NaN;
@@ -112,7 +140,29 @@
     }
   }
 
-  var Units = { toSI: toSI, fromSI: fromSI, ATM: ATM };
+  // Курируемые списки единиц для конвертора (без дублей-алиасов).
+  var CONV_LISTS = {
+    temp: ['°C', '°F', 'K'],
+    tempDiff: ['°C', 'K', '°F'],
+    pressureAbs: ['kPa abs', 'MPa abs', 'psi abs', 'bar abs', 'kg/cm² abs', 'mmHg abs', 'kPaG', 'MPaG', 'psig', 'barG', 'kg/cm²G', 'mmHgG'],
+    length: ['mm', 'cm', 'm', 'in', 'ft', 'yd'],
+    area: ['m²', 'cm²', 'mm²', 'in²', 'ft²', 'yd²'],
+    volume: ['m³', 'cm³(=mL)', 'dm³(=L)', 'gal (US)', 'gal (UK)', 'in³', 'ft³', 'yd³', 'barrel'],
+    velocity: ['m/s', 'km/h', 'ft/s', 'mile/h'],
+    mass: ['kg', 'g', 't(metric)', 'lb'],
+    dynVisc: ['mPa·s', 'Pa·s', 'cP', 'µPa·s'],
+    energy: ['kJ', 'J', 'MJ', 'kcal', 'kWh', 'BTU', 'ft·lbf'],
+    heatTransfer: ['W/m²K', 'kcal/m²h°C', 'BTU/ft²h°F'],
+    thermalCond: ['W/m K', 'kcal/mh°C', 'BTU/ft h°F'],
+    enthalpy: ['kJ/kg', 'kcal/kg', 'BTU/lb']
+  };
+  function list(category) {
+    if (CONV_LISTS[category]) return CONV_LISTS[category].slice();
+    var t = TABLES[category];
+    return t ? Object.keys(t) : [];
+  }
+
+  var Units = { toSI: toSI, fromSI: fromSI, ATM: ATM, list: list };
   if (typeof window !== 'undefined') window.Units = Units;
   if (typeof module !== 'undefined' && module.exports) module.exports = Units;
 })();

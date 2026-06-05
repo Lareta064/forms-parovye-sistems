@@ -163,7 +163,34 @@
     });
   }
 
+  // ----- Конвертор единиц: форма [data-convert="<категория>"] -----
+  // Ввод значения + единица (dropdown в группе поля [data-conv-in]) -> таблица всех единиц категории
+  // в контейнер [data-conv-results].
+  function initConverter(form) {
+    var cat = form.getAttribute('data-convert');
+    var inEl = form.querySelector('[data-conv-in]');
+    var box = form.querySelector('[data-conv-results]');
+    if (!cat || !inEl || !box || !window.Units) return;
+    function run() {
+      var sym = unitSymbol(groupOf(inEl));
+      var si = window.Units.toSI(inEl.value, cat, sym);
+      box.innerHTML = '';
+      if (!isFinite(si)) return;
+      window.Units.list(cat).forEach(function (u) {
+        var val = formatNum(window.Units.fromSI(si, cat, u));
+        var row = document.createElement('div');
+        row.className = 'calculator-result-row conv-row';
+        row.innerHTML = '<span class="conv-row__unit">' + u + '</span><span class="conv-row__val">' + val + '</span>';
+        box.appendChild(row);
+      });
+    }
+    form.addEventListener('submit', function (e) { e.preventDefault(); run(); });
+    inEl.addEventListener('input', run);
+    groupOf(inEl).querySelectorAll('.dropdown--measure input').forEach(function (r) { r.addEventListener('change', run); });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-calc]').forEach(initForm);
+    document.querySelectorAll('[data-convert]').forEach(initConverter);
   });
 })();

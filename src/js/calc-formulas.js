@@ -354,6 +354,43 @@
     return { condHeatPipe: mh, condRadiant: mr, condTotal: mh + mr };
   };
 
+  /*
+   * 11130 — Подбор размера трубы по скорости (упрощённый: без фитингов).
+   * Вход: pipeGrade, stmPress, stmTemp, stmFlow, upperVelo(м/с), pipeLen, pipeRough. Выход: pipeSize, pipeInDiam, stmVelo, pressLoss.
+   */
+  CALC['11130'] = function (inp) {
+    var S = steam(), PIPES = pipes();
+    var st = steamState(inp.stmPress, inp.stmTemp), V = st.V, eta = S.viscosity(1 / V, st.T);
+    var eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000;
+      var r = velAndLoss(d, inp.stmFlow, V, eta, inp.pipeLen, {}, eps);
+      if (r.v <= inp.upperVelo) { chosen = { pipe: list[i], d: d, r: r }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000; chosen = { pipe: last, d: dd, r: velAndLoss(dd, inp.stmFlow, V, eta, inp.pipeLen, {}, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, stmVelo: chosen.r.v, pressLoss: chosen.r.dp, exceeded: exceeded };
+  };
+
+  /*
+   * 11350 / 11360 — Точка подтопления (stall point) для теплообменника.
+   * S = (Tb − Tm)/(Ts − Tm)·100, где Tm=(T1+T2)/2 — средняя темп. среды, Tb — темп. насыщения
+   * при противодавлении. Вход: lqdInTemp/airInTemp(T1,К), lqdOutTemp/airOutTemp(T2,К),
+   * stmPress(МПа), stmTemp(К|null), backPress(МПа), oversur(%). Выход: stallPoint(%), stallPointOs(%).
+   */
+  function stallPoint(inp) {
+    var S = steam();
+    var Ts = (inp.stmTemp && inp.stmTemp > S.Tsat(inp.stmPress) ? inp.stmTemp : S.Tsat(inp.stmPress)) - 273.15;
+    var Tb = S.Tsat(inp.backPress) - 273.15;
+    var T1 = inp.t1 - 273.15, T2 = inp.t2 - 273.15, Tm = (T1 + T2) / 2;
+    var Sp = (Tb - Tm) / (Ts - Tm) * 100;
+    var os = inp.oversur || 0;
+    return { stallPoint: Sp, stallPointOs: Sp * (1 + os / 100) }; // Os — с запасом поверхности (предв., калибровать)
+  }
+  CALC['11350'] = function (inp) { return stallPoint({ t1: inp.lqdInTemp, t2: inp.lqdOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
+  CALC['11360'] = function (inp) { return stallPoint({ t1: inp.airInTemp, t2: inp.airOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);

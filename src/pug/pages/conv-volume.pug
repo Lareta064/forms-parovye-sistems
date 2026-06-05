@@ -1,0 +1,72 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('conv-volume')
+
+			.grid-column-main.grid-column-calc
+				.grid-column-head
+					p.breadcrumb Тут компонент breadcrumbs
+					h1.h-30 Конвертер объёма
+
+				form.calculator-form.custom-form(data-convert="volume")
+					.calculator-form__body
+						.calculator-fieldset
+							.form-item-group
+								.form-label Значение
+								.form-item.form-item--measure
+									input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
+									.dropdown.dropdown--measure
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="0" checked)
+														span.form-radio-name m³
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="1")
+														span.form-radio-name cm³(=mL)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="2")
+														span.form-radio-name dm³(=L)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="3")
+														span.form-radio-name gal (US)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="4")
+														span.form-radio-name gal (UK)
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="5")
+														span.form-radio-name in³
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="6")
+														span.form-radio-name ft³
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="7")
+														span.form-radio-name yd³
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="8")
+														span.form-radio-name barrel
+
+					.calculator-form__footer.flex-column.flex-center
+						button.form-button(type="submit") Конвертировать
+
+					.calculator-form__result
+						p.semi-24 Результат:
+						.calculator-result-block(data-conv-results="")
+	-var title = "Конвертер объёма";

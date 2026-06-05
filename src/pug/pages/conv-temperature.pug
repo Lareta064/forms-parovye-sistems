@@ -1,0 +1,48 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('conv-temperature')
+
+			.grid-column-main.grid-column-calc
+				.grid-column-head
+					p.breadcrumb Тут компонент breadcrumbs
+					h1.h-30 Конвертер температуры
+
+				form.calculator-form.custom-form(data-convert="temp")
+					.calculator-form__body
+						.calculator-fieldset
+							.form-item-group
+								.form-label Значение
+								.form-item.form-item--measure
+									input.form-inp.form-inp--measure(type="text" data-conv-in="" inputmode="decimal" value="1")
+									.dropdown.dropdown--measure
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="0" checked)
+														span.form-radio-name °C
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="1")
+														span.form-radio-name °F
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="conv_unit" value="2")
+														span.form-radio-name K
+
+					.calculator-form__footer.flex-column.flex-center
+						button.form-button(type="submit") Конвертировать
+
+					.calculator-form__result
+						p.semi-24 Результат:
+						.calculator-result-block(data-conv-results="")
+	-var title = "Конвертер температуры";
