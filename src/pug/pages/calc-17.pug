@@ -15,7 +15,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Таблица свойств перегретого пара
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11530")
 						.calculator-form__head
 							.semi-24 Начальные данные
 							.calculator-form__measure
@@ -36,7 +36,7 @@ block content
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -56,7 +56,7 @@ block content
 											.tooltip-text
 												p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+										input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" value="(99.9743)")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 											.dropdown__list
@@ -75,5 +75,93 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Удельная энтальпия
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельная энтальпия
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_h" data-out="superEnth" data-cat="enthalpy" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_h_unit" value="kJ/kg" checked)
+															span.form-radio-name kJ/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_h_unit" value="kcal/kg")
+															span.form-radio-name kcal/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_h_unit" value="BTU/lb")
+															span.form-radio-name BTU/lb
+								//Удельный объём
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельный объём
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_v" data-out="superVol" data-cat="specVol" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_v_unit" value="m³/kg" checked)
+															span.form-radio-name m³/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_v_unit" value="L/kg")
+															span.form-radio-name L/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_v_unit" value="ft³/lb")
+															span.form-radio-name ft³/lb
+								//Удельная теплоёмкость
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельная теплоёмкость
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_cp" data-out="superCp" data-cat="specHeat" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg K
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cp_unit" value="kJ/kg K" checked)
+															span.form-radio-name kJ/kg K
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cp_unit" value="kcal/kg·°C")
+															span.form-radio-name kcal/kg·°C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cp_unit" value="BTU/lb °F")
+															span.form-radio-name BTU/lb °F
+								//Динамическая вязкость
+								.calculator-result-row.form-item-group
+									.form-label
+										span Динамическая вязкость
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_visc" data-out="superVisc" data-cat="dynVisc" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mPa·s
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_visc_unit" value="mPa·s" checked)
+															span.form-radio-name mPa·s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_visc_unit" value="µPa·s")
+															span.form-radio-name µPa·s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_visc_unit" value="cP")
+															span.form-radio-name cP
 	-var title = "Таблица свойств перегретого пара";

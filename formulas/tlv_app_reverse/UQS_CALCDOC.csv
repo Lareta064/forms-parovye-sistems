@@ -1,0 +1,3813 @@
+,,ENG,,,,ENG(psi-pound),,,,JPN,,,DEU,,,FRA, ,,CHN,,,KOR,,,ESP,,
+QS_CALCDOC,,Expression,LaTex Equation,Variable,Comment,Expression,LaTex Equation,Variable,Comment,Expression,Variable,Comment,Expression,Variable,Comment,Expression,Variable,Comment,Expression,Variable,Comment,Expression,Variable,Comment,Expression,Variable,Comment
+,11110,"∆p  = μ · l · v² / (2 · d · V)
+v  = ms / 3600 · V / {(d / 2)^2 · π}","\Delta p = \frac{\mu \cdot l \cdot v^2}{2d \cdot V }
+v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi }","∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Flow velocity (m/s)
+d  :Inner diameter of pipe (m)
+V  :Specific volume (m³/kg)
+ms:Steam flow rate (kg/h)
+π  :3.1415…","dP=f*l*Vs^2/(2*d*V)
+Vs=Fs/3600*V/((d/2)^2*π)","∆p  = 1/144 · μ · l · v² / (2 · d · g · V)
+v  = ms / 3600 · V / {(d / 2)^2 · π}","\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^2}{2d \cdot g\cdot V }
+v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi }","∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+v  :Flow velocity (ft/s)
+d  :Inner diameter of pipe (ft)
+g  :Gravitational accel. (ft/s²)
+V  :Specific volume (ft³/lb)
+ms:Steam flow rate (lb/h)
+π  :3.1415…","dP=1/144*f*Lp*Vs^2/(2*d*g*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+Vs :流速(m/s)
+d  :配管内径(m)
+v"" :比容積(m3/kg)
+Fs :蒸気流量(kg/h)
+pi :円周率",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m) 
+Vs :Fliessgeschwindigkeit(m/s)
+d  :Rohrinnendurchmesser(m)
+v"" :Spez. Volumen(m3/kg)
+Fs :Dampfdurchsatz(kg/h)
+pi :3,1415…",,"dP=(f*Lp*Vs^2)/(2*d*v"")
+Vs=(Fs/3600*v"")/(pi*(d/2)^2)","dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+Vs :Vitesse(m/s)
+d  :Diamètre inteRee de tuyauterie(m)
+v"" :Volume spécifique(m3/kg)
+Fs :Débit vapeur(kg/h)
+pi :3.1415…",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP :压损(Pa)
+f  :摩擦系数
+L  :管道长度(m) 
+Vs :流速(m/s)
+d  :管道内径(m)
+v"" :比重(m3/kg)
+Fs :蒸汽流量(kg/h)
+pi :3.1415…",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+Vs :유속(m/s)
+d  :배관내경(m)
+v"" :비체적(m3/kg)
+Fs :증기유량(kg/h)
+pi :원주율",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs/3600*v""/((d/2)^2*pi)","dP :CaidaPresión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de Tubería(m) 
+Vs :Velocidad de Flujo(m/s)
+d  :Diámetro de tubería Interno(m)
+v"" :Volumen especifico(m3/kg)
+Fs :Rango de flujo de vapor(kg/h)
+pi :3.1415…",
+,11120,"d = (ms / 3600 · V / v · 4 / π) ^ 0.5
+∆p = μ · l · v^2 / (2 · d · V) ","d = \left \sqrt{ \frac{{m}_{s}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi } \right }
+\Delta p = \frac{\mu \cdot l \cdot v^2}{2d \cdot V }","d  :Inner diameter of pipe (m)
+ms:Steam flow rate (kg/h)
+V  :Specific volume (m³/kg)
+v  :Flow velocity (m/s)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) ","d=(Fs/3600*V/v*4/π)^0.5
+∆p=λ*l*v^2/(2*d*V) ","d = (ms / 3600 · V / v · 4 / π) ^ 0.5
+∆p = 1/144 · μ · l · v² / (2 · d · g · V)","d = \left \sqrt{ \frac{{m}_{s}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi } \right }
+\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^2}{2d \cdot g\cdot V }","d  :Inner diameter of pipe (ft)
+ms:Steam flow rate (lb/h)
+V  :Specific volume (ft³/lb)
+v  :Flow velocity(ft/s)
+π  :3.1415…
+∆P :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft)
+g  :Gravitational accel. (ft/s²)","d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=1/144*f*Lp*Vs^2/(2*d*g*v"")","d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :配管内径(m)
+Fs :蒸気流量(kg/h)
+v"" :比容積(m3/kg)
+Vs :流速(m/s)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)",,"d=(Fs/3600*v""/Vs*4/pi)^0,5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :Rohrinnendurchmesser(m)
+Fs :Dampfdurchsatz(kg/h)
+v"" :Spez. Volumen(m3/kg)
+Vs :Fliessgeschwindigkeit(m/s)
+pi :3,1415...
+dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m) ",,"d=((4*Fs/3600*v"")/(Vs*pi))^0.5
+dP=(f*Lp*Vs^2)/(2*d*v"") ","d  :Diamètre inteRee de la tuyauterie(m)
+Fs :Débit vapeur(kg/h)
+v"" :Volume spécifique(m3/kg)
+Vs :Vitesse(m/s)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) ",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :管道内径(m)
+Fs :蒸汽流量(kg/h)
+v"" :比容(m3/kg)
+Vs :流速(m/s)
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m) ",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :배관내경(m)
+Fs :증기유량(kg/h)
+v"" :비체적(m3/kg)
+Vs :유속(m/s)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :Diámetro Interno de Tubería(m)
+Fs :Rango de Flujo de Vapor(kg/h)
+v"" :Volumen Especifico(m3/kg)
+Vs :Velocidad del Vapor(m/s)
+pi :3.1415...
+dP :Caída de Presión(Pa)
+f  :Coeficiente de Fricción
+Lp :Longitud de Tubería(m) ",
+,11130,"d = (ms / 3600 · V / v · 4 / π) ^ 0.5
+∆p = μ · l · v^2 / (2 · d · V)","d = \sqrt { \frac{{m}_{s}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi } }
+\Delta p = \frac{\mu \cdot l \cdot v^2}{2d \cdot V }","d  :Inner diameter of pipe (m)
+ms:Steam flow rate (kg/h)
+V  :Specific volume (m³/kg)
+v  :Flow velocity (m/s)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m)","d=(Fs/3600*V/v*4/π)^0.5
+∆p=λ*l*v^2/(2*d*V) ","d = (ms / 3600 · V / v · 4 / π) ^ 0.5
+∆p  = 1/144 · μ · l · v² / (2 · d · g · V)","d = \left \sqrt{ \frac{{m}_{s}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi } }
+\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^2}{2d \cdot g\cdot V }","d  :Inner diameter of pipe (ft)
+ms:Steam flow rate (lb/h)
+V  :Specific volume (ft³/lb)
+v  :Flow velocity (ft/s)
+π  :3.1415…
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+g  :Gravitational accel. (ft/s²)","d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=1/144*f*Lp*Vs^2/(2*d*g*v"")","d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :配管内径(m)
+Fs :蒸気流量(kg/h)
+v"" :比容積(m3/kg)
+Vs :流速(m/s)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)",,"d=(Fs/3600*v""/Vs*4/pi)^0,5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :Rohrinnendurchmesser(m)
+Fs :Dampfdurchsatz(kg/h)
+v"" :Spez. Volumen(m3/kg)
+Vs :Fliessgeschwindigkeit(m/s)
+pi :3,1415...
+dP :Druckverlust(Pa)        
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m) ",,"d=((4*Fs/3600*v"")/(Vs*pi))^0.5
+dP=(f*Lp*Vs^2)/(2*d*v"") ","d  :Diamètre inteRee de la tuyauterie(m)
+Fs :Débit vapeur(kg/h)
+v"" :Volume spécifique(m3/kg)
+Vs :Vitesse(m/s)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) ",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","Vs :流速(m/s)
+Fs :蒸汽流量(kg/h)
+V  :比重(m3/kg)
+d  :管道内径(m)
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+lp :管道长度(m)",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :배관내경(m)
+Fs :증기유량(kg/h)
+v"" :비체적(m3/kg)
+Vs :유속(m/s)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)",,"d=(Fs/3600*v""/Vs*4/pi)^0.5
+dP=f*Lp*Vs^2/(2*d*v"") ","d  :Diámetro Interno de Tubería(m)
+Fs :Rango de Flujo de Vapor(kg/h)
+v"" :Volumen Especifico(m3/kg)
+Vs :Velocidad del Vapor(m/s)
+pi :3.1415...
+dP :Caída de Presión(Pa)
+f  :Coeficiente de Fricción
+Lp :Longitud de Tubería(m) ",
+,11140,"v = ms / 3600 · V / {(d / 2)^2 · π}
+∆p = μ · l · v^2 / (2 · d · V) ","v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi }
+\Delta p = \frac{\mu \cdot l \cdot v^2}{2d \cdot V }","v  :Flow velocity (m/s)
+ms:Steam flow rate (kg/h)
+V  :Specific volume (m³/kg)
+d  :Inner diameter of pipe (m)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m)","v=Fs/3600*V/((d/2)^2*π)
+∆p=λ*l*v^2/(2*d*V)  ","v = ms / 3600 · V / {(d / 2)^2 · π}
+∆p = 1/144 · μ · l · v² / (2 · d · g · V)","v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi }
+\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^2}{2d \cdot g\cdot V }","v  :Flow velocity (ft/s)
+ms:Steam flow rate (lb/h)
+d  :Inner diameter of pipe (ft)
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+g  :Gravitational accel. (ft/s²)
+V  :Specific volume (ft³/lb)","Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=1/144*f*Lp*Vs^2/(2*d*g*v"")
+Re=Vs*d/Vis ","Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=f*Lp*Vs^2/(2*d*v"") 
+Re=Vs*d/Vis ","Vs :流速(m/s)
+Fs :蒸気流量(kg/h)
+v"" :比容積(m3/kg)
+d  :配管内径(m)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)",,"Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=f*Lp*Vs^2/(2*d*v"") 
+Re=Vs*d/Vis ","Vs :Fliessgeschwindigkeit(m/s)       
+Fs :Dampfdurchsatz(kg/h)
+v"" :Spez. Volumen(m3/kg)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...
+dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m) ",,"Vs=(Fs/3600*v"")/(pi*(d/2)^2)
+dP=(f*Lp*Vs^2)/(2*d*v"") 
+Re=(Vs*d)/Vis ","Vs :Vitesse(m/sec)
+Fs :Débit vapeur(kg/h)
+d  :Diamètre inteRee de tuyauterie(m)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+v"" :Volume spécifique(m3/kg)",,"Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=f*Lp*Vs^2/(2*d*v"") 
+Re=Vs*d/Vis ","Vs :流速(m/s)
+Fs :蒸汽流量(kg/h)
+V  :比重(m3/kg)
+d  :管道内径(m)
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+lp :管道长度(m)",,"Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=f*Lp*Vs^2/(2*d*v"") ","Vs :유속(m/s)
+Fs :증기유량(kg/h)
+v"" :비체적(m3/kg)
+d  :배관내경(m)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)",,"Vs=Fs/3600*v""/((d/2)^2*pi)
+dP=f*Lp*Vs^2/(2*d*v"")  ","Vs :Velocidad de Flujo(m/s)
+Fs :Rango de Flujo de Vapor(kg/h)
+V  :Volumen Específico(m3/kg)
+d  :Diámetro de Tubería Interno(m)
+pi :3.1415...
+dP :Caída de Presión(Pa)
+l  :Coeficiente de Fricción
+lp :Longitud de Tubería(m)",
+,11150,v = ms / 3600 · V / {(d / 2)^2 · π},v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi },"v  :Steam velocity (m/s)
+ms:Steam flow rate (kg/h)
+V  :Specific volume (m³/kg)
+d  :Inner diameter of pipe (m)",v=Fs/ 3600 *V/((d/2)^2*π),v = ms / 3600 · V / {(d / 2)^2 · π},v = \frac{{m}_{s}}{3600}\cdot \frac{V}{(\frac{d}{2})^{2} \cdot \pi },"v  :Steam velocity (ft/s)
+ms:Steam flow rate (lb/h)
+V  :Specific volume (ft³/lb)
+d  :Inner diameter of pipe (ft)
+π  :3.1415…","Vs=Fs/3600*v""/((d/2)^2*pi)","Vs=Fs/3600*v""/((d/2)^2*pi)","Vs :流速(m/s)
+Fs :蒸気流量(kg/h)
+v"" :蒸気の比容積(m3/kg)
+d  :配管内径(m)
+pi :円周率",,"Vs=Fs/3600*v""/((d/2)^2*pi)","Vs :Dampfgeschwindigkeit(m/s)
+Fs :Dampfdurchsatz(kg/h)
+v"" :Spez. Volumen(m3/kg)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...",,"Vs=(Fs/3600*v"")/(pi*(d/2)^2)","Vs :Vitesse de la vapeur(m/s)
+Fs :Débit vapeur(kg/h)
+v"" :Volume spécifique(m3/kg)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...",,"Vs=Fs/3600*v""/((d/2)^2*pi)","Vs :蒸汽流速(m/s)
+Fs :蒸汽流量(kg/h)
+V"" :比重量(m3/kg)
+d  :管道内径(m)
+pi :3.1415...",,"Vs=Fs/3600*v""/((d/2)^2*pi)","Vs :유속(m/s)
+Fs :증기유량(kg/h)
+v"" :증기의 비체적(m3/kg)
+d  :배관내경(m)
+pi :원주율",,"Vs=Fs/3600*v""/((d/2)^2*pi)","Vs :Velocidad de vapor(m/s)
+Fs :Rango de Flujo de Vapor(kg/h)
+V"" :Volumen específico(m3/kg)
+d  :Diámetro de tubería interno(m)
+pi :3.1415...",
+,11160,ms = v · (d / 2)^2 · π / V · 3600,{m}_{s} = \frac{v\cdot \left (\frac{d}{2} \right )^{2}\cdot \pi}{ V}\cdot 3600,"ms:Steam flow rate (kg/h)
+v  :Steam velocity (m/s)
+d  :Inner diameter of pipe (m)
+V  :Specific volume (m³/kg)",Fs=v*(d/2)^2*π/V*3600,ms = v · (d / 2)^2 · π / V · 3600,{m}_{s} = \frac{v\cdot \left (\frac{d}{2} \right )^{2}\cdot \pi}{ V}\cdot 3600,"ms:Steam flow rate (lb/h)
+v  :Steam velocity (ft/s)
+d  :Inner diameter of pipe (ft)
+V  :Specific volume (ft³/lb)","Fs=Vs*(d/2)^2*pi/v""*3600","Fs=Vs*(d/2)^2*pi/v""*3600","Fs :蒸気流量(kg/h)
+Vs :流速(m/s)
+d  :配管内径(m)
+v"" :蒸気の比容積(m3/kg)",,"Fs=Vs*(d/2)^2*pi/v""*3600","Fs :Dampfdurchsatz(kg/h)
+Vs :Dampfgeschwindigkeit(m/s)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...
+v"" :Spez. Volumen(m3/kg)",,"Fs=(Vs*pi*(d/2)^2)/v""*3600","Fs :Débit vapeur(kg/h)
+Vs :Vitesse de la vapeur(m/s)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...
+v"" : Volume spécifique(m3/kg)",,"Fs=Vs*(d/2)^2*pi/v""*3600","Fs :蒸汽流量(kg/h)
+Vs :蒸汽流速(m/s)
+d  :管道内径(m)
+pi :3.1415...
+V"" :比重量 (m3/kg)",,"Fs=Vs*(d/2)^2*pi/v""*3600","Fs :증기유량(kg/h)
+Vs :유속(m/s)
+d  :배관내경(m)
+pi :원주율
+v"" :증기의 비체적(m3/kg)",,"Fs=Vs*(d/2)^2*pi/v""*3600","Fs :Rango de flujo de vapor(kg/h)
+Vs :Velocidad de vapor(m/s)
+d  :Diámetro de tubería interno(m)
+pi :3.1415...
+V"" :Volumen específico(m3/kg)",
+,11210,"(p1 - p2)/ p1 < Fγ · xT :
+ms = 2.73 · Cv · (1 - (p1 - p2)/ p1 /(3 · Fγ · xT)) · {(p1 - p2) · ρ}^0.5
+(p1 - p2)/ p1 >= Fγ · xT :
+ms = 0.66 · 2.73 · Cv · (Fγ · xT · p1 · ρ)^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=2.73\cdot C_{v}\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3\cdot F_{\gamma}\cdot x_{T}) \right )}\cdot \sqrt{(p_{1}-p_{2})\cdot \rho}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=0.66\cdot 2.73\cdot C_{v}\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+ms:Steam flow rate (kg/h)
+Cv:Valve flow coefficient value
+ρs:Density of steam (kg/m³)","(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","(p1 - p2)/ p1 < Fγ · xT :
+ms = 63.3 · Cv · (1 - (p1 - p2)/ p1 /(3 · Fγ · xT)) · {(p1 - p2) · ρ}^0.5
+(p1 - p2)/ p1 >= Fγ · xT :
+ms = 0.66 · 63.3 · Cv · (Fγ · xT · p1 · ρ)^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=63.3\cdot C_{v}\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3\cdot F_{\gamma}\cdot x_{T}) \right )}\cdot ((p_{1}-p_{2})\cdot \rho)^{0.5}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=0.66\cdot 63.3\cdot C_{v}\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+ms:Steam flow rate (lb/h)
+Cv:Valve flow coefficient value
+ρs:Density of steam (lb/ft³)","(P1-P2)/P1<Fg*Xt :
+Fs=63.3*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*63.3*Cv*(Fg*Xt*P1*Ds)^0.5","(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Fs :蒸気流量(kg/h)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Ds  :蒸気の密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=3.16*Kv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*3.16*Kv*(Fg*Xt*P1*Ds)^0.5","P1 :VorDssruck(kPaA)
+P2 :GegenDssruck(kPaA)
+Fg :Normierungsfaktor
+Xt :DssifferenzDssruck-Verhältnis(=0.72)
+Fs :DssampfDssurchsatz(kg/h)
+Kv :Kv-Wert Ventil
+Ds :Dssichte Dsses Dssampfes(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression seconDssaire(kPaA)
+Fg :Facteur Dsse rapport Dsse chaleur spécifique
+Xt :Facteur Dsse rapport Dsse pression Dssifférentielle(=0.72)
+Fs :Dssébit vapeur(kg/h)
+Cv :Cv Dsse vanne
+Ds  :Masse volumique Dsse la vapeur(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Fs :蒸汽流量(kg/h)
+Cv :阀门的CV值
+Ds :蒸汽密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","P1 :일차측 증기압력(kPaA)
+P2 :이차측 증기압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Fs :증기유량(kg/h)
+Cv :밸브의 Cv치
+Ds :증기의 밀도(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*Cv*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*Cv*(Fg*Xt*P1*Ds)^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secunDsaria(kPaA)
+Fg :Relación Dse Calores Específicos
+Xt :Relación Dse Presiones Dsiferenciales(=0.72)
+Fs :Rango Dse flujo Dse vapor(kg/h)
+Cv :Valor Dse Cv Dse la válvula
+Ds :DsensiDsaDs Dsel vapor(kg/m3)",
+,11220,"(p1 - p2)/ p1 < Fγ · xT :
+Cv = ms /[2.73 · {1 -(p1 - p2)/ p1 / (3 · Fγ · xT)} · {(p1 - p2) · ρ}^0.5]
+(p1 - p2)/ p1 >= Fγ · xT :
+Cv = ms /{0.66 · 2.73 · (Fγ · xT · p1 · ρ)^0.5}","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+C_{v}=\frac{ m_{s}}{ \left( 2.73\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\gamma}\cdot x_{T}) \right )}\cdot \sqrt{(p_{1}-p_{2})\cdot \rho} \right )}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+C_{v}=\frac{{m}_{s}}{ 0.66\cdot 2.73\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Cv:Valve flow coefficient value
+ms:Steam flow rate (kg/h)
+ρs:Density of steam (kg/m³)","(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","(p1 - p2)/ p1 < Fγ · xT :
+Cv = ms /[63.3 · {1 -(p1 - p2)/ p1 / (3 · Fγ · xT)} · {(p1 - p2) · ρ}^0.5]
+(p1 - p2)/ p1 >= Fγ · xT :
+Cv = ms /{0.66 · 63.3 · (Fγ · xT · p1 · ρ)^0.5}","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+C_{v}=\frac{ m_{s}}{ \left( 63.3\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\gamma}\cdot x_{T}) \right )}\cdot \sqrt{(p_{1}-p_{2})\cdot \rho} \right )}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+C_{v}=\frac{{m}_{s}}{ 0.66\cdot 63.3\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Cv:Valve flow coefficient value
+ms:Steam flow rate (lb/h)
+ρs:Density of steam (lb/ft³)","(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(63.3*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*63.3*(Fg*Xt*P1*Ds)^0.5)","(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Fs :蒸気流量(kg/h)
+Ds :蒸気の密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Kv=Fs/(3.16*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Kv=Fs/(0.66*3.16*(Fg*Xt*P1*Ds)^0.5)","P1 :VorDsruck(kPaA)
+P2 :GegenDsruck(kPaA)
+Fg :Normierungsfaktor
+Xt :DsifferenzDsruck-Verhältnis(=0.72)
+Kv :Kv-Wert Ventil
+Fs :DsampfDsurchsatz(kg/h)
+Ds :Dsichte Dses Dsampfes(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","P1 :Pression primaire(kPaA)
+P2 :Pression seconDsaire(kPaA)
+Fg :Facteur Dse rapport Dse chaleur spécifique
+Xt :Facteur Dse rapport Dse pression Dsifférentielle(=0.72)
+Cv :Cv Dse vanne
+Fs :Dsébit vapeur(kg/h)
+Ds :Masse volumique Dse la vapeur(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Cv :阀门的CV值
+Fs :蒸汽流量(kg/h)
+Ds :蒸汽密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","P1 :일차측 증기압력(kPaA)
+P2 :이차측 증기압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Cv :밸브의 Cv치
+Fs :증기유량(kg/h)
+Ds :증기의 밀도(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Fs/(2.73*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5)
+(P1-P2)/P1>=Fg*Xt :
+Cv=Fs/(0.66*2.73*(Fg*Xt*P1*Ds)^0.5)","P1 :Presión primaria(kPaA)
+P2 :Presión secunDsaria(kPaA)
+Fg :Relación Dse Calores Específicos
+Xt :Relación Dse Presiones Dsiferenciales(=0.72)
+Cv :Valor Dse Cv Dse la válvula
+Fs :Rango Dse flujo Dse vapor(kg/h)
+Ds :DsensiDsaDs Dsel vapor(kg/m3)",
+,11230,"(p1 - p2) / p1 < Fγ · xT :
+ms = 2.73 · C · (do / 4.654)^2 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {(p1 - p2) · ρ}^0.5
+(P - p2) / p1 >= Fγ · xT :
+ms = 0.66 · 2.73 · C · (do / 4.654)^2 · (Fγ · xT · p1 · ρ)^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=2.73\cdot C \left \cdot (\frac{d_{o}}{4.654})^2\cdot \left( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3F_{\gamma}\cdot x_{T}) \right )} \cdot \sqrt{(p_{1}-p_{2})\cdot \rho}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=0.66\cdot 2.73\cdot C \left \cdot (\frac{d_{o}}{4.654})^2\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+ms:Steam flow rate (kg/h)
+C  :Coefficient of Discharge
+do:Diameter of orifice (mm)
+ρs:Density of steam (kg/m³)","(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Dso/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Dso/4.654)^2*(Fg*Xt*P1*Ds)^0.5","(p1 - p2) / p1 < Fγ · xT :
+ms = 63.3 · C · (do / 0.0153)^2 · {1 - (p1 - p2) / p1 / (3 · Fγ * xT)} · {(p1 - p2) · ρ}^0.5
+(P - p2) / p1 >= Fγ · xT :
+ms = 0.66 · 63.3 · C · (do / 0.0153)^2 · (Fγ · xT · p1 · ρ)^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=63.3\cdot C \left \cdot (\frac{d_{o}}{0.0153})^2\cdot \left( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3F_{\gamma}\cdot x_{T}) \right )} \cdot \sqrt{(p_{1}-p_{2})\cdot \rho}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow 
+{m}_{s}=0.66\cdot 63.3\cdot C \left \cdot (\frac{d_{o}}{0.0153})^2\cdot \sqrt{F_{\gamma}\cdot x_{T}\cdot p_{1}\cdot \rho}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+ms:Steam flow rate (lb/h)
+C  :Coefficient of Discharge
+do:Diameter of orific (ft)
+ρs:Density of steam (lb/ft³)","(P1-P2)/P1<Fg*Xt :
+Fs=63.3*C*(Dso/0.0153)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*63.3*C*(Dso/0.0153)^2*(Fg*Xt*P1*Ds)^0.5","(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Fs :蒸気流量(kg/h)
+C  :流量係数
+Do :ｵﾘﾌｨｽ径(mm)
+Ds :蒸気の密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :VorDsruck(kPaA)
+P2 :GegenDsruck(kPaA)
+Fg :Normierungsfaktor
+Xt :DsifferenzDsruck-Verhältnis(=0.72)
+Fs :DsampfDsurchsatz(kg/h)
+C  :Dsurchflussbeiwert
+Do :BlenDsenDsurchmesser(mm)  
+Ds :Dsichte Dses Dsampfes(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression seconDsaire(kPaA)
+Fg :Facteur Dse rapport Dse chaleur spécifique
+Xt :Facteur Dse rapport Dse pression Dsifférentielle(=0.72)
+Fs :Dsébit vapeur(kg/h)
+C  :Coefficient Dse Dsécharge
+Do :Dsiamètre Ds'orifice(m)
+Ds :Masse volumique Dse la vapeur(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Fs :蒸汽流量(kg/h)
+C  :排放系数
+Do :阀嘴直径(mm)
+Ds :蒸汽密度(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :일차측 증기압력(kPaA)
+P2 :이차측 증기압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Fs :증기유량 (kg/h)
+C  :유량계수
+Do :오리피스 사이즈(mm)
+Ds :증기의 밀도(kg/m3)",,"(P1-P2)/P1<Fg*Xt :
+Fs=2.73*C*(Do/4.654)^2*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)*Ds)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Fs=0.66*2.73*C*(Do/4.654)^2*(Fg*Xt*P1*Ds)^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secunDsaria(kPaA)
+Fg :Relación Dse Calores Específicos
+Xt :Relación Dse Presiones Dsiferenciales(=0.72)
+Fs :Rango Dse flujo Dse vapor(kg/h)
+C  :Coeficiente Dse Dsescarga
+Do :Dsiámetro Dse orificio(mm)
+Ds :DsensiDsaDs Dsel vapor(kg/m3)",
+,11310,"mc = mh + mr
+mh = (cp · Wp · l · (Ts - Tam) / ∆H)
+mr = 3.6 · 2 · π · ((Ts + 100) ·/2 - Tam) ·l / [1 / λ · ln{(d1 + 2 ·  L) / d1} + 2 / (d1 + 2 · L) / α] / (∆H · 60 / tSU )","{m}_{c}={m}_{h}+{m}_{r}
+{m}_{h}=\frac{C_{p}\cdot W_{p}\cdot l\cdot (T_{s}-T{am})}{\Delta H}
+{m}_{r}=\left(\frac{3.6\cdot 2\pi\cdot (\frac{(T_{s}+ 100)}{2}-{T}_{am})\cdot {l}}  {\frac{1}{\lambda}\cdot ln( \frac{d_{1}+2L}{d_{1}})+ \frac{2/(d_{1}+2L)}{\alpha} } \right )/(\Delta H\cdot\frac{60}{t_{SU}} )","mc:Initial Condensate Load(kg/h)
+mh:Condensate load from heating piping (kg/h)
+mr:Condensate load from radiation heat loss (kg/h)
+cp:Specific heat of pipe (kJ/kg K)
+Wp:Pipe weight (kg/m)
+l  :Pipe length (m)
+Ts:Steam temperature (°C)
+Tam:Ambient temperature (°C)
+∆H :Enthalpy difference between steam and saturated water (kJ/kg)
+tSU:Start-up time (min)
+π  :3.1415...
+k  :Thermal conductivity coefficient (W/m K)
+d1:Inner diameter of insulation material (m)
+L  :Insulation thickness (m)
+α  :Heat transfer coefficient (W/m² K)","Fc=Fh+Fr
+Fh=(Hp*Wp*l*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*π*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","mc = mh + mr
+mh = (cp · Wp · l · (Ts - Tam) / ∆H)
+mr = 2 · π · ((Ts + 212) ·/2 - Tam) ·l / [1 / λ · ln{(d1 + 2 ·  L) / d1} + 2 / (d1 + 2 · L) / α] / (∆H · 60 / tSU )","{m}_{c}={m}_{h}+{m}_{r}
+{m}_{h}=\frac{C_{p}\cdot W_{p}\cdot l\cdot (T_{s}-T{am})}{\Delta H}
+{m}_{r}=\left(\frac{2\pi\cdot (\frac{(T_{s}+ 212)}{2}-{T}_{am})\cdot {l}}  {\frac{1}{\lambda}\cdot ln( \frac{d_{1}+2L}{d_{1}})+ \frac{2/(d_{1}+2L)}{\alpha} } \right )/(\Delta H\cdot\frac{60}{t_{SU}} )","mc:Initial Condensate Load (lb/h)
+mh:Condensate load from heating piping (lb/h)
+mr:Condensate load from radiation heat loss (lb/h)
+cp:Specific heat of pipe (BTU/lb F)
+Wp:Pipe weight (lb/ft)
+l  :Pipe length (ft)
+Ts:Steam temperature (°F)
+Tam:Ambient temperature (°F)
+∆H :Enthalpy difference between steam and saturated water (BTU/lb)
+tSU:Start-up time (min)
+π  :3.1415…
+k  :Coefficient of thermal conductivity (BTU/ft h F)
+d1:Inner diameter of insulation material (ft)
+L  :Insulation thickness (ft)
+h  :Heat transfer coefficient","Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :初期ドレン発生量(kg/h)
+Fh :配管の加熱によるドレン発生量(kg/h)
+Fr :放熱によるドレン発生量(kg/h)
+Hp :配管の比熱(kJ/kg K)
+Wp :配管重量(kg/m)
+Lp :配管長さ(m)
+Ts :蒸気温度(°C)
+Tam:外気温度(°C)
+dH :蒸気と飽和水のｴﾝﾀﾙﾋﾟ差(kJ/kg)
+Tst:立上時間(min)
+pi :円周率
+c  :保温材の熱伝導率(W/m K)
+d1 :配管の外径(m)
+t  :保温材の厚さ(m)
+a  :表面の熱伝達係数(W/m2 K)",,"Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :Anfänglicher Kondensatanfall(kg/h)
+Fh :Kondensatanfall bei Rohrerhitzung(kg/h)
+Fr :Kondensatanfall bei Wärmeverlust durch Abstrahlung(kg/h)
+Hp :Spez. Wärmekapazität Rohrmaterial(kJ/kg K)
+Wp :Spez. Rohrgewicht(kg/m)
+Lp :Rohrlänge(m)
+Ts :Dampftemperatur(°C)
+Tam:Umgebungstemperatur(°C)
+dH :Enthalpiedifferenz zw. Dampf und gesättigtem Wasser(kJ/kg)
+Tst:Anfahrzeit(min)
+pi :3,1415...
+c  :Wärmeleitzahl(W/m K)
+d1 :Rohraussendurchmesser(m)
+t  :Isolierstärke(m)
+a  :Wärmeübergangszahl(W/m2 K)",,"Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :Charge de condensat initiale(kg/h)
+Fh :Charge de condensat du(kg/h)
+Fr: Charge de condensat des pertes de chaleur radiante(kg/h)
+Hp :Chaleur spécifique de la tuyauterie(kJ/kg K)
+Wp :Poids de la tuyauterie(kg/m)
+Lp :Longueur de tuyauterie(m)
+Ts :Température vapeur(°C)
+Tam:Température ambiante(°C)
+dH :Différence d'enthalpie entre la vapeur et l'eau(kJ/kg)
+Tst:Temps de mise en route(min)
+pi :3.1415...
+c  :Coefficient de conductivité thermique(W/m K)
+d1 :Diamètre inteRee de l'isolant(m)
+t  :Epaisseur d'isolation(m)
+a  :Coefficient de transfert de chaleur(W/m2 K)",,"Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :初始冷凝水量(kg/h)
+Fh :暖管产生的冷凝水量(kg/h)
+Fr :辐射散热产生的冷凝水量(kg/h)
+Hp :管道的比热(kJ/kg K)
+Wp :管道重量(kg/m)
+Lp :管道长度(m)
+Ts :蒸汽温度(°C)
+Tam:环境温度(°C)
+dH :蒸汽和饱和水的热焓差(kJ/kg)
+Tst:启动时间(min)
+pi :3.1415...
+c  :导热系数(W/m K)
+d1 :保温材料内径(m)
+t  :保温层厚度(m)
+a  :传热系数(W/m2 K)",,"Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :증기 배관의 초기 응축수 발생량(kg/h)
+Fh :증기 배관의 가열에 따른 응축수 발생량(kg/h)
+Fr :방열손실에 따른 응축수의 발생량(kg/h)
+Hp :배관의 비열(kJ/kg K)
+Wp :배관중량(kg/m)
+Lp :배관길이(m)
+Ts :증기온도(°C)
+Tam:외기온도(°C)
+dH :증기와 포화수 엔탈피의 차(kJ/kg)
+Tst:초기 스타트업 시간(min)
+pi :원주율
+c  :보온재의 열전도율(W/m K)
+d1 :배관의 외경(m)
+t  :보온재의 두께(m)
+a  :표면의 열전달 계수(W/m2 K)",,"Fc=Fh+Fr
+Fh=(Hp*Wp*Lp*(Ts-Tam)/dH)*60/Tst
+Fr=3.6*(2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a))/dh","Fc :Carga Inicial de Condensado(kg/h)
+Fh :Carga de Condensado de la Tubería de Calentamiento(kg/h) 
+Fr :Carga de Condensado por Perdida de Calor por Radiación(kg/h)
+Hp :Calor específico del material de la tubería(kJ/kg K)
+Wp :Peso de unidad de longitud de la tubería(kg/m)
+Lp :Longitud de tubería(m)
+Ts :Temperatura de Vapor(°C)
+Tam:Temperatura ambiente(°C)
+dH :Diferencia de entalpía entre vapor y agua saturada(kJ/kg)
+Tst:Tiempo de Arranque (min)
+pi :3.1415...
+c  :Coeficiente de conductividad térmica(W/m K)
+d1 :Diámetro interno de material de aislamiento(m)
+t  :Espesor de aislamiento(m)
+a  :Coeficiente de transferencia de calor(W/m2 K)",
+,11320,"Qr = 2 · π · (Ts - Tam) / [1 / λ · ln{(d1 + 2 · L) / d1} + 2 / (d1 + 2 · L) / α]
+mc = 3.6 · Qr / ∆H · l","Q_{r}=\frac{2\pi\cdot (T_{s}-T_{am})}{{\frac{1}{\lambda}\cdot ln( \frac{d_{1}+2L}{d_{1}})+ \frac{2/(d_{1}+2L)}{\alpha} }}
+{m}_{c}=\frac{3.6\cdot Q_{r}}{\Delta H}\cdot l","Qr:Radiant heat (W/m)
+π  :3.1415...
+Ts:Steam temperature (°C)
+Tam:Ambient temperature (°C)
+k  :Thermal conductivity coefficient (W/m K)
+d1:Inner diameter of insulation material (m)
+L  :Insulation thickness (m)
+α  :Heat transfer coefficient(W/m2 K)
+mc:Condensate load(kg/h)
+∆H :Enthalpy difference between steam and saturated water (kJ/kg)","Qr=2*π*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3.6*Qr/r*l","Qr = 2 · π · (Ts - Tam) / [1 / λ · ln{(d1 + 2 · L) / d1} + 2 / (d1 + 2 · L) / α]
+mc = Qr / ∆H · l","Q_{r}=\frac{2\pi\cdot (T_{s}-T_{am})}{{\frac{1}{\lambda}\cdot ln( \frac{d_{1}+2L}{d_{1}})+ \frac{2/(d_{1}+2L)}{\alpha} }}
+{m}_{c}=\frac{Q_{r}}{\Delta H}\cdot l","Qr :Radiant heat(BTU/h ft)
+π  :3.1415…
+Ts :Steam temperature(°F)
+Tam:Ambient temperature(°F)
+k  :Coefficient of thermal conductivity (BTU/ft h F)
+d1 :Inner diameter of insulation material(ft)
+L  :Insulation thickness(ft)
+h  :Heat transfer coefficient
+∆H :Enthalpy difference between steam and saturated water (kJ/kg)","Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=Qr/r*Lp","Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3.6*Qr/r*Lp","Qr :放散熱量(W/m)
+pi :円周率
+Ts :蒸気温度(°C)
+Tam:外気温度(°C)
+c  :保温材の熱伝導率(W/m K)
+d1 :配管の外径(m)
+t  :保温材の厚さ(m)
+a  :表面の熱伝達係数(W/m2 K)
+Fc :ドレン発生量(kg/h)
+r :蒸気と飽和水のｴﾝﾀﾙﾋﾟ差(kJ/kg)",,"Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3,6*Qr/r*Lp","Qr :Wärmeverlust(W/m)
+pi :3,1415...
+Ts :Dampftemperatur(°C)
+Tam:Umgebungstemperatur(°C)
+c  :Wärmeleitzahl(W/m K)
+d1 :Rohraussendurchmesser(m)
+t  :Isolierstärke(m)
+a  :Wärmeübergangszahl(W/m2 K)
+Fc :Kondensatmenge(kg/h)
+r :Enthalpiedifferenz zw. Dampf un",,"Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=Qr/r*Lp","Qr :Chaleur radiante(W/m)
+pi :3.1415...
+Ts :Température de la vapeur(°C)
+Tam:Température ambiante(°C)
+c  :Coefficient de conductivité thermique(W/m K)
+d1 :Diamètre inteRee de l'isolant(m)
+t  :Epaisseur d'isolation(m)
+a  :Coefficient de transfert de chaleur(W/m2 K)
+Fc :Débit de condensât(kg/h)
+r :Différence d'enthalpie entre la vapeur et l'eau(kJ/kg)",,"Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3.6*Qr/r*Lp","Qr :辐射热(W/m)
+pi :3.1415...
+Ts :蒸汽温度(°C)
+Tam:环境温度(°C)
+c  :导热系数(W/m K)
+d1 :保温材料内径(m)
+t  :保温层厚度(m)
+a  :传热系数(W/m2 K)
+Fc :冷凝水流量(kg/h)
+r :蒸汽和饱和水的热焓差(kJ/kg)",,"Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3.6*Qr/r*Lp","Qr :방산열량(W/m)
+pi :원주율
+Ts :증기온도(°C)
+Tam:외기온도(°C)
+c  :보온재의 열전도율(W/m K)
+d1 :배관의 외경(m)
+t  :보온재의 두께(m)
+a  :표면의 열전달 계수(W/m2 K)
+Fc :응축수 발생량 (kg/h)
+r :증기와 포화수의 엔탈피의 차(kJ/kg)",,"Qr=2*pi*(Ts-Tam)/(1/c*ln((d1+2*t)/d1)+2/(d1+2*t)/a)
+Fc=3.6*Qr/r*Lp","Qr :Calor radiante(W/m)
+pi :3.1415...
+Ts :Temperatura de Vapor(°C)
+Tam:Temperatura ambiente(°C)
+c  :Coeficiente de conductividad térmica(W/m K)
+d1 :Diámetro interno de material de aislamiento(m)
+t  :Espesor de aislamiento(m)
+a  :Coeficiente de transferencia de calor(W/m2 K)
+Fc :Rango de condensado(kg/h)
+r :Diferencia de entalpía entre vapor y agua saturada(kJ/kg)",
+,11330,mc = c · SG · Ql · (T2 - T1) / ∆H · 1000,{m}_{c}=\left (\frac{c\cdot SG\cdot Q_{l}\cdot (T_{2}-T_{1})}{\Delta H \right )\cdot 1000},"mc:Condensate load (kg/h)
+cl:Specific heat of liquid (kJ/kg K)
+SGl:Specific gravity of liquid
+Ql:Liquid flow rate (m³/h)
+T2:Outlet temperature of liquid (°C)
+T1:Inlet temperature of liquid (°C)
+∆H :Enthalpy difference between steam and saturated water (kJ/kg)",Fc=Hl*Gl*Fl*(T2-T1)/r*1000,mc = c · SG · Ql · (T2 - T1) / ∆H · 1000,{m}_{c}=\left (\frac{c\cdot SG\cdot Q_{l}\cdot (T_{2}-T_{1})}{\Delta H \right )\cdot 1000},"mc:Condensate rate (lb/h)
+cl:Specific heat of liquid (BTU/lb F)
+SGl:Specific gravity of liquid
+Ql:Liquid flow rate (ft³/h)
+T2 :Outlet temperature of liquid (°F)
+T1 :Inlet temperature of liquid (°F)
+∆H :Enthalpy difference between steam and saturated water (BTU/lb)",Fc=Hl*Gl*Fl*(T2-T1)/r*1000,Fc=Hl*Gl*Fl*(T2-T1)/r*1000,"Fc :ﾄﾞﾚﾝ発生量(kg/h)
+Hl :液体の比熱(kJ/kg K)
+Gl :液体の比重
+Fl :液体の流量(m3/h)
+T2 :液体の出口温度(°C)
+T1 :液体の入口温度(°C)
+r :蒸気と飽和水のｴﾝﾀﾙﾋﾟ差(kJ/kg)",,Fc=Hl*Gl*Fl*(T2-T1)/r*1000,"Fc :Kondensatanfall(kg/h)
+Hl :Spez. Wärmekapazität Flüssigkeit(kJ/kg K)
+Gl :Spez. Gewicht Flüssigkeit
+Fl :Flüssigkeitsdurchsatz(m3/h)
+T2 :Flüssigkeitsaustrittstemperatur(°C)
+T1 :Flüssigkeitseintrittstemperatur(°C)
+r :Enthalpiedifferenz zw. Dampf und ges",,Fc=(Hl*Gl*Fl*(T2-T1)*1000)/r,"Fc :Débit de condensât(kg/h)
+Hl :Chaleur spécifique du liquide(kJ/kg K)
+Gl :Gravité spécifique du liquide
+Q  :Débit du liquide(m3/h)
+T2 :Température de sortie du liquide(°C)
+T1 :Température d'entrée du liquide(°C)
+r :Différence d'enthalpie entre la vapeur et l'eau(kJ/kg)",,Fc=Hl*Gl*Fl*(T2-T1)/r*1000,"Fc :冷凝水流量(kg/h)
+Hl :流体比热(kJ/kg K)
+Gl :流体比重
+Fl :流体流量(m3/h)
+T2 :出口流体温度(°C)
+T1 :入口流体温度(°C)
+r :蒸汽和饱和水的热焓差(kJ/kg)",,Fc=Hl*Gl*Fl*(T2-T1)/r*1000,"Fc :응축수 발생량(kg/h)
+Hl :액체의 비열(kJ/kg K)
+Gl :액체의 비중
+Fl :액체의 유량(m3/h)
+T2 :액체의 출구온도(C)
+T1 :액체의 입구온도(C)
+r :증기와 포화수의 엔탈피의 차(kJ/kg)",,Fc=Hl*Gl*Fl*(T2-T1)/r*1000,"Fc :Rango de condensado(kg/h)
+Hl :Calor específico del liquido(kJ/kg K)
+Gl :Gravedad específica del liquido
+Fl :Rango de flujo del liquido(m3/h)
+T2 :Temperatura de salida del liquido(°C)
+T1 :Temperatura de entrada del liquido(°C)
+r :Diferencia de entalpía entre vapor y agua saturada(kJ/kg)",
+,11331,mc = c · SG · Ql · (T2 - T1) / ∆H / th · 1000,{m}_{c}= \left ( \left (\frac{c\cdot SG\cdot Q_{l}\cdot (T_{2}-T_{1})}{\Delta H} \right )/t_{h}  \right )\cdot 1000,"mc:Condensate load (kg/h)
+cl:Specific heat of liquid (kJ/kg K)
+SGl:Specific gravity of liquid
+Vl:Liquid volume (m³)
+T2:Outlet temperature of liquid (°C)
+T1:Inlet temperature of liquid (°C)
+∆H :Enthalpy difference between steam and saturated water (kJ/kg)
+th:Heating time (h)",Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,mc = c · SG · Ql · (T2 - T1) / ∆H / th · 1000,{m}_{c}= \left ( \left (\frac{c\cdot SG\cdot Q_{l}\cdot (T_{2}-T_{1})}{\Delta H} \right )/t_{h}  \right )\cdot 1000,"mc:Condensate load (lb/h)
+cl:Specific heat of liquid (BTU/lb F)
+SGl:Specific gravity of liquid (lb/ft³)
+Ql :Liquid volume (ft³)
+T2 :Outlet temperature of liquid (°F)
+T1 :Inlet temperature of liquid (°F)
+∆H :Enthalpy difference between steam and saturated water (BTU/lb)
+th:Heating time (h)",Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,"Fc :ﾄﾞﾚﾝ発生量(kg/h)
+Hl :液体の比熱(kJ/kg K)
+Gl :液体の比重量(kg/m3)
+Ql :液体量(m3)
+T2 :液体の出口温度(°C)
+T1 :液体の入口温度(°C)
+r :蒸気と飽和水のｴﾝﾀﾙﾋﾟ差(kJ/kg)
+Th :加熱時間(h)",,Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,"Fc :Kondensatanfall(kg/h)
+Hl :Spez. Wärmekapazität Flüssigkeit(kJ/kg K)
+Gl :Spez. Gewicht Flüssigkeit
+Ql :Flüssigkeitsvolumen(m3)
+T2 :Flüssigkeitsaustrittstemperatur(°C)
+T1 :Flüssigkeitseintrittstemperatur(°C)
+r :Enthalpiedifferenz zw. Dampf und ge",,Fc=(Hl*Gl*Ql*(T2-T1)*Th*1000)/r,"Fc :Débit de condensât(kg/h)
+Hl :Chaleur spécifique du liquide(kJ/kg K)
+Gl :Gravité spécifique du liquide(kg/m3)
+Ql :Volume du liquide(m3)
+T2 :Température de sortie du liquide(°C)
+T1 :Température d'entrée du liquide(°C)
+r :Différence d'enthalpie entre la vapeur et l'eau(kJ/kg)
+Th :Temps de chauffe(h)",,Fc=(Hl*Gl*Ql*(T2-T1)*Th*1000)/r,"Fc :冷凝水量(kg/h)
+Hl :流体比热容(kJ/kg K)
+Gl :流体的比重
+Ql :流体体积(m3)
+T2 :流体出口处温度(°C)
+T1 :流体入口处温度(°C)
+r :蒸汽和饱和水的热焓差(kJ/kg)
+Th :加热时间(h)",,Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,"Fc :응축수 발생량(kg/h)
+Hl :액체의 비열(kJ/kg K)
+Gl :액체의 비중
+Ql :액체량(m3)
+T2 :액체의 출구온도(°C)
+T1 :액체의 입구온도(°C)
+r :증기와 포화수의 엔탈피의 차(kJ/kg)
+Th :가열시간(h)",,Fc=Hl*Gl*Ql*(T2-T1)/r/Th*1000,"Fc :Carga de condensado(kg/h)
+Hl :Calor específico del liquido(kJ/kg K)
+Gl :Gravedad específica del liquido
+Ql :Volumen del liquido(m3)
+T2 :Temperatura de salida del liquido(°C)
+T1 :Temperatura de entrada del liquido(°C)
+r :Diferencia de entalpía entre vapor y agua saturada(kJ/kg)
+Th :Tiempo de calentamiento(h)",
+,11340,mc = ca · γa · Qa · 60 · (T2 - T1) / ∆H,{m}_{c}= \frac{c_{a}\cdot \gamma_{a}\cdot Q_{a}\cdot 60\cdot (T_{2}-T_{1})}{\Delta H},"mc:Condensate load (kg/h)
+ca:Specific heat of air (kJ/kg K)
+γa:Specific weight of air (kg/m³)
+Qa:Air flow rate (m³/min)
+T2:Outlet temperature of air (°C)
+T1:Inlet temperature of air (°C)
+∆H :Enthalpy difference between steam and saturated water(kJ/kg)
+*Air Pressure is atmospheric",Fc=Ca*Ga*Fa*60*(T2-T1)/r,mc = ca · γa · Qa · 60 · (T2 - T1) / ∆H,{m}_{c}= \frac{c_{a}\cdot \gamma_{a}\cdot Q_{a}\cdot 60\cdot (T_{2}-T_{1})}{\Delta H},"mc:Condensate load(lb/h)
+ca :Specific heat of air (BTU/lb F)
+γa:Specific heat of air (BTU/lb F)
+Qa :Air flow rate(CFM)
+T2 :Outlet temperature of air(°F)
+T1 :Inlet temperature of air(°F)
+∆H :Enthalpy difference between steam and saturated water (BTU/lb)
+*Air Pressure is atmospheric",Fc=Ca*Ga*Fa*60*(T2-T1)/r,Fc=Ca*Ga*Fa*60*(T2-T1)/r,"Fc :ﾄﾞﾚﾝ発生量(kg/h)
+Ca :空気の比熱(kJ/kg K)
+Ga :空気の比重量(kg/m3)
+Fa :空気流量(m3/min)
+T2 :空気の出口温度(°C)
+T1 :空気の入口温度(°C)
+r :蒸気と飽和水のｴﾝﾀﾙﾋﾟ差(kJ/kg)
+*空気は、大気圧とする",,Fc=Ca*Ga*Fa*60*(T2-T1)/r,"Fc :Kondensatanfall(kg/h)
+Ca :Spez. Wärmekapazität Luft(kJ/kg K)
+Ga :Spez. Gewicht Luft(kg/m3)
+Fa :Luftdurchsatz (m3/min)
+T2 :Flüssigkeitsaustrittstemperatur(°C)
+T1 :Flüssigkeitseintrittstemperatur(°C)
+r :Enthalpiedifferenz zw. Dampf und gesättigtem ",,Fc=(Ca*Ga*Fa*60*(T2-T1))/r,"Fc :Débit de condensât(kg/h)
+Ca :Chaleur spécifique de l'air(kJ/kg K)
+Ga :Poids spécifique de l'air(kg/m3)
+Fa :Débit d'air(m3/min)
+T2 :Température de sortie de l'air(°C)
+T1 :Température d'entrée de l'air(°C)
+r :Différence d'enthalpie entre la vapeur et l'eau(kJ/kg)
+*Pression de l'air atmosphérique",,Fc=(Ca*Ga*Fa*60*(T2-T1))/r,"Fc :冷凝水量(kg/h)
+Ca :空气比热容(kJ/kg K)
+Ga :空气的比重(kg/m3)
+Fa :空气流量(m3/min)
+T2 :空气出口处温度(°C)
+T1 :空气入口处温度(°C)
+r :蒸汽和饱和水的热焓差(kJ/kg)
+*空气压力为大气压",,Fc=Ca*Ga*Fa*60*(T2-T1)/r,"Fc :응축수 발생량(kg/h)
+Ca :에어의 비열(kJ/kg K)
+Ga :에어의 비중량(kg/m3)
+Fa :에어의 유량(m3/min)
+T2 :에어의 출구온도(°C)
+T1 :에어의 입구온도(°C)
+r :증기와 포화수의 엔탈피의 차(kJ/kg)
+*에어는 대기압기준",,Fc=Ca*Ga*Fa*60*(T2-T1)/r,"Fc :Carga de condensado(kg/h)
+Ca :Calor específico del aire(kJ/kg K)
+Ga :Peso específico del aire(kg/m3)
+Fa :Rango de flujo del aire(m3/min)
+T2 :Temperatura de salida del liquido(°C)
+T1 :Temperatura de entrada del liquido(°C)
+r :Diferencia de entalpía entre vapor y agua saturada(kJ/kg)
+*La presión del aire es atmosférica",
+,11350,"S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 + T2) / 2) · 100
+",S=\frac{T_{b}- \frac{T_{1}+T_{2}}{2}}{T_{s}- \frac{T_{1}+T_{2}}{2}}\cdot 100,"S  :Stall Point
+Tb:Saturated steam temperature at backpressure(°C)
+T1:Inlet temperature of liquid (°C)
+T2:Outlet temperature of liquid (°C)
+Ts:Steam temperature(°C)","SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100
+","S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 + T2) / 2) · 100
+",S=\frac{T_{b}- \frac{T_{1}+T_{2}}{2}}{T_{s}- \frac{T_{1}+T_{2}}{2}}\cdot 100,"SP :Stall Point
+Tb :Saturated steam temperature at backpressure(°F)
+T1 :Inlet temperature of liquid(°C)
+T2 :Outlet temperature of liquid(°C)
+Ts :Steam temperature(°F)",SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :ストールポイント
+Tbp:背圧の飽和温度(°C)
+T1 :液体の入口温度(°C)
+T2 :液体の出口温度(°C)
+Ts :蒸気温度(°C)",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Rückstaupunkt
+Tbp:Sattdampftemperatur bei Gegendruck(°C)
+T1 :Qüssigkeitseintrittstemperatur(°C)
+T2 :Qüssigkeitsaustrittstemperatur(°C)
+Ts :Dampftemperatur(°C)",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Point de charge critique
+Tbp:Température de vapeur saturé(°C)
+T1 :Température d'entrée du liquide(°C)
+T2 :Température de sortie du liquide(°C)
+Ts :Température de la vapeur(°C)",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :滞流点
+Tbp:背压下的饱和蒸汽温度(°C)
+T1 :流体入口温度（°C）
+T2 :流体出口温度（°C）
+Ts :蒸汽温度(°C)",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :스톨 포인트
+Tbp:배압의 압력에 해당하는 포화온도(°C)
+T1 :액체의 입구온도(°C)
+T2 :액체의 출구온도(°C)
+Ts :증기온도(°C)",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Punto Stall
+Tbp:Temperatura de Saturación del Vapor en la Contrapresión(°C)
+T1 :Temperatura de entrada del liquido(°C)
+T2 :Temperatura de salida del liquido(°C)
+Ts :Temperatura de Vapor(°C)",
+,11360,S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 - T2) / 2) · 100,S=\frac{T_{b}- \frac{T_{1}+T_{2}}{2}}{T_{s}- \frac{T_{1}-T_{2}}{2}}\cdot 100,"S  :Stall Point
+Tb:Saturated steam temperature at backpressure (°C)
+T1:Inlet temperature of air (°C)
+T2:Outlet temperature of air (°C)",SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 - T2) / 2) · 100,S=\frac{T_{b}- \frac{T_{1}+T_{2}}{2}}{T_{s}- \frac{T_{1}-T_{2}}{2}}\cdot 100,"SP :Stall Point
+Tb :Saturated steam temperature at backpressure(°F)
+T1 :Inlet temperature of air(°F)
+T2 :Outlet temperature of air(°F)",SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :ストールポイント
+Tbp:背圧の飽和温度(°C)
+T1 :空気の入口温度(°C)
+T2 :空気の出口温度(°C)
+*空気は、大気圧とする",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Rückstaupunkt
+Tbp:Sattdampftemperatur bei Gegendruck(°C)
+T1 :Flüssigkeitseintrittstemperatur(°C)
+T2 :Flüssigkeitsaustrittstemperatur(°C)
+* Luftdruck ist atmosphärisch",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Point de charge critique
+Tbp:Température de vapeur saturée(°C)
+T1 :Température d'entrée de l'air(°C)
+T2 :Température de sortie de l'air(°C)
+*Pression de l'air atmosphérique",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :滞流点
+Tbp:背压下的饱和蒸汽温度(°C)
+T1 :空气入口处温度(°C)
+T2 :空气出口处温度(°C)
+*空气压力为大气压",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :스톨 포인트
+Tbp:배압의 압력에 해당하는 포화온도(°C)
+T1 :에어의 입구온도(°C)
+T2 :에어의 출구온도(°C)
+*에어는 대기압기준",,SP=(Tbp-(T1+T2)/2)/(Ts-(T1+T2)/2)*100,"SP :Punto Stall
+Tbp:Temperatura de Saturación del Vapor en la Contrapresión(°C)
+T1 :Temperatura de entrada del liquido(°C)
+T2 :Temperatura de salida del liquido(°C)
+*La presión del aire es atmosférica",
+,11410,"η = (mfw - mb) · (hw + 0.98 · ΔH - hfw) / (mfl · Hf)
+LF = (mfw - mb) / mfwmax · 100","\eta =\frac{({m}_{fw}-{m}_{b})\cdot (h_{w}+0.98\cdot\Delta H-h_{fw})}{m_{fl}\cdot H_{f}}
+LF=\frac{({m}_{fw}-{m}_{b})}{{m}_{fw\: max}}\cdot 100","η  :Boiler efficiency
+mfw:Feed water rate (kg/h)
+mb:Boiler blow down rate (kg/h)
+hw:Specific enthalpy of saturated water (kJ/kg)
+hfg:Latent heat of steam (kJ/kg)
+hfw:Specific enthalpy of feed water (kJ/kg)
+Qf:Fuel consumption (kg/h)
+Hf:Heating value of fuel (kJ/kg)
+LF :Boiler load factor (%)
+mfwmax:Maximum Rated Feed Water Flow Rate (kg/h)","Eb=(Fw-Qb)*(Ew+0.98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","η = (mfw - mb) · (hw + 0.98 · ΔH - hfw) / (mfl · Hf)
+LF = (mfw - mb) / mfwmax · 100","\eta =\frac{({m}_{fw}-{m}_{b})\cdot (h_{w}+0.98\cdot\Delta H-h_{fw})}{m_{fl}\cdot H_{f}}
+LF=\frac{({m}_{fw}-{m}_{b})}{{m}_{fw\: max}}\cdot 100","η  :Boiler efficiency
+mw :Feed water rate(lb/h)
+mb :Boiler blow down rate(lb/h)
+hw :Specific enthalpy of sat. water(BTU/lb)
+hfg  :Latent heat of steam(BTU/lb)
+hfw :Specific enthalpy of feed water(BTU/lb)
+Qf :Fuel consumption(lb/h)
+Hf :Heating value of fuel(BTU/lb)
+LF :Boiler load factor(%)
+mwmax:Maximum Rated Feed Water Flow Rate(lb/h)","Eb=(Fw-Qb)*(Ew+0.98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb=(Fw-Qb)*(Ew+0.98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :ﾎﾞｲﾗ効率
+Fw :給水量(kg/h)
+Qb :ﾎﾞｲﾗﾌﾞﾛｰ量(kg/h)
+Ew :飽和水の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+r  :蒸気の潜熱(kJ/kg)
+TW :給水の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+Qf :燃料消費量(kg/h)
+Hf :燃料の低発熱量(kJ/kg)
+LF :ﾎﾞｲﾗ負荷率
+BC :ﾎﾞｲﾗ相当蒸発量(kg/h)",,"Eb=(Fw-Qb)*(Ew+0,98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :Kesselwirkungsgrad
+Fw :Speisewassermenge(kg/h)
+Qb :Kesselverluste(kg/h)
+Ew :Spez. Enthalpie gesättigtes Wasser(kJ/kg)
+r  :Verdampfungswärme(kJ/kg)
+TW :Spez. Enthalpie Frischwasser(kJ/kg)
+Qf :Brenstoffverbrauch(kg/h)
+Hf :Brennstoffheizwert(kJ/kg)
+LF :Kesselauslastung(%)
+BC :Max. Speisewasserzulaufmenge(kg/h)",,"Eb=((Fw-Qb)*(Ew+0.98*r-TW))/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :Rendement de la chaudière
+Fw :Débit d'eau d'appoint(kg/h)
+Qb :Taux de purge de chaudière(kg/h)
+Ew :Enthalpie spécifique de l'eau(kJ/kg)
+r  :Chaleur latente de la vapeur(kJ/kg)
+TW :Enthalpie spécifique de l'eau d'appoint(kJ/kg)
+Qf :Consommation de fuel(kg/h)
+Hf :Pouvoir calorifique du fuel(kJ/kg)
+LF :Qcteur de charge de la chaudière
+BC :Taux maximum de remplissage d'eau(kg/h)",,"Eb=((Fw-Qb)*(Ew+0.98*r-TW))/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :锅炉效率
+Fw :给水量(kg/h)
+Qb :锅炉排污量(kg/h)
+Ew :饱和水热焓(kJ/kg)
+r  :蒸汽潜热(kJ/kg)
+TW :给水热焓(kJ/kg)
+Qf :燃料消耗量(kg/h)
+Hf :燃料热值(kJ/kg)
+LF :锅炉载荷率
+BC :锅炉给水的最大流量(kg/h)",,"Eb=(Fw-Qb)*(Ew+0.98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :보일러 효율
+Fw :급수량(kg/h)
+Qb :보일러 블로우량(kg/h)
+Ew :포화수의 비엔탈피(kJ/kg)
+r  :증기의 잠열(kJ/kg)
+TW :급수의 비엔탈피(kJ/kg)
+Qf :연료소비량(kg/h)
+Hf :연료의 저위발열량(kJ/kg)
+LF :보일러 부하율
+BC :보일러의 상당증발량(kg/h)",,"Eb=(Fw-Qb)*(Ew+0.98*r-TW)/(Qf*Hf)
+LF=(Fw-Qb)/BC","Eb :Eficiencia de caldera
+Fw :Rango de agua de alimentación(kg/h)
+Qb :Rango de blow-down de la caldera(kg/h)
+Ew :Entalpía específica de agua saturada(kJ/kg)
+r  :Calor latente del vapor(kJ/kg)
+TW :Entalpía específica del agua de alimentación(kJ/kg)
+Qf :Consumo de combustible(kg/h)
+Hf :Poder calorífico del combustible(kJ/kg)
+LF :Factor de carga de la caldera
+BC :Máximo flujo de agua de alimentación registrado(kg/h)",
+,11420,Ce = Cf / (Hf · η / 100),C_{e}=C_{f}/(\frac{H_{f}\cdot \eta}{100} ),"Ce:Unit cost of energy ($/1000kJ)
+Cf:Unit cost of fuel ($/1000kg)
+Hf:Heating value of fuel (kJ/kg)
+η  :Boiler efficiency",Ce=Cf/(Hf*Eb/100),Ce = Cf / (Hf · η / 100),C_{e}=C_{f}/(\frac{H_{f}\cdot \eta}{100} ),"Ce :Unit cost of energy($/1000BTU)
+Cf :Unit cost of fuel($/1000lb)
+Hf :Heating value of fuel(BTU/lb)
+η  :Boiler efficiency",Ce=Cf/(Hf*Eb/100),Ce=Cf/(Hf*Eb/100),"Ce :熱量単価(\/1000kJ)
+Cf :燃料単価(\/ton)
+Hf :燃料の低発熱量(kJ/kg)
+Eb :ﾎﾞｲﾗ効率",,Ce=Cf/(Hf*Eb/100),"Ce :Energiekosten(EUR/MJ)
+Cf :Brennstoffkosten(EUR/t)
+Hf :Brennstoffheizwert(kJ/kg)
+Eb :Kesselwirkungsgrad(%)",,Ce=Cf/(Hf*Eb/100),"Ce :Coût unitaire de l'énergie(€/1000kJ)
+Cf :Coût unitaire du fuel(€/1000kg)
+Hf :Pouvoir calorifique du fuel(kJ/kg)
+Eb :Rendement de la chaudière",,Ce=Cf/(Hf*Eb/100),"Ce :单位能源成本(RMB/1000kJ)
+Cf :单位燃料成本(RMB/1000kg)
+Hf :燃料热值(kJ/kg)
+Eb :锅炉效率",,Ce=Cf/(Hf*Eb/100),"Ce :열량단가(\/1000kJ)
+Cf :연료단가(\/ton)
+Hf :연료의 저위발열량(kJ/kg)
+Eb :보일러 효율",,Ce=Cf/(Hf*Eb/100),"Ce :Unidad de costo de energía($/1000kJ)
+Cf :Unidad de costo de combustible($/1000kg)
+Hf :Valor de calentamiento del combustible(kJ/kg)
+Eb :Eficiencia de la caldera",
+,11430,Cs = (hs - hfw) · Ce,C_{s}=(h_{s}-h_{fw})\cdot C_{e},"Cs:Unit cost of steam ($/1000kg)
+hs:Specific enthalpy of steam (kJ/kg)
+hfw:Specific enthalpy of feed water (kJ/kg)
+Ce:Unit cost of energy ($/1000kJ)",Cs=(Es-Efw)*Ce,Cs = (hs - hfw) · Ce,C_{s}=(h_{s}-h_{fw})\cdot C_{e},"Cs :Unit cost of steam($/1000lb)
+hs :Specific enthalpy of steam(BTU/lb)
+hFW :Specific enthalpy of boiler feed water(BTU/lb)
+Ce :Unit cost of energy($/1000BTU)",Cs=(Es-Efw)*Ce,Cs=(Es-Efw)*Ce,"Cs :蒸気単価(\/ton)
+Es :蒸気の全熱(kJ/kg)
+Efw:ﾎﾞｲﾗ給水の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+Ce :熱量単価(\/1000kJ)",,Cs=(Es-Efw)*Ce,"Cs :Dampfkosten(EUR/t)
+Es :Spez. Dampfenthalpie(kJ/kg)
+Efw:Spez. Enthalpie Kesselspeisewasser(kJ/kg)
+Ce :Energiekosten(EUR/MJ)",,Cs=(Es-Efw)*Ce,"Cs :Coût unitaire de la vapeur(€/1000kg)
+Es :Enthalpie spécifique de la vapeur(kJ/kg)
+Efw:Enthalpie spécifique de l'eau de remplissage de chaudière(kJ/kg)
+Ce :Coût unitaire de l'énergie (€/1000kJ)",,Cs=(Es-Efw)*Ce,"Cs :单位蒸汽成本(RMB/1000kg)
+Es :蒸汽热焓(kJ/kg)
+Efw:锅炉给水热焓(kJ/kg)
+Ce :单位能源成本(RMB/1000kJ)",,Cs=(Es-Efw)*Ce,"Cs :증기단가(\/ton)
+Es :증기의 전열(kJ/kg)
+Efw:보일러 급수의 비엔탈피(kJ/kg)
+Ce :열량단가(\/1000kJ)",,Cs=(Es-Efw)*Ce,"Cs :Unidad de costo de vapor($/1000kg)
+Es :Entalpía específica del vapor(kJ/kg)
+Efw:Entalpía específica del agua de alimentación a la caldera(kJ/kg)
+Ce :Unidad de costo de energía($/1000kJ)",
+,11440,"h1 = h""1 -(1 - X1 / 100) · ∆H1
+h1 < h""2 :
+X2 = {1 -(h""2 - h1) / ∆H2} · 100
+h1 > h""2 :
+∆T = (h1 - h""2) / c2","h_{1}=h""_{1}-(1-\frac{X_{1}}{100})\cdot \Delta H_{1}
+h_{1}< h""_{2}\rightarrow 
+X_{2}=(1-\frac{(h""_{2}- h_{1})}{\Delta H_{2}})\cdot 100
+h_{1}> h""_{2}\rightarrow 
+\Delta T=\frac{h_{1}-h""_{2}}{c_{2}}","h1:Specific enthalpy of primary steam (kJ/kg)
+h""1:Specific enthalpy of primary saturated steam (kJ/kg)
+Χ1:Estimated primary steam dryness (%)
+hfg1:Latent heat of primary steam (kJ/kg)
+h""2:Specific enthalpy of secondary saturated steam (kJ/kg)
+Χ2:Secondary steam dryness (%)
+hfg2:Latent heat of secondary steam (kJ/kg)
+∆T :Degrees of superheat (°C)
+c2:Specific heat of secondary steam (kJ/kg K)","h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 = h""1 -(1 - X1 / 100) · ∆H1
+h1 < h""2 :
+X2 = {1 -(h""2 - h1) / ∆H2} · 100
+h1 > h""2 :
+∆T = (h1 - h""2) / c2","h_{1}=h""_{1}-(1-\frac{X_{1}}{100})\cdot \Delta H_{1}
+h_{1}< h""_{2}\rightarrow 
+X_{2}=(1-\frac{(h""_{2}- h_{1})}{\Delta H_{2}})\cdot 100
+h_{1}> h""_{2}\rightarrow 
+\Delta T=\frac{h_{1}-h""_{2}}{c_{2}}","h1 :Specific enthalpy of primary steam(BTU/lb)
+h""1:Specific enthalpy of primary saturated steam(BTU/lb)
+X1 :Estimated primary steam dryness(%)
+hfg1:Latent heat of primary steam(BTU/lb)
+h""2:Specific enthalpy of secondary steam(BTU/lb)
+X2 :Secondary steam dryness(%)
+hfg2:Latent heat of secondary steam(BTU/lb)
+∆T :Degrees of superheat(°F)
+c2 :Specific heat of secondary steam(BTU/lb F)","h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :一次側蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+h1"":一次側圧力における飽和蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+X1 :一次側蒸気の乾き度
+r1 :一次側蒸気の潜熱(kJ/kg)
+h2"":二次側圧力における飽和蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+X2 :二次側蒸気の乾き度
+r2 :二次側蒸気の潜熱(kJ/kg)
+Ts :二次側蒸気の過熱度(C)
+cp"":二次側蒸気の比熱(kJ/kg K)",,"h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :Spez. Dampfenthalpie vor Reduzierung(kJ/kg)
+h1"":Spez. Enthalpie Sattdampf bei Vordruck(kJ/kg)
+X1 :Trockenheitsgrad vor Reduzierung(%)
+r1 :Verdampfungswärme vor Reduzierung(kJ/kg)
+h2"":Spez. Dampfenthalpie nach Reduzierung(kJ/kg)
+X2 :Trockenheitsgrad nach Reduzierung(%)
+r2 :Verdampfungswärme nach Reduzierung(kJ/kg)
+Ts :Überhitzungsgrad(°C)
+cp"":Spez. Wärme Dampf nach Reduzierung(kJ/kg K)",,"h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :Enthalpie spécifique de la vapeur primaire(kJ/kg)
+h1"":Enthalpie spécifique de la vapeur primaire saturée(kJ/kg)
+X1 :Titre estimé de la vapeur primaire
+r1 :Chaleur latente de la vapeur primaire(kJ/kg)
+h2"":Enthalpie spécifique de la vapeur secondaire",,"h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :一次蒸汽热焓(kJ/kg)
+h1"":一次饱和蒸汽热焓(kJ/kg)
+X1 :预估一次蒸汽干燥度
+r1 :一次蒸汽潜热(kJ/kg)
+h2"":二次蒸汽热焓(kJ/kg)
+X2 :二次蒸汽干燥度
+r2 :二次蒸汽潜热(kJ/kg)
+Ts :过热度(°C)
+cp"":二次蒸汽比热(kJ/kg K)",,"h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :일차측 증기의 비엔탈피(kJ/kg)
+h1"":일차측 압력에 따른 포화증기의 비엔탈피(kJ/kg)
+X1 :일차측 증기의 건도
+r1 :일차측 증기의 잠열(kJ/kg)
+h2"":이차측 압력에 해당하는 포화증기의 비엔탈피(kJ/kg)
+X2 :이차측 증기의 건도
+r2 :이차측 증기의 잠열(kJ/kg)
+Ts :이차측 증기의 과열도(°C)
+cp"":이차측 증기의 비열(kJ/kg K)",,"h1=h1""-(1-X1)*r1
+h1<h2"":
+X2=(1-(h2""-h1)/r2)
+h1>h2"":
+Ts=(h1-h2"")/cp""","h1 :Entalpía específica del vapor primario(kJ/kg)
+h1"":Entalpía especific del vapor primario saturado(kJ/kg)
+X1 :Sequedad estimada del vapor primario
+r1 :Calor latente del vapor primario(kJ/kg)
+h2"":Entalpía específica del vapor secundario(kJ/kg)
+X2 :Sequedad del vapor secundario
+r2 :Calor latente del vapor secundario(kJ/kg)
+Ts :Grados de sobrecalentamiento(C)
+cp"":Calor específico del vapor secundario(kJ/kg K)",
+,11450,"X1 = 1 - mc / (ms · ηs / 100) · 100
+X'1= (ms - mc / ηs / 100) / (ms - mc) · 100
+h1 = h1"" - (1 - X'1 / 100) · ∆H1
+h1 < h2"" :
+X2 = {1 - (h2"" - h1) / ∆H2} · 100
+h1 > h2"" :
+∆T = (h1 - h2"") / c2","X_{1}=1-\frac{m_{c}}{(m_{s}\cdot \eta_{s})/100}\cdot 100
+X'_{1}=\frac{{m}_{s}-\frac{{m}_{c}}{(\eta_{s}\cdot 100)}}{{m}_{s}-{m}{c}}\cdot 100
+h_{1}=h""_{1}-(1-\frac{X'_{1}}{100})\cdot \Delta H_{1}
+h_{1}< h""_{2}\rightarrow 
+X_{2}=(1-\frac{h""_{2}-h_{1}}{\Delta H_{2}})\cdot 100
+h_{1}> h""_{2}\rightarrow 
+\Delta_{T}=\frac{h_{1}-h""_{2}}{c_{2}}","X1:Dryness of primary steam
+mc:Amount of condensate separated (kg/h)
+ms:Steam flow rate (kg/h)
+ηs:Separation efficiency(%)
+X'1:Dryness of primary steam after separation(%)
+h1:Specific enthalpy of primary steam (kJ/kg)
+h""1:Specific enthalpy of primary saturated steam (kJ/kg)
+hfg1:Latent heat of primary steam (kJ/kg)
+h""2:Specific enthalpy of secondary saturated steam (kJ/kg)
+X2 :Secondary steam dryness
+hfg2:Latent heat of secondary steam(kJ/kg)
+∆T :Degrees of superheat (°C)
+c2:Specific heat of secondary steam (kJ/kg K)","X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 = 1 - mc / (ms · ηs / 100) · 100
+X'1= (ms - mc / ηs / 100) / (ms - mc) · 100
+h1 = h1"" - (1 - X'1 / 100) · ∆H1
+h1 < h2"" :
+X2 = {1 - (h2"" - h1) / ∆H2} · 100
+h1 > h2"" :
+∆T = (h1 - h2"") / c2","X_{1}=1-\frac{m_{c}}{(m_{s}\cdot \eta_{s})/100}\cdot 100
+X'_{1}=\frac{{m}_{s}-\frac{{m}_{c}}{(\eta_{s}\cdot 100)}}{{m}_{s}-{m}{c}}\cdot 100
+h_{1}=h""_{1}-(1-\frac{X'_{1}}{100})\cdot \Delta H_{1}
+h_{1}< h""_{2}\rightarrow 
+X_{2}=(1-\frac{h""_{2}-h_{1}}{\Delta H_{2}})\cdot 100
+h_{1}> h""_{2}\rightarrow 
+\Delta_{T}=\frac{h_{1}-h""_{2}}{c_{2}}","X1 :Dryness of primary steam
+mc:Amount of condensate separated(lb/h)
+ms:Steam flow rate (lb/h) 
+ηs:Separation efficiency(%)
+X'1:Dryness of primary steam after separation
+h1 :Specific enthalpy of primary steam(BTU/lb)
+h""1:Specific enthalpy of primary saturated steam(BTU/lb)
+hfg1 :Latent heat of primary steam(BTU/lb)
+h""2:Specific enthalpy of secondary steam(BTU/lb)
+X2 :Secondary steam dryness
+hfg2:Latent heat of secondary steam(BTU/lb)
+∆T :Degrees of superheat(°F)
+c2:Specific heat of secondary steam(BTU/lb F)","X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :一次側蒸気の乾き度
+Fc :分離ﾄﾞﾚﾝ量(kg/h)
+Fs :蒸気流量(kg/h)
+SE :分離効率
+X'1:ﾄﾞﾚﾝ分離後の蒸気乾き度
+h1 :一次側蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+h1"":一次側圧力における飽和蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+r1 :一次側蒸気の潜熱(kJ/kg) 
+X2 :二次側蒸気の乾き度
+h2"":二次側圧力における飽和蒸気の比ｴﾝﾀﾙﾋﾟ(kJ/kg)
+r2 :二次側蒸気の潜熱(kJ/kg)
+Ts :二次側蒸気の過熱度(°C)
+cp"":二次側蒸気の比熱(kJ/kg",,"X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :Trockenheitsgrad vor Reduzierung(%)
+Fc :Abgeschiedene Kondensatmenge(kg/h)
+Fs :Dampfdurchsatz(kg/h) 
+SE :Abscheidungsgrad(%)
+X'1:Trockenheitsgrad nach Kondensatabscheidung(%)
+h1 :Spez. Dampfenthalpie vor Reduzierung(kJ/kg)
+h1"":Spez. Enthalpie Sattdampf bei Vordruck(kJ/kg)
+r1 :Verdampfungswärme vor Reduzierung(kJ/kg)
+h2"":Spez. Dampfenthalpie nach Reduzierung(kJ/kg)
+X2 :Trockenheitsgrad nach Reduzierung(%)
+r2 :Verdampfungswärme nach Reduzierung(kJ/kg)
+Ts :Überhitzungsgrad(°C)
+cp"":Spez. Wärme Dampf nach Reduzierung(kJ/kg K)",,"X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :Titre de la vapeur primaire
+Fc :Quantité de condensât séparé(kg/h)
+Fs :Débit de la vapeur (kg/h) 
+SE :Taux d'efficacité de séparation
+X'1:Titre de la vapeur primaire après séparation
+h1 :Enthalpie spécifique de la vapeur primaire(kJ/kg)
+h1"":Enthalpie spécifique de la vapeur primaire saturée(kJ/kg)
+r1 :Chaleur latente de la vapeur primaire(kJ/kg)
+h2"":Enthalpie spécifique de la vapeur secondaire(kJ/kg)
+X2 :Titre de la vapeur secondaire
+r2 :Chaleur latente de la vapeur secondaire(kJ/kg)
+Ts :Degré de surchauffe(°C)
+cp"":Chaleur spécifique de la vapeur secondaire(kJ/kg K)",,"X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :一次压力干燥度
+Fc :分离出的冷凝水量(kg/h)
+Fs :蒸汽流量(kg/h)
+SE :汽水分离率
+X'1:汽水分离后一次蒸汽干燥度
+h1 :一次蒸汽热焓(kJ/kg)
+h1"":一次饱和蒸汽热焓(kJ/kg)
+r1 :一次蒸汽潜热(kJ/kg)
+h2"":二次蒸汽热焓(kJ/kg)
+X2 :二次蒸汽干燥度
+r2 :二次蒸汽潜热(kJ/kg)
+Ts :过热度(°C)
+cp"":二次蒸汽比热(kJ/kg K)",,"X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :일차측 증기의 건도
+Fc :분리 응축수량(kg/h)
+Fs :증기유량(kg/h)
+SE :분리효율
+X'1:응축수 분리후의 증기건도
+h1 :일차측 증기의 비엔탈피(kJ/kg)
+h1"":일차측 압력에 해당하는 포화증기의 비엔탈피(kJ/kg)
+r1 :일차측 증기의 잠열(kJ/kg) 
+X2 :이차측 증기의 건도
+h2"":이차측 압력에 해당하는 포화증기의 비엔탈피(kJ/kg)
+r2 :이차측 증기의 잠열(kJ/kg)
+Ts :이차측 증기의 과열도(°C)
+cp"":이차측 증기의 비열(kJ/kg K)",,"X1=1-Fc/(Fs*SE) 
+X'1=(Fs-Fc/SE)/(Fs-Fc)
+h1=h1""- (1-X'1)*r1
+h1<h2"" :
+X2=(1-(h2""-h1)/r2)
+h1>h2"" :
+Ts=(h1-h2"")/cp""","X1 :Sequedad de vapor primario
+Fc :Monto de condensado separado(kg/h)
+Fs :Rango de flujo de vapor(kg/h)
+SE :Eficiencia de separación
+X'1:Sequedad de vapor primario despues de la separación
+h1 :Entalpía específica del vapor primario(kJ/kg)
+h1"":Entalpía especific del vapor primario saturado(kJ/kg)
+r1 :Calor latente del vapor primario(kJ/kg)
+h2"":Entalpía específica del vapor secundario(kJ/kg)
+X2 :Sequedad del vapor secundario
+r2 :Calor latente del vapor secundario(kJ/kg)
+Ts :Grados de sobrecalentamiento(°C)
+cp"":Calor específico del vapor secundario(kJ/kg K)",
+,11460,"ps = p  · (1 - a / 100)
+∆T = T - Ts","p_{s}=p\cdot (1-\frac{a}{100})
+\Delta T=T-T_{s}","ps:Partial pressure of steam (kPaA)
+p  :Pressure of mixture (kPaA)
+a  :Air as a ratio of total volume
+∆T :Temperature drop (°C)
+T  :Saturated temperature at ""p"" (°C)
+Ts:Saturated temperature at ""ps"" (°C)","Ps=Pp*(1-a/100)
+dt=t-t'","ps = p  · (1 - a / 100)
+∆T = T - Ts","p_{s}=p\cdot (1-\frac{a}{100})
+\Delta T=T-T_{s}","ps :Partial pressure of steam(psia)
+p  :Pressure of mixture(psia)
+a  :Air as a ratio of total volume
+∆T :Temperature drop(°F)
+T  :Saturated temperature at ""p""(°F)
+Ts :Saturated temperature at ""ps""(°F)","Ps=Pp*(1-a/100)
+dt=t-t'","Ps=Pp*(1-a/100)
+dt=t-t'","Ps :蒸気分圧(kPaA)
+Pp :蒸気空気混合物全圧(kPaA)
+a  :空気の容積混入率
+dt :温度降下(C)
+t  :P に対する飽和温度(°C)
+t' :Ps に対する飽和温度(°C)",,"Ps=Pp*(1-a/100)
+dt=t-t'","Ps :Dampfdruck(kPaA)
+Pp :Partialdruck des Dampfes(kPa)
+a  :Luftanteil am Gesamtvolumen(%)
+dt :Temperaturabfall(°C)
+t  :Sättingungstemperatur bei ""Pp""(°C)
+t' :Sättigungstemperatur bei ""Ps""(°C)",,"Ps=Pp*(1-a/100)
+dt=t-t'","Ps :Pression de la vapeur(kPaA)
+Pp :Pression du mélange(kPaA)
+a  :% d'air du volume total
+dt :Delta de Température(°C)
+t  :Température saturée pour Pp(°C)
+t' :Température saturée pour Ps(°C)",,"Ps=Pp*(1-a/100)
+dt=t-t'","Ps :蒸汽分压（kPaA）
+Pp :混合压力(kPaA)
+a  :空气所占百分比
+dt :温降（°C）
+t  :在“Pp”时的饱和温度(°C)
+t' :在“Ps”时的饱和温度(°C)",,"Ps=Pp*(1-a/100)
+dt=t-t'","Ps :증기분압(kPaA)
+Pp :증기,에어혼합물 전체압(kPaA)
+a  :에어의 체적 혼입율
+dt :온도저하(°C)
+t  :P 에 해당하는 포화온도(°C)
+t' :Ps 에 해당하는 포화온도(°C)",,"Ps=Pp*(1-a/100)
+dt=t-t'","Ps :Presión parcial del vapor(kPaA)
+Pp :Presión de mezcla(kPaA)
+a  :Aire como un radio del volumen total
+dt :Caida de temperatura(°C)
+t  :Temperatura saturada en ""Pp""(°C)
+t' :Temperatura saturada en ""Ps""(°C)",
+,11461,a = (1 - ps / p) · 100,a=(1-\frac{p_{s}}{p})\cdot 100,"a  :Air as a ratio of total volume
+ps:Partial pressure of steam(kPaA)
+p  :Pressure of mixture(kPaA)", a=(1-Ps/Pp)+100,a = (1 - ps / p) · 100,a=(1-\frac{p_{s}}{p})\cdot 100,"a  :Air as a ratio of total volume
+ps :Partial pressure of steam(psia)
+p  :Pressure of mixture(psia)", a=(1-Ps/Pp)*100, a=(1-Ps/Pp)*100,"a  :空気の容積混入率
+Ps :蒸気分圧(kPaA)
+Pp :蒸気空気混合物全圧(kPaA)",, a=(1-Ps/Pp)*100,"a  :Luftanteil am Gesamtvolumen
+Ps :Dampfdruck(kPaA)
+Pp :Partialdruck des Dampfes(kPaA)",, a=(1-Ps/Pp)*100,"a  :% d'air du volume total
+Ps :Pression de la vapeur(kPaA)
+Pp :Pression du mélange(kPaA)",, a=(1-Ps/Pp)*100,"a  :空气所占百分比
+Ps :蒸汽分压(kPaA)
+Pp :混合压力(kPaA)",, a=(1-Ps/Pp)*100,"a  :에어의 체적 혼입율
+Ps :증기분압(kPaA)
+Pp :증기,에어혼합물 전체압(kPaA)",,a=(1-Ps/Pp)*100,"a  :Aire como un radio del volumen total
+Ps :Presión parcial del vapor(kPaA)
+Pp :Presión de mezcla(kPaA)",
+,11470,"Ci1  = π / 4 · ((d1 + 2 · L)^2 - d1^2) · Ci2 · N · 1000 + Ce · h · Qr · 0.001
+N  = {i · (1 + i)^m} / {(1 + i)^m - 1}
+Qr = 2 · π · (Ts - Tam) / {1 / λ · ln(d2 / d1) + 2 / (d1 + 2 · L) / α} · l","C_{i\:1}=1000\frac{\pi}{4} ((d_{1}+2L)^{\:2}-d_{1}^{\:2}) C_{i\:2}\cdot N 
+
++ 0.001C_{e}\cdot h\cdot Q_{r}
+
+N=\frac{i\cdot (1+i)^{m}}{(1+i)^{m}-1}
+
+Q_{r}=\frac  {2\pi(T_{s}-T{am})}  {\frac{1}{\lambda}\cdot ln (\frac{(d_{1}+2L)}{d_{1}})+ \frac{2}{\alpha(d_{1}+2L)} }","Ci1:Annual average insulating costs($/m)
+π  :3.1415...
+d2:Outer diameter of insulation material(m)
+d1:Outer diameter of pipe(m) 
+Ci2:Insulation and labor costs(1000$/m3)
+N  :Rate of payback
+Ce:Unit cost of energy($/kW h)
+h  :Annual operating hours(h)
+i  :Interest rate (%)
+m  :Payback period (yrs)
+Qr:Radiant heat (W)
+k  :Thermal conductivity coefficient (W/m K)
+α  :Heat transfer coefficient (W/m² K)
+Ts:Steam temperature (°C)
+Tam:Ambient temperature (°C)
+l  :Pipe length (m) ","F=π/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2*pi*(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","Ci1  = π / 4 · ((d1 + 2 · L)^2 - d1^2) · Ci2 · N · 1000 + Ce · h · Qr · 0.001
+N  = {i · (1 + i)^m} / {(1 + i)^m - 1}
+Qr = 2 · π · (Ts - Tam) / {1 / λ · ln(d2 / d1) + 2 / (d1 + 2 · L) / α} · l","C_{i\:1}=1000\frac{\pi}{4} ((d_{1}+2L)^{\:2}-d_{1}^{\:2}) C_{i\:2}\cdot N
+
++ 0.0036C_{e}\cdot h\cdot Q_{r}
+
+N=\frac{i\cdot (1+i)^{m}}{(1+i)^{m}-1}
+
+Q_{r}=\frac  {2\pi(T_{s}-T{am})}  {\frac{1}{\lambda}\cdot ln (\frac{(d_{1}+2L)}{d_{1}})+ \frac{2}{\alpha(d_{1}+2L)} }","Ci1  :Annual average insulating costs($/ft)
+π  :3.1415…
+d2 :Outer diameter of insulation material(ft)
+dl :Outer diameter of pipe(ft)
+Ci2 :Insulation and labor costs(1000$/ft³)
+N  :Rate of payback
+Ce :Unit cost of energy($/1000BTU)
+h  :Annual operating hours(h)
+i  :Interest rate
+m  :Payback period
+Qr :Radiant heat(BTU/h)
+k  :Thermal conductivity coefficient(BTU/ft F h)
+h  :Heat transfer coefficient(BTU/ft2 F h)
+Ts :Steam temperature(°F)
+Tam:Ambient temperature(°F)
+l  :Pipe length (ft) ","F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2pi(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2*pi*(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F  :保温による年間総費用(\/m)
+pi :円周率
+d2 :保温材の外径(m)
+d1 :配管の外径(m)   
+Ia :保温材施工価格(1000\/m3)
+N  :償却率  
+b  :熱量単価(\/1000kJ)
+h  :年間使用時間(h) 
+n  :年利率
+m  :使用年数
+Qr :放熱量(W/m)
+c  :保温材の熱伝導率(W/m K)
+a  :表面の熱伝達係数(W/m2 K)
+Ts :蒸気温度(°C)
+Tam:外気温度(°C)",,"F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0,001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2pi(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F  :Jährl. Kosten für Isolierungsarbeiten(EUR/m)
+pi :3,1415...
+d2 :Aussendurchmesser Isolierung(m)
+d1 :Rohraussendurchmesser(m)
+Ia :Isoliermaterial- und Arbeitskosten(1000 EUR/m3)
+N  :Rückzahlungsrate
+b  :Energiekosten(EUR/MJ)
+h  :Jährl. Betriebsstunden(h)
+n  :Zinssatz(%)
+m  :Amortisationszeitraum
+Qr :Wärmeverlust(W/m)
+c  :Wärmeleitzahl(W/m K)
+a  :Wärmeübergangszahl(W/m2 K)
+Ts :Dampftemperatur(°C)
+Tam:Umgebungstemperatur(°C)",,"F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=(2*pi*(Ts-Tam))/(ln(d2/d1)/c+(2*a)/d2)","F  :Coûts moyens annuels de calorifugeage(€/m)
+pi :3.1415...
+d2 :Diamètre inteRee du calorifugeage(m)
+d1 :Diamètre extérieur de la tuyauterie(m)
+Ia :Coûts de Calorifugeage et de main d'oeuvre(1000€/m3)
+N  :Taux de retour sur investissement
+b  :Coût unitaire de l'énergie(€/1000kJ)
+h  :Nombre d'heures annuelles en fonctionnement(h)
+n  :Taux d'intérêt
+m  :Durée de retour sur investissement
+Qr :Chaleur radiante(W/m)
+c  :Coefficient de conductivité thermique(W/m K)
+a  :Coefficient de transfert de chaleur(W/m2 K)
+Ts :Température de la vapeur(°C)
+Tam:Température ambiante(°C)",,"F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2*pi*(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F  :每年平均保温材料成本(RMB/m)
+pi :3.1415...
+d2 :保温层外径(m)
+d1 :管道外径(m) 
+Ia :保温及用工成本(1000RMB/m3)
+N  :回报率
+b  :单位能源成本(RMB/kW h)
+h  :年运行时间(h)
+n  :利率
+m  :回报周期
+Qr :辐射热(W/m)
+c  :导热系数(W/m K)
+a  :传热系数(W/m2 K)
+Ts :蒸汽温度(°C)
+Tam:环境温度(°C)",,"F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2*pi*(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F  :보온에 따른 연간 총비용(\/m)
+pi :원주율
+d2 :보온재의 외경(m)
+d1 :배관의 외경(m)   
+Ia :보온재 시공가격(1000\/m3)
+N  :투자효과  
+b  :열량단가(\/1000kJ)
+h  :년간사용시간(h) 
+n  :년이율
+m  :사용년수
+Qr :방산량(W/m)
+c  :보온재의 열전도율(W/m K)
+a  :표면의 열전달계수(W/m2 K)
+Ts :증기온도(°C)
+Tam:외기온도(°C)",,"F=pi/4*(d2^2-d1^2)*Ia*N*1000+b*h*Qr*0.001
+N=(n*(1+n)^m)/((1+n)^m-1)
+Qr=2*pi*(Ts-Tam)/(1/c*ln(d2/d1)+2/d2/a)","F  :Costo anual promedio de aislamiento($/m)
+pi :3.1415...
+d2 :Diámetro externo del material de aislamiento(m)
+d1 :Diámetro externo de tubería(m) 
+Ia :Costos de aislamiento y mano de obra(1000$/m3)
+N  :Rango de retorno de inversión
+b  :Unidad de costo de energía($/kW h)
+h  :Horas operadas anualmente(h)
+n  :Tasa de interés
+m  :Periodo de retorno de inversión
+Qr :Calor radiado(W/m)
+c  :Coeficiente de conductividad térmica(W/m K)
+a  :Coeficiente de transferencia de calor(W/m2 K)
+Ts :Temperatura del vapor(°C)
+Tam:Temperatura ambiente(°C)",
+,12110,"Tm = {Tc · mc + (mfw - mc) · Tfw} / mfw
+Tm < Tfwmax :
+Tfw = Tm
+Hr = {(Tm - Tfw) · mfw} / 0.86;
+Tm > Tfwmax :
+Tfw = Tfwmax
+Hr = (Tfwmax - Tfw) · mfw / 0.86;
+Hu = (Tm - Tfwmax) · mfw / 0.86;
+M  = 3.6 · Hr · Ce · h
+FC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100","T_{m}=\frac{T_{c}\cdot {m}_{c}+({m}_{fw}-{m}_{c})\cdot T_{fw} }{{m}_{fw}}
+T_{m}<T_{fw\:max}\rightarrow
+T_{fw}=T_{m}
+H_{r}=\frac{(T_{m}-T_{fw})\cdot {m}_{fw}}{0.86}
+T_{m}>T_{fw\:max}\rightarrow
+T_{fw}=T_{fw\: max}
+H_{r}=\frac{(T_{fw\:max}-T_{fw})\cdot m_{fw}}{0.86}
+H_{u}=\frac{(T_{m}-T_{fw\: max})\cdot {m}_{fw}}{0.86}
+M=3.6\cdot H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\: /{m}_{fw}   \right )\cdot 100","Tm:Mixture temperature(°C)
+Tc:Condensate temperature(°C)
+mc:Condensate load(kg/h)
+mfw:Feed water rate (kg/h)
+Tfw:Boiler feed water temperature (°C)
+Tfwmax:Max. allowable feed water temperature (°C)
+Hr:Heat recovered (W)
+Hu:Unrecoverable heat (kJ/h)
+M  :Monetary value ($/year)
+Ce:Unit cost of energy($/kJ) 
+h  :Annual operating hours (h/year)
+FC :Ratio of fuel conserved
+hs:Specific enthalpy of steam at boiler pressure (kJ/kg)","Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm = {Tc · mc + (mfw - mc) · Tfw} / mfw
+Tm < Tfwmax :
+Tfw = Tm
+Hr = (Tm - Tfw) · mfw
+Tm > Tfwmax :
+Tfw = Tfwmax
+Hr = (Tfwmax - Tfw) · mfw
+Hu = (Tm - Tfwmax) · mfw
+M  = Hr · Ce · h
+FC = Hr  / (hs - Tfw) / mfw · 100","T_{m}=\frac{T_{c}\cdot {m}_{c}+({m}_{fw}-{m}_{c})\cdot T_{fw} }{{m}_{fw}}
+T_{m}<T_{fw\:max}\rightarrow
+T_{fw}=T_{m}
+H_{r}=(T_{m}-T_{fw})\cdot {m}_{fw}
+T_{m}>T_{fw\:max}\rightarrow
+T_{fw}=T_{fw\: max}
+H_{r}=(T_{fw\:max}-T_{fw})\cdot m_{fw}
+H_{u}=(T_{m}-T_{fw\: max})\cdot {m}_{fw}
+M=H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}}{ (h_{s}-T_{fw}}\: /{m}_{fw}   \right )\cdot 100","Tm :Mixture temperature(°F)
+Tc :Condensate temperature(°F)
+mc:Condensate load(lb/h)
+mw :Feed water rate(lb/h)
+Tfw:Boiler feed water temperature(°F)
+Twmax :Max. allowable feed water temperature(°F)
+Hr :Heat recovered(BTU/h)
+Hu :Unrecoverable heat(BTU/h)
+M  :Monetary value($/year)
+Ce :Unit cost of energy($/BTU) 
+h  :Annual operating hours(hour/year)
+Fc:Ratio of fuel conserved
+hs :Specific enthalpy of steam at boiler pressure(BTU/lb)","Tm=(Tc*Fc+(Qfw-Fc)*Tfw)/Qfw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Qfw)
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)
+UH=((Tm-TA)*Fw)
+M=HR*Ce*AN
+FC=HR/(Es-Tfw)/Fw","Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm :混合温度(°C) 
+Tc :ﾄﾞﾚﾝ温度(°C) 
+Fc :ﾄﾞﾚﾝ量(kg/h) 
+Fw :給水量(kg/h)
+Tfw:給水温度(°C)
+TA :給水可能温度(°C)
+HR :回収熱量(W)
+UH :非回収熱量(W)
+M  :回収ﾒﾘｯﾄ(\/year)
+Ce :熱量単価(\/kJ) 
+AN :年間稼動時間(hour/year)
+FC :燃料節約率
+Es :蒸気全熱(kJ/kg)",,"Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0,86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0,86;
+UH=((Tm-TA)*Fw)/0,86;
+M=HR*Ce*AN
+FC=HR*0,86/(Es/4,186-Tfw)/Fw","Tm :Mischtemperatur(°C)
+Tc :Kondensattemperatur(°C)
+Fc :KondensatanQll(kg/h)
+Fw :Speisewassermenge(kg/h)
+Tfw:Kesselspeisewassertemperatur(°C)
+TA :Max. zul. Speisewassertemperatur(°C)
+HR :Zurückgewonnene Wärme(kJ/h)
+UH :Nicht zurückgewinnbare Wärme(kJ/h)
+M  :Einsparung(EUR/Jahr)
+Ce :Energiekosten(EUR/MJ) 
+AN :Jährl. Betriebsstunden(h/Jahr)
+FC :Brennstoffeinsparung(%)
+Es :Spez. Dampfenthalpie bei Kesseldruck(kJ/kg)",,"Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm :Température de mélange(°C)
+Tc :Température de condensât(°C)
+Fc :Débit de condensât(kg/h)
+Fw :Débit d'eau de remplissage de chaudière(kg/h)
+Tfw:Température d'eau de remplissage de chaudière(°C)
+TA :Température maximale admissible pour l'eau de remplissage(°C)
+HR :Chaleur récupérée(W)
+UH :Chaleur non récupérable(kJ/kg)
+M  :Gain monétaire annuel(€/an)
+Ce :Coût de l'énergie(€/kJ) 
+AN :Nombre d'heures annuelles de fonctionnement(h/an)
+FC :Ratio de fuel économisé
+Es :Enthalpie spécifique de vapeur à la pression de la chaudière(kJ/kg)",,"Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm :混合温度(°C)
+Tc :冷凝水温度 (°C)
+Fc :冷凝水流量(kg/h)
+Fw :锅炉给水量(kg/h)
+Tfw:锅炉给水温度(°C)
+TA :锅炉给水最高允许温度(°C)
+HR :回收热量(W)
+UH :不可回收热量(kJ/h)
+M  :年回报 (RMB/year)
+Ce :单位能源成本(RMB/kJ) 
+AN :年运行时间（小时/年) 
+FC :燃料节约
+Es :锅炉所产蒸汽热焓(kJ/kg)",,"Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm :혼합온도(°C) 
+Tc :응축수온도(°C) 
+Fc :응축수량(kg/h) 
+Fw :급수량 (kg/h)
+Tfw:급수온도(°C)
+TA :급수가능온도(°C)
+HR :회수열량(W)
+UH :비회수 열량(W)
+M  :회수메리트(\/year)
+Ce :열량단가(\/kJ) 
+AN :년간가동시간(hour/year)
+FC :연료절약율
+Es :증기전열(kJ/kg)",,"Tm=(Tc*Fc+(Fw-Fc)*Tfw)/Fw
+Tm<TA :
+Tfw=Tm
+HR=((Tm-Tfw)*Fw)/0.86;
+Tm>TA :
+Tfw=TA
+HR=((TA-Tfw)*Fw)/0.86;
+UH=((Tm-TA)*Fw)/0.86;
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Tm :Temperatura de mezcla(°C)
+Tc :Temperatura del condensado(C)
+Fc :Carga del condensado(kg/h)
+Fw :Rango de agua de alimentación(kg/h)
+Tfw:Temperatura del agua de aliemntación a la caldera(°C)
+TA :Temperatura max. permisible de agua de alimentación(°C)
+HR :Calor recuperado(W)
+UH :Calor no recuperable(kJ/h)
+M  :Valor económico($/year)
+Ce :Unidad de costo de energía($/kJ) 
+AN :Horas operadas anualmente(hour/year)
+FC :Proporción de combustible ahorrado
+Es :Entalpía específica del vapor a la presión de caldera(kJ/kg)",
+,12120,"This pipe size was calculated using TLV's recommended standards. Other local or internationally accepted standards may result in the selection of different pipe sizes.
+Hr = (Tc - Tfw) · mc / 0.86
+M  = 3.6 · Hr · Ce · h
+FC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100 ","H_{r}=\frac{(T_{c}-T_{fw})\cdot {m}_{c}}{0.86}
+M=3.6\cdot H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\: /{m}_{fw}   \right )\cdot 100","Hr:Heat recovered (W)
+Tc:Condensate temperature (°C)
+Tfw:Boiler feed water temperature (°C)
+mc:Condensate load (kg/h)
+M  :Monetary value ($/year)
+Ce:Unit cost of energy ($/kJ) 
+h  :Annual operating hours (h/year)
+FC :Ratio of fuel conserved
+hs:Specific enthalpy of steam at boiler pressure (kJ/kg)
+mfw:Feed water rate (kg/h)","This pipe size was calculated using TLV's recommended standards. Other local or internationally accepted standards may result in the selection of different pipe sizes.
+HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","This pipe size was calculated using TLV's recommended standards. Other local or internationally accepted standards may result in the selection of different pipe sizes.
+Hr = (Tc - Tfw) · mc
+M  = Hr · Ce · h
+FC = Hr  / (hs - Tfw) / mfw · 100","H_{r}=(T_{c}-T_{fw})\cdot {m}_{c}
+M=H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}}{ (h_{s}-T_{fw})}\: /{m}_{fw}   \right )\cdot 100","Hr :Heat recovered(BTU/h)
+Tc :Condensate temperature(°F)
+Tw :Boiler feed water temperature(°F)
+mc:Condensate load(lb/h)
+M  :Monetary value($/year)
+Ce :Unit cost of energy($/BTU) 
+h  :Annual operating hours(hour/year)
+Fc :ratio of fuel conserved
+hs :Specific enthalpy of steam at boiler pressure(BTU/lb)
+mw :Feed water rate(lb/h)","This pipe size was calculated using TLV's recommended standards. Other local or internationally accepted standards may result in the selection of different pipe sizes.
+HR=((Tc-Tfw)*Fc)
+M=HR*Ce*AN
+FC=HR/(Es-Tfw)/Fw","HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","HR :回収熱量(W)
+Tc :ﾄﾞﾚﾝ温度(°C)
+Tfw:給水温度(°C)
+Fc :ﾄﾞﾚﾝ量(kg/h)
+M  :回収メリット(\/year)
+Ce :熱量単価(\/kJ) 
+AN :年間稼動時間(hour/year)
+FC :燃料節約率
+Es :蒸気全熱(kJ/kg)
+Fw :給水量(kg/h)
+
+
+
+
+",,"Die Leitungsnennweite wurde unter Zugrundelegung des von TLV empfohlenen Standards berechnet. Verwendung anderer nationaler oder internationaler Standards führen eventuell zur Auswahl unterschiedlicher Leitungsnennweiten.
+HR=((Tc-Tfw)*Fc)/0,86
+M=HR*Ce*AN
+","HR :Zurückgewonnene Wärme(W)
+Tc :Kondensattemperatur(°C)
+Tfw:Kesselspeisewassertemperatur(°C)
+Fc :KondensatanQll(kg/h)
+M  :Einsparung(EUR/Jahr)
+Ce :Energiekosten(EUR/MJ) 
+AN :Jährl. Betriebsstunden(h/Jahr)
+FC :Brennstoffeinsparung(%)
+Es :Spez. Dampfenthalpie bei Kesseldruck(kJ/kg)
+Fw :Speisewassermenge(kg/h)",,"Ce dimensionnement de tuyauterie a été calculé selon les normes recommandées par TLV. L'utilisation d'autres normes locales or internationales pourrait entraîner la sélection d'un autre dimensionnement de tuyauterie.
+HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","HR :Chaleur récupérée(W)
+Tc :Température du condensât(°C)
+Tfw:Température de l'eau d'appoint de chaudière(°C)
+Fc :Débit de condensât(kg/h)
+M  :Gain monétaire annuel(€/an)
+Ce :Coût de l'énergie(€/kJ) 
+AN :Nombre d'heures annuelles de fonctionnement(h/an)
+Wc :Ratio de fuel économisé
+Es :Enthalpie spécifique de la vapeur à la pression de la chaudière(kJ/kg)
+Fw :Débit d'eau de remplissage de chaudière(kg/h)",,"管道内径的计算是根据TLV所推荐的标准。 利用其他国内或国际标准可能会计算出不同的管道内径。
+HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=(HRFw**0.86)/(Es/4.186-Tfw)","HR :回收热量（W）
+Tc :冷凝水温度（C）
+Tfw:锅炉给水温度(C)
+Fc :冷凝水流量(kg/h)
+M  :年回报（RMB/Year）
+Ce :单位能源成本(RMB/kJ)
+AN :年运行时间（小时/年)
+FC :燃料节约
+Es :锅炉所产蒸汽热晗(kJ/kg)
+Fw :锅炉给水量（kg/h）",,"이 파이프의 사이즈는 TLV의 기준으로 계산되었습니다. 다른 기준을 적용하여 파이프 선정을 했을때는 다른 결과의 파이프 선정이 될 수가 있습니다.
+HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","HR :회수열량(W)
+Tc :응축수온도(°C)
+Tfw:급수온도(°C)
+Fc :응축수량(kg/h)
+M  :회수메리트(\/year)
+Ce :열량단가(\/kJ) 
+AN :년간가동시간(hour/year)
+FC :연료절약율
+Es :증기전열(kJ/kg)
+Fw :급수량(kg/h)
+
+",,"Este tamaño de tubería fue calculado usando los estándares recomendados por TLV. Otros estándares locales o internacionales pueden resultar en la selección de diferentes tamaños de tubería.
+HR=((Tc-Tfw)*Fc)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","HR :Calor recuperado(W)
+Tc :Temperatura del condensado(°C)
+Tfw:Temperatura del agua de aliemntación a la caldera(C)
+Fc :Carga del condensado(kg/h)
+M  :Valor monetario($/year)
+Ce :Unidad de costo de energia($/kJ) 
+AN :Horas de operación anual(hour/year)
+FC :Proporción de combustible ahorrado
+Es :Entalpía específica del vapor a la presión de caldera(kJ/kg)
+Fw :Rango de agua de alimentación(kg/h)",
+,12130,"T2 = (Tc - T1) · ηT / 100 + T1
+Hr = Ql · c · SG · (T2 - T1) / ΔH / 0.86
+M  = 3.6 · Hr · Ce · h
+FC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100","T_{2}=\frac{(T_{c}-T_{1})\cdot \eta_{T}}{100}+T_{1}
+H_{r}=\frac{Q_{l}\cdot c\cdot SG\cdot (T_{2}-T_{1})}{h_{fg}\cdot 0.86}
+M=3.6\cdot H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\: /{m}_{fw}   \right )\cdot 100","T2:Outlet temperature of liquid (°C)
+Tc:Condensate temperature (°C)
+T1:Inlet temperature of liquid (°C)
+ηT:Temperature efficiency
+Hr:Heat recovered (W)
+Ql:Liquid flow rate (m³/h)
+cl:Specific heat of liquid (kJ/kg K)
+SGl:Specific gravity of liquid
+hfg:Latent heat of steam (kJ/kg)
+M  :Monetary value ($/year)
+Ce:Unit cost of energy ($/kJ) 
+h  :Annual operating hours (h/year)
+FC :Ratio of fuel conserved
+hs:Specific enthalpy of steam at boiler pressure (kJ/kg)
+Tfw:Temperature of boiler feed water (°C)
+mfw:Feed water rate (kg/h)","T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","T2 = (Tc - T1) · ηT / 100 + T1
+Hr = Ql · c · SG · (T2 - T1) / ΔH
+M  = Hr · Ce · h
+FC = Hr / (hs - Tfw) / mfw · 100","T_{2}=\frac{(T_{c}-T_{1})\cdot \eta_{T}}{100}+T_{1}
+H_{r}=\frac{Q_{l}\cdot c\cdot SG\cdot (T_{2}-T_{1})}{h_{fg}}
+M=H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}}{ (h_{s}-T_{fw})}\: /{m}_{fw}   \right )\cdot 100","T2 :Outlet temperature of liquid(F)
+Tc :Condensate temperature(F)
+T1 :Inlet temperature of liquid(F)
+ηT:Temperature efficiency
+Hr :Heat recovered(BTU/h)
+Ql :Liquid flow rate(ft³/h)
+cl:Specific heat of liquid(BTU/lb F)
+SGl:Specific gravity of liquid
+hfg:Latent heat(BTU/lb)
+M  :Recovered value($/year)
+Ce :Unit cost of energy($/BTU) 
+h  :Annual operating hours(hour/year)
+Fc :Ratio of fuel conserved
+hs :Specific enthalpy of steam at boiler pressure(BTU/lb)
+Tw :Temperature of boiler feed water(°F)
+mw :Feed water rate(lb/h)","T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r
+M=HR*Ce*AN
+FC=HR/(Es-Tfw)/Fw","T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","T2 :液体の出口温度(C)
+Tc :ﾄﾞﾚﾝ温度(C)
+T1 :液体の入口温度(C)
+TE :温度効率
+HR :回収熱量(W)
+Fl :液体の流量(m3/h)
+Hl :液体の比熱(kJ/kg K)
+Gl :液体の比重
+r  :蒸気潜熱(kJ/kg)
+M  :回収メリット(\/year)
+Ce :熱量単価(\/kJ) 
+AN :年間稼動時間(hour/year)
+FC :燃料節約率
+Es :蒸気全熱(kJ/kg)
+Tfw:給水温度(C)
+Fw :給水量(kg/h)
+
+
+
+
+",,"T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r/0,86
+M=HR*Ce*AN
+FC=HR*0,86/(Es/4,186-Tfw)/Fw","T2 :Qüssigkeitsaustrittstemperatur(°C)
+Tc :Kondensattemperatur(°C)
+T1 :Qüssigkeitseintrittstemperatur(°C)
+TE :Wärmeaustauschwirkungsgrad
+HR :Zurückgewonnene Wärme(W)
+Q  :Qüssigkeitsdurchsatz(m3/h)
+Hl :Spez. Wärmekapazität Qüssigkeit(kJ/kg K)
+Gl :Spez. Gewicht Qüssigkeit
+r  :Verdampfungswärme Entspannungsdampf(kJ/kg)
+M  :Einsparung(EUR/Jahr)
+Ce :Energiekosten(EUR/MJ) 
+AN :Jährl. Betriebsstunden(h/Jahr)
+FC :Brennstoffeinsparung(%)
+Es :Spez. Dampfenthalpie bei Kesseldruck(kJ/kg)
+Tfw:Kesselspeisewassertemperatur(°C)
+Fw :Speisewassermenge(kg/h)",,"T2=(Tc-T1)*TE/100+T1
+HR=(Fl*Hl*Gl*(T2-T1)*0.86)/r
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","T2 :Température de sortie du liquide(°C)
+Tc :Température du condensât(°C)
+T1 :Température d'entrée du liquide(°C)
+TE :""Rendement"" de température
+HR :Chaleur récupérée(W)
+Fl :Débit du liquide (m3/h)
+Hl :Chaleur spécifique du liquide(kJ/kg K)
+Gl :Gravité spécifique du liquide 
+r  :Chaleur latente(kJ/kg)
+M  :Gain monétaire annuel(€/an)
+Ce :Coût de l'énergie(€/kJ) 
+AN :Nombre d'heures annuelles de fonctionnement(h/an)
+FC :Ratio de fuel economisé
+Es :Enthalpie spécifique de la vapeur à la pression de la chaudière(kJ/kg)
+Tfw:Température de l'eau de remplissage dans la chaudière(°C)
+Fw :Débit de l'eau de remplissage dans la chaudière(kg/h)",,"T2=(Tc-T1)*TE/100+T1
+HR=(Fl*Hl*Gl*(T2-T1)*0.86)/r
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","T2 :流体出口温度（°C）
+Tc :冷凝水温度（°C）
+T1 :流体入口温度（°C）
+TE :温效
+HR :回收热量（W）
+Fl :流体流量(m3/h)
+Hl :流体比热(kJ/kg K)
+Gl :流体比重
+r  :潜热（kJ/kg）
+M  :年回报（RMB/年）
+Ce :单位能源成本(RMB/kJ)
+AN :年运行时间（小时/年)
+FC :燃料节约
+Es :锅炉所产蒸汽热晗(kJ/kg)
+Tfw:锅炉给水温度(°C)
+Fw :锅炉给水量（kg/h）",,"T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","T2 :액체의 출구온도(C)
+Tc :응축수 온도(C)
+T1 :액체의 입구온도(C)
+TE :온도효율
+HR :회수열량(W)
+Fl :액체의 유량(m3/h)
+Hl :액체의 비열(kJ/kg K)
+Gl :액체의 비중
+r  :증기잠열(kJ/kg)
+M  :회수메리트(\/year)
+Ce :열량단가(\/kJ) 
+AN :년간가동시간(hour/year)
+FC :연료절약율
+Es :증기전열(kJ/kg)
+Tfw:급수온도(°C)
+Fw :급수량(kg/h)",,"T2=(Tc-T1)*TE/100+T1
+HR=Fl*Hl*Gl*(T2-T1)/r/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","T2 :Temperatura de salida del liquido(C)
+Tc :Temperatura del condensado(C)
+T1 :Temperatura de entrada del liquido(C)
+TE :Eficiencia de temperatura
+HR :Calor recuperado(W)
+Fl :Rango de flujo del liquido(m3/h)
+Hl :Calor específico del liquido(kJ/kg K)
+Gl :Gravedad específica del líquido
+r  :Calor latente(kJ/kg)
+M  :Valor recuperado($/year)
+Ce :Unidad de costo de energía($/kJ) 
+AN :Horas operadas anualmente(hour/year)
+FC :Proporción de combustible ahorrado
+Es :Entalpía específica del vapor a la presión de caldera(kJ/kg)
+Tfw:Temperatura del agua de alimentación a caldera(°C)
+Fw :Rango de agua de alimentación(kg/h)",
+,12140,"mfs = mc · (hw - hfs) / hfg
+Hr = mfs · (hfs / 4.186 - Trw) / 0.86
+M  = 3.6 · Hr · Ce · h
+FC = Hr · 0.86 / (hfs / 4.186 - Tfw) / mfw · 100","{m}_{fs}=\frac{{m}_{c}\cdot (h_{w}-h_{fs})}{h_{fg}}
+H_{r}={m}_{fs}\cdot (\frac{h_{fs}}{4.186}-T_{rw})\: /0.86
+M=3.6\cdot H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}\cdot 0.86}{ (h_{fs}/4.186)-T_{fw}}\: /{m}_{fw}   \right )\cdot 100","mfs:Amount of flash steam (kg/h)
+mc:Condensate load (kg/h)
+Q  :Sensible heat of recovered condensate(kJ/kg)
+hfs:Specific enthalpy of flash steam(kJ/kg)
+hfg:Latent heat of flash steam(kJ/kg)
+Hr:Heat recovered (W)
+Tfw:Temperature of boiler feed water (°C)
+M  :Recovered value($/year)
+Ce:Unit cost of energy ($/kJ)
+h  :Annual operating hours (h/year)
+FC :Ratio of fuel conserved
+Trw:Raw water temperature (°C) 
+mfw:Feed water rate (kg/h)","Ff=Fc*(Ew-Es)/r
+HR=Ff*(Es/4.186-Trw)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","mfs = mc · (hw - hfs) / hfg
+Hr = mfs · (hfs - Trw)
+M  = Hr · Ce · h
+FC = Hr  / (hfs  - Tfw)/ mfw · 100","{m}_{fs}=\frac{{m}_{c}\cdot (h_{w}-h_{fs})}{h_{fg}}
+H_{r}={m}_{fs}\cdot (h_{fs}-T_{rw})
+M=H_{r}\cdot C_{e} \cdot h
+FC=\left (  \frac{H_{r}}{ (h_{s}-T_{fw})}\: /{m}_{fw}   \right )\cdot 100","mFS :Amount of flash steam(lb/h)
+mc:Condensate rate(lb/h)
+Q  :Sensible heat of recovered condensate(BTU/lb)
+hFS :Specific enthalpy of flash steam(BTU/lb)
+hfg:Latent heat of flash steam(BTU/lb)
+Hr :Heat recovered(BTU/h)
+Tw :Temperature of boiler feed
+M  :Recovered value($/year)
+Ce :Unit cost of energy($/kJ)
+h  :Annual operating hours(hour/year)
+FC :Ratio of fuel conserved
+Trw:Raw water temperature(°F) 
+mw :Feed water rate(lb/h) ","Ff=Fc*(Ew-Es)/r
+HR=Ff*(Es-Trw)
+M=HR*Ce*AN
+FC=HR/(Es-Tfw)/Fw","Ff=Fc*(Ew-Es)/r
+HR=Ff*(Es/4.186-Trw)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Ff :ﾌﾗｯｼｭ蒸気量(kg/h)
+Fc :ﾄﾞﾚﾝ量(kg/h)
+Ew :ﾄﾞﾚﾝの比エンタルピ(kJ/kg)
+Es :フラッシュ飽和水の比エンタルピ(kJ/kg)
+r  :ﾌﾗｯｼｭ蒸気潜熱(kJ/kg)
+HR :回収熱量(W)
+Trw:原水温度(°C)
+M  :回収ﾒﾘｯﾄ(\/year)
+Ce :熱量単価(\/kJ) 
+AN :年間稼動時間(hour/year)
+FC :燃料節約率
+Tfw:給水温度(°C)
+Fw :給水量(kg/h)",,"Ff=Fc*(Ew-Es)/r
+HR=Ff*(Es/4,186-Trw)/0,86
+M=HR*Ce*AN
+FC=HR*0,86/(Es/4,186-Tfw)/Fw","Ff :Entspannungsdampfmenge(kg/h)
+Fc :Kondensatmenge(kg/h)
+Ew :Wärmeinhalt des zurückgeführten Kondensats(kJ/kg)
+Es :Spez. Enthalpie Entspannungsdampf(kJ/kg)
+r  :Verdampfungswärme Entspannungsdampf(kJ/kg)
+HR :Zurückgewonnene Wärme(W)
+Tfw:Kesselspeisewassertemperatur(°C)
+M  :Einsparung(EUR/Jahr)
+Ce :Energiekosten(EUR/MJ)
+AN :Jährl. Betriebsstunden(h/Jahr)
+FC :Brennstoffeinsparung(%)
+Trw:Frischwassertemperatur(°C)
+Fw :Speisewassermenge(kg/h)",,"Ff=(Fc*(Ew-Es))/r
+HR=(Ff*(Es/4.186-Trw))/0.86
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","Ff :Quantité de vapeur de revaporisation(kg/h)
+Wc :Débit de condensât(kg/h)
+Ew :Chaleur sensible du condensât récupéré(kJ/kg)
+Es :Enthalpie spécifique de la vapeur de revaporisation(kJ/kg)
+r  :Chaleur latente de la vapeur de revaporisation(kJ/kg)
+HR :Chaleur récupérée(W)
+Tfw:Température de l'eau entrant dans la chaudière(°C)
+M  :Economie annuelle(€/an)
+Ce :Coût de l'énergie(€/kJ)
+AN :Nombre d'heures de fonctionnement annuel(h/an)
+FC :Ratio de fuel économisé
+Trw:Température de l'eau d'appoint(eau brute)(°C)
+Fw :Débit d'eau de remplissage(kg/h)",,"Ff=(Fc*(Ew-Es))/r
+HR=(Ff*(Es/4.186-Trw))/0.86
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","Ff :闪蒸汽量(kg/h)
+Fc :燃料节约(kg/h)
+Ew :回收冷凝水的显热(kJ/kg)
+Es :闪蒸汽热焓(kJ/kg) 
+r  :闪蒸汽潜热（kJ/kg）
+HR :回收热量（W）
+Tfw:锅炉给水温度(C) 
+M  :年回报（RMB/年）
+Ce :单位能源成本(RMB/kJ)
+AN :年运行时间（小时/年)
+FC :燃料节约
+Trw:预处理水温（C）
+Fw :锅炉给水量（kg/h）",,"Ff=(Fc*(Ew-Es))/r
+HR=(Ff*(Es/4.186-Trw))/0.86
+M=3.6*HR*Ce*AN
+FC=(HR*Fw*0.86)/(Es/4.186-Tfw)","Ff :재증발 증기량(kg/h)
+Fc :응축수량(kg/h)
+Ew :응축수전열(kJ/kg)
+Es :증기전열(kJ/kg)
+r  :재증발증기 잠열(kJ/kg)
+HR :회수열량(W)
+Trw:원수온도(C)
+M  :회수메리트(\/year)
+Ce :열량단가(\/kJ) 
+AN :년간가동시간(hour/year)
+FC :연료절약율
+Tfw:급수온도(C)
+Fw :급수량(kg/h)",,"Ff=Fc*(Ew-Es)/r
+HR=Ff*(Es/4.186-Trw)/0.86
+M=3.6*HR*Ce*AN
+FC=HR*0.86/(Es/4.186-Tfw)/Fw","Ff :Monto de vapor flash(kg/h)
+Fc :Rango de condensado(kg/h)
+Ew :Calor sensible de condensado recuperado(kJ/kg)
+Es :Entalpía específica del vapor flash(kJ/kg)
+r  :Calor latente del vapor flash(kJ/kg)
+HR :Calor recuperado(W)
+Tfw:Temperatura de agua de alimentación(°C)
+M  :Valor recuperado($/year)
+Ce :Unidad de costo de energía($/kJ)
+AN :Horas operadas anualmente (hours/year)
+FC :Proporción de combustible ahorrado
+Trw:Temperatura de agua fresca(°C)
+Fw :Rango de agua de alimentación(kg/h)",
+,12210,d = (mc / 3600 · V  / v · 4 / π)^0.5,d=\sqrt{\frac{{m}_{c}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi}},"d  :Inner diameter of pipe (m)
+mc:Condensate flow rate (kg/h)
+v  :Flow velocity (m/s)
+V  :Specific volume (m³/kg)
+π  :3.1415...",d=(Fc/3600*V /v*4/pi)^0.5,d = (mc / 3600 · V  / v · 4 / π)^0.5,d=\sqrt{\frac{{m}_{c}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi}},"d  :Inner diameter of pipe (ft)
+Qc:Condensate rate(ft³/h)
+v  :Velocity of condensate(ft/s)
+V  :Specific volume (ft³/lb)
+π  :3.1415…","d=(Fc/3600*v""/Vc*4/pi)^0.5","d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :配管内径(m)
+Fc :ﾄﾞﾚﾝ量(kg/h)
+Vc :ﾄﾞﾚﾝ流速(m/s)
+v"" :ドレン比容積(m3/kg)
+pi :円周率
+",,"d=(Fc/3600*v""/Vc*4/pi)^0,5","d  :Rohrinnendurchmesser(m)
+Fc :Kondensatmenge(kg/h)
+Vc :Kondensatgeschwindigkeit(m/s)
+v"" :Specific volume(m3/kg)
+pi :3,1415…",,"d=((4*Fc/3600*v"")/(Vc*pi))^0.5","d  :Diamètre inteRee de tuyauterie(m)
+Fc :Débit de condensât(kg/h)
+Vc :Vitesse du condensât(m/s)
+v"" :Specific volume(m3/kg)
+pi :3.1415...",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :管道内径（m）
+Fc :冷凝水流量(kg/h)
+Vc :冷凝水流速（m/s）
+v"" :比重量(m3/kg)
+pi :3.1415…",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :배관내경(m)
+Fc :응축수량(kg/h)
+Vc :응축수유속(m/s)
+v"" :비체적(m3/kg)
+pi :원주율",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :Diámetro interno de tubería(m)
+Fc :Rango de condensado(kg/h)
+Vc :Velocidad del condensado(m/s)
+v"" :Volumen especifico(m3/kg)
+pi :3.1415...",
+,12220,"∆p = μ · l · v^2 / (2 · d · Vtemp)
+v = mc · Vtemp / {(d / 2)^2 · π}","\Delta p= \frac{\mu\cdot l \cdot v^{2}}{2d \cdot g \cdot V_{temp}}
+
+v=\frac{{m}_{c}\cdot V_{temp}}{ 3600\pi (\frac{d}{2})^2}","∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Flow velocity (m/s)
+d  :Inner diameter of pipe (m)
+Vtemp:Temporary specific volume variable (m³/kg)
+mc:Condensate flow rate (kg/s)
+π  :3.1415...","∆p=λ*l*v^2/(2*d*v"")
+v=Fc*v""/((d/2)^2*π)
+Ve=Vw*(1-Pf)+Vs*Pf","∆p = 1/144 · μ · l · v^2 /(2 · d · g · Vtemp)
+v = mc · Vtemp / {(d / 2)^2 · π}","\Delta p= \frac{\mu\cdot l \cdot v^{2}}{24d \cdot V_{temp}}
+
+v=\frac{{m}_{c}\cdot V_{temp}}{3600\pi (\frac{d}{2})^2}","∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+v  :Flow velocity (ft/s)
+d  :Inner diameter of pipe (ft)
+g  :Gravitational accel. (ft/s²)
+v  :Flow velocity(ft/s)
+d  :Inner diameter of pipe (ft)
+Vx :Temporary specific volume variable","dP=1/144*f*Lp*Vs^2/(2*d*g*v"")
+Vs=Fs*v""/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP=f*Lp*V^2/(2*d*Ve)
+V=Fc*Ve/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+V  :流速(m/s)
+d  :配管内径(m)
+Ve :相当比容積(m3/kg)
+Fc :ﾄﾞﾚﾝ量(kg/s)
+pi :円周率
+Vw :飽和水の比容積(m3/kg)
+Vs :飽和蒸気の比容積(m3/kg)
+Pf :ﾌﾗｯｼｭ比率","※注意
+入力する条件によっては、SE1(DOS版)の結果より小さい配管ｻｲｽﾞが計算されます。","dP=f*Lp*V^2/(2*d*Ve)
+V=Fc*Ve/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m) 
+V  :Fliessgeschwindigkeit(m/s)
+d  :Rohrinnendurchmesser(m)
+Ve :Spez. Volumen der Mischung(m3/kg)
+Wc :Kondensatmenge(kg/s)
+pi :3,1415... 
+Vw :Spez. Volumen gesättigtes Wasser(m3/kg)
+Vs :Spez. Volumen Sattdampf(m3/kg)
+Pf :Nachverdampfung",,"dP=(f*Lp*V^2)/(2*d*Ve)
+V=(Fc*Ve)/(pi*(d/2)^2)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+V  :Vitesse du fluide(m/s)
+d  :Diamètre inteRee de la tuyauterie(m)
+Ve :Volume spécifique du mélange(m3/kg)
+Wc :Débit de condensât(kg/s)
+pi :3.1415...
+Vw :Volume spécifique de l'eau(m3/kg)
+Vs :Volume spécifique de la vapeur saturée(m3/kg)
+Pf :Ratio de vapeur de revaporisation",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs*v""/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :压损(Pa）
+f  :摩擦系数
+Lp :管道长度（m）
+V  :流速（m/s）
+d  :管道内径（m）
+Ve :瞬时比容 (m3/kg)
+Fc :冷凝水流量（kg/s）
+pi :3.1415...
+Vw :饱和水比容(m3/kg)
+Vs :饱和蒸汽比容(m3/kg)
+Pf :闪蒸汽百分比",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs*v""/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+V  :유속(m/s)
+d  :배관내경(m)
+Ve :상당비체적(m3/kg)
+Fc :응축수량(kg/s)
+pi :원주율
+Vw :포화수의 비체적(m3/kg)
+Vs :포화증기의 비체적(m3/kg)
+Pf :재증발율",,"dP=f*Lp*Vs^2/(2*d*v"")
+Vs=Fs*v""/((d/2)^2*pi)
+Ve=Vw*(1-Pf)+Vs*Pf","dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+V  :Velocidad de flujo(m/s)
+d  :Diámetro interno de tubería(m)
+Ve :Variable temporal de volumen 
+dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+V  :Velocidad de flujo(m/s)
+d  :Diámetro interno de tubería(m)
+Ve :Variable temporal de volumen específico(m3/kg)
+Fc :Rango de condensado(kg/s) 
+pi :3.1415...
+Vw :Volumen específico del agua saturada(m3/kg)
+Vs :Volumen específico del vapor saturado(m3/kg)
+Pf :Proporción de vapor flash",
+,12221,"d  = (mc · Vtemp / v · 4 / π)^0.5
+∆p = μ · l · v^2 / (2 · d · Vtemp)","d=\sqrt{\frac{{m}_{c}\cdot V_{temp}}{v} \cdot \frac{4}{\pi}}
+\Delta p= \frac{\mu\cdot l \cdot v^{2}}{2d\cdot V_{temp}}","d  :Inner diameter of pipe (m)
+mc:Condensate flow rate (kg/s)
+Vtemp:Temporary specific volume variable (m³/kg)
+v  :Flow velocity (m/s)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) ","d=(Fｃ*Ve/v*4/π)^0.5
+∆p=λ*l*v^2/(2*d*Ve) ","d  = (mc · Vtemp / v · 4 / π)^0.5
+∆p = 1/144 · μ · l · v^2 / (2 · d · g · Vtemp)","d=\sqrt{\frac{{m}_{c}\cdot V_{temp}}{v} \cdot \frac{4}{\pi}}
+\Delta p= \frac{\frac{1}{144}\cdot \mu\cdot l \cdot v^{2}}{2d\cdot g \cdot V_{temp}}","d  :Inner diameter of pipe (ft)
+mc:Condensate flow rate(lb/s) 
+Vx :Temporary specific volume variable(ft³/lb)
+v  :Flow velocity(ft/s)
+π  :3.1415…
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length(ft)","d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) ","d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) ","d  :配管内径(m)
+Fｃ :ドレン流量(kg/s)
+Vc :相当比容積(m3/kg)
+Vc :流速(m/s)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)",,"d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) ","d  :Rohrinnendurchmesser(m)
+Fc :Kondensatmenge(kg/s)
+Ve :Spez. Volumen der Mischung(m3/kg)
+Vc :Fliessgeschwindigkeit(m/s)
+pi :3,1415...
+dP :Druckverlust(kPa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)",,"d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) 
+Re=Vc*d/Vic","d  :Diamètre inteRee de la tuyauterie(m)
+Fc :Débit de condensât(kg/s)
+Ve :Volume spécifique du mélange(m3/kg)
+Vc :Vitesse du fluide(m/s)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m)",,"d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) 
+Re=Vc*d/Vic","d  :管道内径(m)
+Fc :冷凝水流量（kg/s）
+Ve :瞬时比容(m3/kg)
+Vc :流速（m/s）
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度（m）",,"d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) 
+Re=Vc*d/Vic","d  :배관내경(m)
+Fc :응축수량(kg/s)
+Ve :상당비체적(m3/kg)
+Vc :유속(m/s)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)",,"d=(Fｃ*Vc/Vs*4/pi)^0.5
+dP=f*Lp*Vc^2/(2*d*Vc) 
+Re=Vc*d/Vic","d  :Diámetro interno de tubería(m)
+Fc :Rango de condensado(kg/s) 
+Ve :Variable temporal de volumen(m3/kg)
+Vc :Velocidad de flujo(m/s)
+pi :3.1415...
+dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) ",
+,12230,d =(mc / 3600 · V / v · 4 / π)^0.5,d=\sqrt{\frac{{m}_{c}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi}},"d  :Inner diameter of pipe (m)
+mc:Condensate load (kg/h)
+v  :Flow velocity (m/s)
+V  :Specific volume (m³/kg)
+π  :3.1415...",d=(Fc/3600*V/v*4/π)^0.5,d =(mc / 3600 · V / v · 4 / π)^0.5,d=\sqrt{\frac{{m}_{c}}{3600}\cdot \frac{V}{v}\cdot \frac{4}{\pi}},"d  :Inner diameter of pipe (ft)
+mc:Condensate rate(lb/h)
+v  :Velocity of condensate(ft/s)
+V  :Specific volume (ft³/lb)
+π  :3.1415…","d=(Fc/3600*v""/Vc*4/pi)^0.5","d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :配管内径(m)
+Fc :ﾄﾞﾚﾝ量(kg/h)
+Vc :ﾄﾞﾚﾝ流速(m/s)
+v"" :比容積(m3/kg)
+pi :円周率
+",,"d=(Fc/3600*v""/Vc*4/pi)^0,5","d  :Rohrinnendurchmesser(m)
+Fc :Kondensatmenge(kg/h)
+Vc :Fliessgeschwindigkeit Kondensat(m/s)
+v"" :Spez. Volumen(m3/kg)
+pi :3,1415...",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :Diamètre inteRee de tuyauterie(m)
+Fc :Débit de condensât(kg/h)
+Vc :Vitesse du condensât(m/s)
+v"" :Volume spécifique(m3/kg)
+pi :3.1415...",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :管道内径(m)
+Fc :冷凝水流量(m3/s)
+Vc :冷凝水流速(m/s)
+v"" :比重(m3/kg)
+pi :3.1415...",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :배관내경(m)
+Fc :응축수량(kg/h)
+Vc :응축수유속(m/s)
+v"" :비체적(m3/kg)
+pi :원주율",,"d=(Fc/3600*v""/Vc*4/pi)^0.5","d  :Diámetro interno de tubería(m)
+Fc :Rango de condensado(kg/h)
+Vc :Velocidad del condensado(m/s)
+v"" :Volumen especifico(m3/kg)
+pi :3.1415...",
+,12310,"Rfs = (hw - hc) / hfg · 100
+mfs = Rfs / 100 · mc","{R}_{fs}=\frac{(h_{w} - h_{c})}{h_{fg}}\cdot 100
+m_{fs}=\frac{{R}_{fs}}{100}\cdot m_{c}","mfs:Amount of flash steam (kg/h)
+mc:Condensate rate (kg/h)
+Q  :Sensible heat of recovered condensate (kJ/kg)
+hfs:Specific enthalpy of flash steam (kJ/kg)
+hfg:Latent heat of flash steam (kJ/kg)","Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Rfs = (hw - hc) / hfg · 100
+mfs = Rfs / 100 · mc","{R}_{fs}=\frac{(h_{w} - h_{c})}{h_{fg}}\cdot 100
+m_{fs}=\frac{{R}_{fs}}{100}\cdot m_{c}","mf :Amount of flash steam(lb/h)
+mc:Condensate rfate(lb/h)
+Q  :Sensible heat of rfecoverfed condensate(BTU/lb)
+hFS:Specific enthalpy of flash steam(BTU/lb)
+hfg:Latent heat of flash steam(BTU/lb)","Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :ﾌﾗｯｼｭ蒸気量(kg/h)
+Fc :ﾄﾞﾚﾝ発生量(kg/h)
+Ew :ﾄﾞﾚﾝの比エンタルピ(kJ/kg)
+Es :フラッシュ飽和水の比エンタルピ(kJ/kg)
+rf  :ﾌﾗｯｼｭ蒸気潜熱(kJ/kg)",,"Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :Entspannungsdampfmenge(kg/h)
+Fc :Kondensatmenge(kg/h)
+Ew :Wärfmeinhalt des zurfückgeführften Kondensats(kJ/kg)
+Es :Spez. Enthalpie Entspannungsdampf(kJ/kg)
+rf  :Verfdampfungswärfme Entspannungsdampf(kJ/kg)",,"Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :Quantité de vapeurf de rfevaporfisation(kg/h)
+Fc :Débit de condensât(kg/h)
+Ew :Chaleurf sensible du condensât rfécupérfé(kJ/kg)
+Es :Enthalpie spécifique de la vapeurf de rfevaporfisation(kJ/kg)
+rf  :Chaleurf latente de la vapeurf de rfevaporfisation(kJ/kg)",,"Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :闪蒸汽量(kg/h)
+Fc :冷凝水流量(kg/h)
+Ew :回收冷凝水的显热(kJ/kg)
+Es :闪蒸汽热焓(kJ/kg)
+rf  :闪蒸汽潜热(kJ/kg)",,"Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :재증발 증기량(kg/h)
+Fc :응축수 발생량(kg/h)
+Ew :응축수 전열(kJ/kg)
+Es :증기전열(kJ/kg)
+rf  :재증발증기 잠열(kJ/kg)",,"Ff=Fc*(Ew-Es)/rf
+Rf=Ff/Fc*100","Ff :Monto de vaporf flash(kg/h)
+Fc :rfango de condensado(kg/h)
+Ew :Calorf sensible de condensado rfecuperfado(kJ/kg)
+Es :Entalpía específica del vaporf flash(kJ/kg)
+rf  :Calorf latente del vaporf flash(kJ/kg)",
+,13110,"v = Qw / (d / 2)^2 · π
+∆p = μ · l · v^2 / (2 · d / SG)","v=\frac{Q_{w}}{ (\frac{d}{2})^{2}}\cdot \pi \newline
+\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2d} \newline
+\rho = density of water (1000 kg/m^{3})","v  :Water velocity (m/s)
+Q  :Water Flow rate (m³/s)
+d  :Inner diameter of pipe (m)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+SG:Specific gravity of Water","v=Fw/(d/2)^2*π
+∆p=λ*l*v^2/(2*d/Gw)","v = Qw / (d / 2)^2 · π
+∆p  = 1/ 144 · μ · l · v^2 ·ρ/  (2 · d / SG)","v=\frac{0.134Q_{w}}{ 3600\pi (\frac{d}{24})^{2}} \newline
+\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2dg} \newline
+\rho : density of water (62.4 lb/ft^{3}) \newline
+g:acceleration of gravity
+
+","v  :Water velocity(ft/s)
+Q  :Water Fwow rate(ft³/s)
+d  :Inner diameter of pipe (ft)
+π  :3.1415…
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length(ft)
+ρw  :Density(lb/ft³)
+g  :Gravitational accel. (ft/s²)","Vw=Fw/(d/2)^2*pi
+dP=1/144*f*Lp*Vw^2*Dw/(2*g*d)","Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :水の流速(m/s)
+Fw :水の流量(m3/s)
+d  :配管内径(m)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+Dw :水の密度(kg/m3)",,"Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :Qiessgeschwindigkeit Qüssigkeit(m/s)
+Fw :Qüssigkeitsdurchsatz(m3/h)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...
+dP :Druckverlust(kPa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Dw :Dichte(kg/m3)",,"Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :Vitesse du Quide(m/s)
+Q  :Débit du Quide(m3/s)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m)
+Dw :Densité(kg/m3)",,"Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :水流速(m/s)
+Fw :水流量(m3/s)
+d  :管道内径(m)
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度（m）
+Dw :水密度(kg/m3)",,"Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :액체의 유속(m/s)
+Fw :액체의 유량(m3/s)
+d  :배관내경(m)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+Dw :밀도(kg/m3)",,"Vw=(Fw*pi)/(d/2)^2
+dP=(f*Lp*Dw*Vw^2)/(2*d)","Vw :Velocidad del liquido(m/s)
+Fw :Rango de Fwujo del liquido(m3/s)
+d  :Diámetro interno de tubería(m)
+pi :3.1415...
+dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Dw :Densidad(kg/m3)",
+,13120,"d  = (Qw / v · 4 / π)^0.5
+∆p = μ · l · v^2 / (2 · d / SG)","d=\sqrt{\frac{Q_{w}}{3600v}\cdot \frac{4}{\pi}}\newline
+\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2d} \newline
+\rho = density of water (1000 kg/m^{3})","d  :Inner diameter of pipe (m)
+Q  :Water Flow rate (m³/s)
+v  :Water velocity (m/s)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+SG:Specific gravity of Water","d=(Fw/v*4/π)^0.5
+∆p=λ*l*v^2/(2*d/Gw)","d  = (Qw / v · 4 / π)^0.5
+∆p = 1/144 · μ · l · v^2 · ρ / (2 · d / SG)","d= \frac{1}{12}\sqrt{\frac{0.134Q_{w}}{3600}\cdot \frac{4}{\pi}}\newline
+\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2dg} \newline
+\rho : density of water (62.4 lb/ft^{3}) \newline
+g:acceleration of gravity
+","d  :Inner diameter of pipe (ft)
+Q  :Water Fwow rate(ft³/s)
+v  :Water velocity(ft/s)
+π  :3.1415…
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+ρw  :Density(lb/ft³)
+g  :Gravitational accel. (ft/s²)","d=(Fw/Vw*4/pi)^0.5
+dP=1/144*f*Lp*Vw^2*Dw/(2*g*d)","d=(Fw/Vw*4/pi)^0.5
+dP=(f*Lp*Dw*Vw^2)/(2*d)","d  :配配管内径(m)
+Fw :水の流量(m3/s)
+Vw :水の流速(m/s)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+Dw :水の密度(kg/m3)",,"d=(Fw/Vw*4/pi)^0.5
+dP=(f*Lp*Dw*Vw^2)/(2*d)","d  :Rohrinnendurchmesser(m)
+Fw :Qüssigkeitsdurchsatz(m3/h)
+Vw :Qiessgeschwindigkeit Qüssigkeit(m/s)
+pi :3,1415... 
+dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Dw :Dichte(kg/m3)",,"d=(Fw/Vw*4/pi)^0.5
+dP=(f*Lp*Gw*Vw^2)/(2*d)","d  :Diamètre inteRee de la tuyauterie(m)
+Q  :Débit du Quide(m3/s)
+Vw :Vitesse du Quide(m/s)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+Gw :Gravité spécifique du Quide",,"d=(Fw/Vw*4/pi)^0.5
+dP=f*Lp*Vw^2/(2*d/Gw)","d  :管道内径（m）
+Fw :流体流量(m3/s)
+Vw :流体流速（m/s）
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m)
+Gw :流体比重",,"d=(Fw/Vw*4/pi)^0.5
+dP=f*Lp*Vw^2/(2*d/Gw)","d  :배관내경(m)
+Fw :액체의 유량(m3/s)
+Vw :액체의 유속(m/s)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+Gw :액체의 비중",,"d=(Fw/Vw*4/pi)^0.5
+dP=f*Lp*Vw^2/(2*d/Gw)","d  :Diámetro interno de tubería(m)
+Fw :Rango de Fwujo del liquido(m3/s)
+Vw :Velocidad del liquido(m/s)
+pi :3.1415...
+dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Dw :Densidad(kg/m3)",
+,13130,∆p = μ · l · v^2 / (2 · d · SG) ,"\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2d} \newline
+\rho = density of water (1000 kg/m^{3})","∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Water velocity (m/s) 
+d  :Inner diameter of pipe (m)
+SG:Specific gravity of Water",∆p=λ*l*v^2/(2*d*Gw) ,∆p = 1/144 · μ · l · v^2 · ρ / (2 · d  / SG) ,"\Delta p= \frac{\mu\cdot l\cdot v^{2}\cdot \rho \cdot SG}{2dg} \newline
+\rho : density of water (62.4 lb/ft^{3}) \newline
+g:acceleration of gravity
+","∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+v  :Water velocity(ft/s) 
+SGw:Specific gravity of Water
+g  :Gravitational accel(ft/s2)
+d  :Inner diameter of pipe (ft)",dP=1/144*f*Lp*Vw^2*Gw/(2*g*d),dP=(f*Lp*Vw^2)/(2*Dw/d) ,"dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+Vw :水の流速(m/s)
+d  :配管内径(m)
+Dw :水の密度(kg/m3)",,dP=f*Lp*Vw^2/(2*d*Gw) ,"dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Vw :Fwüssigkeitsgeschwindigkeit(m/s)
+d  :Rohrinnendurchmesser(m)
+Gw :Spez. Gewicht Fwüssigkeit",,dP=(f*Lp*Gw*Vw^2)/(2*Gw/d) ,"dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+Vw :Vitesse du Fwuide(m/s) 
+Gw :Gravité spécifique du Fwuide
+d  :Diamètre inteRee de la tuyauterie(m)",,dP=f*Lp*Vw^2/(2*d*Gw) ,"dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m)
+Vw :流体流速(m/s) 
+d  :管道内径(m)
+Gw :流体比重",,dP=f*Lp*Vw^2/(2*d*Gw) ,"dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+Vw :액체의 유속(m/s)
+d  :배관내경(m)
+Gw :액체의 비중",,dP=f*Lp*Vw^2/(2*d*Gw) ,"dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Vw :Velocidad del liquido(m/s)
+d  :Diámetro interno de tubería(m)
+Gw :Gravedad específica del liquido",
+,13140,v = Q / 3600 / {(d / 2)^2 · π},v=\frac{Q_{w}/3600}{(\frac{d}{2})^{2} \cdot \pi},"v  :Water velocity (m/s)
+Q  :Water flow rate (m³/h)
+d  :Inner diameter of pipe (m)
+π  :3.1415...",v=Fw/3600/((d/2)^2*π),v = Q / 3600 / {(d / 2)^2 · π},v=\frac{Q_{w}/3600}{(\frac{d}{2})^{2} \cdot \pi},"v  :Water velocity(ft/s)
+Q  :Water flow rate(ft³/h)
+d  :Inner diameter of pipe (ft)
+π  :3.1415…",Vl=Fl/3600/((d/2)^2*pi),Vl=Fl/3600/((d/2)^2*pi),"Vw :水の流速(m/s)
+Fw :水の流量(m3/h)
+d  :配管内径(m)
+pi :円周率",,Vw=Fw/3600/((d/2)^2*pi),"Vw :Fliessgeschwindigkeit Flüssigkeit(m/s)
+Fw :Flüssigkeitsdurchsatz(m3/h)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...",,Vw=Fw/3600/(pi*(d/2)^2),"Vw :Vitesse du fluide(m/s)
+Fw :Débit du fluide(m3/h)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...",,Vw=Fw/3600/(pi*(d/2)^2),"Vw :流体流速(m/s)
+Fw :流体流量(m3/h)
+d  :管道内径(m)
+pi :3.1415...",,Vw=Fw/3600/(pi*(d/2)^2),"Vw :액체의 유속(m/s)
+Fw :액체의 유량(m3/h)
+d  :배관내경(m)
+pi :원주율
+",,Vw=Fw/3600/(pi*(d/2)^2),"Vw :Velocidad del liquido(m/s)
+Fw :Rango de flujo del liquido(m3/h)
+d  :Diámetro interno de tubería(m)
+pi :3.1415…",
+,13150,Qw = v · (d / 2)^2 · π · 3600,Q_{w}=v\cdot (\frac{d}{2})^{2}\cdot \pi\cdot 3600,"Q  :Water flow rate (m³/h)
+v  :Water velocity (m/s)
+d  :Inner diameter of pipe (m)
+π  :3.1415...",Fw=v*(d/2)^2*π*3600,Qw = v · (d / 2)^2 · π · 3600,Q_{w}=v\cdot (\frac{d}{2})^{2}\cdot \pi\cdot 3600,"Q  :Water flow rate(ft³/h)
+v  :Water velocity(ft/s)
+d  :Inner diameter of pipe (ft)
+π  :3.1415…",Fw=Vw*(d/2)^2*pi*3600,Fw=Vw*pi*(d/2)^2*3600,"Fw :水の流量(m3/h)
+Vw :水の流速(m/s)
+d  :配管内径(m)
+pi :円周率",,Fw=Vw*(d/2)^2*pi*3600,"Fw :Flüssigkeitsdurchsatz(m3/h)
+Vw :Fliessgeschwindigkeit Flüssigkeit(m/s)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...",,Fw=Vw*pi*(d/2)^2*3600,"Fw :Débit du fluide(m3/h)
+Vw :Vitesse du fluide(m/s)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...",,Fw=Vw*pi*(d/2)^2*3600,"Fw :流体流量(m3/h)
+Vw :流体流速(m/s)
+d  :管道内径(m)
+pi :3.1415...",,Fw=Vw*(d/2)^2*pi*3600,"Fw :액체의 유량(m3/h)
+Vw :액체의 유속(m/s)
+d  :배관내경(m)
+pi :원주율",,Fw=Vw*(d/2)^2*pi*3600,"Fw :Rango de flujo del liquido(m3/h)
+Vw :Velocidad del liquido(m/s)
+d  :Diámetro interno de tubería(m)
+pi :3.1415…",
+,13200,"p1 - p2 < FL^2 · (p1 - FF · P) :
+Qw = 0.0865 · Cv · {(p1 - p2) / SG}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Qw = 0.0865 · Cv · FL · {(p1 - FF · P) / SG}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+Q_{w}=0.0865\cdot C_{v}\cdot \sqrt{\frac{p_{1}-p_{2}}{SG}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+Q_{w}=0.0865\cdot C_{v}\cdot FL \cdot \sqrt{\frac{p_{1}-FF\cdot P}{SG}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+FL:Pressure recovery factor(=0.9)
+FF:Critical pressure ratio factor
+P  :Absolute vapor pressure of the water at inlet temperature
+Q  :Water flow rate (m³/h)
+Cv:Valve flow coefficient value
+SG:Specific gravity of Water (=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","p1 - p2 < FL^2 · (p1 - FF · P) :
+Qw = Cv · {(p1 - p2)/ SG}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Qw = Cv · FL · {(p1 - FF · P) / SG}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+Q_{w}= C_{v}\cdot \sqrt{\frac{p_{1}-p_{2}}{SG}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+Q_{w}= C_{v}\cdot FL \cdot \sqrt{\frac{p_{1}-FF\cdot P}{SG}}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+FL :Pressure recovery factor (=0.9)
+FF :Critical pressure ratio factor
+P  :Absolute vapor pressure of the water at inlet temperature
+Q  :Water flow rate(gal/min)
+Cv:Valve flow coefficient value
+SG:Specific gravity of water(=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :一次圧力(kPaA)
+P2 :二次圧力(kPaA)
+Fl :圧力回復係数
+Ff :臨界圧力比係数
+Pv :水温に対する飽和圧力(kPaA)
+Fw  :水の流量(m3/h)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Gw :水の比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.1*Kv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.1*Kv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fl :Faktor Druckrückgewinn(=0.9)
+Ff :Faktor kritisches Druckverhältnis
+Pv :Sattdampfdruck Wasser bei Eintrittstemperatur
+Fw  :Flüssigkeitsdurchsatz(m3/h)
+Kv :Kv-Wert Ventil
+Gw :Spez. Gewicht Wasser(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fl :Facteur de récupération de pression
+Ff :Facteur de rapport de pression critiFwue
+Pv :Pression de vapeur absolue de l'eau à la température d'entrée(kPaA)
+Fw  :Débit d'eau(m3/h)
+Cv :Valeur de CV 
+Gw :Densité de l'eau(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fl :回收压力系数(=0.9)
+Ff :临界压力比系数
+Pv :入口水温度绝对压力(kPaA)
+Fw  :水流量(m3/h)
+Cv :阀门的CV值
+Gw :水比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :일차측압력(kPaA)
+P2 :이차측압력(kPaA)
+Fl :압력회복계수
+Ff :임계압력비계수
+Pv :물의온도에 대한 포화압력(kPaA)
+Fw  :물의 유량(m3/h)
+Cv :밸브의 Cv치
+Gw :물의 비중(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*Cv*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fl :Factor de recuperación de presión(=0.9)
+Ff :Factor crítico de relación de presiones
+Pv :Presión de vapor absoluta para el agua a la temperatura de entrada(kPaA)
+Fw  :Flujo de agua(m3/h)
+Cv :Valor de Cv de la válvula
+Gw :Gravedad específica del agua(=1)",
+,13300,"p1 - p2 < FL^2 · (p1 - FF · P) :
+Cv = Qw / 0.0865 · {SG / (p1 - p2)}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Cv = Qw / (0.0865 · FL) · {SG / (p1 - FF · P)}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+C_{v}=\frac{Q_{w}}{0.0865}\cdot \sqrt{\frac{SG}{p_{1}-p_{2}}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+C_{v}=\frac{Q_{w}}{0.0865\cdot FL}\cdot \sqrt{\frac{SG}{p_{1}-FF\cdot P}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+FL:Pressure recovery factor(=0.9)
+FF:Critical pressure ratio factor
+P  :Absolute vapor pressure of the water at inlet temperature
+Cv:Valve flow coefficient value
+Q  :Water flow rate (m³/h)
+SGw:Specific gravity of Water (=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","p1 - p2 < FL^2 · (p1 - FF · P) :
+Cv = Qw / {SG / (p1 - p2)}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Cv = Qw /FL · {SG /(p1 - FF · P)}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+C_{v}=\frac{Q_{w}}{\sqrt{SG/(p_{1}-p_{2})}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow 
+C_{v}=\frac{Q_{w}}{FL}\cdot \sqrt{\frac{SG}{p_{1}-FF\cdot P}}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+FL :Pressure recovery factor(=0.9)
+FF :Critical pressure ratio factor
+P :Absolute vapor pressure of the water at inlet temperature
+Cv:Valve flow coefficient value
+Q  :Water flow rate(gal/min)
+SGw:Specific gravity of water(=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/Fl*(Gw/(P1-Ff*Pv))^0.5","P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :一次圧力(kPaA)
+P2 :二次圧力(kPaA)
+Fl :圧力回復係数
+Ff :臨界圧力比係数
+Pv :水温に対する飽和圧力(kPaA)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Fw  :水の流量(m3/h)
+Gw :水の比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Kv=Fw/0.1*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Kv=Fw/(0.1*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fl :Faktor Druckrückgewinn (=0.9)
+Ff :Faktor kritisches Druckverhältnis
+Pv :Sattdampfdruck Wasser bei Eintrittstemperatur
+Kv :Kv-Wert Ventil
+Fw  :Flüssigkeitsdurchsatz(m3/h)
+Gw :Spez. Gewicht Wasser(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fl :Facteur de récupération de pression
+Ff :Facteur de rapport de pression critiFwue
+Pv :Pression de vapeur absolue de l'eau à la température d'entrée(kPaA)
+Cv :Valeur de CV 
+Fw  :Débit d'eau(m3/h)
+Gw :Densité de l'eau(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fl :回收压力系数(=0.9)
+Ff :临界压力比系数
+Pv :入口水温度绝对压力(kPaA)
+Cv :阀门的CV值
+Fw  :水流量(m3/h)
+Gw :水比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :일차측압력(kPaA)
+P2 :이차측압력(kPaA)
+Fl :압력회복계수
+Ff :임계압력비계수
+Pv :물의온도에 대한 포화압력(kPaA)
+Cv :밸브의 Cv치
+Fw  :물의 유량(m3/h)
+Gw :물의 비중(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Cv=Fw/0.0865*(Gw/(P1-P2))^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Cv=Fw/(0.0865*Fl)*(Gw/(P1-Ff*Pv))^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fl :Factor de recuperación de presión(=0.9)
+Ff :Factor crítico de relación de presiones
+Pv :Presión de vapor absoluta para el agua a la temperatura de entrada(kPaA)
+Cv :Valor de Cv de la válvula
+Fw  :Flujo de agua(m3/h)
+Gw :Gravedad específica del agua(=1)",
+,13400,"p1 - p2 < FL^2 · (p1 - FF · P) :
+Q = 0.0865 · C · (do / 4.654)^2 · {(p1 - p2) / SG}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Q = 0.0865 · C · (do / 4.654)^2 · FL · {(p1 - FF · P)/ SG}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+Q_{w}=0.0865\cdot C\cdot (\frac{d_{o}}{4.654})^{2}\cdot \sqrt{\frac{p_{1}-p_{2}}{SG}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+Q_{w}=0.0865\cdot C\cdot (\frac{d_{o}}{4.654})^{2}\cdot FL\cdot \sqrt{\frac{p_{1}-FF\cdot P}{SG}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+FL:Pressure recovery factor(=0.9)
+FF:Critical pressure ratio factor
+P  :Absolute vapor pressure of the water at inlet temperature
+Q  :Water flow rate (m³/h)
+C  :Coefficient of discharge
+do:Diameter of orifice (mm)
+SGw:Specific gravity of Water (=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","p1 - p2 < FL^2 · (p1 - FF · P) :
+Q = 0.0865 · C · (do / 0.0153)^2 · {(p1 - p2) / SG}^0.5
+p1 - p2 >= FL^2 · (p1 - FF · P) :
+Q = 0.0865 · C · (do / 0.0153)^2 · FL · {(p1 - FF · P)/ SG}^0.5","p_{1}-p_{2}<FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+Q_{w}=0.0865\cdot C\cdot (\frac{d_{o}}{0.0153})^{2}\cdot \sqrt{\frac{p_{1}-p_{2}}{SG}}
+p_{1}-p_{2}\geq FL^{2}\cdot (p_{1}-FF\cdot P)\rightarrow
+Q_{w}=0.0865\cdot C\cdot (\frac{d_{o}}{0.0153})^{2}\cdot FL\cdot \sqrt{\frac{p_{1}-FF\cdot P}{SG}}","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+FL :Pressure recovery factor(=0.9)
+FF :Critical pressure ratio factor
+P  :Absolute vapor pressure of the water at inlet temperature
+Cv:Valve flow coefficient value
+Q  :Water flow rate(gal/min)
+C  :Coefficient of discharge
+do :Diameter of orifice(mm)
+SGw:Specific gravity of water(=1)","P1-P2<Fl^2*(P1-Ff*Pv):
+Fs=0.0865*C*(Do/0.0153)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fs=0.0865*C*(Do/0.0153)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1-P2<Fl^2*(P1-Ff*Pv):
+Fs=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fs=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :一次圧力(kPaA)
+P2 :二次圧力(kPaA)
+Fl :圧力回復係数
+Ff :臨界圧力比係数
+Pv :水温に対する飽和圧力(kPaA)
+Fw  :水の流量(m3/h)
+C  :流量係数
+Do :オリフィス径(mm)
+Gw :水の比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fl :Faktor Druckrückgewinn(=0.9)
+Ff :Faktor kritisches Druckverhältnis
+Pv :Sattdampfdruck Wasser bei Eintrittstemperatur
+Fw  :Flüssigkeitsdurchsatz(m3/h)
+C  :Durchflussbeiwert
+Do :Blendendurchmesser(mm)
+Gw :Spez. Gewicht Wasser(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fl :Facteur de récupération de pression
+Ff :Facteur de rapport de pression critiFwue
+Pv :Pression de vapeur absolue de l'eau à la température d'entrée(kPaA)
+Fw  :Débit d'eau(m3/h)
+C  :Coefficient de décharge
+Do :Diamètre d'orifice(mm)
+Gw :Densité de l'eau(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :一次压力(kPaA)
+P2 :二次压力(kPaA)
+Fl :回收压力系数(=0.9)
+Ff :临界压力比系数
+Pv :入口水温度绝对压力(kPaA)
+Fw  :水流量(m3/h)
+C  :排放系数
+Do :阀嘴口径(mm)
+Gw :水比重(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","P1 :일차측압력(kPaA)
+P2 :이차측압력(kPaA)
+Fl :압력회복계수
+Ff :임계압력비계수
+Pv :물의온도에 대한 포화압력(kPaA)
+Fw  :물의 유량(m3/h)
+C  :유량계수
+Do :오리피스 사이즈(mm)
+Gw :물의 비중(=1)",,"P1-P2<Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*((P1-P2)/Gw)^0.5
+P1-P2>=Fl^2*(P1-Ff*Pv):
+Fw=0.0865*C*(Do/4.654)^2*Fl*((P1-Ff*Pv)/Gw)^0.5","
+P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fl :Factor de recuperación de presión(=0.9)
+Ff :Factor crítico de relación de presiones
+Pv :Presión de vapor absoluta para el agua a la temperatura de entrada(kPaA)
+Fw  :Flujo de agua(m3/h)
+C  :Coeficiente de descarga
+Do :Diámetro del orificio(mm)
+Gw :Gravedad específica del agua(=1)",
+,13500,(d1 + 2 · L) · ln{(d1 + 2 · L) / d1} = 2 · λ / α · (Ti - Tdp) / (Tdp - Tam),(d_{1}+2L)\cdot \ln (\frac{d_{1}+2L}{d_{1}})=\frac{2\lambda}{\alpha}\cdot \frac{T_{i}-T_{dp}}{T_{dp}-T_{am}},"d1:Outer diameter of pipe (m)
+L  :Insulation thickness (m)
+k  :Thermal conductivity coefficient (W/m K)
+α  :Heat transfer coefficient (W/m² K)
+Ti:Internal temperature (°C)
+Tdp:Dew point (°C)
+Tam:Ambient temperature (°C)",(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),(d1 + 2 · L) · ln{(d1 + 2 · L) / d1} = 2 · λ / α · (Ti - Tdp) / (Tdp - Tam),(d_{1}+2L)\cdot \ln (\frac{d_{1}+2L}{d_{1}})=\frac{2\lambda}{\alpha}\cdot \frac{T_{i}-T_{dp}}{T_{dp}-T_{am}},"d1 :Outer diameter of pipe(ft)
+L  :Insulation thickness (ft)
+k  :Thermal conductivity coefficient(BtU/ft F h)
+h  :Heat transfer coefficient(BTU/ft2 F h)
+Ti :Internal temperature(°F)
+Tdp:Dew point(°F)
+Tam:Ambient temperature(°F)",(d1+2*t)*ln((d1+2*t)/d)=2*c/a*(Ti-DP)/(DP-Tam),(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :配管の外径(m)
+t　:保温材の厚さ(m)
+c  :保温材の熱伝導率(W/m K)
+a  :表面の熱伝達率(W/m2 K)
+Ti :内部温度(°C)
+DP :表面温度、露点温度(°C)
+Tam:外気温度(°C)
+",,(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :Rohraussendurchmesser(m)
+t  :Isolierstärke(m)
+c  :Wärmeleitzahl(W/m K)
+a  :Wärmeübergangszahl(W/m2 K)
+Ti :Innentemperatur(°C)
+DP :Taupunkt(°C)
+Tam:Umgebungstemperatur(°C) ",,(d1+2*t)*ln((d1+2*t)/d)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :Diamètre extérieur de la tuyauterie(m)
+t  :Epaisseur du calorifugeag(m)
+c  :Coefficient de conductivité thermique(W/m K)
+a  :Coefficient de transfert de chaleur(W/m2 K)
+Ti :Température inteRee(°C)
+DP :Point de rosée(°C)
+Tam:Température ambiante(°C)",,(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :管道出口尺寸 (m)
+t  :保温层厚度(m)
+c  :导热系数(W/m K)
+a  :传热系数(W/m2 K)
+Ti :内部温度(°C)
+DP :露点(°C)
+Tam:环境温度(°C)",,(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :배관의 외경(m)
+t　:보온재의 두께(m)
+c  :보온재의 열전도율(W/m K)
+a  :표면의 열전달율(W/m2 K)
+Ti :내부온도(°C)
+DP :표면온도, 노점온도(°C)
+Tam:외기온도(°C)",,(d1+2*t)*ln((d1+2*t)/d1)=2*c/a*(Ti-DP)/(DP-Tam),"d1 :Diámetro externo de tubería(m)
+t  :Espesor de aislamiento(m)
+c  :Coeficiente de conductividad termica(W/m K)
+a  :Coeficiente de transferencia de calor(W/m2 K)
+Ti :Temperatura interna(C)
+DP :Punto de rocío(C)
+Tam:Temperatura ambiente(C)",
+,14110,∆p = μ · l · v^2 / (2 · d / ρ),\Delta p = \frac{\mu \cdot l \cdot v^{2}}{2d/\rho},"∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Air velocity (m/s)
+d  :Inner diameter of pipe (m)
+ρa  :Density (kg/m³)",∆p=λ*l*v^2/(2*d/Da),∆p = 1/144 · μ · l · v^2 · ρ/ (2 · g · d),\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^{2}\cdot \rho}{2d\cdot g},"∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+v  :Air velocity(ft/s)
+ρa  :Density(lb/ft³)
+g  :Gravitational accel. (ft/s²)
+d  :Inner diameter of pipe (ft)
+ν  :Kinematic viscosity of air(ft2/s)",dP=1/144*f*Lp*Va^2*Da/(2*g*d) ,dP=(f*Lp*Da*Va^2)/(2*d),"dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m) 
+Va :空気流速(m/s)
+Da :密度(kg/m3)
+d  :配管内径(m)",,dP=f*Lp*Va^2/(2*d/Da),"dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Va :Strömungsgeschwindigkeit Luft(m/s)
+d  :Rohrinnendurchmesser(m)
+Da :Dichte(kg/m3)",,dP=(f*Lp*Da*Va^2)/(2*d),"dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+Va :Vitesse de l'air(m/s)
+Da :Densité(kg/m3)
+g  :Accélération(m/s2)
+d  :Diamètre inteRee de la tuyauterie(m)",,dP=f*Lp*Va^2/(2*d/Da),"dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m) 
+Va :空气流速(m/s)
+d  :管道内径(m)
+Da :密度 (kg/m3)",,dP=f*Lp*Va^2/(2*d/Da),"dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m) 
+Va :에어유속(m/s)
+Da :밀도(kg/m3)
+d  :배관내경(m)",,dP=f*Lp*Va^2/(2*d/Da),"dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Va :Velocidad del aire(m/s)
+d  :Diámetro interno de tubería(m)
+Da :Density(kg/m3)",
+,14120,"d  = (Qa / 60 / v · 4 / π)^0.5
+∆p = μ · l · v^2 /(2 · d / ρ)","d=\sqrt{\frac{Q_a/60}{v}\cdot \frac{4}{\pi}}
+\Delta p = \frac{\mu \cdot l \cdot v^{2}}{2d/\rho}","d  :Inner diameter of pipe (m)
+Qa:Air flow rate (m³/min)
+v  :Air velocity (m/s)
+π  :3.1415...
+∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+ρa:Density (kg/m³)","d=(Fa/60/v*4/π)^0.5
+∆p=λ*l*v^2/(2*d/Da)","d  = (Qa / 60 / v · 4 / π)^0.5
+∆p = 1/144 · μ · l · v^2  ·ρ / (2 · g · d)","d=\sqrt{\frac{Q_a/60}{v}\cdot \frac{4}{\pi}}
+\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^{2}\cdot \rho}{2d\cdot g}","d  :Inner diameter of pipe (ft)
+Qq :Air flow rate(CFM)
+v  :Air velocity(ft/s)
+π  :3.1415…
+∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length (ft) 
+ρa:Density (lb/ft³)
+g  :Gravitational accel. (ft/s²)","d=(Fa/60/Va*4/pi)^0.5
+dP=1/144*f*Lp*Va^2*Da/(2*g*d) ","d=(Fa/60/Va*4/pi)^0.5
+dP=f*Lp*Va^2/(2*d/Da)","d  :配管内径(m)
+Fa :空気流量(m3/min)
+Va :空気流速(m/s)
+pi :円周率
+dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m) 
+Da :密度(kg/m3)",,"d=(Fa/60/Va*4/pi)^0,5
+dP=f*Lp*Va^2/(2*d/Da)","d  :Rohrinnendurchmesser(m)
+Fa :Luftdurchsatz(m3/min)
+Va :Strömungsgeschwindigkeit Luft(m/s)
+pi :3,1415...
+dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Da :Dichte(kg/m3)",,"d=(Fa/60/Va*4/pi)^0.5
+dP=f*Lp*Va^2/(2*d/Da)","d  :Diamètre inteRee de tuyauterie(m)
+Fa :Débit d'air(m3/min)
+Va :Vitesse de l'air(m/s)
+pi :3.1415...
+dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m) 
+Da :Densité(kg/m3)
+g  :Accélération(m/s2)",,"d=(Fa/60/Va*4/pi)^0.5
+dP=f*Lp*Va^2/(2*d/Da)","d  :管道内径(m)
+Fa :空气流量(m3/min)
+Va :空气流速(m/s)
+pi :3.1415...
+dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m) 
+Da :密度(kg/m3)",,"d=(Fa/60/Va*4/pi)^0.5
+dP=f*Lp*Va^2/(2*d/Da)","d  :배관내경(m)
+Fa :에어유량(m3/min)
+Va :에어유속(m/s)
+pi :원주율
+dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m) 
+Da :밀도(kg/m3)",,"d=(Fa/60/Va*4/pi)^0.5
+dP=f*Lp*Va^2/(2*d/Da)","d  :Diámetro interno de tubería(m)
+Fa :Rango de flujo de aire(m3/min)
+Va :Velocidad del aire(m/s)
+pi :3.1415...
+dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Da :Densidad(kg/m3)",
+,14130,∆p =μ · l · v^2 / (2 · d / ρ),\Delta p = \frac{\mu \cdot l \cdot v^{2}}{2d/\rho},"∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Air velocity (m/s)
+d  :Inner diameter of pipe (m)
+ρa:Density (kg/m³)",∆p=λ*l*v^2/(2*d/Da),∆p = 1/144 · μ · l · v^2 · ρ/ (2 · g · d),\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^{2}\cdot \rho}{2d\cdot g},"∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length(ft)
+v  :Air velocity(ft/s)
+ρa:Density(lb/ft³)
+g  :Gravitational accel. (ft/s²)
+d  :Inner diameter of pipe (ft)",dP=1/144*f*Lp*Va^2*Da/(2*g*d),dP=f*Lp*Va^2/(2*d/Da),"dP :圧力損失(Pa)
+ f :摩擦係数
+Lp :配管長さ(m) 
+Va :空気流速(m/s)
+ d :配管内径(m)
+Da :密度(kg/m3)",,dP=f*Lp*Va^2/(2*d/Da),"dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Va :Strömungsgeschwindigkeit Luft(m/s)
+d  :Rohrinnendurchmesser(m)
+Da :Dichte(kg/m3)",,dP=f*Lp*Va^2/(2*d/Da),"dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m)
+Va :Vitesse de l'air(m/s)
+Da :Densité(kg/m3)
+g  :Accélération(m/s2)
+d  :Diamètre inteRee de tuyauterie(m)",,dP=f*Lp*Va^2/(2*d/Da),"dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m) 
+Va :空气流速(m/s)
+d  :管道内径(m)
+Da :密度(kg/m3)",,dP=f*Lp*Va^2/(2*d/Da),"dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m) 
+Va :에어유속(m/s)
+d  :배관내경(m)
+Da :밀도(kg/m3)",,dP=f*Lp*Va^2/(2*d/Da),"dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Va :Velocidad del aire(m/s)
+d  :Diámetro interno de tubería(m)
+Da :Densidad(kg/m3)",
+,14140,∆p =μ · l · v^2 / (2 · d / ρ),\Delta p = \frac{\mu \cdot l \cdot v^{2}}{2d/\rho},"∆p :Pressure loss (Pa)
+λ  :Coefficient of friction
+l  :Pipe length (m) 
+v  :Gas flow velocity (m/s)
+d  :Inner diameter of pipe (m)
+ρg:Density(kg/m³)",∆p=λ*l*v^2/(2*d/Dg),∆p = 1/144 · μ · l · v^2 · ρ / (2 · g · d),\Delta p = \frac{\frac{1}{144}\cdot \mu \cdot l \cdot v^{2}\cdot \rho}{2d\cdot g},"∆p :Pressure loss (psi)
+λ  :Coefficient of friction
+l  :Pipe length(ft)
+v  :Gas flow velocity(ft/s)
+ρg:Density(lb/ft³)
+g  :Gravitational accel. (ft/s²)
+d  :Inner diameter of pipe (ft)",dP=1/144*f*Lp*Vg^2*Dg/(2*g*d),dP=f*Lp*Vg^2/(2*d/Dg),"dP :圧力損失(Pa)
+f  :摩擦係数
+Lp :配管長さ(m)
+Vg :ｶﾞｽ流速(m/s)
+Dg :密度(kg/m3)
+d  :配管内径(m)",,dP=f*Lp*Vg^2/(2*d/Dg),"dP :Druckverlust(Pa)
+f  :Reibungskoeffizient
+Lp :Rohrlänge(m)
+Vg :Strömungsgeschwindigkeit Gas(m/s)
+d  :Rohrinnendurchmesser(m)  
+Dg :Dichte(kg/m3)",,dP=f*Lp*Vg^2/(2*d/Dg),"dP :Perte de charge(Pa)
+f  :Coefficient de friction
+Lp :Longueur de tuyauterie(m)
+Vg :Vitesse du gaz(m/s)
+Dg :Poids spécifique(kg/m3)
+d  :Diamètre inteRee de la tuyauterie(m)",,dP=f*Lp*Vg^2/(2*d/Dg),"dP :压损(Pa)
+f  :摩擦系数
+Lp :管道长度(m)
+Vg :气体流速(m/s)
+d  :管道内径(m)
+Dg :密度(kg/m3)",,dP=f*Lp*Vg^2/(2*d/Dg),"dP :압력손실(Pa)
+f  :마찰계수
+Lp :배관길이(m)
+Vg :가스유량(m/s)
+Dg :밀도(kg/m3)
+d  :배관내경(m)",,dP=f*Lp*Vg^2/(2*d/Dg),"dP :Perdida de presión(Pa)
+f  :Coeficiente de fricción
+Lp :Longitud de tubería(m) 
+Vg :Velocidad del flujo de gas(m/s)
+d  :Diámetro interno de tubería(m)
+Dg :Peso específico(kg/m3)",
+,14150,v = Qa / 60 / {(d / 2)^2 · π},v=\frac{Q_{a}/60}{(\frac{d}{2})^{2}\cdot \pi},"v  :Air velocity (m/s)
+Qa:Air flow rate (m³/min)
+d  :Inner diameter of pipe (m)
+π  :3.1415...",v=Fa/60/((d/2)^2*π),v = Qa / 60 / {(d / 2)^2 · π},v=\frac{Q_{a}/60}{(\frac{d}{2})^{2}\cdot \pi},"V  :Air velocity (ft/s)
+Qa :Air flow rate (CFM)
+d  :Inner diameter of pipe (ft)
+π  :3.1415…",Va=Fa/60/((d/2)^2*pi),Va=Fa/60/((d/2)^2*pi),"Va :空気流速(m/s)
+Fa :空気流量(m3/min)
+d  :配管内径(m)
+pi :円周率",,Va=Fa/60/((d/2)^2*pi),"Va :Strömungsgeschwindigkeit Luft(m/s)
+Fa :Luftdurchsatz(m3/min)
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...",,Va=Fa/60/((d/2)^2*pi),"Va :Vitesse de l'air(m/s)
+Fa :Débit de l'air(m3/min)
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...",,Va=Fa/60/((d/2)^2*pi),"Va :空气流速(m/s)
+Fa :空气流量(m3/min)
+d  :管道内径(m)
+pi :3.1415...",,Va=Fa/60/((d/2)^2*pi),"Va :에어유속(m/s)
+Fa :에어유량(m3/min)
+d  :배관내경(m)
+pi :원주율",,Va=Fa/60/((d/2)^2*pi),"Va :Velocidad del aire(m/s)
+Fa :Rango de flujo de aire(m3/min)
+d  :Diámetro interno de tubería(m)
+pi :3.1415…",
+,14160,Qa = v · (d / 2)^2 · π · 60,Q_{a}=v\cdot (\frac{d}{2})^{2}\cdot \pi \cdot 60,"Qa:Air flow rate (m³/min)
+v  :Air velocity (m/s) 
+d  :Inner diameter of pipe (m)
+π  :3.1415...",Fa=v*(d/2)^2*π*60,Qa = v · (d / 2)^2 · π · 60,Q_{a}=v\cdot (\frac{d}{2})^{2}\cdot \pi \cdot 60,"Qa :Air flow rate(CFM)
+v  :Air velocity(ft/s) 
+d  :Inner diameter of pipe (ft)
+π  :3.1415…",Fa=Va*(d/2)^2*pi*60,Fa=Va*(d/2)^2*pi*60,"Fa :空気流量(m3/min)
+Va :空気流速(m/s)
+d  :配管内径(m)
+pi :円周率",,Fa=Va*(d/2)^2*pi*60,"Fa :Luftdurchsatz(m3/min)
+Va :Strömungsgeschwindigkeit Luft(m/s) 
+d  :Rohrinnendurchmesser(m)
+pi :3,1415...",,Fa=Va*(d/2)^2*pi*60,"Fa :Débit de l'air(m3/min)
+Va :Vitesse de l'air(m/s) 
+d  :Diamètre inteRee de la tuyauterie(m)
+pi :3.1415...",,Fa=Va*(d/2)^2*pi*60,"Va :空气流速(m/s)
+Fa :空气流量(m3/min)
+d  :管道内径(m)
+pi :3.1415...",,Fa=Va*(d/2)^2*pi*60,"Fa :에어유량(m3/min)
+Va :에어유속(m/s)
+d  :배관내경(m)
+pi :원주율",,Fa=Va*(d/2)^2*pi*60,"Fa :Rango de flujo de aire(m3/min)
+Va :Velocidad del aire(m/s)
+d  :Diámetro interno de tubería(m)
+pi :3.1415…",
+,14200,"(p1 - p2) / p1 < Fγ · xT :
+Qa = 4.17 · Cv · p1 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {(p1 - p2) / p1 / (Ta + 273.15)}^0.5 / 60
+(p1 - p2) / P >= Fγ · xT :
+Qa = 0.667 · 4.17 · Cv · p1 · {Fγ · xT / (Ta + 273.15)}^0.5 / 60","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=4.17\cdot C_{v}\cdot p_{1}\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\gamma}\cdot x_{T})} \right )\cdot \sqrt{ \frac{\frac{p_{1}-p_{2}}{p_{1}}}{( T_{a}+ 273.15)}}\: / 60
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=0.667\cdot 4.17\cdot C_{v}\cdot p_{1}\cdot \sqrt{\frac{F_{\gamma}\cdot x_{T}}{T_{a}+273.15}}\: /60","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Qa:Air flow rate (Nm³/min)
+Cv:Valve flow coefficient value
+Ta:Air temperature (°C)","(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","(p1 - p2) / p1 < Fγ * xT :
+Qa = 1360 · Cv · p1 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {(p1 - p2) / p1 / Ta}^0.5 / 60
+(p1 - p2) / P >= Fγ · xT :
+Qa = 0.667 · 1360 · Cv · p1 · {Fγ · xT / (Ta)}^0.5 / 60","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=1360\cdot C_{v}\cdot p_{1}\cdot \left ( 1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\gamma}\cdot x_{T})} \right )\cdot \sqrt{ \frac{\frac{p_{1}-p_{2}}{p_{1}}}{ T_{a}}}\: / 60
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=0.667\cdot 1360\cdot C_{v}\cdot p_{1}\cdot \sqrt{\frac{F_{\gamma}\cdot x_{T}}{T_{a}}}\: /60
+","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Qa :Air flow rate(scfm)
+Cv:Valve flow coefficient value
+Ta :Air temperature(R)","(P1-P2)/P1<Fg*Xt :
+Q=1360*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/T1)^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*1360*Cv*P1*(Fg*Xt/T1)^0.5/60","(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Q  :空気流量(Nm3/min)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Ta :空気温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.82*Kv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.82*Kv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fg :Normierungsfaktor
+Xt :Differenzdruck-Verhältnis(=0.72)
+Q  :Luftdurchsatz(Nm3/min)
+Kv :Kv-Wert Ventil
+Ta :Lufttemperatur(°C)  ",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fg :Facteur de rapport de chaleur spécifique
+Xt :Facteur de rapport de pression différentielle(=0.72)
+Q  :Débit d'air(Nm3/min)
+Cv :Cv de vanne
+Ta :Température de l'air(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :入口压力(kPaA)
+P2 :出口压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Q  :空气流量(Nm3/min)
+Cv :阀门的CV值
+Ta :空气温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :일차측 압력(kPaA)
+P2 :이차측 압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Q  :에어유량(Nm3/min)
+Cv :밸브의 Cv치
+Ta :에어온도(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*Cv*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5/60
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*Cv*P1*(Fg*Xt/(T1+273.5))^0.5/60","P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fg :Relación de Calores Específicos
+Xt :Relación de Presiones Diferenciales(=0.72)
+Q  :Rango de flujo de aire(Nm3/min)
+Cv :Valor de Cv de la válvula
+Ta :Temperatura del aire(°C)",
+,14300,"(p1 - p2) / p1 < Fγ · xT :
+Cv = Qa / [4.17  · p1 · {1 - (p1 - p2)/ p1 / (3 · Fγ · xT)} · {(Ta + 273.15) / (p1 - p2) / p1}^0.5]
+(p1 - p2) / p1 >= Fγ · xT :
+Cv = Qa / (0.667 · 4.17 · p1) · {(Ta + 273.15) / (Fγ · xT · p1)}^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+C_{v}=\frac{Q_{a}}{\left ( 4.17\cdot p_{1}\cdot (1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{3F_{\gamma}\cdot x_{T}})\cdot \sqrt{\frac{T_{a}+273.15}{\frac{p_{1}-p_{2}}{p_{1}}}} \right ) }
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+C_{v}=\frac{Q_{a}}{0.667\cdot 4.17\cdot p_{1}}\cdot \sqrt{\frac{T_{a}+273.15}{F_{\gamma}\cdot x_{T}\cdot p_{1}}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Cv:Valve flow coefficient value
+Qa:Air flow rate (Nm³/min)
+Ta:Air temperature (°C)","(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","(p1 - p2) / p1 < Fγ · xT :
+Cv = Qa / [1360 · p1 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {Ta / (p1 - p2) / p1}^0.5]
+(p1 - p2) / p1 >= Fγ · xT :
+Cv = Qa /(0.667 · 1360 · p1) · {Ta / (Fγ · xT · p1)}^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+C_{v}=\frac{Q_{a}}{\sqrt{ 1360\cdot p_{1}\cdot (1-\frac{\frac{p_{1}-p_{2}}{p_{1}}}{3F_{\gamma}\cdot x_{T}})\cdot (\frac{T_{a}}{\frac{p_{1}-p_{2}}{p_{1}}})} }
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+C_{v}=\frac{Q_{a}}{0.667\cdot 1360\cdot p_{1}}\cdot \sqrt{\frac{T_{a}}{F_{\gamma}\cdot x_{T}\cdot p_{1}}}
+","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Cv:Valve flow coefficient value
+Qa :Air flow rate(scfh)
+Ta :Air temperature(R)","(P1-P2)/P1<Fg*Xt :
+Cv=Q/(1360*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*(T1/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*1360*P1)*{T1/(Fg*Xt*P1)}^0.5","(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Cv :ﾊﾞﾙﾌﾞのCv値
+Q  :空気流量(Nm3/h)
+Ta :空気温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Kv=Q/(4.82*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Kv=Q/(0.667*4.82*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fg :Normierungsfaktor
+Xt :Differenzdruck-Verhältnis(=0.72)
+Kv :Kv-Wert Ventil
+Q  :Luftdurchsatz(Nm3/h)
+Ta :Lufttemperatur(°C)  ",,"(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fg :Facteur de rapport de chaleur spécifique
+Xt :Facteur de rapport de pression différentielle(=0.72)
+Cv :Cv de vanne
+Q  :Débit d'air(Nm3/h)
+Ta :Température de l'air(°C)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :入口压力(kPaA)
+P2 :出口压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Cv :阀门的CV值
+Q  :空气流量(Nm3/h)
+Ta :空气温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1><=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :일차측 압력(kPaA)
+P2 :이차측 압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Cv :밸브의 Cv치
+Q  :에어유량(Nm3/h)
+Ta :에어온도(°C)",,"(P1-P2)/P1<Fg*Xt :
+Cv=Q/(4.17*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((T1+273.15)/(P1-P2)/P1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Cv=Q/(0.667*4.17*P1)*((T1+273.15)/(Fg*Xt*P1))^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fg :Relación de Calores Específicos
+Xt :Relación de Presiones Diferenciales(=0.72)
+Cv :Valor de Cv de la válvula
+Q  :Rango de flujo de aire(Nm3/h)
+Ta :Temperatura del aire(°C)",
+,14400,"(p1 - p2) / p1 < Fγ · xT :
+Qa = 4.17 · C · (do / 4.654)^2 · p1 · (1 - (p1 - p2) / p1  / (3 · Fγ · xT)) · {(p1 - p2) / p1 / (Ta + 273.15)}^0.5
+(p1 - p2) / p1 >= Fγ · xT :
+Qa = 0.667 · 4.17 · C · (do / 4.654)^2 · p1 · {Fγ · xT / (Ta + 273.5)}^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=4.17\cdot C\cdot (\frac{d_{o}}{4.654})^{2}\cdot p_{1}\cdot (1-\frac{\frac{p1-p2}{p1}}{3F_{\gamma}\cdot x_{T}})\cdot \sqrt{\frac{\frac{p1-p2}{p1}}{T_{a}+273.15}}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=0.667\cdot 4.17\cdot C \cdot (\frac{d_{o}}{4.654})^{2}\cdot p_{1} \cdot \sqrt{\frac{F_{\gamma}\cdot x_{T}}{T_{a}+273.15}}","p1:Primary pressure (kPaA)
+p2:Secondary pressure (kPaA)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Qa:Air flow rate (Nm³/min)
+C  :Coefficient of discharge
+do:Diameter of orifice (mm)
+Ta:Air temperature (°C)","(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","(p1 - p2) / p1 < Fγ · xT :
+Qa = 1360 · C · (do / 0.0153)^2 · p1 · (1 - (p1 - p2) / p1  /(3 · Fγ · xT)) · {(p1 - p2) / p1 /Ta}^0.5
+(p1 - p2) / p1 >= Fγ · xT :
+Qa = 0.667 · 1360 · C · (do / 0.0153)^2 · p1 · {Fγ · xT / Ta}^0.5","\frac{\left (p_{1}-p_{2}  \right )}{p1}< F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=1360\cdot C\cdot (\frac{d_{o}}{0.183})^{2}\cdot p_{1}\cdot (1-\frac{\frac{p1-p2}{p1}}{3F_{\gamma}\cdot x_{T}})\cdot \sqrt{\frac{\frac{p1-p2}{p1}}{T_{a}}}
+\frac{\left (p_{1}-p_{2}  \right )}{p1}\geq  F_{\gamma}\cdot x_{T}\rightarrow
+Q_{a}=0.667\cdot 1360\cdot C \cdot (\frac{d_{o}}{0.183})^{2}\cdot p_{1} \cdot \sqrt{\frac{F_{\gamma}\cdot x_{T}}{T_{a}}}
+","p1 :Primary pressure (psia)
+p2 :Secondary pressure (psia)
+Fγ:Specific heat ratio factor
+xT:Pressure Differential ratio factor (=0.72)
+Qa :Air flow rate(scfh)
+C  :Coefficient of discharge
+do:Diameter of orific (ft)
+Ta :Air temperature(R)","(P1-P2)/P1<Fg*Xt :
+Q=1360*C*(Do/0.0153)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/T1)^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*1360*C*(Do/0.0153)^2*P1*(Fg*Xt/T1)^0.5","(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(Do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(Do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :一次蒸気圧力(kPaA)
+P2 :二次蒸気圧力(kPaA)
+Fg :比熱比係数
+Xt :差圧比係数(=0.72)
+Q  :空気流量(Nm3/h)
+C  :流量係数
+do :ｵﾘﾌｨｽ径(mm)
+Ta :空気温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :Vordruck(kPaA)
+P2 :Gegendruck(kPaA)
+Fg :Normierungsfaktor
+Xt :Differenzdruck-Verhältnis(=0.72)
+Q  :Luftdurchsatz(Nm3/h)
+C  :Durchflussbeiwert
+do :Blendendurchmesser(m)
+Ta :Lufttemperatur(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :Pression primaire(kPaA)
+P2 :Pression secondaire(kPaA)
+Fg :Facteur de rapport de chaleur spécifique
+Xt :Facteur de rapport de pression différentielle(=0.72)
+Q  :Débit d'air(Nm3/h)
+C  :Coefficient de décharge
+do :Diamètre d'orifice(m)
+Ta :Température de l'air(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :入口压力(kPaA)
+P2 :出口压力(kPaA)
+Fg :比热比系数
+Xt :压差比系数(=0.72)
+Q  :空气流量(Nm3/h)
+C  :排放系数
+do :阀嘴直径(mm)
+Ta :空气温度(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :일차측 압력(kPaA)
+P2 :이차측 압력(kPaA)
+Fg :비열비계수
+Xt :차압비계수(=0.72)
+Q  :에어유량(Nm3/h)
+C  :유량계수
+do :오리피스의 사이즈(mm)
+Ta :에어온도(°C)",,"(P1-P2)/P1<Fg*Xt :
+Q=4.17*C*(do/4.654)^2*P1*(1-(P1-P2)/P1/(3*Fg*Xt))*((P1-P2)/P1/(T1+273.15))^0.5
+(P1-P2)/P1>=Fg*Xt :
+Q=0.667*4.17*C*(do/4.654)^2*P1*(Fg*Xt/(T1+273.5))^0.5","P1 :Presión primaria(kPaA)
+P2 :Presión secundaria(kPaA)
+Fg :Relación de Calores Específicos
+Xt :Relación de Presiones Diferenciales(=0.72)
+Q  :Rango de flujo de aire(Nm3/h)
+C  :Coeficiente de descarga
+do :Diámetro del orificio(mm)
+Ta :Temperatura del aire(°C)",
+,14500,"mc = (dv1 - Xr) · Qa · 60 / Vtemp / 1000
+X1 = Φ · dv1
+Xr = dv2 · (760 - p2)/(760 · Pr - p2)
+Vtemp = V · (760 - p1) /(760 - Φ · p1)
+Pr = (pa + 101.325) / 101.325","m_{c}=\frac{(dv_{1}-X_{r})\cdot Q_{a}\cdot 60}{V_{temp}}\: /1000
+X_1=\Phi \cdot dv_{1}
+X_{r}=\frac{d_{v2}\cdot (760-p_{2})}{760\cdot P_{r}-p_{2}}
+V_{temp}=\frac{V\cdot (760-p_1)}{760-\Phi\cdot p_{1}}
+P_{r}=\frac{(p_{a}+101.325)}{101.325}","mc:Condensate flow rate (kg/h)
+Qa:Air flow rate (Nm³/min)
+Vtemp:Temporary specific volume variable (m³/kg)
+Φ  :Relative humidity
+dv1:Absolute humidity of saturated humid air at ambient temperature (g/kg)
+dv2:Absolute humidity of saturated humid air at cooling temp (g/kg)
+p2:Partial pressure of vapor in saturated humid air at Cooling temperature (mmHg)
+V  :Specific volume of saturated humid air at ambient temperature (m³/kg)
+p1:Partial pressure of vapor in saturated humid air at ambient temperature (mmHg)
+pa:Air pressure (kPaA)","Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","mc = (dv1 - Xr) · Qa · 60 / Vtemp
+X1 = Φ · dv1
+Xr = dv2 · (14.7 - p2) / (14.7 · Pr - p2)
+Vtemp = V · (14.7 - p1) / (14.7 - Φ · p1)
+Pr = (pa + 14.7) / 14.7","m_{c}=\frac{(dv_{1}-X_{r})\cdot Q_{a}\cdot 60}{V_{temp}}
+X_1=\Phi \cdot dv_{1}
+X_{r}=\frac{d_{v2}\cdot (14.7-p_{2})}{14.7\cdot P_{r}-p_{2}}
+V_{temp}=\frac{V\cdot (14.7-p_1)}{14.7-\Phi\cdot p_{1}}
+P_{r}=\frac{(p_{a}+14.7)}{14.7}","mc :Condensate rate(lb/h)
+Qa :Air flow rate(SWcM)
+Vx :Temporary specific volume variable(ft³/lb)
+Φ  :Relative humidity
+dv1:Absolute humidity of saturated humid air at ambient temperature(lb/lb)
+dv2:Absolute humidity of saturated humid air at cooling temperature(lb/lb)
+p2:Partial pressure of vapor in saturated humid air at Cooling temperature(psia)
+V:Specific volume of saturated humid air at ambient temperature(ft³/lb)
+p1:Partial pressure of vapor in saturated humid air at ambient temperature(psia)
+pa :Air pressure(psia)","Xd=(X1-Xr)*FaN*60/Vo
+X1=RH*Xs1
+Xr=Xs2*(14.7-Ps2)/(14.7*Pr-Ps2)
+Vo=Vs1*(14.7-Ps1)/(14.7-RH*Ps1)
+Pr=(Pa+14.7)/14.7","Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","Xd :ﾄﾞﾚﾝ発生量(kg/h)
+FaN:空気流量(Nm3/min)
+RH :相対湿度
+Xs1:外気温度における飽和湿り空気の絶対湿度(g/kg)
+Vs1:外気温度における飽和湿り空気の比容積(m3/kg)
+Ps1:外気温度における飽和湿り空気の水蒸気分圧(mmHg)
+Xs2:冷却温度における飽和湿り空気の絶対湿度(g/kg)
+Ps2:冷却温度における飽和湿り空気の水蒸気分圧(mmHg)
+Pa :空気圧力(kPaA)",,"Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101,325)/101,325","Xd :Kondensatmenge(kg/h)
+QN :Luftdurchsatz(Nm3/min))
+Vo :Spez. Volumen der feuchten Luft(m3/kg)
+RH :Relative Feuchte(%)
+Xs1:Absolute Feuchte der gesättigten Luft bei Umgebungstemperatur(g/kg)
+Xs2:Absolute Feuchte der gesättigten Luft nach Abkühlung(g/kg)
+Ps2:Partialdruck des Wasserdampfes in der gesättigten Luft nach Abkühlung(mmHg)
+Vs1:Spez. Volumen der gesättigten Luft bei Umgebungstemperatur(m3/kg)
+Ps1:Partialdruck des Wasserdampfes in der gesättigten Luft bei Umgebungstemperatur(mmHg)
+Pa :Luftdruck(kPaA)",,"Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","Xd :Débit de condensât(kg/h)
+QN :Débit d'air(Nm3/min)
+Vo :Volume spécifique de l'air humide(m3/kg)
+RH :Humidité relative
+Xs1:Humidité absolue de l'air humide saturé à température ambiante(g/kg)
+Xs2:Humidité absolue de l'air humide saturé à température après refroidissement(g/kg)
+Ps2:Pression partielle de la vapeur dans de l'air humide saturé après refroidissement(mmHg)
+Vs1:Volume spécifique de l'air saturé humide à température ambiante(m3/kg)
+Ps1:Pression partielle de la vapeur dans l'air saturé humide à température ambiante(mmHg)
+Pa :Pression de l'air(kPaA)",,"Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","Xd :冷凝水流量(kg/h)
+FaN:空气流量(Nm3/min)
+Vo :临时比容变量(m3/kg)
+RH :相对湿度
+Xs1:环境温度下饱和空气的绝对湿度(g/kg)
+Xs2:过冷温度下饱和空气的绝对湿度(g/kg) 
+Ps2:过冷温度下饱和空气的分压（mmHg）
+Vs1:环境温度下饱和空气的比容(m3/kg)
+Ps1:环境温度下饱和空气的分压(mmHg)
+Pa :空气压力(kPaA)",,"Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","Xd :응축수 발생량(kg/h)
+FaN:에어유량(Nm3/min)
+RH :상대습도
+Xs1:외기온도에 해당하는 포화습공기의 절대습도(g/kg)
+Vs1:외기온도에 해당하는 포화습공기의 비체적(m3/kg)
+Ps1:외기온도에 해당하는 포화습공기의 수증기분압(mmHg)
+Xs2:냉각온도에 해당하는 포화습공기의 절대습도(g/kg)
+Ps2:냉각온도에 해당하는 포화습공기의 수증기분압(mmHg)
+Pa :공기압력(kPaA)",,"Xd=(X1-Xr)*FaN*60/Vo/1000
+X1=RH*Xs1
+Xr=Xs2*(760-Ps2)/(760*Pr-Ps2)
+Vo=Vs1*(760-Ps1)/(760-RH*Ps1)
+Pr=(Pa+101.325)/101.325","Xd :Rango de condensado (kg/h)QN:Rango de flujo de aire (Nm3/min)QN:Air flow rate(Nm3/min)
+Vo :Variable temporal de volumen específico(m3/kg)
+RH :Húmedad relativa
+Xs1:Húmedad absoluta del aire saturado húmedo a temperatura ambiente(g/kg)
+Xs2:Húmedad absoluta del aire saturado húmedo a temperatura de enfriamiento(g/kg)
+Ps2:Presión parcial del vapor en aire saturado húmedo a temperatura de enfriamiento(mmHg)
+Vs1:Volumen específico del aire saturado húmedo a temperatura ambiente(m3/kg)
+Ps1:Presión parcial del vapor en el aire saturado húmedo a temperatura ambiente(mmHg)
+Pa :Presión del aire(kPaA)",

@@ -18,7 +18,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Расход пара через сопло
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11230")
 						//FORM HEADER
 						.calculator-form__head
 							.semi-24 Начальные данные
@@ -53,7 +53,7 @@ block content
 								.form-item-group
 									.form-label Давление на входе
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_p_in" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_p_in" data-var="stmPrimPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -111,7 +111,7 @@ block content
 								.form-item-group
 									.form-label Давление на выходе
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_p_out" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_p_out" data-var="stmSecondPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -169,7 +169,7 @@ block content
 								.form-item-group
 									.form-label Диаметр проходного сечения
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_diametr_sech" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_diametr_sech" data-var="orificeDiam" data-cat="length" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
 											.dropdown__list
@@ -208,7 +208,7 @@ block content
 											.tooltip-text
 												p Коэффициент расхода :<br/>Максимальный коэффициент 1,0. Он обеспечивается когда поток проходит через отверстие круглого сечения без кромок в атмосферу
 									.form-item
-										input.form-inp(type="text" name="koef_rashoda" inputmode="decimal" value="0.7")
+										input.form-inp(type="text" name="koef_rashoda" data-var="dischargeCoeff" inputmode="decimal" value="0.7")
 
 							//СКРЫТЫЕ ДОП ОПЦИИ
 							.hide-block-wrapper
@@ -223,7 +223,7 @@ block content
 													.tooltip-text
 														p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 											.form-item.form-item--measure
-												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" value="(99.9743)")
 												.dropdown.dropdown--measure
 													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 													.dropdown__list
@@ -254,7 +254,29 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Расход пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_flow" data-out="stmFlow" data-cat="massFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="kg/h" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="t(metric)/h")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="lb/h")
+															span.form-radio-name lb/h
 					//formulas
 					.formulas
 						.formulas__title Формулы:

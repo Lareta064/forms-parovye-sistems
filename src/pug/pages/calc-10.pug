@@ -15,7 +15,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Расход конденсата при нагреве жидкости (непрерывном)
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11330")
 						.calculator-form__head
 							.semi-24 Начальные данные
 							.calculator-form__measure
@@ -50,12 +50,12 @@ block content
 								.form-item-group
 									.form-label Плотность
 									.form-item
-										input.form-inp(type="text" name="plotnost" inputmode="decimal" value="1")
+										input.form-inp(type="text" name="plotnost" data-var="gravity" inputmode="decimal" value="1")
 
 								.form-item-group
 									.form-label Теплосодержание
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_teplo" inputmode="decimal" value="4.19")
+										input.form-inp.form-inp--measure(type="text" name="current_teplo" data-var="specHeat" data-cat="specHeat" inputmode="decimal" value="4.19")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg K
 											.dropdown__list
@@ -70,7 +70,7 @@ block content
 								.form-item-group
 									.form-label Расход жидкости
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_rashod_zhidk" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_rashod_zhidk" data-var="lqdFlow" data-cat="volFlow" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/h
 											.dropdown__list
@@ -90,7 +90,7 @@ block content
 											.tooltip-text
 												p Температура жидкости на входе :<br/>Введите температуру воды перед нагревом
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_t_in" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_t_in" data-var="lqdInTemp" data-cat="temp" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 											.dropdown__list
@@ -110,7 +110,7 @@ block content
 											.tooltip-text
 												p Температура жидкости на выходе :<br/>Введите заданную температуру воды
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_t_out" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_t_out" data-var="lqdOutTemp" data-cat="temp" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 											.dropdown__list
@@ -124,7 +124,7 @@ block content
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -147,7 +147,7 @@ block content
 													.tooltip-text
 														p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 											.form-item.form-item--measure
-												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" value="(99.9743)")
 												.dropdown.dropdown--measure
 													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 													.dropdown__list
@@ -169,7 +169,29 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Расход конденсата
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход конденсата
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_cond" data-out="condLoad" data-cat="massFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cond_unit" value="kg/h" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cond_unit" value="t(metric)/h")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_cond_unit" value="lb/h")
+															span.form-radio-name lb/h
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

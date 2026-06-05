@@ -18,7 +18,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Расход пара в трубопроводе
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11160")
 						//FORM HEADER
 						.calculator-form__head
 							.semi-24 Начальные данные
@@ -53,7 +53,7 @@ block content
 								.form-item-group
 									.form-label
 										span Класс трубопровода
-									.dropdown
+									.dropdown(data-var="pipeGrade" data-type="grade")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
 										.dropdown__list
 											ul
@@ -94,7 +94,7 @@ block content
 								.form-item-group
 									.form-label
 										span Диаметр трубопровода
-									.dropdown
+									.dropdown(data-var="pipeSize" data-type="size")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
 										.dropdown__list
 											ul
@@ -190,6 +190,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_davlenie_para"
+											data-var="stmPress"
+											data-cat="pressureAbs"
 											inputmode="decimal"
 											value="0"
 										)
@@ -254,6 +256,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_skorost_para"
+											data-var="stmVelo"
+											data-cat="velocity"
 											inputmode="decimal"
 											value="0"
 										)
@@ -291,6 +295,8 @@ block content
 												input.form-inp.form-inp--measure(
 													type="text"
 													name="current_vnutr_diametr"
+													data-var="pipeInDiam"
+													data-cat="length"
 													inputmode="decimal"
 													value="7"
 												)
@@ -336,6 +342,8 @@ block content
 												input.form-inp.form-inp--measure(
 													type="text"
 													name="current_temperatura_para"
+													data-var="stmTemp"
+													data-cat="temp"
 													inputmode="decimal"
 												)
 
@@ -369,7 +377,29 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Расход пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_flow" data-out="stmFlow" data-cat="massFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="kg/h" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="t(metric)/h")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flow_unit" value="lb/h")
+															span.form-radio-name lb/h
 					//formulas
 					.formulas
 						.formulas__title Формулы:

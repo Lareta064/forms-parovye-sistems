@@ -15,7 +15,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Таблица свойств насыщенного пара по давлению
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11510")
 						.calculator-form__head
 							.semi-24 Начальные данные
 							.calculator-form__measure
@@ -36,7 +36,7 @@ block content
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -55,5 +55,137 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Температура насыщения
+								.calculator-result-row.form-item-group
+									.form-label
+										span Температура насыщения
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_tsat" data-out="satTemp" data-cat="temp" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_tsat_unit" value="°C" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_tsat_unit" value="°F")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_tsat_unit" value="K")
+															span.form-radio-name K
+								//Скрытая теплота парообразования
+								.calculator-result-row.form-item-group
+									.form-label
+										span Скрытая теплота парообразования
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_dh" data-out="latentHeat" data-cat="enthalpy" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dh_unit" value="kJ/kg" checked)
+															span.form-radio-name kJ/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dh_unit" value="kcal/kg")
+															span.form-radio-name kcal/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dh_unit" value="BTU/lb")
+															span.form-radio-name BTU/lb
+								//Удельная энтальпия пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельная энтальпия пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_hg" data-out="satVapEnth" data-cat="enthalpy" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hg_unit" value="kJ/kg" checked)
+															span.form-radio-name kJ/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hg_unit" value="kcal/kg")
+															span.form-radio-name kcal/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hg_unit" value="BTU/lb")
+															span.form-radio-name BTU/lb
+								//Удельная энтальпия воды
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельная энтальпия воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_hf" data-out="satWtrEnth" data-cat="enthalpy" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kJ/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hf_unit" value="kJ/kg" checked)
+															span.form-radio-name kJ/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hf_unit" value="kcal/kg")
+															span.form-radio-name kcal/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_hf_unit" value="BTU/lb")
+															span.form-radio-name BTU/lb
+								//Удельный объём пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельный объём пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_vg" data-out="satVapVol" data-cat="specVol" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vg_unit" value="m³/kg" checked)
+															span.form-radio-name m³/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vg_unit" value="L/kg")
+															span.form-radio-name L/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vg_unit" value="ft³/lb")
+															span.form-radio-name ft³/lb
+								//Удельный объём воды
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельный объём воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_vf" data-out="satWtrVol" data-cat="specVol" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vf_unit" value="m³/kg" checked)
+															span.form-radio-name m³/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vf_unit" value="L/kg")
+															span.form-radio-name L/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_vf_unit" value="ft³/lb")
+															span.form-radio-name ft³/lb
 	-var title = "Таблица свойств насыщенного пара по давлению";

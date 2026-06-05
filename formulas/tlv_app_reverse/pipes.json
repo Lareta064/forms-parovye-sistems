@@ -1,0 +1,1654 @@
+{
+  "pipes": [
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.5",
+      "od_in": "0.413385826771654",
+      "id_mm": "6.5",
+      "id_in": "0.255905511811024",
+      "thickness_mm": "2"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.8",
+      "od_in": "0.543307086614173",
+      "id_mm": "9.2",
+      "id_in": "0.362204724409449",
+      "thickness_mm": "2.3"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.3",
+      "od_in": "0.681102362204724",
+      "id_mm": "12.7",
+      "id_in": "0.5",
+      "thickness_mm": "2.3"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.7",
+      "od_in": "0.854330708661417",
+      "id_mm": "16.1",
+      "id_in": "0.633858267716535",
+      "thickness_mm": "2.8"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "27.2",
+      "od_in": "1.07086614173228",
+      "id_mm": "21.6",
+      "id_in": "0.850393700787402",
+      "thickness_mm": "2.8"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "34",
+      "od_in": "1.33858267716535",
+      "id_mm": "27.6",
+      "id_in": "1.08661417322835",
+      "thickness_mm": "3.2"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.7",
+      "od_in": "1.68110236220472",
+      "id_mm": "35.7",
+      "id_in": "1.40551181102362",
+      "thickness_mm": "3.5"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.6",
+      "od_in": "1.91338582677165",
+      "id_mm": "41.6",
+      "id_in": "1.63779527559055",
+      "thickness_mm": "3.5"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.5",
+      "od_in": "2.38188976377953",
+      "id_mm": "52.9",
+      "id_in": "2.08267716535433",
+      "thickness_mm": "3.8"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "76.3",
+      "od_in": "3.00393700787402",
+      "id_mm": "67.9",
+      "id_in": "2.67322834645669",
+      "thickness_mm": "4.2"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "89.1",
+      "od_in": "3.50787401574803",
+      "id_mm": "80.7",
+      "id_in": "3.17716535433071",
+      "thickness_mm": "4.2"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "105.3",
+      "id_in": "4.14566929133858",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "139.8",
+      "od_in": "5.50393700787402",
+      "id_mm": "130.8",
+      "id_in": "5.1496062992126",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "165.2",
+      "od_in": "6.50393700787402",
+      "id_mm": "155.2",
+      "id_in": "6.11023622047244",
+      "thickness_mm": "5"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "216.3",
+      "od_in": "8.51574803149607",
+      "id_mm": "204.7",
+      "id_in": "8.05905511811024",
+      "thickness_mm": "5.8"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "267.4",
+      "od_in": "10.5275590551181",
+      "id_mm": "254.2",
+      "id_in": "10.007874015748",
+      "thickness_mm": "6.6"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "318.5",
+      "od_in": "12.5393700787402",
+      "id_mm": "304.7",
+      "id_in": "11.996062992126",
+      "thickness_mm": "6.9"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "339.8",
+      "id_in": "13.3779527559055",
+      "thickness_mm": "7.9"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "390.6",
+      "id_in": "15.3779527559055",
+      "thickness_mm": "7.9"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "441.4",
+      "id_in": "17.3779527559055",
+      "thickness_mm": "7.9"
+    },
+    {
+      "grade": "JIS-SGP",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "492.2",
+      "id_in": "19.3779527559055",
+      "thickness_mm": "7.9"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.5",
+      "od_in": "0.413385826771654",
+      "id_mm": "7.1",
+      "id_in": "0.279527559055118",
+      "thickness_mm": "1.7"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.8",
+      "od_in": "0.543307086614173",
+      "id_mm": "9.4",
+      "id_in": "0.37007874015748",
+      "thickness_mm": "2.2"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.3",
+      "od_in": "0.681102362204724",
+      "id_mm": "12.7",
+      "id_in": "0.5",
+      "thickness_mm": "2.3"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.7",
+      "od_in": "0.854330708661417",
+      "id_mm": "16.1",
+      "id_in": "0.633858267716535",
+      "thickness_mm": "2.8"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "27.2",
+      "od_in": "1.07086614173228",
+      "id_mm": "21.4",
+      "id_in": "0.84251968503937",
+      "thickness_mm": "2.9"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "34",
+      "od_in": "1.33858267716535",
+      "id_mm": "27.2",
+      "id_in": "1.07086614173228",
+      "thickness_mm": "3.4"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.7",
+      "od_in": "1.68110236220472",
+      "id_mm": "35.5",
+      "id_in": "1.39763779527559",
+      "thickness_mm": "3.6"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.6",
+      "od_in": "1.91338582677165",
+      "id_mm": "41.2",
+      "id_in": "1.62204724409449",
+      "thickness_mm": "3.7"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.5",
+      "od_in": "2.38188976377953",
+      "id_mm": "52.7",
+      "id_in": "2.0748031496063",
+      "thickness_mm": "3.9"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "76.3",
+      "od_in": "3.00393700787402",
+      "id_mm": "65.9",
+      "id_in": "2.59448818897638",
+      "thickness_mm": "5.2"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "89.1",
+      "od_in": "3.50787401574803",
+      "id_mm": "78.1",
+      "id_in": "3.0748031496063",
+      "thickness_mm": "5.5"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "102.3",
+      "id_in": "4.02755905511811",
+      "thickness_mm": "6"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "139.8",
+      "od_in": "5.50393700787402",
+      "id_mm": "126.6",
+      "id_in": "4.98425196850394",
+      "thickness_mm": "6.6"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "165.2",
+      "od_in": "6.50393700787402",
+      "id_mm": "151",
+      "id_in": "5.94488188976378",
+      "thickness_mm": "7.1"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "216.3",
+      "od_in": "8.51574803149607",
+      "id_mm": "199.9",
+      "id_in": "7.87007874015748",
+      "thickness_mm": "8.2"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "267.4",
+      "od_in": "10.5275590551181",
+      "id_mm": "248.8",
+      "id_in": "9.79527559055118",
+      "thickness_mm": "9.3"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "318.5",
+      "od_in": "12.5393700787402",
+      "id_mm": "297.9",
+      "id_in": "11.7283464566929",
+      "thickness_mm": "10.3"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "333.4",
+      "id_in": "13.1259842519685",
+      "thickness_mm": "11.1"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "381",
+      "id_in": "15",
+      "thickness_mm": "12.7"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "428.6",
+      "id_in": "16.8740157480315",
+      "thickness_mm": "14.3"
+    },
+    {
+      "grade": "JIS-STPG Sch40",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "477.8",
+      "id_in": "18.8110236220472",
+      "thickness_mm": "15.1"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.5",
+      "od_in": "0.413385826771654",
+      "id_mm": "6.1",
+      "id_in": "0.240157480314961",
+      "thickness_mm": "2.2"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.8",
+      "od_in": "0.543307086614173",
+      "id_mm": "9",
+      "id_in": "0.354330708661417",
+      "thickness_mm": "2.4"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.3",
+      "od_in": "0.681102362204724",
+      "id_mm": "11.7",
+      "id_in": "0.460629921259843",
+      "thickness_mm": "2.8"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.7",
+      "od_in": "0.854330708661417",
+      "id_mm": "15.3",
+      "id_in": "0.602362204724409",
+      "thickness_mm": "3.2"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "27.2",
+      "od_in": "1.07086614173228",
+      "id_mm": "20.4",
+      "id_in": "0.803149606299213",
+      "thickness_mm": "3.4"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "34",
+      "od_in": "1.33858267716535",
+      "id_mm": "26.2",
+      "id_in": "1.03149606299213",
+      "thickness_mm": "3.9"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.7",
+      "od_in": "1.68110236220472",
+      "id_mm": "33.7",
+      "id_in": "1.32677165354331",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.6",
+      "od_in": "1.91338582677165",
+      "id_mm": "39.6",
+      "id_in": "1.55905511811024",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.5",
+      "od_in": "2.38188976377953",
+      "id_mm": "50.7",
+      "id_in": "1.99606299212598",
+      "thickness_mm": "4.9"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "76.3",
+      "od_in": "3.00393700787402",
+      "id_mm": "64.3",
+      "id_in": "2.53149606299213",
+      "thickness_mm": "6"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "89.1",
+      "od_in": "3.50787401574803",
+      "id_mm": "75.9",
+      "id_in": "2.98818897637795",
+      "thickness_mm": "6.6"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "100.1",
+      "id_in": "3.94094488188976",
+      "thickness_mm": "7.1"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "139.8",
+      "od_in": "5.50393700787402",
+      "id_mm": "123.6",
+      "id_in": "4.86614173228347",
+      "thickness_mm": "8.1"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "165.2",
+      "od_in": "6.50393700787402",
+      "id_mm": "146.6",
+      "id_in": "5.77165354330709",
+      "thickness_mm": "9.3"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "216.3",
+      "od_in": "8.51574803149607",
+      "id_mm": "195.7",
+      "id_in": "7.70472440944882",
+      "thickness_mm": "10.3"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "267.4",
+      "od_in": "10.5275590551181",
+      "id_mm": "242",
+      "id_in": "9.52755905511811",
+      "thickness_mm": "12.7"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "318.5",
+      "od_in": "12.5393700787402",
+      "id_mm": "289.9",
+      "id_in": "11.4133858267717",
+      "thickness_mm": "14.3"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "325.4",
+      "id_in": "12.8110236220472",
+      "thickness_mm": "15.1"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "373",
+      "id_in": "14.6850393700787",
+      "thickness_mm": "16.7"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "419.2",
+      "id_in": "16.503937007874",
+      "thickness_mm": "19"
+    },
+    {
+      "grade": "JIS-STPG Sch60",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "466.8",
+      "id_in": "18.3779527559055",
+      "thickness_mm": "20.6"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.5",
+      "od_in": "0.413385826771654",
+      "id_mm": "5.7",
+      "id_in": "0.224409448818898",
+      "thickness_mm": "2.4"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.8",
+      "od_in": "0.543307086614173",
+      "id_mm": "7.8",
+      "id_in": "0.307086614173228",
+      "thickness_mm": "3"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.3",
+      "od_in": "0.681102362204724",
+      "id_mm": "10.9",
+      "id_in": "0.429133858267717",
+      "thickness_mm": "3.2"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.7",
+      "od_in": "0.854330708661417",
+      "id_mm": "14.3",
+      "id_in": "0.562992125984252",
+      "thickness_mm": "3.7"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "27.2",
+      "od_in": "1.07086614173228",
+      "id_mm": "19.4",
+      "id_in": "0.763779527559055",
+      "thickness_mm": "3.9"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "34",
+      "od_in": "1.33858267716535",
+      "id_mm": "25",
+      "id_in": "0.984251968503937",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.7",
+      "od_in": "1.68110236220472",
+      "id_mm": "32.9",
+      "id_in": "1.29527559055118",
+      "thickness_mm": "4.9"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.6",
+      "od_in": "1.91338582677165",
+      "id_mm": "38.4",
+      "id_in": "1.51181102362205",
+      "thickness_mm": "5.1"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.5",
+      "od_in": "2.38188976377953",
+      "id_mm": "49.5",
+      "id_in": "1.9488188976378",
+      "thickness_mm": "5.5"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "76.3",
+      "od_in": "3.00393700787402",
+      "id_mm": "62.3",
+      "id_in": "2.45275590551181",
+      "thickness_mm": "7"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "89.1",
+      "od_in": "3.50787401574803",
+      "id_mm": "73.9",
+      "id_in": "2.90944881889764",
+      "thickness_mm": "7.6"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "97.1",
+      "id_in": "3.82283464566929",
+      "thickness_mm": "8.6"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "139.8",
+      "od_in": "5.50393700787402",
+      "id_mm": "120.8",
+      "id_in": "4.75590551181102",
+      "thickness_mm": "9.5"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "165.2",
+      "od_in": "6.50393700787402",
+      "id_mm": "143.2",
+      "id_in": "5.63779527559055",
+      "thickness_mm": "11"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "216.3",
+      "od_in": "8.51574803149607",
+      "id_mm": "190.9",
+      "id_in": "7.51574803149606",
+      "thickness_mm": "12.7"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "267.4",
+      "od_in": "10.5275590551181",
+      "id_mm": "237.2",
+      "id_in": "9.33858267716535",
+      "thickness_mm": "15.1"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "318.5",
+      "od_in": "12.5393700787402",
+      "id_mm": "283.7",
+      "id_in": "11.1692913385827",
+      "thickness_mm": "17.4"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "317.6",
+      "id_in": "12.503937007874",
+      "thickness_mm": "19"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "363.6",
+      "id_in": "14.3149606299213",
+      "thickness_mm": "21.4"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "409.6",
+      "id_in": "16.1259842519685",
+      "thickness_mm": "23.8"
+    },
+    {
+      "grade": "JIS-STPG Sch80",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "455.6",
+      "id_in": "17.9370078740158",
+      "thickness_mm": "26.2"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.287",
+      "od_in": "0.405",
+      "id_mm": "6.8326",
+      "id_in": "0.269",
+      "thickness_mm": "1.7272"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.716",
+      "od_in": "0.54",
+      "id_mm": "9.2456",
+      "id_in": "0.364",
+      "thickness_mm": "2.2352"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.145",
+      "od_in": "0.675",
+      "id_mm": "12.5222",
+      "id_in": "0.493",
+      "thickness_mm": "2.3114"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.336",
+      "od_in": "0.84",
+      "id_mm": "15.7988",
+      "id_in": "0.622",
+      "thickness_mm": "2.7686"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "26.67",
+      "od_in": "1.05",
+      "id_mm": "20.9296",
+      "id_in": "0.824",
+      "thickness_mm": "2.8702"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "33.401",
+      "od_in": "1.315",
+      "id_mm": "26.6446",
+      "id_in": "1.049",
+      "thickness_mm": "3.3782"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.164",
+      "od_in": "1.66",
+      "id_mm": "35.052",
+      "id_in": "1.38",
+      "thickness_mm": "3.556"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.26",
+      "od_in": "1.9",
+      "id_mm": "40.894",
+      "id_in": "1.61",
+      "thickness_mm": "3.683"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.325",
+      "od_in": "2.375",
+      "id_mm": "52.5018",
+      "id_in": "2.067",
+      "thickness_mm": "3.9116"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "73.025",
+      "od_in": "2.875",
+      "id_mm": "62.7126",
+      "id_in": "2.469",
+      "thickness_mm": "5.1562"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "88.9",
+      "od_in": "3.5",
+      "id_mm": "77.9272",
+      "id_in": "3.068",
+      "thickness_mm": "5.4864"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "102.2604",
+      "id_in": "4.026",
+      "thickness_mm": "6.0198"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "141.3002",
+      "od_in": "5.563",
+      "id_mm": "128.1938",
+      "id_in": "5.047",
+      "thickness_mm": "6.5532"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "168.275",
+      "od_in": "6.625",
+      "id_mm": "154.051",
+      "id_in": "6.065",
+      "thickness_mm": "7.112"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "219.075",
+      "od_in": "8.625",
+      "id_mm": "202.7174",
+      "id_in": "7.981",
+      "thickness_mm": "8.1788"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "273.05",
+      "od_in": "10.75",
+      "id_mm": "254.508",
+      "id_in": "10.02",
+      "thickness_mm": "9.271"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "323.85",
+      "od_in": "12.75",
+      "id_mm": "303.2252",
+      "id_in": "11.938",
+      "thickness_mm": "10.3124"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "333.3496",
+      "id_in": "13.124",
+      "thickness_mm": "11.1252"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "381",
+      "id_in": "15",
+      "thickness_mm": "12.7"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "428.6504",
+      "id_in": "16.876",
+      "thickness_mm": "14.2748"
+    },
+    {
+      "grade": "ANSI Sch40",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "477.8248",
+      "id_in": "18.812",
+      "thickness_mm": "15.0876"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.287",
+      "od_in": "0.405",
+      "id_mm": "5.461",
+      "id_in": "0.215",
+      "thickness_mm": "2.413"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.716",
+      "od_in": "0.54",
+      "id_mm": "7.6708",
+      "id_in": "0.302",
+      "thickness_mm": "3.0226"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.145",
+      "od_in": "0.675",
+      "id_mm": "10.7442",
+      "id_in": "0.423",
+      "thickness_mm": "3.2004"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.336",
+      "od_in": "0.84",
+      "id_mm": "13.8684",
+      "id_in": "0.546",
+      "thickness_mm": "3.7338"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "26.67",
+      "od_in": "1.05",
+      "id_mm": "18.8468",
+      "id_in": "0.742",
+      "thickness_mm": "3.9116"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "33.401",
+      "od_in": "1.315",
+      "id_mm": "24.3078",
+      "id_in": "0.957",
+      "thickness_mm": "4.5466"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.164",
+      "od_in": "1.66",
+      "id_mm": "32.4612",
+      "id_in": "1.278",
+      "thickness_mm": "4.8514"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.26",
+      "od_in": "1.9",
+      "id_mm": "38.1",
+      "id_in": "1.5",
+      "thickness_mm": "5.08"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.325",
+      "od_in": "2.375",
+      "id_mm": "49.2506",
+      "id_in": "1.939",
+      "thickness_mm": "5.5372"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "73.025",
+      "od_in": "2.875",
+      "id_mm": "59.0042",
+      "id_in": "2.323",
+      "thickness_mm": "7.0104"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "88.9",
+      "od_in": "3.5",
+      "id_mm": "73.66",
+      "id_in": "2.9",
+      "thickness_mm": "7.62"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "97.1804",
+      "id_in": "3.826",
+      "thickness_mm": "8.5598"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "141.3002",
+      "od_in": "5.563",
+      "id_mm": "122.2502",
+      "id_in": "4.813",
+      "thickness_mm": "9.525"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "168.275",
+      "od_in": "6.625",
+      "id_mm": "146.3294",
+      "id_in": "5.761",
+      "thickness_mm": "10.9728"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "219.075",
+      "od_in": "8.625",
+      "id_mm": "193.675",
+      "id_in": "7.625",
+      "thickness_mm": "12.7"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "273.05",
+      "od_in": "10.75",
+      "id_mm": "242.8748",
+      "id_in": "9.562",
+      "thickness_mm": "15.0876"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "323.85",
+      "od_in": "12.75",
+      "id_mm": "288.8996",
+      "id_in": "11.374",
+      "thickness_mm": "17.4752"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "317.5",
+      "id_in": "12.5",
+      "thickness_mm": "19.05"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "363.5248",
+      "id_in": "14.312",
+      "thickness_mm": "21.4376"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "409.5496",
+      "id_in": "16.124",
+      "thickness_mm": "23.8252"
+    },
+    {
+      "grade": "ANSI Sch80",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "455.6252",
+      "id_in": "17.938",
+      "thickness_mm": "26.1874"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.336",
+      "od_in": "0.84",
+      "id_mm": "11.7856",
+      "id_in": "0.464",
+      "thickness_mm": "4.7752"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "26.67",
+      "od_in": "1.05",
+      "id_mm": "15.5448",
+      "id_in": "0.612",
+      "thickness_mm": "5.5626"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "33.401",
+      "od_in": "1.315",
+      "id_mm": "20.701",
+      "id_in": "0.815",
+      "thickness_mm": "6.35"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.164",
+      "od_in": "1.66",
+      "id_mm": "29.464",
+      "id_in": "1.16",
+      "thickness_mm": "6.35"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.26",
+      "od_in": "1.9",
+      "id_mm": "33.9852",
+      "id_in": "1.338",
+      "thickness_mm": "7.1374"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.325",
+      "od_in": "2.375",
+      "id_mm": "42.8498",
+      "id_in": "1.687",
+      "thickness_mm": "8.7376"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "73.025",
+      "od_in": "2.875",
+      "id_mm": "53.975",
+      "id_in": "2.125",
+      "thickness_mm": "9.525"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "88.9",
+      "od_in": "3.5",
+      "id_mm": "66.6496",
+      "id_in": "2.624",
+      "thickness_mm": "11.1252"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "87.3252",
+      "id_in": "3.438",
+      "thickness_mm": "13.4874"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "141.3002",
+      "od_in": "5.563",
+      "id_mm": "109.5502",
+      "id_in": "4.313",
+      "thickness_mm": "15.875"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "168.275",
+      "od_in": "6.625",
+      "id_mm": "131.7498",
+      "id_in": "5.187",
+      "thickness_mm": "18.2626"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "219.075",
+      "od_in": "8.625",
+      "id_mm": "173.0502",
+      "id_in": "6.813",
+      "thickness_mm": "23.0124"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "273.05",
+      "od_in": "10.75",
+      "id_mm": "215.9",
+      "id_in": "8.5",
+      "thickness_mm": "28.575"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "323.85",
+      "od_in": "12.75",
+      "id_mm": "257.2004",
+      "id_in": "10.126",
+      "thickness_mm": "33.3248"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "284.1752",
+      "id_in": "11.188",
+      "thickness_mm": "35.7124"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "325.4248",
+      "id_in": "12.812",
+      "thickness_mm": "40.4876"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "366.7252",
+      "id_in": "14.438",
+      "thickness_mm": "45.2374"
+    },
+    {
+      "grade": "ANSI Sch160",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "407.9748",
+      "id_in": "16.062",
+      "thickness_mm": "50.0126"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "6A",
+      "size_inch": "NPS1/8",
+      "od_mm": "10.2",
+      "od_in": "0.401574803149606",
+      "id_mm": "7",
+      "id_in": "0.275590551181102",
+      "thickness_mm": "1.6"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "8A",
+      "size_inch": "NPS1/4",
+      "od_mm": "13.5",
+      "od_in": "0.531496062992126",
+      "id_mm": "9.9",
+      "id_in": "0.389763779527559",
+      "thickness_mm": "1.8"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "10A",
+      "size_inch": "NPS3/8",
+      "od_mm": "17.2",
+      "od_in": "0.677165354330709",
+      "id_mm": "13.6",
+      "id_in": "0.535433070866142",
+      "thickness_mm": "1.8"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "15A",
+      "size_inch": "NPS1/2",
+      "od_mm": "21.3",
+      "od_in": "0.838582677165354",
+      "id_mm": "17.3",
+      "id_in": "0.681102362204724",
+      "thickness_mm": "2"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "20A",
+      "size_inch": "NPS3/4",
+      "od_mm": "26.9",
+      "od_in": "1.05905511811024",
+      "id_mm": "22.3",
+      "id_in": "0.877952755905512",
+      "thickness_mm": "2.3"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "25A",
+      "size_inch": "NPS1",
+      "od_mm": "33.7",
+      "od_in": "1.32677165354331",
+      "id_mm": "28.5",
+      "id_in": "1.12204724409449",
+      "thickness_mm": "2.6"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "32A",
+      "size_inch": "NPS1 1/4",
+      "od_mm": "42.4",
+      "od_in": "1.66929133858268",
+      "id_mm": "37.2",
+      "id_in": "1.46456692913386",
+      "thickness_mm": "2.6"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "40A",
+      "size_inch": "NPS1 1/2",
+      "od_mm": "48.3",
+      "od_in": "1.90157480314961",
+      "id_mm": "43.1",
+      "id_in": "1.69685039370079",
+      "thickness_mm": "2.6"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "50A",
+      "size_inch": "NPS2",
+      "od_mm": "60.3",
+      "od_in": "2.3740157480315",
+      "id_mm": "54.5",
+      "id_in": "2.14566929133858",
+      "thickness_mm": "2.9"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "65A",
+      "size_inch": "NPS2 1/2",
+      "od_mm": "76.1",
+      "od_in": "2.99606299212598",
+      "id_mm": "70.3",
+      "id_in": "2.76771653543307",
+      "thickness_mm": "2.9"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "80A",
+      "size_inch": "NPS3",
+      "od_mm": "88.9",
+      "od_in": "3.5",
+      "id_mm": "82.5",
+      "id_in": "3.24803149606299",
+      "thickness_mm": "3.2"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "100A",
+      "size_inch": "NPS4",
+      "od_mm": "114.3",
+      "od_in": "4.5",
+      "id_mm": "107.1",
+      "id_in": "4.21653543307087",
+      "thickness_mm": "3.6"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "125A",
+      "size_inch": "NPS5",
+      "od_mm": "139.7",
+      "od_in": "5.5",
+      "id_mm": "131.7",
+      "id_in": "5.18503937007874",
+      "thickness_mm": "4"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "150A",
+      "size_inch": "NPS6",
+      "od_mm": "168.3",
+      "od_in": "6.6259842519685",
+      "id_mm": "159.3",
+      "id_in": "6.27165354330709",
+      "thickness_mm": "4.5"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "200A",
+      "size_inch": "NPS8",
+      "od_mm": "219.1",
+      "od_in": "8.6259842519685",
+      "id_mm": "207.3",
+      "id_in": "8.16141732283465",
+      "thickness_mm": "5.9"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "250A",
+      "size_inch": "NPS10",
+      "od_mm": "273",
+      "od_in": "10.748031496063",
+      "id_mm": "260.4",
+      "id_in": "10.251968503937",
+      "thickness_mm": "6.3"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "300A",
+      "size_inch": "NPS12",
+      "od_mm": "323.9",
+      "od_in": "12.751968503937",
+      "id_mm": "309.7",
+      "id_in": "12.1929133858268",
+      "thickness_mm": "7.1"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "350A",
+      "size_inch": "NPS14",
+      "od_mm": "355.6",
+      "od_in": "14",
+      "id_mm": "339.6",
+      "id_in": "13.3700787401575",
+      "thickness_mm": "8"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "400A",
+      "size_inch": "NPS16",
+      "od_mm": "406.4",
+      "od_in": "16",
+      "id_mm": "388.8",
+      "id_in": "15.3070866141732",
+      "thickness_mm": "8.8"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "450A",
+      "size_inch": "NPS18",
+      "od_mm": "457.2",
+      "od_in": "18",
+      "id_mm": "437.2",
+      "id_in": "17.2125984251969",
+      "thickness_mm": "10"
+    },
+    {
+      "grade": "DIN 2448",
+      "size_metric": "500A",
+      "size_inch": "NPS20",
+      "od_mm": "508",
+      "od_in": "20",
+      "id_mm": "486",
+      "id_in": "19.1338582677165",
+      "thickness_mm": "11"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Расход конденсата в трубопроводе при запуске
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11310")
 						.calculator-form__head
 							.semi-24 Начальные данные
 							.calculator-form__measure
@@ -46,7 +46,7 @@ block content
 								.form-item-group
 									.form-label
 										span Класс трубопровода
-									.dropdown
+									.dropdown(data-var="pipeGrade" data-type="grade")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
 										.dropdown__list
 											ul
@@ -86,7 +86,7 @@ block content
 								.form-item-group
 									.form-label
 										span Диаметр трубопровода
-									.dropdown
+									.dropdown(data-var="pipeSize" data-type="size")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
 										.dropdown__list
 											ul
@@ -104,7 +104,7 @@ block content
 											span.tooltip-icon i
 											.tooltip-text
 												p Изоляция :<br/>Значения теплопроводности в соответствии со стандартами JIS
-									.dropdown
+									.dropdown(data-var="insType" data-type="select")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") Минеральная вата Rockwool
 										.dropdown__list
 											ul
@@ -128,7 +128,7 @@ block content
 								.form-item-group
 									.form-label Давление пара
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_para" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -148,7 +148,7 @@ block content
 											.tooltip-text
 												p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" inputmode="decimal" value="(99.9743)")
+										input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" value="(99.9743)")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 											.dropdown__list
@@ -169,7 +169,7 @@ block content
 								.form-item-group
 									.form-label Скорость ветра
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_skorost_vetra" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_skorost_vetra" data-var="windVelo" data-cat="velocity" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
 											.dropdown__list
@@ -184,7 +184,7 @@ block content
 								.form-item-group
 									.form-label Толщина теплоизоляционного покрытия
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_tolshchina_izol" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_tolshchina_izol" data-var="insThick" data-cat="length" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
 											.dropdown__list
@@ -204,7 +204,7 @@ block content
 											.tooltip-text
 												p Длина трубопровода :<br/>Введите полную длину трубопровода
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_dlina" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_dlina" data-var="pipeLen" data-cat="length" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
 											.dropdown__list
@@ -219,7 +219,7 @@ block content
 								.form-item-group
 									.form-label Температура окружающей среды
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_temp_okr" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_temp_okr" data-var="ambTemp" data-cat="temp" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 											.dropdown__list
@@ -234,7 +234,7 @@ block content
 								.form-item-group
 									.form-label Время разогрева
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_time_razogreva" inputmode="decimal" value="10")
+										input.form-inp.form-inp--measure(type="text" name="current_time_razogreva" data-var="startTime" data-cat="time" inputmode="decimal" value="10")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") min
 											.dropdown__list
@@ -255,7 +255,73 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//На прогрев трубы
+								.calculator-result-row.form-item-group
+									.form-label
+										span На прогрев трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_mh" data-out="condHeatPipe" data-cat="mass" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mh_unit" value="kg" checked)
+															span.form-radio-name kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mh_unit" value="t(metric)")
+															span.form-radio-name t(metric)
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mh_unit" value="lb")
+															span.form-radio-name lb
+								//От теплопотерь с поверхности
+								.calculator-result-row.form-item-group
+									.form-label
+										span От теплопотерь с поверхности
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_mr" data-out="condRadiant" data-cat="mass" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mr_unit" value="kg" checked)
+															span.form-radio-name kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mr_unit" value="t(metric)")
+															span.form-radio-name t(metric)
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mr_unit" value="lb")
+															span.form-radio-name lb
+								//Общий расход конденсата
+								.calculator-result-row.form-item-group
+									.form-label
+										span Общий расход конденсата
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_mc" data-out="condTotal" data-cat="mass" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mc_unit" value="kg" checked)
+															span.form-radio-name kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mc_unit" value="t(metric)")
+															span.form-radio-name t(metric)
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_mc_unit" value="lb")
+															span.form-radio-name lb
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

@@ -1,0 +1,814 @@
+{
+  "units": {
+    "0100": {
+      "symbol": "°C",
+      "name": "Temperature (Reading)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0101": {
+      "symbol": "°F",
+      "name": "Temperature (Reading)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0102": {
+      "symbol": "K",
+      "name": "Temperature (Reading)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0200": {
+      "symbol": "mm",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0201": {
+      "symbol": "cm",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0202": {
+      "symbol": "m",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0203": {
+      "symbol": "in",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0204": {
+      "symbol": "ft",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0205": {
+      "symbol": "yd",
+      "name": "Length",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0300": {
+      "symbol": "kJ",
+      "name": "Energy",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0301": {
+      "symbol": "kWh",
+      "name": "Energy",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0302": {
+      "symbol": "kcal",
+      "name": "Energy",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0303": {
+      "symbol": "BTU",
+      "name": "Energy",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0400": {
+      "symbol": "W/m²·K",
+      "name": "Heat-Transfer Coefficient",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0401": {
+      "symbol": "kcal/hr·m²·°C",
+      "name": "Heat-Transfer Coefficient",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0402": {
+      "symbol": "BTU/ft²·h·°F",
+      "name": "Heat-Transfer Coefficient",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0500": {
+      "symbol": "kJ/kg·K",
+      "name": "Specific Heat",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0501": {
+      "symbol": "kcal/kg·°C",
+      "name": "Specific Heat",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0502": {
+      "symbol": "BTU/lb·°F",
+      "name": "Specific Heat",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0600": {
+      "symbol": "m³",
+      "name": "Volume",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0601": {
+      "symbol": "mm³",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0602": {
+      "symbol": "cm³(=mL)",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0603": {
+      "symbol": "dm³(=L)",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0604": {
+      "symbol": "gal (UK)",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0605": {
+      "symbol": "gal (US)",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0606": {
+      "symbol": "in³",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0607": {
+      "symbol": "ft³",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0608": {
+      "symbol": "yd³",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0609": {
+      "symbol": "barrel",
+      "name": "Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0700": {
+      "symbol": "m²",
+      "name": "Area",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0701": {
+      "symbol": "mm²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0702": {
+      "symbol": "cm²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0703": {
+      "symbol": "km²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0704": {
+      "symbol": "ha",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0705": {
+      "symbol": "in²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0706": {
+      "symbol": "ft²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0707": {
+      "symbol": "yd²",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0708": {
+      "symbol": "acre",
+      "name": "Area",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0800": {
+      "symbol": "kg",
+      "name": "Weight",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "0801": {
+      "symbol": "lb",
+      "name": "Weight",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0802": {
+      "symbol": "t(metric)",
+      "name": "Weight",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0803": {
+      "symbol": "ton(UK)",
+      "name": "Weight",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0804": {
+      "symbol": "ton(US)",
+      "name": "Weight",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0900": {
+      "symbol": "kPa abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0901": {
+      "symbol": "MPa abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0902": {
+      "symbol": "psi abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "0903": {
+      "symbol": "bar abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0904": {
+      "symbol": "kg/cm² abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0905": {
+      "symbol": "mmHg abs",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0906": {
+      "symbol": "kPaG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0907": {
+      "symbol": "MPaG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0908": {
+      "symbol": "psig",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0909": {
+      "symbol": "barG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0910": {
+      "symbol": "kg/cm²G",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "0911": {
+      "symbol": "mmHgG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1000": {
+      "symbol": "kPa",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1001": {
+      "symbol": "MPa",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1002": {
+      "symbol": "psi",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1003": {
+      "symbol": "bar",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1004": {
+      "symbol": "kg/cm²",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1005": {
+      "symbol": "mmHg",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1100": {
+      "symbol": "W",
+      "name": "Power",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1101": {
+      "symbol": "kJ/h",
+      "name": "Power",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1102": {
+      "symbol": "kcal/h",
+      "name": "Power",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1103": {
+      "symbol": "BTU/h",
+      "name": "Power",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1200": {
+      "symbol": "m/s",
+      "name": "Velocity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1201": {
+      "symbol": "km/h",
+      "name": "Velocity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1202": {
+      "symbol": "ft/s",
+      "name": "Velocity",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1203": {
+      "symbol": "mile/h",
+      "name": "Velocity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1300": {
+      "symbol": "mPa s",
+      "name": "Viscosity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1301": {
+      "symbol": "Pa s",
+      "name": "Viscosity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1302": {
+      "symbol": "cP",
+      "name": "Viscosity",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1303": {
+      "symbol": "kgf s/m²",
+      "name": "Viscosity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1304": {
+      "symbol": "lbf s/in²",
+      "name": "Viscosity",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1400": {
+      "symbol": "m³/min",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1401": {
+      "symbol": "m³/h",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1402": {
+      "symbol": "l/min",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1403": {
+      "symbol": "CFM",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1500": {
+      "symbol": "Nm³/min",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1501": {
+      "symbol": "Nm³/h",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1502": {
+      "symbol": "Nl/min",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1503": {
+      "symbol": "SCFM (@0°C/32°F)",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1600": {
+      "symbol": "kg/h",
+      "name": "Flow Rate (Weight)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1601": {
+      "symbol": "t(metric)/h",
+      "name": "Flow Rate (Weight)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1602": {
+      "symbol": "lb/h",
+      "name": "Flow Rate (Weight)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1700": {
+      "symbol": "m³/kg",
+      "name": "Specific Volume",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1701": {
+      "symbol": "ft³/lb",
+      "name": "Specific Volume",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1800": {
+      "symbol": "kg/m³",
+      "name": "Specific Weight",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1801": {
+      "symbol": "lb/ft³",
+      "name": "Specific Weight",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "1900": {
+      "symbol": "kJ/kg",
+      "name": "Specific Enthalpy",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1901": {
+      "symbol": "MJ/kg",
+      "name": "Specific Enthalpy",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1902": {
+      "symbol": "kcal/kg",
+      "name": "Specific Enthalpy",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "1903": {
+      "symbol": "BTU/lb",
+      "name": "Specific Enthalpy",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2000": {
+      "symbol": "W/m K",
+      "name": "Thermal Conductivity Coefficient",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2001": {
+      "symbol": "kcal/hr m C",
+      "name": "Thermal Conductivity Coefficient",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2002": {
+      "symbol": "BTU/ft h F",
+      "name": "Thermal Conductivity Coefficient",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2100": {
+      "symbol": "kPaG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2101": {
+      "symbol": "MPaG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2102": {
+      "symbol": "psiG",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2103": {
+      "symbol": "barG",
+      "name": "Pressure",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2104": {
+      "symbol": "kg/cm²G",
+      "name": "Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2200": {
+      "symbol": "kPa",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2201": {
+      "symbol": "MPa",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2202": {
+      "symbol": "psi",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2203": {
+      "symbol": "bar",
+      "name": "Differential Pressure",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2204": {
+      "symbol": "kg/cm²",
+      "name": "Differential Pressure",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2300": {
+      "symbol": "$/ton",
+      "name": "Steam Cost",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2301": {
+      "symbol": "$/1000lb",
+      "name": "Steam Cost",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2400": {
+      "symbol": "m³/h",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2401": {
+      "symbol": "l/h",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2402": {
+      "symbol": "gal/h",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2403": {
+      "symbol": "GPM",
+      "name": "Flow Rate (Volume)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2500": {
+      "symbol": "%",
+      "name": "Percent",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2600": {
+      "symbol": "Cv(US)",
+      "name": "Cv Value",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2601": {
+      "symbol": "Cv(UK)",
+      "name": "Cv Value",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2602": {
+      "symbol": "Kv",
+      "name": "Cv Value",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2700": {
+      "symbol": "$/MJ",
+      "name": "Energy Unit Cost",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2701": {
+      "symbol": "$/Mcal",
+      "name": "Energy Unit Cost",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2702": {
+      "symbol": "$/1000BTU",
+      "name": "Energy Unit Cost",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "2800": {
+      "symbol": "sec",
+      "name": "Time",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2801": {
+      "symbol": "min",
+      "name": "Time",
+      "is_si": true,
+      "is_imperial": true
+    },
+    "2802": {
+      "symbol": "h",
+      "name": "Time",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "2900": {
+      "symbol": "x1000$/m³",
+      "name": "Insulation and Labor Costs",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "2901": {
+      "symbol": "x1000$/ft³",
+      "name": "Insulation and Labor Costs",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "3000": {
+      "symbol": "g/kg",
+      "name": "Absolute Humidity",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "3001": {
+      "symbol": "lb/lb",
+      "name": "Absolute Humidity",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "3100": {
+      "symbol": "x1000$/yr",
+      "name": "Recovered Value",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "3200": {
+      "symbol": "kg/yr",
+      "name": "Annual Fuel Savings",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "3201": {
+      "symbol": "lb/yr",
+      "name": "Annual Fuel Savings",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "3300": {
+      "symbol": "$/ton",
+      "name": "Fuel Unit Cost",
+      "is_si": true,
+      "is_imperial": false
+    },
+    "3301": {
+      "symbol": "$/1000lb",
+      "name": "Fuel Unit Cost",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "3400": {
+      "symbol": "yr",
+      "name": "Time",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "3500": {
+      "symbol": "°C",
+      "name": "Temperature (Difference)",
+      "is_si": false,
+      "is_imperial": false
+    },
+    "3501": {
+      "symbol": "°F",
+      "name": "Temperature (Difference)",
+      "is_si": false,
+      "is_imperial": true
+    },
+    "3502": {
+      "symbol": "K",
+      "name": "Temperature (Difference)",
+      "is_si": false,
+      "is_imperial": false
+    }
+  }
+}

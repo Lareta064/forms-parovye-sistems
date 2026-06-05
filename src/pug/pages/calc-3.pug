@@ -18,7 +18,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Потеря давления пара через трубопровод
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11140")
 						//FORM HEADER
 						.calculator-form__head
 							.semi-24 Начальные данные
@@ -53,7 +53,7 @@ block content
 								.form-item-group
 									.form-label
 										span Класс трубопровода
-									.dropdown
+									.dropdown(data-var="pipeGrade" data-type="grade")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
 										.dropdown__list
 											ul
@@ -94,7 +94,7 @@ block content
 								.form-item-group
 									.form-label
 										span Номинальный диаметр трубы
-									.dropdown
+									.dropdown(data-var="pipeSize" data-type="size")
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") 25A
 										.dropdown__list
 											ul
@@ -166,6 +166,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_davlenie_para"
+											data-var="stmPress"
+											data-cat="pressureAbs"
 											inputmode="decimal"
 											value="0"
 										)
@@ -235,6 +237,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_temperatura_para"
+											data-var="stmTemp"
+											data-cat="temp"
 											inputmode="decimal"
 											value="(99.9743)"
 										)
@@ -263,6 +267,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_rashod_para"
+											data-var="stmFlow"
+											data-cat="massFlow"
 											inputmode="decimal"
 											value="0"
 										)
@@ -296,6 +302,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_dlina_truboprovoda"
+											data-var="pipeLen"
+											data-cat="length"
 											inputmode="decimal"
 											value="0"
 										)
@@ -341,7 +349,7 @@ block content
 													.tooltip-text
 														p Клапаны с изменяемым направлением потока (вентили и т.п.) (кол-во):<br>Введите количество клапанов с изменением потока (вентили и пр.)
 											.form-item
-												input.form-inp(type="number" name="klapan_1" value="0")
+												input.form-inp(type="number" name="klapan_1" value="0" data-var="fit.obsFlo")
 
 										.form-item-group
 											.form-label.has-tooltip
@@ -351,7 +359,7 @@ block content
 													.tooltip-text
 														p Проходные клапаны (задвижки и т.п.) (кол-во):<br>Введите количество проходных клапанов на трубопроводе
 											.form-item
-												input.form-inp(type="number" name="klapan_2" value="0")
+												input.form-inp(type="number" name="klapan_2" value="0" data-var="fit.thruFlo")
 
 										.form-item-group
 											.form-label.has-tooltip
@@ -361,7 +369,7 @@ block content
 													.tooltip-text
 														p Обратные клапаны (кол-во):<br>Введите количество обратных клапанов на трубопроводе
 											.form-item
-												input.form-inp(type="number" name="klapan_3" value="0")
+												input.form-inp(type="number" name="klapan_3" value="0" data-var="fit.check")
 
 										.form-item-group
 											.form-label.has-tooltip
@@ -371,7 +379,7 @@ block content
 													.tooltip-text
 														p Отводы (кол-во):<br>Введите количество отводов
 											.form-item
-												input.form-inp(type="number" name="klapan_4" value="0")
+												input.form-inp(type="number" name="klapan_4" value="0" data-var="fit.elbow")
 
 										//Возраст трубы
 										.form-item-group
@@ -380,6 +388,8 @@ block content
 												input.form-inp.form-inp--measure(
 													type="text"
 													name="current_vozrast_truby"
+													data-var="pipeRough"
+													data-cat="length"
 													inputmode="decimal"
 													value="0.05"
 												)
@@ -426,7 +436,81 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Скорость пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Скорость пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_velo" data-out="stmVelo" data-cat="velocity" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_velo_unit" value="m/s" checked)
+															span.form-radio-name m/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_velo_unit" value="ft/s")
+															span.form-radio-name ft/s
+								//Потери давления
+								.calculator-result-row.form-item-group
+									.form-label
+										span Потери давления
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_dp" data-out="pressLoss" data-cat="dPress" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="bar" checked)
+															span.form-radio-name bar
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="kPa")
+															span.form-radio-name kPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="MPa")
+															span.form-radio-name MPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="psi")
+															span.form-radio-name psi
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="kg/cm²")
+															span.form-radio-name kg/cm²
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="mmHg")
+															span.form-radio-name mmHg
+								//Эквивалентная длина прямого участка трубы
+								.calculator-result-row.form-item-group
+									.form-label
+										span Эквивалентная длина прямого участка трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_leq" data-out="equivLen" data-cat="length" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="m" checked)
+															span.form-radio-name m
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="mm")
+															span.form-radio-name mm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="ft")
+															span.form-radio-name ft
 					//formulas
 					.formulas
 						.formulas__title Формулы:

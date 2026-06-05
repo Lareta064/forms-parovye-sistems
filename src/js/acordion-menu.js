@@ -12,26 +12,3 @@ document.querySelectorAll(".acc__head").forEach((button) => {
     currentAcc.classList.toggle("is-open");
   });
 });
-
-(function () {
-  const MOBILE_MAX = 768;
-
-  function applyMobileLayout() {
-    const isMobile = window.innerWidth < MOBILE_MAX;
-
-    document
-      .querySelectorAll(".calc-start-page .grid-column-main")
-      .forEach((el) => {
-        el.style.display = isMobile ? "none" : "";
-      });
-
-    document
-      .querySelectorAll(".calculator-single .grid-column-sidebar")
-      .forEach((el) => {
-        el.style.display = isMobile ? "none" : "";
-      });
-  }
-
-  applyMobileLayout();
-  window.addEventListener("resize", applyMobileLayout);
-})();

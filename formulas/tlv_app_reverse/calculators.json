@@ -1,0 +1,4650 @@
+{
+  "calculators": {
+    "11110": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "66",
+          "name": "AllowPressLoss",
+          "symbol": "",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p  = μ · l · v² / (2 · d · V)\nv  = ms / 3600 · V / {(d / 2)^2 · π}",
+      "latex": "\\Delta p = \\frac{\\mu \\cdot l \\cdot v^2}{2d \\cdot V }\nv = \\frac{{m}_{s}}{3600}\\cdot \\frac{V}{(\\frac{d}{2})^{2} \\cdot \\pi }",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Flow velocity (m/s)\nd  :Inner diameter of pipe (m)\nV  :Specific volume (m³/kg)\nms:Steam flow rate (kg/h)\nπ  :3.1415…"
+    },
+    "11120": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "67",
+          "name": "UpperVeloStm",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "d = (ms / 3600 · V / v · 4 / π) ^ 0.5\n∆p = μ · l · v^2 / (2 · d · V)",
+      "latex": "d = \\left \\sqrt{ \\frac{{m}_{s}}{3600}\\cdot \\frac{V}{v}\\cdot \\frac{4}{\\pi } \\right }\n\\Delta p = \\frac{\\mu \\cdot l \\cdot v^2}{2d \\cdot V }",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nms:Steam flow rate (kg/h)\nV  :Specific volume (m³/kg)\nv  :Flow velocity (m/s)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m)"
+    },
+    "11130": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "107",
+          "name": "UpperVeloStm2",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        }
+      ],
+      "formula": "d = (ms / 3600 · V / v · 4 / π) ^ 0.5\n∆p = μ · l · v^2 / (2 · d · V)",
+      "latex": "d = \\sqrt { \\frac{{m}_{s}}{3600}\\cdot \\frac{V}{v}\\cdot \\frac{4}{\\pi } }\n\\Delta p = \\frac{\\mu \\cdot l \\cdot v^2}{2d \\cdot V }",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nms:Steam flow rate (kg/h)\nV  :Specific volume (m³/kg)\nv  :Flow velocity (m/s)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m)"
+    },
+    "11140": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "v = ms / 3600 · V / {(d / 2)^2 · π}\n∆p = μ · l · v^2 / (2 · d · V)",
+      "latex": "v = \\frac{{m}_{s}}{3600}\\cdot \\frac{V}{(\\frac{d}{2})^{2} \\cdot \\pi }\n\\Delta p = \\frac{\\mu \\cdot l \\cdot v^2}{2d \\cdot V }",
+      "variables_desc": "v  :Flow velocity (m/s)\nms:Steam flow rate (kg/h)\nV  :Specific volume (m³/kg)\nd  :Inner diameter of pipe (m)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m)"
+    },
+    "11150": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "formula": "v = ms / 3600 · V / {(d / 2)^2 · π}",
+      "latex": "v = \\frac{{m}_{s}}{3600}\\cdot \\frac{V}{(\\frac{d}{2})^{2} \\cdot \\pi }",
+      "variables_desc": "v  :Steam velocity (m/s)\nms:Steam flow rate (kg/h)\nV  :Specific volume (m³/kg)\nd  :Inner diameter of pipe (m)"
+    },
+    "11160": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "34",
+          "name": "StmVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "ms = v · (d / 2)^2 · π / V · 3600",
+      "latex": "{m}_{s} = \\frac{v\\cdot \\left (\\frac{d}{2} \\right )^{2}\\cdot \\pi}{ V}\\cdot 3600",
+      "variables_desc": "ms:Steam flow rate (kg/h)\nv  :Steam velocity (m/s)\nd  :Inner diameter of pipe (m)\nV  :Specific volume (m³/kg)"
+    },
+    "11210": {
+      "inputs": [
+        {
+          "code": "30",
+          "name": "StmPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        },
+        {
+          "code": "84",
+          "name": "StmPrimTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "(p1 - p2)/ p1 < Fγ · xT :\nms = 2.73 · Cv · (1 - (p1 - p2)/ p1 /(3 · Fγ · xT)) · {(p1 - p2) · ρ}^0.5\n(p1 - p2)/ p1 >= Fγ · xT :\nms = 0.66 · 2.73 · Cv · (Fγ · xT · p1 · ρ)^0.5",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow \n{m}_{s}=2.73\\cdot C_{v}\\cdot \\left ( 1-\\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{( 3\\cdot F_{\\gamma}\\cdot x_{T}) \\right )}\\cdot \\sqrt{(p_{1}-p_{2})\\cdot \\rho}\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow \n{m}_{s}=0.66\\cdot 2.73\\cdot C_{v}\\cdot \\sqrt{F_{\\gamma}\\cdot x_{T}\\cdot p_{1}\\cdot \\rho}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nms:Steam flow rate (kg/h)\nCv:Valve flow coefficient value\nρs:Density of steam (kg/m³)"
+    },
+    "11220": {
+      "inputs": [
+        {
+          "code": "30",
+          "name": "StmPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "84",
+          "name": "StmPrimTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        }
+      ],
+      "formula": "(p1 - p2)/ p1 < Fγ · xT :\nCv = ms /[2.73 · {1 -(p1 - p2)/ p1 / (3 · Fγ · xT)} · {(p1 - p2) · ρ}^0.5]\n(p1 - p2)/ p1 >= Fγ · xT :\nCv = ms /{0.66 · 2.73 · (Fγ · xT · p1 · ρ)^0.5}",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow \nC_{v}=\\frac{ m_{s}}{ \\left( 2.73\\cdot \\left ( 1-\\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\\gamma}\\cdot x_{T}) \\right )}\\cdot \\sqrt{(p_{1}-p_{2})\\cdot \\rho} \\right )}\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow \nC_{v}=\\frac{{m}_{s}}{ 0.66\\cdot 2.73\\cdot \\sqrt{F_{\\gamma}\\cdot x_{T}\\cdot p_{1}\\cdot \\rho}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nCv:Valve flow coefficient value\nms:Steam flow rate (kg/h)\nρs:Density of steam (kg/m³)"
+    },
+    "11230": {
+      "inputs": [
+        {
+          "code": "30",
+          "name": "StmPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "75",
+          "name": "OrificeDiam",
+          "symbol": "do",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "76",
+          "name": "DischargeCoeff",
+          "symbol": "C",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "84",
+          "name": "StmPrimTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "(p1 - p2) / p1 < Fγ · xT :\nms = 2.73 · C · (do / 4.654)^2 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {(p1 - p2) · ρ}^0.5\n(P - p2) / p1 >= Fγ · xT :\nms = 0.66 · 2.73 · C · (do / 4.654)^2 · (Fγ · xT · p1 · ρ)^0.5",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow \n{m}_{s}=2.73\\cdot C \\left \\cdot (\\frac{d_{o}}{4.654})^2\\cdot \\left( 1-\\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{( 3F_{\\gamma}\\cdot x_{T}) \\right )} \\cdot \\sqrt{(p_{1}-p_{2})\\cdot \\rho}\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow \n{m}_{s}=0.66\\cdot 2.73\\cdot C \\left \\cdot (\\frac{d_{o}}{4.654})^2\\cdot \\sqrt{F_{\\gamma}\\cdot x_{T}\\cdot p_{1}\\cdot \\rho}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nms:Steam flow rate (kg/h)\nC  :Coefficient of Discharge\ndo:Diameter of orifice (mm)\nρs:Density of steam (kg/m³)"
+    },
+    "11310": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "78",
+          "name": "InsType",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "40",
+          "name": "WindVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "57",
+          "name": "InsThick",
+          "symbol": "L",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "77",
+          "name": "AmbTemp",
+          "symbol": "Tam",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        },
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        },
+        {
+          "code": "102",
+          "name": "StartTime",
+          "symbol": "tSU",
+          "unit_si": "min",
+          "unit_imperial": "min"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "243",
+          "name": "StartTime2",
+          "symbol": "tSU",
+          "unit_si": "min",
+          "unit_imperial": "min"
+        },
+        {
+          "code": "244",
+          "name": "CondHeatPipe",
+          "symbol": "mh",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        },
+        {
+          "code": "245",
+          "name": "CondRadiant",
+          "symbol": "mr",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        },
+        {
+          "code": "246",
+          "name": "CondTotal",
+          "symbol": "mc",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        }
+      ],
+      "formula": "mc = mh + mr\nmh = (cp · Wp · l · (Ts - Tam) / ∆H)\nmr = 3.6 · 2 · π · ((Ts + 100) ·/2 - Tam) ·l / [1 / λ · ln{(d1 + 2 ·  L) / d1} + 2 / (d1 + 2 · L) / α] / (∆H · 60 / tSU )",
+      "latex": "{m}_{c}={m}_{h}+{m}_{r}\n{m}_{h}=\\frac{C_{p}\\cdot W_{p}\\cdot l\\cdot (T_{s}-T{am})}{\\Delta H}\n{m}_{r}=\\left(\\frac{3.6\\cdot 2\\pi\\cdot (\\frac{(T_{s}+ 100)}{2}-{T}_{am})\\cdot {l}}  {\\frac{1}{\\lambda}\\cdot ln( \\frac{d_{1}+2L}{d_{1}})+ \\frac{2/(d_{1}+2L)}{\\alpha} } \\right )/(\\Delta H\\cdot\\frac{60}{t_{SU}} )",
+      "variables_desc": "mc:Initial Condensate Load(kg/h)\nmh:Condensate load from heating piping (kg/h)\nmr:Condensate load from radiation heat loss (kg/h)\ncp:Specific heat of pipe (kJ/kg K)\nWp:Pipe weight (kg/m)\nl  :Pipe length (m)\nTs:Steam temperature (°C)\nTam:Ambient temperature (°C)\n∆H :Enthalpy difference between steam and saturated water (kJ/kg)\ntSU:Start-up time (min)\nπ  :3.1415...\nk  :Thermal conductivity coefficient (W/m K)\nd1:Inner diameter of insulation material (m)\nL  :Insulation thickness (m)\nα  :Heat transfer coefficient (W/m² K)"
+    },
+    "11320": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "78",
+          "name": "InsType",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "40",
+          "name": "WindVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "57",
+          "name": "InsThick",
+          "symbol": "L",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "77",
+          "name": "AmbTemp",
+          "symbol": "Tam",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        },
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "219",
+          "name": "Radiant",
+          "symbol": "Qr",
+          "unit_si": "W/m",
+          "unit_imperial": "BTU/ft h"
+        }
+      ],
+      "formula": "Qr = 2 · π · (Ts - Tam) / [1 / λ · ln{(d1 + 2 · L) / d1} + 2 / (d1 + 2 · L) / α]\nmc = 3.6 · Qr / ∆H · l",
+      "latex": "Q_{r}=\\frac{2\\pi\\cdot (T_{s}-T_{am})}{{\\frac{1}{\\lambda}\\cdot ln( \\frac{d_{1}+2L}{d_{1}})+ \\frac{2/(d_{1}+2L)}{\\alpha} }}\n{m}_{c}=\\frac{3.6\\cdot Q_{r}}{\\Delta H}\\cdot l",
+      "variables_desc": "Qr:Radiant heat (W/m)\nπ  :3.1415...\nTs:Steam temperature (°C)\nTam:Ambient temperature (°C)\nk  :Thermal conductivity coefficient (W/m K)\nd1:Inner diameter of insulation material (m)\nL  :Insulation thickness (m)\nα  :Heat transfer coefficient(W/m2 K)\nmc:Condensate load(kg/h)\n∆H :Enthalpy difference between steam and saturated water (kJ/kg)"
+    },
+    "11330": {
+      "inputs": [
+        {
+          "code": "106",
+          "name": "LiquidName",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "19",
+          "name": "Gravity",
+          "symbol": "SG",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "25",
+          "name": "SpecHeat",
+          "symbol": "c",
+          "unit_si": "kJ/kg K",
+          "unit_imperial": "BTU/lb F"
+        },
+        {
+          "code": "18",
+          "name": "LqdFlowRate",
+          "symbol": "Fl",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        },
+        {
+          "code": "23",
+          "name": "LqdInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "24",
+          "name": "LqdOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "mc = c · SG · Ql · (T2 - T1) / ∆H · 1000",
+      "latex": "{m}_{c}=\\left (\\frac{c\\cdot SG\\cdot Q_{l}\\cdot (T_{2}-T_{1})}{\\Delta H \\right )\\cdot 1000}",
+      "variables_desc": "mc:Condensate load (kg/h)\ncl:Specific heat of liquid (kJ/kg K)\nSGl:Specific gravity of liquid\nQl:Liquid flow rate (m³/h)\nT2:Outlet temperature of liquid (°C)\nT1:Inlet temperature of liquid (°C)\n∆H :Enthalpy difference between steam and saturated water (kJ/kg)"
+    },
+    "11331": {
+      "inputs": [
+        {
+          "code": "106",
+          "name": "LiquidName",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "19",
+          "name": "Gravity",
+          "symbol": "SG",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "25",
+          "name": "SpecHeat",
+          "symbol": "c",
+          "unit_si": "kJ/kg K",
+          "unit_imperial": "BTU/lb F"
+        },
+        {
+          "code": "23",
+          "name": "LqdInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "24",
+          "name": "LqdOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "28",
+          "name": "LqdAmount",
+          "symbol": "V",
+          "unit_si": "m³",
+          "unit_imperial": "gal (UK)"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "79",
+          "name": "HeatTime",
+          "symbol": "th",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "225",
+          "name": "TotalAmount",
+          "symbol": "mc",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        },
+        {
+          "code": "226",
+          "name": "AveAmount",
+          "symbol": "",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "mc = c · SG · Ql · (T2 - T1) / ∆H / th · 1000",
+      "latex": "{m}_{c}= \\left ( \\left (\\frac{c\\cdot SG\\cdot Q_{l}\\cdot (T_{2}-T_{1})}{\\Delta H} \\right )/t_{h}  \\right )\\cdot 1000",
+      "variables_desc": "mc:Condensate load (kg/h)\ncl:Specific heat of liquid (kJ/kg K)\nSGl:Specific gravity of liquid\nVl:Liquid volume (m³)\nT2:Outlet temperature of liquid (°C)\nT1:Inlet temperature of liquid (°C)\n∆H :Enthalpy difference between steam and saturated water (kJ/kg)\nth:Heating time (h)"
+    },
+    "11340": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "42",
+          "name": "AirInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "43",
+          "name": "AirOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "mc = ca · γa · Qa · 60 · (T2 - T1) / ∆H",
+      "latex": "{m}_{c}= \\frac{c_{a}\\cdot \\gamma_{a}\\cdot Q_{a}\\cdot 60\\cdot (T_{2}-T_{1})}{\\Delta H}",
+      "variables_desc": "mc:Condensate load (kg/h)\nca:Specific heat of air (kJ/kg K)\nγa:Specific weight of air (kg/m³)\nQa:Air flow rate (m³/min)\nT2:Outlet temperature of air (°C)\nT1:Inlet temperature of air (°C)\n∆H :Enthalpy difference between steam and saturated water(kJ/kg)\n*Air Pressure is atmospheric"
+    },
+    "11350": {
+      "inputs": [
+        {
+          "code": "23",
+          "name": "LqdInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "24",
+          "name": "LqdOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "100",
+          "name": "BackPress",
+          "symbol": "pb",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "101",
+          "name": "Oversur",
+          "symbol": "",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "238",
+          "name": "StallPoint",
+          "symbol": "S",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "239",
+          "name": "StallPointOs",
+          "symbol": "",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 + T2) / 2) · 100",
+      "latex": "S=\\frac{T_{b}- \\frac{T_{1}+T_{2}}{2}}{T_{s}- \\frac{T_{1}+T_{2}}{2}}\\cdot 100",
+      "variables_desc": "S  :Stall Point\nTb:Saturated steam temperature at backpressure(°C)\nT1:Inlet temperature of liquid (°C)\nT2:Outlet temperature of liquid (°C)\nTs:Steam temperature(°C)"
+    },
+    "11360": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "42",
+          "name": "AirInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "43",
+          "name": "AirOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "100",
+          "name": "BackPress",
+          "symbol": "pb",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "101",
+          "name": "Oversur",
+          "symbol": "",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "238",
+          "name": "StallPoint",
+          "symbol": "S",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "239",
+          "name": "StallPointOs",
+          "symbol": "",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "S  = (Tb - (T1 + T2) / 2) / (Ts - (T1 - T2) / 2) · 100",
+      "latex": "S=\\frac{T_{b}- \\frac{T_{1}+T_{2}}{2}}{T_{s}- \\frac{T_{1}-T_{2}}{2}}\\cdot 100",
+      "variables_desc": "S  :Stall Point\nTb:Saturated steam temperature at backpressure (°C)\nT1:Inlet temperature of air (°C)\nT2:Outlet temperature of air (°C)"
+    },
+    "11410": {
+      "inputs": [
+        {
+          "code": "44",
+          "name": "BoilerPress",
+          "symbol": "pb",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "46",
+          "name": "BoilerBlow",
+          "symbol": "mb",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "47",
+          "name": "FeedWtrRate",
+          "symbol": "mfw",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "49",
+          "name": "FuelConsumption",
+          "symbol": "mfl",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "54",
+          "name": "BoilerCapa",
+          "symbol": "mfwmax",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "221",
+          "name": "LoadFactor",
+          "symbol": "LF",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "η = (mfw - mb) · (hw + 0.98 · ΔH - hfw) / (mfl · Hf)\nLF = (mfw - mb) / mfwmax · 100",
+      "latex": "\\eta =\\frac{({m}_{fw}-{m}_{b})\\cdot (h_{w}+0.98\\cdot\\Delta H-h_{fw})}{m_{fl}\\cdot H_{f}}\nLF=\\frac{({m}_{fw}-{m}_{b})}{{m}_{fw\\: max}}\\cdot 100",
+      "variables_desc": "η  :Boiler efficiency\nmfw:Feed water rate (kg/h)\nmb:Boiler blow down rate (kg/h)\nhw:Specific enthalpy of saturated water (kJ/kg)\nhfg:Latent heat of steam (kJ/kg)\nhfw:Specific enthalpy of feed water (kJ/kg)\nQf:Fuel consumption (kg/h)\nHf:Heating value of fuel (kJ/kg)\nLF :Boiler load factor (%)\nmfwmax:Maximum Rated Feed Water Flow Rate (kg/h)"
+    },
+    "11420": {
+      "inputs": [
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "50",
+          "name": "FuelUnitCost",
+          "symbol": "Cf",
+          "unit_si": "$/ton",
+          "unit_imperial": "$/1000lb"
+        },
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        }
+      ],
+      "formula": "Ce = Cf / (Hf · η / 100)",
+      "latex": "C_{e}=C_{f}/(\\frac{H_{f}\\cdot \\eta}{100} )",
+      "variables_desc": "Ce:Unit cost of energy ($/1000kJ)\nCf:Unit cost of fuel ($/1000kg)\nHf:Heating value of fuel (kJ/kg)\nη  :Boiler efficiency"
+    },
+    "11430": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "222",
+          "name": "StmCost",
+          "symbol": "Cs",
+          "unit_si": "$/t",
+          "unit_imperial": "$/1000lb"
+        }
+      ],
+      "formula": "Cs = (hs - hfw) · Ce",
+      "latex": "C_{s}=(h_{s}-h_{fw})\\cdot C_{e}",
+      "variables_desc": "Cs:Unit cost of steam ($/1000kg)\nhs:Specific enthalpy of steam (kJ/kg)\nhfw:Specific enthalpy of feed water (kJ/kg)\nCe:Unit cost of energy ($/1000kJ)"
+    },
+    "11440": {
+      "inputs": [
+        {
+          "code": "30",
+          "name": "StmPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "53",
+          "name": "EstPrimStmDry",
+          "symbol": "X1",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "223",
+          "name": "SecDryness",
+          "symbol": "X2",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "224",
+          "name": "DegreeOfSuper",
+          "symbol": "∆T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "h1 = h\"1 -(1 - X1 / 100) · ∆H1\nh1 < h\"2 :\nX2 = {1 -(h\"2 - h1) / ∆H2} · 100\nh1 > h\"2 :\n∆T = (h1 - h\"2) / c2",
+      "latex": "h_{1}=h\"_{1}-(1-\\frac{X_{1}}{100})\\cdot \\Delta H_{1}\nh_{1}< h\"_{2}\\rightarrow \nX_{2}=(1-\\frac{(h\"_{2}- h_{1})}{\\Delta H_{2}})\\cdot 100\nh_{1}> h\"_{2}\\rightarrow \n\\Delta T=\\frac{h_{1}-h\"_{2}}{c_{2}}",
+      "variables_desc": "h1:Specific enthalpy of primary steam (kJ/kg)\nh\"1:Specific enthalpy of primary saturated steam (kJ/kg)\nΧ1:Estimated primary steam dryness (%)\nhfg1:Latent heat of primary steam (kJ/kg)\nh\"2:Specific enthalpy of secondary saturated steam (kJ/kg)\nΧ2:Secondary steam dryness (%)\nhfg2:Latent heat of secondary steam (kJ/kg)\n∆T :Degrees of superheat (°C)\nc2:Specific heat of secondary steam (kJ/kg K)"
+    },
+    "11450": {
+      "inputs": [
+        {
+          "code": "30",
+          "name": "StmPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "33",
+          "name": "StmFlowRate",
+          "symbol": "ms",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "55",
+          "name": "SeparateEff",
+          "symbol": "ηs",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "56",
+          "name": "SepaCond",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "32",
+          "name": "StmSecondPress",
+          "symbol": "P2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "53",
+          "name": "EstPrimStmDry",
+          "symbol": "X1",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "209",
+          "name": "SaturatTemp",
+          "symbol": "",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "223",
+          "name": "SecDryness",
+          "symbol": "X2",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "224",
+          "name": "DegreeOfSuper",
+          "symbol": "∆T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "X1 = 1 - mc / (ms · ηs / 100) · 100\nX'1= (ms - mc / ηs / 100) / (ms - mc) · 100\nh1 = h1\" - (1 - X'1 / 100) · ∆H1\nh1 < h2\" :\nX2 = {1 - (h2\" - h1) / ∆H2} · 100\nh1 > h2\" :\n∆T = (h1 - h2\") / c2",
+      "latex": "X_{1}=1-\\frac{m_{c}}{(m_{s}\\cdot \\eta_{s})/100}\\cdot 100\nX'_{1}=\\frac{{m}_{s}-\\frac{{m}_{c}}{(\\eta_{s}\\cdot 100)}}{{m}_{s}-{m}{c}}\\cdot 100\nh_{1}=h\"_{1}-(1-\\frac{X'_{1}}{100})\\cdot \\Delta H_{1}\nh_{1}< h\"_{2}\\rightarrow \nX_{2}=(1-\\frac{h\"_{2}-h_{1}}{\\Delta H_{2}})\\cdot 100\nh_{1}> h\"_{2}\\rightarrow \n\\Delta_{T}=\\frac{h_{1}-h\"_{2}}{c_{2}}",
+      "variables_desc": "X1:Dryness of primary steam\nmc:Amount of condensate separated (kg/h)\nms:Steam flow rate (kg/h)\nηs:Separation efficiency(%)\nX'1:Dryness of primary steam after separation(%)\nh1:Specific enthalpy of primary steam (kJ/kg)\nh\"1:Specific enthalpy of primary saturated steam (kJ/kg)\nhfg1:Latent heat of primary steam (kJ/kg)\nh\"2:Specific enthalpy of secondary saturated steam (kJ/kg)\nX2 :Secondary steam dryness\nhfg2:Latent heat of secondary steam(kJ/kg)\n∆T :Degrees of superheat (°C)\nc2:Specific heat of secondary steam (kJ/kg K)"
+    },
+    "11460": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "58",
+          "name": "AirVolume",
+          "symbol": "a",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "59",
+          "name": "TempOfMix",
+          "symbol": "Tm",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "206",
+          "name": "PartPress",
+          "symbol": "ps",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "209",
+          "name": "SaturatTemp",
+          "symbol": "",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "236",
+          "name": "TempDrop",
+          "symbol": "∆T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "ps = p  · (1 - a / 100)\n∆T = T - Ts",
+      "latex": "p_{s}=p\\cdot (1-\\frac{a}{100})\n\\Delta T=T-T_{s}",
+      "variables_desc": "ps:Partial pressure of steam (kPaA)\np  :Pressure of mixture (kPaA)\na  :Air as a ratio of total volume\n∆T :Temperature drop (°C)\nT  :Saturated temperature at \"p\" (°C)\nTs:Saturated temperature at \"ps\" (°C)"
+    },
+    "11461": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "59",
+          "name": "TempOfMix",
+          "symbol": "Tm",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "58",
+          "name": "AirVolume",
+          "symbol": "a",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "206",
+          "name": "PartPress",
+          "symbol": "ps",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "209",
+          "name": "SaturatTemp",
+          "symbol": "",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "236",
+          "name": "TempDrop",
+          "symbol": "∆T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "a = (1 - ps / p) · 100",
+      "latex": "a=(1-\\frac{p_{s}}{p})\\cdot 100",
+      "variables_desc": "a  :Air as a ratio of total volume\nps:Partial pressure of steam(kPaA)\np  :Pressure of mixture(kPaA)"
+    },
+    "11470": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "78",
+          "name": "InsType",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "40",
+          "name": "WindVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        },
+        {
+          "code": "63",
+          "name": "LaborCost",
+          "symbol": "Ci2",
+          "unit_si": "x1000$/m³",
+          "unit_imperial": "x1000$/ft³"
+        },
+        {
+          "code": "62",
+          "name": "Annual",
+          "symbol": "h",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        },
+        {
+          "code": "64",
+          "name": "InterestRate",
+          "symbol": "i",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "65",
+          "name": "PaybackPeriod",
+          "symbol": "m",
+          "unit_si": "year",
+          "unit_imperial": "yr"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "77",
+          "name": "AmbTemp",
+          "symbol": "Tam",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        },
+        {
+          "code": "219",
+          "name": "Radiant",
+          "symbol": "Qr",
+          "unit_si": "W/m",
+          "unit_imperial": "BTU/ft h"
+        },
+        {
+          "code": "234",
+          "name": "InsThick5",
+          "symbol": "L",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "235",
+          "name": "SurfaceTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "Ci1  = π / 4 · ((d1 + 2 · L)^2 - d1^2) · Ci2 · N · 1000 + Ce · h · Qr · 0.001\nN  = {i · (1 + i)^m} / {(1 + i)^m - 1}\nQr = 2 · π · (Ts - Tam) / {1 / λ · ln(d2 / d1) + 2 / (d1 + 2 · L) / α} · l",
+      "latex": "C_{i\\:1}=1000\\frac{\\pi}{4} ((d_{1}+2L)^{\\:2}-d_{1}^{\\:2}) C_{i\\:2}\\cdot N \n\n+ 0.001C_{e}\\cdot h\\cdot Q_{r}\n\nN=\\frac{i\\cdot (1+i)^{m}}{(1+i)^{m}-1}\n\nQ_{r}=\\frac  {2\\pi(T_{s}-T{am})}  {\\frac{1}{\\lambda}\\cdot ln (\\frac{(d_{1}+2L)}{d_{1}})+ \\frac{2}{\\alpha(d_{1}+2L)} }",
+      "variables_desc": "Ci1:Annual average insulating costs($/m)\nπ  :3.1415...\nd2:Outer diameter of insulation material(m)\nd1:Outer diameter of pipe(m) \nCi2:Insulation and labor costs(1000$/m3)\nN  :Rate of payback\nCe:Unit cost of energy($/kW h)\nh  :Annual operating hours(h)\ni  :Interest rate (%)\nm  :Payback period (yrs)\nQr:Radiant heat (W)\nk  :Thermal conductivity coefficient (W/m K)\nα  :Heat transfer coefficient (W/m² K)\nTs:Steam temperature (°C)\nTam:Ambient temperature (°C)\nl  :Pipe length (m)"
+    },
+    "11510": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "209",
+          "name": "SaturatTemp",
+          "symbol": "",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "211",
+          "name": "LatentHeat",
+          "symbol": "∆H",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "213",
+          "name": "SatSpecEnt",
+          "symbol": "",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "215",
+          "name": "SatWaterSpecEnt",
+          "symbol": "",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "217",
+          "name": "SatSpecVol",
+          "symbol": "",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        },
+        {
+          "code": "218",
+          "name": "SatWaterSpecVol",
+          "symbol": "",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "11520": {
+      "inputs": [
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "211",
+          "name": "LatentHeat",
+          "symbol": "∆H",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "213",
+          "name": "SatSpecEnt",
+          "symbol": "",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "215",
+          "name": "SatWaterSpecEnt",
+          "symbol": "",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "217",
+          "name": "SatSpecVol",
+          "symbol": "",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        },
+        {
+          "code": "218",
+          "name": "SatWaterSpecVol",
+          "symbol": "",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "11530": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "31",
+          "name": "StmTemp",
+          "symbol": "Ts",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "210",
+          "name": "SuperHeatSpecEnt",
+          "symbol": "",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "212",
+          "name": "SuperHeatSpecVol",
+          "symbol": "",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        },
+        {
+          "code": "214",
+          "name": "SuperHeatSpec",
+          "symbol": "",
+          "unit_si": "kJ/kg-K",
+          "unit_imperial": "BTU/lb F"
+        },
+        {
+          "code": "216",
+          "name": "SuperHeatVisco",
+          "symbol": "",
+          "unit_si": "mPa-s",
+          "unit_imperial": "lbf s/in²"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "12110": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "47",
+          "name": "FeedWtrRate",
+          "symbol": "mfw",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        },
+        {
+          "code": "59",
+          "name": "TempOfMix",
+          "symbol": "Tm",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "62",
+          "name": "Annual",
+          "symbol": "h",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        },
+        {
+          "code": "80",
+          "name": "AllowTemp",
+          "symbol": "Tfwmax",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "227",
+          "name": "HeatRecover",
+          "symbol": "Hr",
+          "unit_si": "W",
+          "unit_imperial": "BTU/h"
+        },
+        {
+          "code": "228",
+          "name": "RecoverValue",
+          "symbol": "M",
+          "unit_si": "x1000$/year",
+          "unit_imperial": "x1000$/yr"
+        },
+        {
+          "code": "229",
+          "name": "AnnFuelSave",
+          "symbol": "",
+          "unit_si": "kg/year",
+          "unit_imperial": "lb/yr"
+        },
+        {
+          "code": "230",
+          "name": "FuelConserv",
+          "symbol": "FC",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "231",
+          "name": "UnrecoverHeat",
+          "symbol": "Hu",
+          "unit_si": "W",
+          "unit_imperial": "BTU/h"
+        },
+        {
+          "code": "233",
+          "name": "FeedWtrTemp2",
+          "symbol": "Tw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "Tm = {Tc · mc + (mfw - mc) · Tfw} / mfw\nTm < Tfwmax :\nTfw = Tm\nHr = {(Tm - Tfw) · mfw} / 0.86;\nTm > Tfwmax :\nTfw = Tfwmax\nHr = (Tfwmax - Tfw) · mfw / 0.86;\nHu = (Tm - Tfwmax) · mfw / 0.86;\nM  = 3.6 · Hr · Ce · h\nFC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100",
+      "latex": "T_{m}=\\frac{T_{c}\\cdot {m}_{c}+({m}_{fw}-{m}_{c})\\cdot T_{fw} }{{m}_{fw}}\nT_{m}<T_{fw\\:max}\\rightarrow\nT_{fw}=T_{m}\nH_{r}=\\frac{(T_{m}-T_{fw})\\cdot {m}_{fw}}{0.86}\nT_{m}>T_{fw\\:max}\\rightarrow\nT_{fw}=T_{fw\\: max}\nH_{r}=\\frac{(T_{fw\\:max}-T_{fw})\\cdot m_{fw}}{0.86}\nH_{u}=\\frac{(T_{m}-T_{fw\\: max})\\cdot {m}_{fw}}{0.86}\nM=3.6\\cdot H_{r}\\cdot C_{e} \\cdot h\nFC=\\left (  \\frac{H_{r}\\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\\: /{m}_{fw}   \\right )\\cdot 100",
+      "variables_desc": "Tm:Mixture temperature(°C)\nTc:Condensate temperature(°C)\nmc:Condensate load(kg/h)\nmfw:Feed water rate (kg/h)\nTfw:Boiler feed water temperature (°C)\nTfwmax:Max. allowable feed water temperature (°C)\nHr:Heat recovered (W)\nHu:Unrecoverable heat (kJ/h)\nM  :Monetary value ($/year)\nCe:Unit cost of energy($/kJ) \nh  :Annual operating hours (h/year)\nFC :Ratio of fuel conserved\nhs:Specific enthalpy of steam at boiler pressure (kJ/kg)"
+    },
+    "12120": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "39",
+          "name": "RecoveryPress",
+          "symbol": "pr",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "47",
+          "name": "FeedWtrRate",
+          "symbol": "mfw",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        },
+        {
+          "code": "62",
+          "name": "Annual",
+          "symbol": "h",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "227",
+          "name": "HeatRecover",
+          "symbol": "Hr",
+          "unit_si": "W",
+          "unit_imperial": "BTU/h"
+        },
+        {
+          "code": "228",
+          "name": "RecoverValue",
+          "symbol": "M",
+          "unit_si": "x1000$/year",
+          "unit_imperial": "x1000$/yr"
+        },
+        {
+          "code": "229",
+          "name": "AnnFuelSave",
+          "symbol": "",
+          "unit_si": "kg/year",
+          "unit_imperial": "lb/yr"
+        },
+        {
+          "code": "230",
+          "name": "FuelConserv",
+          "symbol": "FC",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "This pipe size was calculated using TLV's recommended standards. Other local or internationally accepted standards may result in the selection of different pipe sizes.\nHr = (Tc - Tfw) · mc / 0.86\nM  = 3.6 · Hr · Ce · h\nFC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100",
+      "latex": "H_{r}=\\frac{(T_{c}-T_{fw})\\cdot {m}_{c}}{0.86}\nM=3.6\\cdot H_{r}\\cdot C_{e} \\cdot h\nFC=\\left (  \\frac{H_{r}\\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\\: /{m}_{fw}   \\right )\\cdot 100",
+      "variables_desc": "Hr:Heat recovered (W)\nTc:Condensate temperature (°C)\nTfw:Boiler feed water temperature (°C)\nmc:Condensate load (kg/h)\nM  :Monetary value ($/year)\nCe:Unit cost of energy ($/kJ) \nh  :Annual operating hours (h/year)\nFC :Ratio of fuel conserved\nhs:Specific enthalpy of steam at boiler pressure (kJ/kg)\nmfw:Feed water rate (kg/h)"
+    },
+    "12130": {
+      "inputs": [
+        {
+          "code": "106",
+          "name": "LiquidName",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "19",
+          "name": "Gravity",
+          "symbol": "SG",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "25",
+          "name": "SpecHeat",
+          "symbol": "c",
+          "unit_si": "kJ/kg K",
+          "unit_imperial": "BTU/lb F"
+        },
+        {
+          "code": "18",
+          "name": "LqdFlowRate",
+          "symbol": "Fl",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        },
+        {
+          "code": "23",
+          "name": "LqdInTemp",
+          "symbol": "T1",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "47",
+          "name": "FeedWtrRate",
+          "symbol": "mfw",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        },
+        {
+          "code": "61",
+          "name": "RawWtrTemp",
+          "symbol": "Trw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "62",
+          "name": "Annual",
+          "symbol": "h",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        },
+        {
+          "code": "81",
+          "name": "TempEff",
+          "symbol": "ηT",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "24",
+          "name": "LqdOutTemp",
+          "symbol": "T2",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "227",
+          "name": "HeatRecover",
+          "symbol": "Hr",
+          "unit_si": "W",
+          "unit_imperial": "BTU/h"
+        },
+        {
+          "code": "228",
+          "name": "RecoverValue",
+          "symbol": "M",
+          "unit_si": "x1000$/year",
+          "unit_imperial": "x1000$/yr"
+        },
+        {
+          "code": "229",
+          "name": "AnnFuelSave",
+          "symbol": "",
+          "unit_si": "kg/year",
+          "unit_imperial": "lb/yr"
+        },
+        {
+          "code": "230",
+          "name": "FuelConserv",
+          "symbol": "FC",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "T2 = (Tc - T1) · ηT / 100 + T1\nHr = Ql · c · SG · (T2 - T1) / ΔH / 0.86\nM  = 3.6 · Hr · Ce · h\nFC = Hr · 0.86 / (hs / 4.186 - Tfw) / mfw · 100",
+      "latex": "T_{2}=\\frac{(T_{c}-T_{1})\\cdot \\eta_{T}}{100}+T_{1}\nH_{r}=\\frac{Q_{l}\\cdot c\\cdot SG\\cdot (T_{2}-T_{1})}{h_{fg}\\cdot 0.86}\nM=3.6\\cdot H_{r}\\cdot C_{e} \\cdot h\nFC=\\left (  \\frac{H_{r}\\cdot 0.86}{ (h_{s}/4.186)-T_{fw}}\\: /{m}_{fw}   \\right )\\cdot 100",
+      "variables_desc": "T2:Outlet temperature of liquid (°C)\nTc:Condensate temperature (°C)\nT1:Inlet temperature of liquid (°C)\nηT:Temperature efficiency\nHr:Heat recovered (W)\nQl:Liquid flow rate (m³/h)\ncl:Specific heat of liquid (kJ/kg K)\nSGl:Specific gravity of liquid\nhfg:Latent heat of steam (kJ/kg)\nM  :Monetary value ($/year)\nCe:Unit cost of energy ($/kJ) \nh  :Annual operating hours (h/year)\nFC :Ratio of fuel conserved\nhs:Specific enthalpy of steam at boiler pressure (kJ/kg)\nTfw:Temperature of boiler feed water (°C)\nmfw:Feed water rate (kg/h)"
+    },
+    "12140": {
+      "inputs": [
+        {
+          "code": "29",
+          "name": "StmPress",
+          "symbol": "Ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psig"
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "45",
+          "name": "FeedWtrTemp",
+          "symbol": "Tfw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "47",
+          "name": "FeedWtrRate",
+          "symbol": "mfw",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "48",
+          "name": "FuelCalVal",
+          "symbol": "Hf",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        },
+        {
+          "code": "51",
+          "name": "BoilerEff",
+          "symbol": "η",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "52",
+          "name": "EnergyUnitCost",
+          "symbol": "Ce",
+          "unit_si": "$/MJ",
+          "unit_imperial": "$/1000BTU"
+        },
+        {
+          "code": "61",
+          "name": "RawWtrTemp",
+          "symbol": "Trw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "62",
+          "name": "Annual",
+          "symbol": "h",
+          "unit_si": "h",
+          "unit_imperial": "h"
+        },
+        {
+          "code": "82",
+          "name": "FlashPress",
+          "symbol": "ps",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "227",
+          "name": "HeatRecover",
+          "symbol": "Hr",
+          "unit_si": "W",
+          "unit_imperial": "BTU/h"
+        },
+        {
+          "code": "228",
+          "name": "RecoverValue",
+          "symbol": "M",
+          "unit_si": "x1000$/year",
+          "unit_imperial": "x1000$/yr"
+        },
+        {
+          "code": "229",
+          "name": "AnnFuelSave",
+          "symbol": "",
+          "unit_si": "kg/year",
+          "unit_imperial": "lb/yr"
+        },
+        {
+          "code": "230",
+          "name": "FuelConserv",
+          "symbol": "FC",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "232",
+          "name": "FlashFlowRate",
+          "symbol": "mfｓ",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        }
+      ],
+      "formula": "mfs = mc · (hw - hfs) / hfg\nHr = mfs · (hfs / 4.186 - Trw) / 0.86\nM  = 3.6 · Hr · Ce · h\nFC = Hr · 0.86 / (hfs / 4.186 - Tfw) / mfw · 100",
+      "latex": "{m}_{fs}=\\frac{{m}_{c}\\cdot (h_{w}-h_{fs})}{h_{fg}}\nH_{r}={m}_{fs}\\cdot (\\frac{h_{fs}}{4.186}-T_{rw})\\: /0.86\nM=3.6\\cdot H_{r}\\cdot C_{e} \\cdot h\nFC=\\left (  \\frac{H_{r}\\cdot 0.86}{ (h_{fs}/4.186)-T_{fw}}\\: /{m}_{fw}   \\right )\\cdot 100",
+      "variables_desc": "mfs:Amount of flash steam (kg/h)\nmc:Condensate load (kg/h)\nQ  :Sensible heat of recovered condensate(kJ/kg)\nhfs:Specific enthalpy of flash steam(kJ/kg)\nhfg:Latent heat of flash steam(kJ/kg)\nHr:Heat recovered (W)\nTfw:Temperature of boiler feed water (°C)\nM  :Recovered value($/year)\nCe:Unit cost of energy ($/kJ)\nh  :Annual operating hours (h/year)\nFC :Ratio of fuel conserved\nTrw:Raw water temperature (°C) \nmfw:Feed water rate (kg/h)"
+    },
+    "12210": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "103",
+          "name": "UpperVeloWtr",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "38",
+          "name": "CondVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "formula": "d = (mc / 3600 · V  / v · 4 / π)^0.5",
+      "latex": "d=\\sqrt{\\frac{{m}_{c}}{3600}\\cdot \\frac{V}{v}\\cdot \\frac{4}{\\pi}}",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nmc:Condensate flow rate (kg/h)\nv  :Flow velocity (m/s)\nV  :Specific volume (m³/kg)\nπ  :3.1415..."
+    },
+    "12220": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "39",
+          "name": "RecoveryPress",
+          "symbol": "pr",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "66",
+          "name": "AllowPressLoss",
+          "symbol": "",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "38",
+          "name": "CondVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p = μ · l · v^2 / (2 · d · Vtemp)\nv = mc · Vtemp / {(d / 2)^2 · π}",
+      "latex": "\\Delta p= \\frac{\\mu\\cdot l \\cdot v^{2}}{2d \\cdot g \\cdot V_{temp}}\n\nv=\\frac{{m}_{c}\\cdot V_{temp}}{ 3600\\pi (\\frac{d}{2})^2}",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Flow velocity (m/s)\nd  :Inner diameter of pipe (m)\nVtemp:Temporary specific volume variable (m³/kg)\nmc:Condensate flow rate (kg/s)\nπ  :3.1415..."
+    },
+    "12221": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "39",
+          "name": "RecoveryPress",
+          "symbol": "pr",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "104",
+          "name": "UpperVeloCond",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "38",
+          "name": "CondVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "d  = (mc · Vtemp / v · 4 / π)^0.5\n∆p = μ · l · v^2 / (2 · d · Vtemp)",
+      "latex": "d=\\sqrt{\\frac{{m}_{c}\\cdot V_{temp}}{v} \\cdot \\frac{4}{\\pi}}\n\\Delta p= \\frac{\\mu\\cdot l \\cdot v^{2}}{2d\\cdot V_{temp}}",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nmc:Condensate flow rate (kg/s)\nVtemp:Temporary specific volume variable (m³/kg)\nv  :Flow velocity (m/s)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m)"
+    },
+    "12230": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "103",
+          "name": "UpperVeloWtr",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "38",
+          "name": "CondVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "formula": "d =(mc / 3600 · V / v · 4 / π)^0.5",
+      "latex": "d=\\sqrt{\\frac{{m}_{c}}{3600}\\cdot \\frac{V}{v}\\cdot \\frac{4}{\\pi}}",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nmc:Condensate load (kg/h)\nv  :Flow velocity (m/s)\nV  :Specific volume (m³/kg)\nπ  :3.1415..."
+    },
+    "12310": {
+      "inputs": [
+        {
+          "code": "36",
+          "name": "CondPress",
+          "symbol": "pc",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "39",
+          "name": "RecoveryPress",
+          "symbol": "pr",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "232",
+          "name": "FlashFlowRate",
+          "symbol": "mfｓ",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "237",
+          "name": "FlashRatio",
+          "symbol": "Rfs",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        }
+      ],
+      "formula": "Rfs = (hw - hc) / hfg · 100\nmfs = Rfs / 100 · mc",
+      "latex": "{R}_{fs}=\\frac{(h_{w} - h_{c})}{h_{fg}}\\cdot 100\nm_{fs}=\\frac{{R}_{fs}}{100}\\cdot m_{c}",
+      "variables_desc": "mfs:Amount of flash steam (kg/h)\nmc:Condensate rate (kg/h)\nQ  :Sensible heat of recovered condensate (kJ/kg)\nhfs:Specific enthalpy of flash steam (kJ/kg)\nhfg:Latent heat of flash steam (kJ/kg)"
+    },
+    "13110": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "17",
+          "name": "WtrPress",
+          "symbol": "pw",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "66",
+          "name": "AllowPressLoss",
+          "symbol": "",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "27",
+          "name": "WtrVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "v = Qw / (d / 2)^2 · π\n∆p = μ · l · v^2 / (2 · d / SG)",
+      "latex": "v=\\frac{Q_{w}}{ (\\frac{d}{2})^{2}}\\cdot \\pi \\newline\n\\Delta p= \\frac{\\mu\\cdot l\\cdot v^{2}\\cdot \\rho \\cdot SG}{2d} \\newline\n\\rho = density of water (1000 kg/m^{3})",
+      "variables_desc": "v  :Water velocity (m/s)\nQ  :Water Flow rate (m³/s)\nd  :Inner diameter of pipe (m)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nSG:Specific gravity of Water"
+    },
+    "13120": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        },
+        {
+          "code": "103",
+          "name": "UpperVeloWtr",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "27",
+          "name": "WtrVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "d  = (Qw / v · 4 / π)^0.5\n∆p = μ · l · v^2 / (2 · d / SG)",
+      "latex": "d=\\sqrt{\\frac{Q_{w}}{3600v}\\cdot \\frac{4}{\\pi}}\\newline\n\\Delta p= \\frac{\\mu\\cdot l\\cdot v^{2}\\cdot \\rho \\cdot SG}{2d} \\newline\n\\rho = density of water (1000 kg/m^{3})",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nQ  :Water Flow rate (m³/s)\nv  :Water velocity (m/s)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nSG:Specific gravity of Water"
+    },
+    "13130": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "27",
+          "name": "WtrVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p = μ · l · v^2 / (2 · d · SG)",
+      "latex": "\\Delta p= \\frac{\\mu\\cdot l\\cdot v^{2}\\cdot \\rho \\cdot SG}{2d} \\newline\n\\rho = density of water (1000 kg/m^{3})",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Water velocity (m/s) \nd  :Inner diameter of pipe (m)\nSG:Specific gravity of Water"
+    },
+    "13140": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "27",
+          "name": "WtrVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "formula": "v = Q / 3600 / {(d / 2)^2 · π}",
+      "latex": "v=\\frac{Q_{w}/3600}{(\\frac{d}{2})^{2} \\cdot \\pi}",
+      "variables_desc": "v  :Water velocity (m/s)\nQ  :Water flow rate (m³/h)\nd  :Inner diameter of pipe (m)\nπ  :3.1415..."
+    },
+    "13150": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "27",
+          "name": "WtrVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "formula": "Qw = v · (d / 2)^2 · π · 3600",
+      "latex": "Q_{w}=v\\cdot (\\frac{d}{2})^{2}\\cdot \\pi\\cdot 3600",
+      "variables_desc": "Q  :Water flow rate (m³/h)\nv  :Water velocity (m/s)\nd  :Inner diameter of pipe (m)\nπ  :3.1415..."
+    },
+    "13200": {
+      "inputs": [
+        {
+          "code": "21",
+          "name": "WtrPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "22",
+          "name": "WtrSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        },
+        {
+          "code": "98",
+          "name": "WtrTemp",
+          "symbol": "Tw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "formula": "p1 - p2 < FL^2 · (p1 - FF · P) :\nQw = 0.0865 · Cv · {(p1 - p2) / SG}^0.5\np1 - p2 >= FL^2 · (p1 - FF · P) :\nQw = 0.0865 · Cv · FL · {(p1 - FF · P) / SG}^0.5",
+      "latex": "p_{1}-p_{2}<FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow \nQ_{w}=0.0865\\cdot C_{v}\\cdot \\sqrt{\\frac{p_{1}-p_{2}}{SG}}\np_{1}-p_{2}\\geq FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow \nQ_{w}=0.0865\\cdot C_{v}\\cdot FL \\cdot \\sqrt{\\frac{p_{1}-FF\\cdot P}{SG}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFL:Pressure recovery factor(=0.9)\nFF:Critical pressure ratio factor\nP  :Absolute vapor pressure of the water at inlet temperature\nQ  :Water flow rate (m³/h)\nCv:Valve flow coefficient value\nSG:Specific gravity of Water (=1)"
+    },
+    "13300": {
+      "inputs": [
+        {
+          "code": "21",
+          "name": "WtrPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "22",
+          "name": "WtrSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "98",
+          "name": "WtrTemp",
+          "symbol": "Tw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        }
+      ],
+      "formula": "p1 - p2 < FL^2 · (p1 - FF · P) :\nCv = Qw / 0.0865 · {SG / (p1 - p2)}^0.5\np1 - p2 >= FL^2 · (p1 - FF · P) :\nCv = Qw / (0.0865 · FL) · {SG / (p1 - FF · P)}^0.5",
+      "latex": "p_{1}-p_{2}<FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow\nC_{v}=\\frac{Q_{w}}{0.0865}\\cdot \\sqrt{\\frac{SG}{p_{1}-p_{2}}}\np_{1}-p_{2}\\geq FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow \nC_{v}=\\frac{Q_{w}}{0.0865\\cdot FL}\\cdot \\sqrt{\\frac{SG}{p_{1}-FF\\cdot P}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFL:Pressure recovery factor(=0.9)\nFF:Critical pressure ratio factor\nP  :Absolute vapor pressure of the water at inlet temperature\nCv:Valve flow coefficient value\nQ  :Water flow rate (m³/h)\nSGw:Specific gravity of Water (=1)"
+    },
+    "13400": {
+      "inputs": [
+        {
+          "code": "21",
+          "name": "WtrPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "22",
+          "name": "WtrSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "75",
+          "name": "OrificeDiam",
+          "symbol": "do",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "76",
+          "name": "DischargeCoeff",
+          "symbol": "C",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "98",
+          "name": "WtrTemp",
+          "symbol": "Tw",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "99",
+          "name": "WtrFlowRate",
+          "symbol": "Qw",
+          "unit_si": "m³/h",
+          "unit_imperial": "gal/h"
+        }
+      ],
+      "formula": "p1 - p2 < FL^2 · (p1 - FF · P) :\nQ = 0.0865 · C · (do / 4.654)^2 · {(p1 - p2) / SG}^0.5\np1 - p2 >= FL^2 · (p1 - FF · P) :\nQ = 0.0865 · C · (do / 4.654)^2 · FL · {(p1 - FF · P)/ SG}^0.5",
+      "latex": "p_{1}-p_{2}<FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow\nQ_{w}=0.0865\\cdot C\\cdot (\\frac{d_{o}}{4.654})^{2}\\cdot \\sqrt{\\frac{p_{1}-p_{2}}{SG}}\np_{1}-p_{2}\\geq FL^{2}\\cdot (p_{1}-FF\\cdot P)\\rightarrow\nQ_{w}=0.0865\\cdot C\\cdot (\\frac{d_{o}}{4.654})^{2}\\cdot FL\\cdot \\sqrt{\\frac{p_{1}-FF\\cdot P}{SG}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFL:Pressure recovery factor(=0.9)\nFF:Critical pressure ratio factor\nP  :Absolute vapor pressure of the water at inlet temperature\nQ  :Water flow rate (m³/h)\nC  :Coefficient of discharge\ndo:Diameter of orifice (mm)\nSGw:Specific gravity of Water (=1)"
+    },
+    "13500": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "78",
+          "name": "InsType",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "14",
+          "name": "Relative",
+          "symbol": "Φ",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "26",
+          "name": "InternalTemp",
+          "symbol": "Ti",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "77",
+          "name": "AmbTemp",
+          "symbol": "Tam",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        },
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        },
+        {
+          "code": "208",
+          "name": "DewPoint",
+          "symbol": "Tdp",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "234",
+          "name": "InsThick5",
+          "symbol": "L",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "(d1 + 2 · L) · ln{(d1 + 2 · L) / d1} = 2 · λ / α · (Ti - Tdp) / (Tdp - Tam)",
+      "latex": "(d_{1}+2L)\\cdot \\ln (\\frac{d_{1}+2L}{d_{1}})=\\frac{2\\lambda}{\\alpha}\\cdot \\frac{T_{i}-T_{dp}}{T_{dp}-T_{am}}",
+      "variables_desc": "d1:Outer diameter of pipe (m)\nL  :Insulation thickness (m)\nk  :Thermal conductivity coefficient (W/m K)\nα  :Heat transfer coefficient (W/m² K)\nTi:Internal temperature (°C)\nTdp:Dew point (°C)\nTam:Ambient temperature (°C)"
+    },
+    "14110": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        },
+        {
+          "code": "66",
+          "name": "AllowPressLoss",
+          "symbol": "",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "11",
+          "name": "AirVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p = μ · l · v^2 / (2 · d / ρ)",
+      "latex": "\\Delta p = \\frac{\\mu \\cdot l \\cdot v^{2}}{2d/\\rho}",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Air velocity (m/s)\nd  :Inner diameter of pipe (m)\nρa  :Density (kg/m³)"
+    },
+    "14120": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "105",
+          "name": "UpperVeloAir",
+          "symbol": "",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "11",
+          "name": "AirVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "d  = (Qa / 60 / v · 4 / π)^0.5\n∆p = μ · l · v^2 /(2 · d / ρ)",
+      "latex": "d=\\sqrt{\\frac{Q_a/60}{v}\\cdot \\frac{4}{\\pi}}\n\\Delta p = \\frac{\\mu \\cdot l \\cdot v^{2}}{2d/\\rho}",
+      "variables_desc": "d  :Inner diameter of pipe (m)\nQa:Air flow rate (m³/min)\nv  :Air velocity (m/s)\nπ  :3.1415...\n∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nρa:Density (kg/m³)"
+    },
+    "14130": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "11",
+          "name": "AirVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p =μ · l · v^2 / (2 · d / ρ)",
+      "latex": "\\Delta p = \\frac{\\mu \\cdot l \\cdot v^{2}}{2d/\\rho}",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Air velocity (m/s)\nd  :Inner diameter of pipe (m)\nρa:Density (kg/m³)"
+    },
+    "14140": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "6",
+          "name": "GasPress",
+          "symbol": "Pg",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "7",
+          "name": "GasTemp",
+          "symbol": "Tg",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "8",
+          "name": "GasFlowRate",
+          "symbol": "Qg",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "12",
+          "name": "Molecular",
+          "symbol": "M",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "13",
+          "name": "GasVisco",
+          "symbol": "Vi",
+          "unit_si": "mPa s",
+          "unit_imperial": "lbf s/in²"
+        },
+        {
+          "code": "68",
+          "name": "PipeLen",
+          "symbol": "l",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        },
+        {
+          "code": "69",
+          "name": "ObsFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "70",
+          "name": "ThruFloNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "71",
+          "name": "CheckNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "72",
+          "name": "ElbowNo",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "73",
+          "name": "PipeRough",
+          "symbol": "",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "16",
+          "name": "GasVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        },
+        {
+          "code": "200",
+          "name": "PressLoss",
+          "symbol": "∆p",
+          "unit_si": "Pa",
+          "unit_imperial": "psi"
+        },
+        {
+          "code": "202",
+          "name": "EquivPipeLeng",
+          "symbol": "",
+          "unit_si": "m",
+          "unit_imperial": "ft"
+        }
+      ],
+      "formula": "∆p =μ · l · v^2 / (2 · d / ρ)",
+      "latex": "\\Delta p = \\frac{\\mu \\cdot l \\cdot v^{2}}{2d/\\rho}",
+      "variables_desc": "∆p :Pressure loss (Pa)\nλ  :Coefficient of friction\nl  :Pipe length (m) \nv  :Gas flow velocity (m/s)\nd  :Inner diameter of pipe (m)\nρg:Density(kg/m³)"
+    },
+    "14150": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "11",
+          "name": "AirVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "formula": "v = Qa / 60 / {(d / 2)^2 · π}",
+      "latex": "v=\\frac{Q_{a}/60}{(\\frac{d}{2})^{2}\\cdot \\pi}",
+      "variables_desc": "v  :Air velocity (m/s)\nQa:Air flow rate (m³/min)\nd  :Inner diameter of pipe (m)\nπ  :3.1415..."
+    },
+    "14160": {
+      "inputs": [
+        {
+          "code": "1",
+          "name": "PipeGrade",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "2",
+          "name": "PipeSize",
+          "symbol": "",
+          "unit_si": "",
+          "unit_imperial": ""
+        },
+        {
+          "code": "3",
+          "name": "PipeInDiam",
+          "symbol": "d",
+          "unit_si": "m",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "11",
+          "name": "AirVelo",
+          "symbol": "v",
+          "unit_si": "m/s",
+          "unit_imperial": "ft/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        }
+      ],
+      "formula": "Qa = v · (d / 2)^2 · π · 60",
+      "latex": "Q_{a}=v\\cdot (\\frac{d}{2})^{2}\\cdot \\pi \\cdot 60",
+      "variables_desc": "Qa:Air flow rate (m³/min)\nv  :Air velocity (m/s) \nd  :Inner diameter of pipe (m)\nπ  :3.1415..."
+    },
+    "14200": {
+      "inputs": [
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "9",
+          "name": "AirPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "10",
+          "name": "AirSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        }
+      ],
+      "formula": "(p1 - p2) / p1 < Fγ · xT :\nQa = 4.17 · Cv · p1 · {1 - (p1 - p2) / p1 / (3 · Fγ · xT)} · {(p1 - p2) / p1 / (Ta + 273.15)}^0.5 / 60\n(p1 - p2) / P >= Fγ · xT :\nQa = 0.667 · 4.17 · Cv · p1 · {Fγ · xT / (Ta + 273.15)}^0.5 / 60",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow\nQ_{a}=4.17\\cdot C_{v}\\cdot p_{1}\\cdot \\left ( 1-\\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{( 3 F_{\\gamma}\\cdot x_{T})} \\right )\\cdot \\sqrt{ \\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{( T_{a}+ 273.15)}}\\: / 60\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow\nQ_{a}=0.667\\cdot 4.17\\cdot C_{v}\\cdot p_{1}\\cdot \\sqrt{\\frac{F_{\\gamma}\\cdot x_{T}}{T_{a}+273.15}}\\: /60",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nQa:Air flow rate (Nm³/min)\nCv:Valve flow coefficient value\nTa:Air temperature (°C)"
+    },
+    "14300": {
+      "inputs": [
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "9",
+          "name": "AirPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "10",
+          "name": "AirSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "41",
+          "name": "AirFlowRate",
+          "symbol": "Qa",
+          "unit_si": "m³/min",
+          "unit_imperial": "CFM"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "74",
+          "name": "CvValue",
+          "symbol": "Cv",
+          "unit_si": "Cv",
+          "unit_imperial": "Cv (US)"
+        }
+      ],
+      "formula": "(p1 - p2) / p1 < Fγ · xT :\nCv = Qa / [4.17  · p1 · {1 - (p1 - p2)/ p1 / (3 · Fγ · xT)} · {(Ta + 273.15) / (p1 - p2) / p1}^0.5]\n(p1 - p2) / p1 >= Fγ · xT :\nCv = Qa / (0.667 · 4.17 · p1) · {(Ta + 273.15) / (Fγ · xT · p1)}^0.5",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow\nC_{v}=\\frac{Q_{a}}{\\left ( 4.17\\cdot p_{1}\\cdot (1-\\frac{\\frac{p_{1}-p_{2}}{p_{1}}}{3F_{\\gamma}\\cdot x_{T}})\\cdot \\sqrt{\\frac{T_{a}+273.15}{\\frac{p_{1}-p_{2}}{p_{1}}}} \\right ) }\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow\nC_{v}=\\frac{Q_{a}}{0.667\\cdot 4.17\\cdot p_{1}}\\cdot \\sqrt{\\frac{T_{a}+273.15}{F_{\\gamma}\\cdot x_{T}\\cdot p_{1}}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nCv:Valve flow coefficient value\nQa:Air flow rate (Nm³/min)\nTa:Air temperature (°C)"
+    },
+    "14400": {
+      "inputs": [
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "9",
+          "name": "AirPrimPress",
+          "symbol": "p1",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "10",
+          "name": "AirSecondPress",
+          "symbol": "p2",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "75",
+          "name": "OrificeDiam",
+          "symbol": "do",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        },
+        {
+          "code": "76",
+          "name": "DischargeCoeff",
+          "symbol": "C",
+          "unit_si": "",
+          "unit_imperial": ""
+        }
+      ],
+      "outputs": [
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        }
+      ],
+      "formula": "(p1 - p2) / p1 < Fγ · xT :\nQa = 4.17 · C · (do / 4.654)^2 · p1 · (1 - (p1 - p2) / p1  / (3 · Fγ · xT)) · {(p1 - p2) / p1 / (Ta + 273.15)}^0.5\n(p1 - p2) / p1 >= Fγ · xT :\nQa = 0.667 · 4.17 · C · (do / 4.654)^2 · p1 · {Fγ · xT / (Ta + 273.5)}^0.5",
+      "latex": "\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}< F_{\\gamma}\\cdot x_{T}\\rightarrow\nQ_{a}=4.17\\cdot C\\cdot (\\frac{d_{o}}{4.654})^{2}\\cdot p_{1}\\cdot (1-\\frac{\\frac{p1-p2}{p1}}{3F_{\\gamma}\\cdot x_{T}})\\cdot \\sqrt{\\frac{\\frac{p1-p2}{p1}}{T_{a}+273.15}}\n\\frac{\\left (p_{1}-p_{2}  \\right )}{p1}\\geq  F_{\\gamma}\\cdot x_{T}\\rightarrow\nQ_{a}=0.667\\cdot 4.17\\cdot C \\cdot (\\frac{d_{o}}{4.654})^{2}\\cdot p_{1} \\cdot \\sqrt{\\frac{F_{\\gamma}\\cdot x_{T}}{T_{a}+273.15}}",
+      "variables_desc": "p1:Primary pressure (kPaA)\np2:Secondary pressure (kPaA)\nFγ:Specific heat ratio factor\nxT:Pressure Differential ratio factor (=0.72)\nQa:Air flow rate (Nm³/min)\nC  :Coefficient of discharge\ndo:Diameter of orifice (mm)\nTa:Air temperature (°C)"
+    },
+    "14500": {
+      "inputs": [
+        {
+          "code": "4",
+          "name": "AirPress",
+          "symbol": "Pa",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "14",
+          "name": "Relative",
+          "symbol": "Φ",
+          "unit_si": "%",
+          "unit_imperial": "%"
+        },
+        {
+          "code": "15",
+          "name": "CoolTemp",
+          "symbol": "Tc",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        },
+        {
+          "code": "83",
+          "name": "AirFlowRateN",
+          "symbol": "Qa",
+          "unit_si": "Nm³/min",
+          "unit_imperial": "SCFM"
+        },
+        {
+          "code": "77",
+          "name": "AmbTemp",
+          "symbol": "Tam",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "37",
+          "name": "CondFlowLoad",
+          "symbol": "mc",
+          "unit_si": "kg/h",
+          "unit_imperial": "lb/h"
+        },
+        {
+          "code": "204",
+          "name": "InitMoistCont",
+          "symbol": "X1",
+          "unit_si": "g/kg",
+          "unit_imperial": "lb/lb"
+        },
+        {
+          "code": "208",
+          "name": "DewPoint",
+          "symbol": "Tdp",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "mc = (dv1 - Xr) · Qa · 60 / Vtemp / 1000\nX1 = Φ · dv1\nXr = dv2 · (760 - p2)/(760 · Pr - p2)\nVtemp = V · (760 - p1) /(760 - Φ · p1)\nPr = (pa + 101.325) / 101.325",
+      "latex": "m_{c}=\\frac{(dv_{1}-X_{r})\\cdot Q_{a}\\cdot 60}{V_{temp}}\\: /1000\nX_1=\\Phi \\cdot dv_{1}\nX_{r}=\\frac{d_{v2}\\cdot (760-p_{2})}{760\\cdot P_{r}-p_{2}}\nV_{temp}=\\frac{V\\cdot (760-p_1)}{760-\\Phi\\cdot p_{1}}\nP_{r}=\\frac{(p_{a}+101.325)}{101.325}",
+      "variables_desc": "mc:Condensate flow rate (kg/h)\nQa:Air flow rate (Nm³/min)\nVtemp:Temporary specific volume variable (m³/kg)\nΦ  :Relative humidity\ndv1:Absolute humidity of saturated humid air at ambient temperature (g/kg)\ndv2:Absolute humidity of saturated humid air at cooling temp (g/kg)\np2:Partial pressure of vapor in saturated humid air at Cooling temperature (mmHg)\nV  :Specific volume of saturated humid air at ambient temperature (m³/kg)\np1:Partial pressure of vapor in saturated humid air at ambient temperature (mmHg)\npa:Air pressure (kPaA)"
+    },
+    "14600": {
+      "inputs": [
+        {
+          "code": "5",
+          "name": "AirTemp",
+          "symbol": "Ta",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "205",
+          "name": "Humidity",
+          "symbol": "",
+          "unit_si": "g/kg",
+          "unit_imperial": "lb/lb"
+        },
+        {
+          "code": "206",
+          "name": "PartPress",
+          "symbol": "ps",
+          "unit_si": "kPa abs",
+          "unit_imperial": "psia"
+        },
+        {
+          "code": "207",
+          "name": "AirSpecVol",
+          "symbol": "V",
+          "unit_si": "m³/kg",
+          "unit_imperial": "ft³/lb"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15110": {
+      "inputs": [
+        {
+          "code": "85",
+          "name": "TempRead",
+          "symbol": "T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "85",
+          "name": "TempRead",
+          "symbol": "T",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15111": {
+      "inputs": [
+        {
+          "code": "86",
+          "name": "TempDiff",
+          "symbol": "dT",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "86",
+          "name": "TempDiff",
+          "symbol": "dT",
+          "unit_si": "°C",
+          "unit_imperial": "°F"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15112": {
+      "inputs": [
+        {
+          "code": "87",
+          "name": "Pressure",
+          "symbol": "P",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "87",
+          "name": "Pressure",
+          "symbol": "P",
+          "unit_si": "kPa",
+          "unit_imperial": "psi"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15113": {
+      "inputs": [
+        {
+          "code": "88",
+          "name": "Length",
+          "symbol": "L",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "88",
+          "name": "Length",
+          "symbol": "L",
+          "unit_si": "mm",
+          "unit_imperial": "in"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15114": {
+      "inputs": [
+        {
+          "code": "89",
+          "name": "Area",
+          "symbol": "A",
+          "unit_si": "m²",
+          "unit_imperial": "in²"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "89",
+          "name": "Area",
+          "symbol": "A",
+          "unit_si": "m²",
+          "unit_imperial": "in²"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15115": {
+      "inputs": [
+        {
+          "code": "90",
+          "name": "Volume",
+          "symbol": "V",
+          "unit_si": "m³",
+          "unit_imperial": "in³"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "90",
+          "name": "Volume",
+          "symbol": "V",
+          "unit_si": "m³",
+          "unit_imperial": "in³"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15116": {
+      "inputs": [
+        {
+          "code": "91",
+          "name": "Velocity",
+          "symbol": "V",
+          "unit_si": "m/s",
+          "unit_imperial": "mile/s"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "91",
+          "name": "Velocity",
+          "symbol": "V",
+          "unit_si": "m/s",
+          "unit_imperial": "mile/s"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15117": {
+      "inputs": [
+        {
+          "code": "92",
+          "name": "Weight",
+          "symbol": "W",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "92",
+          "name": "Weight",
+          "symbol": "W",
+          "unit_si": "kg",
+          "unit_imperial": "lb"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15118": {
+      "inputs": [
+        {
+          "code": "93",
+          "name": "Viscosity",
+          "symbol": "Vi",
+          "unit_si": "cP",
+          "unit_imperial": "lbf s/in²"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "93",
+          "name": "Viscosity",
+          "symbol": "Vi",
+          "unit_si": "cP",
+          "unit_imperial": "lbf s/in²"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15119": {
+      "inputs": [
+        {
+          "code": "94",
+          "name": "Energy",
+          "symbol": "E",
+          "unit_si": "kJ",
+          "unit_imperial": "BTU"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "94",
+          "name": "Energy",
+          "symbol": "E",
+          "unit_si": "kJ",
+          "unit_imperial": "BTU"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15120": {
+      "inputs": [
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "95",
+          "name": "TranceCoeff",
+          "symbol": "α",
+          "unit_si": "W/m²-K",
+          "unit_imperial": "BTU/ft² h F"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15121": {
+      "inputs": [
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "96",
+          "name": "ConductCoeff",
+          "symbol": "λ",
+          "unit_si": "W/m-K",
+          "unit_imperial": "BTU/ft h F"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    },
+    "15122": {
+      "inputs": [
+        {
+          "code": "97",
+          "name": "SpecEnt",
+          "symbol": "H",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        }
+      ],
+      "outputs": [
+        {
+          "code": "97",
+          "name": "SpecEnt",
+          "symbol": "H",
+          "unit_si": "kJ/kg",
+          "unit_imperial": "BTU/lb"
+        }
+      ],
+      "formula": "",
+      "latex": "",
+      "variables_desc": ""
+    }
+  }
+}

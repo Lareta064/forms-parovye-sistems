@@ -558,9 +558,7 @@
 		position: relative;
 		flex: 0 0 130px;
 		width: 130px;
-
 		border: 0;
-		// border-left: 1px solid var(--prim);
 		border-radius: 0 4px 4px 0;
 		background-color: var(--prim);
 	}
@@ -570,10 +568,8 @@
 		padding-left: 12px;
 		padding-right: 42px;
 		border-radius: 0 4px 4px 0;
-
 		background-color: var(--prim);
 		color: #fff;
-
 		font-size: 15px;
 		line-height: 1;
 	}
@@ -636,6 +632,4 @@
 		display: block;
 		white-space: nowrap;
 	}
-
-
 }

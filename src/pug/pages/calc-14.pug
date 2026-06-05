@@ -15,7 +15,7 @@ block content
 						p.breadcrumb Тут компонент breadcrumbs
 						h1.h-30 Образование выпара при выпуске конденсата
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="12310")
 						.calculator-form__head
 							.semi-24 Начальные данные
 							.calculator-form__measure
@@ -41,7 +41,7 @@ block content
 											.tooltip-text
 												p Давление конденсата :<br/>Введите давление на входе в конденсатоотводчик
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_davlenie_kondensata" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_davlenie_kondensata" data-var="condPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -61,7 +61,7 @@ block content
 											.tooltip-text
 												p Расход конденсата :<br/>Введите расход конденсата в теплообменнике
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_rashod_kondensata" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_rashod_kondensata" data-var="condFlow" data-cat="massFlow" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
 											.dropdown__list
@@ -76,7 +76,7 @@ block content
 								.form-item-group
 									.form-label Противодавление в конденсатной линии
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_protivodavlenie" inputmode="decimal" value="0")
+										input.form-inp.form-inp--measure(type="text" name="current_protivodavlenie" data-var="recoveryPress" data-cat="pressureAbs" inputmode="decimal" value="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
 											.dropdown__list
@@ -94,7 +94,35 @@ block content
 						.calculator-form__result
 							p.semi-24 Результат:
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Расход пара вторичного вскипания
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход пара вторичного вскипания
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_flash" data-out="flashFlow" data-cat="massFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flash_unit" value="kg/h" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flash_unit" value="t(metric)/h")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_flash_unit" value="lb/h")
+															span.form-radio-name lb/h
+								//Доля вторичного пара (%)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Доля вторичного пара (%)
+									.form-item
+										input.form-inp(type="text" name="res_ratio" data-out="flashRatio" readonly)
 					.formulas
 						.formulas__title Формулы:
 						.formulas__block

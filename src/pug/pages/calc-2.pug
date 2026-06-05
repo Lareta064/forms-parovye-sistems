@@ -35,7 +35,7 @@ block content
 
 
 
-					form.calculator-form.custom-form
+					form.calculator-form.custom-form(data-calc="11120")
 
 						//FORM HEADER
 
@@ -105,7 +105,7 @@ block content
 
 										span Класс трубопровода
 
-									.dropdown
+									.dropdown(data-var="pipeGrade" data-type="grade")
 
 										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
 
@@ -190,6 +190,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_davlenie_para"
+											data-var="stmPress"
+											data-cat="pressureAbs"
 											inputmode="decimal"
 											value="0"
 										)
@@ -321,6 +323,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_temperatura_para"
+											data-var="stmTemp"
+											data-cat="temp"
 											inputmode="decimal"
 											value="(99.9743)"
 										)
@@ -370,6 +374,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_rashod_para"
+											data-var="stmFlow"
+											data-cat="massFlow"
 											inputmode="decimal"
 											value="0"
 										)
@@ -429,6 +435,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_max_skorost"
+											data-var="upperVelo"
+											data-cat="velocity"
 											inputmode="decimal"
 											value="30"
 										)
@@ -496,6 +504,8 @@ block content
 										input.form-inp.form-inp--measure(
 											type="text"
 											name="current_dlina_truboprovoda"
+											data-var="pipeLen"
+											data-cat="length"
 											inputmode="decimal"
 											value="0"
 										)
@@ -582,7 +592,7 @@ block content
 
 											.form-item
 
-												input.form-inp(type="number" name="klapan_1" value="0")
+												input.form-inp(type="number" name="klapan_1" value="0" data-var="fit.obsFlo")
 
 										.form-item-group
 
@@ -600,7 +610,7 @@ block content
 
 											.form-item
 
-												input.form-inp(type="number" name="klapan_2" value="0")
+												input.form-inp(type="number" name="klapan_2" value="0" data-var="fit.thruFlo")
 
 										.form-item-group
 
@@ -618,7 +628,7 @@ block content
 
 											.form-item
 
-												input.form-inp(type="number" name="klapan_3" value="0")
+												input.form-inp(type="number" name="klapan_3" value="0" data-var="fit.check")
 
 										.form-item-group
 
@@ -636,7 +646,7 @@ block content
 
 											.form-item
 
-												input.form-inp(type="number" name="klapan_4" value="0")
+												input.form-inp(type="number" name="klapan_4" value="0" data-var="fit.elbow")
 
 
 
@@ -651,6 +661,8 @@ block content
 												input.form-inp.form-inp--measure(
 													type="text"
 													name="current_vozrast_truby"
+													data-var="pipeRough"
+													data-cat="length"
 													inputmode="decimal"
 													value="0.05"
 												)
@@ -738,7 +750,109 @@ block content
 							p.semi-24 Результат:
 
 							.calculator-result-block
-								p.medi-16 Пожалуйста введите данные в поля
+								p.medi-16(data-result-note)
+								//Диаметр трубопровода
+								.calculator-result-row.form-item-group
+									.form-label
+										span Диаметр трубопровода
+									.form-item
+										input.form-inp(type="text" name="res_size" data-out="pipeSize" readonly)
+								//Внутренний диаметр трубопровода
+								.calculator-result-row.form-item-group
+									.form-label
+										span Внутренний диаметр трубопровода
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_id" data-out="pipeInDiam" data-cat="length" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_id_unit" value="mm" checked)
+															span.form-radio-name mm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_id_unit" value="in")
+															span.form-radio-name in
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_id_unit" value="m")
+															span.form-radio-name m
+								//Скорость пара
+								.calculator-result-row.form-item-group
+									.form-label
+										span Скорость пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_velo" data-out="stmVelo" data-cat="velocity" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_velo_unit" value="m/s" checked)
+															span.form-radio-name m/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_velo_unit" value="ft/s")
+															span.form-radio-name ft/s
+								//Потери давления
+								.calculator-result-row.form-item-group
+									.form-label
+										span Потери давления
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_dp" data-out="pressLoss" data-cat="dPress" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="bar" checked)
+															span.form-radio-name bar
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="kPa")
+															span.form-radio-name kPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="MPa")
+															span.form-radio-name MPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="psi")
+															span.form-radio-name psi
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="kg/cm²")
+															span.form-radio-name kg/cm²
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_dp_unit" value="mmHg")
+															span.form-radio-name mmHg
+								//Эквивалентная длина прямого участка трубы
+								.calculator-result-row.form-item-group
+									.form-label
+										span Эквивалентная длина прямого участка трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="res_leq" data-out="equivLen" data-cat="length" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="m" checked)
+															span.form-radio-name m
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="mm")
+															span.form-radio-name mm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="res_leq_unit" value="ft")
+															span.form-radio-name ft
 					//formulas
 
 					.formulas
