@@ -614,6 +614,55 @@
     return { airVolume: (1 - ps / p) * 100, partPress: ps, satTemp: Tsat, tempDrop: Tsat - inp.tempOfMix };
   };
 
+  // ===== КОНДЕНСАТОПРОВОДЫ (12210/12220/12221/12230) =====
+  // Двухфазный удельный объём конденсата после вскипания с Cp до Rp.
+  function condTwoPhase(CpAbs, RpAbs) {
+    var S = steam();
+    var Rfs = (S.satLiquid(CpAbs).h - S.satLiquid(RpAbs).h) / S.latentHeat(RpAbs);
+    if (Rfs < 0) Rfs = 0;
+    var vf = S.satLiquid(RpAbs).v, vg = S.satVapor(RpAbs).v;
+    var Vtemp = vf + Rfs * (vg - vf);
+    var eta = waterVisc(S.Tsat(RpAbs)); // эфф. вязкость двухфазного потока ≈ насыщ. вода при Rp
+    return { V: Vtemp, eta: eta, Rfs: Rfs };
+  }
+  // 12220 — подбор конденсатопровода по допустимым потерям давления.
+  CALC['12220'] = function (inp) {
+    var PIPES = pipes(), tp = condTwoPhase(inp.condPress, inp.recoveryPress);
+    var eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3, Qs = inp.condFlow / 3600;
+    var list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000, v = Qs * tp.V / pipeArea(d);
+      var r = hydraulics(d, v, tp.V, tp.eta, inp.pipeLen, inp.fittings, eps);
+      if (r.dp <= inp.allowPressLoss) { chosen = { pipe: list[i], d: d, r: r }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000, vv = Qs * tp.V / pipeArea(dd); chosen = { pipe: last, d: dd, r: hydraulics(dd, vv, tp.V, tp.eta, inp.pipeLen, inp.fittings, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, condVelo: chosen.r.v, pressLoss: chosen.r.dp, equivLen: chosen.r.leq, exceeded: exceeded };
+  };
+  // 12221 — подбор конденсатопровода по допустимой скорости.
+  CALC['12221'] = function (inp) {
+    var PIPES = pipes(), tp = condTwoPhase(inp.condPress, inp.recoveryPress);
+    var eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3, Qs = inp.condFlow / 3600;
+    var list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000, v = Qs * tp.V / pipeArea(d);
+      if (v <= inp.upperVelo) { chosen = { pipe: list[i], d: d, r: hydraulics(d, v, tp.V, tp.eta, inp.pipeLen, inp.fittings, eps) }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000, vv = Qs * tp.V / pipeArea(dd); chosen = { pipe: last, d: dd, r: hydraulics(dd, vv, tp.V, tp.eta, inp.pipeLen, inp.fittings, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, condVelo: chosen.r.v, pressLoss: chosen.r.dp, equivLen: chosen.r.leq, exceeded: exceeded };
+  };
+  // 12210/12230 — упрощённый подбор по скорости (конденсат как жидкость, без вскипания).
+  function condSimpleSize(inp) {
+    var PIPES = pipes(), V = waterV(0.101325 + (inp.condPress || 0), WATER_T), Qs = inp.condFlow / 3600;
+    var list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) { var d = list[i].id / 1000, v = Qs / pipeArea(d); if (v <= inp.upperVelo) { chosen = { pipe: list[i], d: d, v: v }; break; } }
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000; chosen = { pipe: last, d: dd, v: Qs / pipeArea(dd) }; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, condVelo: chosen.v };
+  }
+  CALC['12210'] = condSimpleSize;
+  CALC['12230'] = condSimpleSize;
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);
