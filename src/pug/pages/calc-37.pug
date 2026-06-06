@@ -1,0 +1,47 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-37')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Стоимость единицы энергии
+
+					form.calculator-form.custom-form(data-calc="11420")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label Низшая теплота сгорания топлива (кДж/кг)
+									.form-item
+										input.form-inp(type="number" name="fuelCalVal" data-var="fuelCalVal" value="40000")
+								.form-item-group
+									.form-label Стоимость топлива (₽/тонна)
+									.form-item
+										input.form-inp(type="number" name="fuelUnitCost" data-var="fuelUnitCost" value="30000")
+								.form-item-group
+									.form-label КПД котла (%)
+									.form-item
+										input.form-inp(type="number" name="boilerEff" data-var="boilerEff" value="75")
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Стоимость единицы энергии (₽/МДж)
+									.form-item
+										input.form-inp(type="text" name="r_energyUnitCost" data-out="energyUnitCost" readonly)
+	-var title = "Стоимость единицы энергии";

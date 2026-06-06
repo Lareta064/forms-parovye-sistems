@@ -552,6 +552,68 @@
     return { airFlowRateN: airValveFlowN(CvEq, inp.airPrimPress * 1000, inp.airSecondPress * 1000, inp.airTemp) };
   };
 
+  // ===== КОТЁЛ, СТОИМОСТЬ, СУХОСТЬ, ПАРОВОЗДУШНАЯ СМЕСЬ (114xx) =====
+  // Энтальпия питательной/сырой воды (кДж/кг) при T(К): насыщенная вода ~ region1 при низком p.
+  function waterEnth(Tk) { return steam().region1(0.101325, Tk).h; }
+
+  // 11410 — КПД котла и коэффициент нагрузки.
+  CALC['11410'] = function (inp) {
+    var S = steam(), P = inp.boilerPress, mb = inp.boilerBlow || 0;
+    var hw = S.satLiquid(P).h, dH = S.latentHeat(P), hfw = waterEnth(inp.feedWtrTemp);
+    var eff = (inp.feedWtrRate - mb) * (hw + 0.98 * dH - hfw) / (inp.fuelConsumption * inp.fuelCalVal) * 100;
+    var lf = (inp.feedWtrRate - mb) / inp.boilerCapa * 100;
+    return { boilerEff: eff, loadFactor: lf };
+  };
+  // 11420 — стоимость единицы энергии. Ce=Cf/(Hf·η/100). Cf $/т, Hf кДж/кг → Ce $/МДж.
+  CALC['11420'] = function (inp) {
+    return { energyUnitCost: inp.fuelUnitCost / (inp.fuelCalVal * inp.boilerEff / 100) };
+  };
+  // 11430 — стоимость пара. Cs=(hs−hfw)·Ce. $/т.
+  CALC['11430'] = function (inp) {
+    var st = steamState(inp.stmPress, inp.stmTemp);
+    var hs = inp.stmTemp && inp.stmTemp > steam().Tsat(inp.stmPress) ? steam().superheated(inp.stmPress, inp.stmTemp).h : steam().satVapor(inp.stmPress).h;
+    var hfw = waterEnth(inp.feedWtrTemp);
+    return { stmCost: (hs - hfw) * inp.energyUnitCost };
+  };
+
+  // Сухость/перегрев пара после дросселирования с p1(сухость X1%) до p2.
+  function drynessAfter(P1, X1, P2) {
+    var S = steam();
+    var h1 = S.satVapor(P1).h - (1 - X1 / 100) * S.latentHeat(P1); // энтальпия влажного пара при p1
+    var hg2 = S.satVapor(P2).h, Ts2 = S.Tsat(P2);
+    if (h1 < hg2) { // остался влажным
+      return { secDryness: (1 - (hg2 - h1) / S.latentHeat(P2)) * 100, degreeOfSuper: 0, satTemp: Ts2 };
+    }
+    // перегрет: ΔT = (h1 − hg2)/cp (cp при насыщении на p2) — как в TLV
+    return { secDryness: 100, degreeOfSuper: (h1 - hg2) / S.cpSuperheated(P2, Ts2), satTemp: Ts2 };
+  }
+  // 11440 — улучшение сухости после редуцирования.
+  CALC['11440'] = function (inp) {
+    var r = drynessAfter(inp.stmPrimPress, inp.estPrimStmDry, inp.stmSecondPress);
+    return { secDryness: r.secDryness, degreeOfSuper: r.degreeOfSuper, satTemp: r.satTemp };
+  };
+  // 11450 — сухость после редуцирования и сепаратора.
+  CALC['11450'] = function (inp) {
+    var ms = inp.stmFlow, mc = inp.sepaCond, eta = inp.separateEff;
+    var X1 = (1 - mc / (ms * eta / 100)) * 100;            // оценочная первичная сухость
+    var Xp1 = (ms - mc / (eta / 100)) / (ms - mc) * 100;   // сухость после сепаратора
+    var r = drynessAfter(inp.stmPrimPress, Xp1, inp.stmSecondPress);
+    return { estPrimStmDry: X1, secDryness: r.secDryness, degreeOfSuper: r.degreeOfSuper, satTemp: r.satTemp };
+  };
+
+  // 11460 — паровоздушная смесь: по доле воздуха → падение температуры.
+  CALC['11460'] = function (inp) {
+    var S = steam(), p = inp.stmPress, ps = p * (1 - inp.airVolume / 100);
+    var Tm = S.Tsat(ps), Tsat = S.Tsat(p);
+    return { tempOfMix: Tm, partPress: ps, satTemp: Tsat, tempDrop: Tsat - Tm };
+  };
+  // 11461 — паровоздушная смесь: по температуре смеси → доля воздуха.
+  CALC['11461'] = function (inp) {
+    var S = steam(), p = inp.stmPress, ps = S.Psat(inp.tempOfMix);
+    var Tsat = S.Tsat(p);
+    return { airVolume: (1 - ps / p) * 100, partPress: ps, satTemp: Tsat, tempDrop: Tsat - inp.tempOfMix };
+  };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);

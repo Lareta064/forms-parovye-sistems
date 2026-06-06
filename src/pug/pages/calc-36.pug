@@ -1,0 +1,180 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-36')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Эффективность котла
+
+					form.calculator-form.custom-form(data-calc="11410")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label Давление в котле
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="boilerPress" data-var="boilerPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerPress_u" value="11")
+															span.form-radio-name mmHgG
+								.form-item-group
+									.form-label Температура питательной воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="feedWtrTemp" data-var="feedWtrTemp" data-cat="temp" inputmode="decimal" value="80")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="0" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="1")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="2")
+															span.form-radio-name K
+								.form-item-group
+									.form-label Расход питательной воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="feedWtrRate" data-var="feedWtrRate" data-cat="massFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="2")
+															span.form-radio-name lb/h
+								.form-item-group
+									.form-label Низшая теплота сгорания топлива (кДж/кг)
+									.form-item
+										input.form-inp(type="number" name="fuelCalVal" data-var="fuelCalVal" value="40000")
+								.form-item-group
+									.form-label Расход топлива
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="fuelConsumption" data-var="fuelConsumption" data-cat="massFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="fuelConsumption_u" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="fuelConsumption_u" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="fuelConsumption_u" value="2")
+															span.form-radio-name lb/h
+								.form-item-group
+									.form-label Максимальный расход питательной воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="boilerCapa" data-var="boilerCapa" data-cat="massFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerCapa_u" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerCapa_u" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="boilerCapa_u" value="2")
+															span.form-radio-name lb/h
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span КПД котла (%)
+									.form-item
+										input.form-inp(type="text" name="r_boilerEff" data-out="boilerEff" readonly)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Коэффициент нагрузки (%)
+									.form-item
+										input.form-inp(type="text" name="r_loadFactor" data-out="loadFactor" readonly)
+	-var title = "Эффективность котла";
