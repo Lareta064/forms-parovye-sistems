@@ -733,6 +733,82 @@
     return e;
   };
 
+  // ===== ПСИХРОМЕТРИЯ ВЛАЖНОГО ВОЗДУХА (14500, 14600) =====
+  // Полное давление 101.325 кПа (760 мм рт.ст.). ps насыщения воды — по IAPWS-IF97
+  // (та же кривая, что у паровых таблиц проекта). Абсолютная влажность насыщения
+  // X=0.622·ps/(P−ps); уд. объём насыщ. воздуха V=Ra·T/(P−ps), Ra=0.287055.
+  // Сверено с таблицей TLV (humid-air-table) — ps/X/V совпадают в рабочем диапазоне
+  // (амбиент/охлаждение ≤50°C); выше 50°C у TLV своя заниженная корреляция V.
+  var PSY_P = 101.325; // кПа
+  function psWater(Tc) { return steam().Psat(Tc + 273.15) * 1000; } // кПа
+  function humSat(Tc) { var p = psWater(Tc); return 622 * p / (PSY_P - p); } // г/кг
+  function moistVolSat(Tc) { var p = psWater(Tc); return 0.287055 * (Tc + 273.15) / (PSY_P - p); } // м³/кг
+
+  // 14600 — таблица насыщения влажного воздуха по температуре.
+  // Выходы: абс. влажность (г/кг), парц. давление пара (МПа абс), уд. объём (м³/кг).
+  CALC['14600'] = function (inp) {
+    var T = inp.airTemp - 273.15;
+    return { humidity: humSat(T), partPress: psWater(T) / 1000, airSpecVol: moistVolSat(T) };
+  };
+
+  // 14500 — расход конденсата при осушении сжатого воздуха.
+  // Влажный воздух (отн. влажность Φ при Tam) сжимается до Pa и охлаждается до Tc;
+  // выпадает конденсат. Pr — степень сжатия (абс). Калибровано по TLV.
+  //   dv1=X(Tam), dv2=X(Tc) — абс. влажность насыщ.; p1=ps(Tam), p2=ps(Tc) [мм рт.ст.]
+  //   Vtemp=V(Tam)·(760−p1)/(760−Φ·p1) — уд. объём фактич. влажного воздуха
+  //   Xr=dv2·(760−p2)/(760·Pr−p2) — остаточная влажность после сжатия+охлаждения
+  //   mc=(X1−Xr)·Qa·60/Vtemp/1000, X1=Φ·dv1
+  var MMHG = 7.5006168; // кПа -> мм рт.ст.
+  CALC['14500'] = function (inp) {
+    var phi = inp.relative / 100;
+    var Tam = inp.ambTemp - 273.15, Tc = inp.coolTemp - 273.15;
+    var dv1 = humSat(Tam), dv2 = humSat(Tc);
+    var p1 = psWater(Tam) * MMHG, p2 = psWater(Tc) * MMHG;
+    var Pr = inp.airPress * 1000 / 101.325; // степень сжатия = абс. давление (кПа) / атм
+    var Vtemp = moistVolSat(Tam) * (760 - p1) / (760 - phi * p1);
+    var Xr = dv2 * (760 - p2) / (760 * Pr - p2);
+    var X1 = phi * dv1;
+    var mc = (X1 - Xr) * inp.airFlowN * 60 / Vtemp / 1000;
+    // точка росы: ps(Tdp)=Φ·ps(Tam)
+    var dewP = dewPoint(phi * psWater(Tam));
+    return { condFlowLoad: mc < 0 ? 0 : mc, initMoistCont: X1, dewPoint: dewP + 273.15 };
+  };
+
+  // Точка росы [°C] по заданному парциальному давлению пара pv [кПа]:
+  // обратная к ps(T) бисекция по кривой насыщения IF97.
+  function dewPoint(pvKPa) {
+    if (pvKPa <= 0) return -273.15;
+    var lo = -50, hi = 200;
+    for (var i = 0; i < 60; i++) {
+      var mid = (lo + hi) / 2;
+      if (psWater(mid) < pvKPa) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  // 13500 — антиконденсатная (противоросная) изоляция трубопроводов холодной воды.
+  // Толщина L, при которой температура поверхности изоляции = точке росы Tdp
+  // (исключает выпадение конденсата). Неявное уравнение:
+  //   (d1+2L)·ln((d1+2L)/d1) = 2λ/α·(Ti−Tdp)/(Tdp−Tam)
+  // α неподвижного воздуха ≈ 7.4 Вт/м²·К (калибровка TLV); λ изоляции при
+  // Tmean=(Ti+Tdp)/2. Толщина округляется до 5 мм («InsThick5»). Сверено с TLV
+  // (точка росы точно; толщина совпадает с точностью до шага округления).
+  var ANTISWEAT_ALPHA = 7.4;
+  CALC['13500'] = function (inp) {
+    var phi = inp.relative / 100;
+    var Ti = inp.internalTemp - 273.15, Tam = inp.ambTemp - 273.15;
+    var Tdp = dewPoint(phi * psWater(Tam));
+    var d1 = inp.pipeOutDiam; // м
+    var ins = INS_LAMBDA[inp.insType] || INS_LAMBDA[0];
+    var lam = ins.l0 + ins.k * (Ti + Tdp) / 2;
+    var rhs = 2 * lam / ANTISWEAT_ALPHA * (Ti - Tdp) / (Tdp - Tam);
+    var lo = d1, hi = d1 * 60;
+    for (var b = 0; b < 100; b++) { var mid = (lo + hi) / 2; if (mid * Math.log(mid / d1) < rhs) lo = mid; else hi = mid; }
+    var L = ((lo + hi) / 2 - d1) / 2;
+    var Lr = Math.round(L * 1000 / 5) * 5 / 1000; // округление до 5 мм
+    return { insThick: Lr, dewPoint: Tdp + 273.15 };
+  };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);

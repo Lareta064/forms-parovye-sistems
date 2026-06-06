@@ -1,0 +1,137 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-51')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Таблица насыщения для влажного воздуха
+
+					form.calculator-form.custom-form(data-calc="14600")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label Температура воздуха
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="airTemp" data-var="airTemp" data-cat="temp" inputmode="decimal" value="20")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="0" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="1")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="2")
+															span.form-radio-name K
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Абсолютная влажность насыщения (г/кг)
+									.form-item
+										input.form-inp(type="text" name="r_humidity" data-out="humidity" readonly)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Парциальное давление пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_partPress" data-out="partPress" data-cat="pressureAbs" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kPa abs
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="0" checked)
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="9")
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_partPress_u" value="11")
+															span.form-radio-name mmHgG
+								.calculator-result-row.form-item-group
+									.form-label
+										span Удельный объём насыщенного воздуха
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_airSpecVol" data-out="airSpecVol" data-cat="specVol" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/kg
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airSpecVol_u" value="0" checked)
+															span.form-radio-name m³/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airSpecVol_u" value="1")
+															span.form-radio-name L/kg
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airSpecVol_u" value="2")
+															span.form-radio-name cm³/g
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airSpecVol_u" value="3")
+															span.form-radio-name ft³/lb
+	-var title = "Таблица насыщения для влажного воздуха";
