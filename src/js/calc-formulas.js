@@ -809,6 +809,50 @@
     return { insThick: Lr, dewPoint: Tdp + 273.15 };
   };
 
+  // 11470 — экономичная толщина изоляции паропровода.
+  // Оптимум выбирается перебором стандартных толщин (шаг 5 мм) по минимуму полной
+  // стоимости: f(L) = площадь_изоляции(L) + drv·Qr_пог(L), где
+  //   drv = Ce·A(i,m)·h·ρ — приведённая ценность теплопотерь,
+  //   A(i,m) = (1−(1+i)^−m)/i — аннуитетный фактор (i=0 → A=m),
+  //   ρ = 6.75e-9 (калибровка по TLV). Модель теплопотерь — как у calc-13
+  //   (α=alphaSurface(v), λ изоляции при Tmean итерацией).
+  // ВАЖНО (выявлено калибровкой TLV): стоимость изоляции Ci2 на ВЫБОР толщины НЕ
+  // влияет (идёт только в денежный вывод, не реализуемый здесь) — драйвер чисто
+  // энергетический Ce·A(i,m)·h. Сверено с TLV: толщина воспроизводится с точностью
+  // до шага 5 мм (на калибровочном наборе 9/12 точно, остальные ±5 мм); для крупных
+  // труб (DN150+) теплопотери могут отклоняться до ~10% (α неподвижного воздуха).
+  var ECON_RHO = 6.75e-9;
+  CALC['11470'] = function (inp) {
+    var S = steam();
+    var Ts = inp.stmTemp != null ? inp.stmTemp - 273.15 : S.Tsat(inp.stmPress) - 273.15;
+    var Tam = inp.ambTemp - 273.15;
+    var d1 = inp.pipeOutDiam, l = inp.pipeLen;
+    var alpha = alphaSurface(inp.windVelo);
+    var ins = INS_LAMBDA[inp.insType] || INS_LAMBDA[0];
+    function heat(L) {
+      var d2 = d1 + 2 * L, lnR = Math.log(d2 / d1), Tmean = Ts, Q = 0, Tsurf = 0;
+      for (var it = 0; it < 40; it++) {
+        var lam = ins.l0 + ins.k * Tmean;
+        Q = 2 * Math.PI * (Ts - Tam) / (lnR / lam + 2 / (d2 * alpha));
+        Tsurf = Tam + Q / (Math.PI * d2 * alpha);
+        Tmean = (Ts + Tsurf) / 2;
+      }
+      return { Q: Q, Tsurf: Tsurf };
+    }
+    var i = inp.interestRate / 100;
+    var Aann = i === 0 ? inp.paybackPeriod : (1 - Math.pow(1 + i, -inp.paybackPeriod)) / i;
+    var drv = inp.energyUnitCost * Aann * inp.annual * ECON_RHO;
+    var best = null;
+    for (var mm = 5; mm <= 300; mm += 5) {
+      var L = mm / 1000, d2 = d1 + 2 * L;
+      var area = Math.PI / 4 * (d2 * d2 - d1 * d1);
+      var hres = heat(L);
+      var f = area + drv * hres.Q;
+      if (!best || f < best.f) best = { f: f, mm: mm, Q: hres.Q, Tsurf: hres.Tsurf };
+    }
+    return { tranceCoeff: alpha, radiant: best.Q * l, insThick: best.mm / 1000, surfaceTemp: best.Tsurf + 273.15 };
+  };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);

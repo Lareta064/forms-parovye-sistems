@@ -2,7 +2,7 @@ mixin calcMenu(active)
 	-
 		var key = active || '';
 		var MAP = {
-			'calc-1':['par','piping'], 'calc-2':['par','piping'], 'calc-3':['par','piping'], 'calc-4':['par','piping'], 'calc-5':['par','piping'],
+			'calc-1':['par','piping'], 'calc-2':['par','piping'], 'calc-3':['par','piping'], 'calc-4':['par','piping'], 'calc-5':['par','piping'], 'calc-54':['par','piping'],
 			'calc-6':['par','valves'], 'calc-7':['par','valves'], 'calc-8':['par','valves'],
 			'calc-9':['par','kondensat'], 'calc-10':['par','kondensat'], 'calc-11':['par','kondensat'], 'calc-12':['par','kondensat'], 'calc-13':['par','kondensat'], 'calc-18':['par','kondensat'],
 			'calc-39':['par','dryness'], 'calc-40':['par','dryness'],
@@ -45,7 +45,7 @@ mixin calcMenu(active)
 								a.acc__link(href='calc-3.html' class=linkClass('calc-3')) Потери давления в трубопроводе
 								a.acc__link(href='calc-4.html' class=linkClass('calc-4')) Скорость пара в трубопроводе
 								a.acc__link(href='calc-5.html' class=linkClass('calc-5')) Расход пара в трубопроводе
-								a.acc__link(href='#') Экономичная толщина изоляции
+								a.acc__link(href='calc-54.html' class=linkClass('calc-54')) Экономичная толщина изоляции
 					.acc.acc--level-2(class=l2Class('valves'))
 						button.acc__head.acc__head--level-2(type='button')
 							span.acc__icon(aria-hidden='true')
