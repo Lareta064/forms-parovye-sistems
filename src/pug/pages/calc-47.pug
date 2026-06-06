@@ -1,0 +1,314 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-47')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Экономический анализ закрытой системы возврата конденсата
+
+					form.calculator-form.custom-form(data-calc="12120")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label Давление пара
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="stmPress" data-var="stmPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="stmPress_u" value="11")
+															span.form-radio-name mmHgG
+								.form-item-group
+									.form-label Давление конденсата
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="condPress" data-var="condPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condPress_u" value="11")
+															span.form-radio-name mmHgG
+								.form-item-group
+									.form-label Расход конденсата
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="condFlow" data-var="condFlow" data-cat="massFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condFlow_u" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condFlow_u" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="condFlow_u" value="2")
+															span.form-radio-name lb/h
+								.form-item-group
+									.form-label Противодавление в конденсатной линии
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="recoveryPress" data-var="recoveryPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="recoveryPress_u" value="11")
+															span.form-radio-name mmHgG
+								.form-item-group
+									.form-label Температура питательной воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="feedWtrTemp" data-var="feedWtrTemp" data-cat="temp" inputmode="decimal" value="80")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="0" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="1")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrTemp_u" value="2")
+															span.form-radio-name K
+								.form-item-group
+									.form-label Расход питательной воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="feedWtrRate" data-var="feedWtrRate" data-cat="massFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") kg/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="0" checked)
+															span.form-radio-name kg/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="1")
+															span.form-radio-name t(metric)/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="feedWtrRate_u" value="2")
+															span.form-radio-name lb/h
+								.form-item-group
+									.form-label Низшая теплота сгорания топлива (кДж/кг)
+									.form-item
+										input.form-inp(type="number" name="fuelCalVal" data-var="fuelCalVal" value="40000")
+								.form-item-group
+									.form-label КПД котла (%)
+									.form-item
+										input.form-inp(type="number" name="boilerEff" data-var="boilerEff" value="75")
+								.form-item-group
+									.form-label Стоимость единицы энергии (₽/МДж)
+									.form-item
+										input.form-inp(type="number" name="energyUnitCost" data-var="energyUnitCost" value="1")
+								.form-item-group
+									.form-label Количество рабочих часов в год (ч)
+									.form-item
+										input.form-inp(type="number" name="annual" data-var="annual" value="8000")
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Денежная экономия на топливе (×1000 ₽/год)
+									.form-item
+										input.form-inp(type="text" name="r_recoverValue" data-out="recoverValue" readonly)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Возвращённое тепло
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_heatRecover" data-out="heatRecover" data-cat="power" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") W
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_heatRecover_u" value="0" checked)
+															span.form-radio-name W
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_heatRecover_u" value="1")
+															span.form-radio-name kW
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_heatRecover_u" value="2")
+															span.form-radio-name kcal/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_heatRecover_u" value="3")
+															span.form-radio-name BTU/h
+								.calculator-result-row.form-item-group
+									.form-label
+										span Годовая экономия топлива (кг/год)
+									.form-item
+										input.form-inp(type="text" name="r_annFuelSave" data-out="annFuelSave" readonly)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Экономия топлива (%)
+									.form-item
+										input.form-inp(type="text" name="r_fuelConserv" data-out="fuelConserv" readonly)
+	-var title = "Экономический анализ закрытой системы возврата конденсата";

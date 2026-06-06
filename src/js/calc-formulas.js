@@ -663,6 +663,54 @@
   CALC['12210'] = condSimpleSize;
   CALC['12230'] = condSimpleSize;
 
+  // ===== РЕКУПЕРАЦИЯ ТЕПЛА КОНДЕНСАТА (12110–12140) =====
+  // Общие денежные выходы по рекуперированному теплу Hr (Вт). Калибровано по TLV.
+  //   recoverValue (×1000 $/год) = 3.6·Hr·h·Ce / 1e6   (Ce в $/МДж)
+  //   annFuelSave (кг/год) = 3.6·Hr·h / (Hf·η/100)
+  //   fuelConserv (%) = Hr·0.86 / (hs/4.186 − Tfw) / mfw · 100   (hs — энтальпия пара при давл. котла)
+  function recoveryEcon(Hr, inp) {
+    var S = steam();
+    var h = inp.annual, Ce = inp.energyUnitCost, Hf = inp.fuelCalVal, eta = inp.boilerEff;
+    var Tfw = inp.feedWtrTemp - 273.15, mfw = inp.feedWtrRate, hs = S.satVapor(inp.stmPress).h;
+    return {
+      heatRecover: Hr,
+      recoverValue: 3.6 * Hr * h * Ce / 1e6,
+      annFuelSave: 3.6 * Hr * h / (Hf * eta / 100),
+      fuelConserv: Hr * 0.86 / (hs / 4.186 - Tfw) / mfw * 100
+    };
+  }
+
+  // 12120 — закрытая система возврата конденсата. Tc=Tsat(давл. конденсата).
+  CALC['12120'] = function (inp) {
+    var Tc = steam().Tsat(inp.condPress) - 273.15, Tfw = inp.feedWtrTemp - 273.15;
+    var Hr = (Tc - Tfw) * inp.condFlow / 0.86;
+    return recoveryEcon(Hr, inp);
+  };
+
+  // 12110 — открытая система (смешение конденсата с питательной водой в баке).
+  CALC['12110'] = function (inp) {
+    var Tc = steam().Tsat(inp.condPress) - 273.15, Tfw = inp.feedWtrTemp - 273.15;
+    var Tfwmax = inp.allowTemp - 273.15, mc = inp.condFlow, mfw = inp.feedWtrRate;
+    var Tm = (Tc * mc + (mfw - mc) * Tfw) / mfw;
+    var Tfw2, Hr, Hu;
+    if (Tm < Tfwmax) { Tfw2 = Tm; Hr = (Tm - Tfw) * mfw / 0.86; Hu = 0; }
+    else { Tfw2 = Tfwmax; Hr = (Tfwmax - Tfw) * mfw / 0.86; Hu = (Tm - Tfwmax) * mfw / 0.86; }
+    var e = recoveryEcon(Hr, inp);
+    e.unrecoverHeat = Hu; e.feedWtrTemp2 = Tfw2 + 273.15; // вернуть в К для вывода через temp
+    return e;
+  };
+
+  // 12140 — рекуперация выпара (нагрев сырой воды паром вторичного вскипания).
+  CALC['12140'] = function (inp) {
+    var S = steam();
+    var mfs = inp.condFlow * (S.satLiquid(inp.condPress).h - S.satLiquid(inp.flashPress).h) / S.latentHeat(inp.flashPress);
+    var Trw = inp.rawWtrTemp - 273.15;
+    var Hr = mfs * (S.satVapor(inp.flashPress).h / 4.186 - Trw) / 0.86;
+    var e = recoveryEcon(Hr, inp);
+    e.flashFlowRate = mfs;
+    return e;
+  };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);
