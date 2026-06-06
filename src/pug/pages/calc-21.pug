@@ -1,0 +1,361 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-21')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Потеря давления воды через трубопровод
+
+					form.calculator-form.custom-form(data-calc="13130")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label
+										span Класс трубопровода
+									.dropdown(data-var="pipeGrade" data-type="grade")
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="0")
+														span.form-radio-name JIS-SGP
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="1")
+														span.form-radio-name JIS-STPG Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="2")
+														span.form-radio-name JIS-STPG Sch60
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="3")
+														span.form-radio-name JIS-STPG Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="4")
+														span.form-radio-name ANSI Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="5")
+														span.form-radio-name ANSI Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="6")
+														span.form-radio-name ANSI Sch160
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="7" checked)
+														span.form-radio-name DIN 2448
+								.form-item-group
+									.form-label
+										span Диаметр трубопровода
+									.dropdown(data-var="pipeSize" data-type="size")
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="0" checked)
+														span.form-radio-name DN6
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="1")
+														span.form-radio-name DN8
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="2")
+														span.form-radio-name DN10
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="3")
+														span.form-radio-name DN15
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="4")
+														span.form-radio-name DN20
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="5")
+														span.form-radio-name DN25
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="6")
+														span.form-radio-name DN32
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="7")
+														span.form-radio-name DN40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="8")
+														span.form-radio-name DN50
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="9")
+														span.form-radio-name DN65
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="10")
+														span.form-radio-name DN80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="11")
+														span.form-radio-name DN100
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="12")
+														span.form-radio-name DN125
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="13")
+														span.form-radio-name DN150
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="14")
+														span.form-radio-name DN200
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="15")
+														span.form-radio-name DN250
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="16")
+														span.form-radio-name DN300
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="17")
+														span.form-radio-name DN350
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="18")
+														span.form-radio-name DN400
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="19")
+														span.form-radio-name DN450
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="20")
+														span.form-radio-name DN500
+								.form-item-group
+									.form-label Расход воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="wtrFlow" data-var="wtrFlow" data-cat="volFlow" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/h
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="wtrFlow_u" value="0" checked)
+															span.form-radio-name m³/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="wtrFlow_u" value="1")
+															span.form-radio-name l/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="wtrFlow_u" value="2")
+															span.form-radio-name gal/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="wtrFlow_u" value="3")
+															span.form-radio-name GPM
+								.form-item-group
+									.form-label Длина трубопровода
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="pipeLen" data-var="pipeLen" data-cat="length" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="0")
+															span.form-radio-name mm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="1")
+															span.form-radio-name cm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="2" checked)
+															span.form-radio-name m
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="3")
+															span.form-radio-name in
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="4")
+															span.form-radio-name ft
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="pipeLen_u" value="5")
+															span.form-radio-name yd
+							.hide-block-wrapper
+								.calculator-fieldset.is-hide-block
+									.form-two-cols
+										.form-item-group
+											.form-label Клапаны с изменяемым направлением потока (вентили) (кол-во)
+											.form-item
+												input.form-inp(type="number" name="fit_obsFlo" data-var="fit.obsFlo" value="0")
+										.form-item-group
+											.form-label Проходные клапаны (задвижки) (кол-во)
+											.form-item
+												input.form-inp(type="number" name="fit_thruFlo" data-var="fit.thruFlo" value="0")
+										.form-item-group
+											.form-label Обратные клапаны (кол-во)
+											.form-item
+												input.form-inp(type="number" name="fit_check" data-var="fit.check" value="0")
+										.form-item-group
+											.form-label Отводы (кол-во)
+											.form-item
+												input.form-inp(type="number" name="fit_elbow" data-var="fit.elbow" value="0")
+										.form-item-group
+											.form-label Шероховатость трубы
+											.form-item.form-item--measure
+												input.form-inp.form-inp--measure(type="text" name="pipeRough" data-var="pipeRough" data-cat="length" inputmode="decimal" value="0.05")
+												.dropdown.dropdown--measure
+													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") mm
+													.dropdown__list
+														ul
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="0" checked)
+																	span.form-radio-name mm
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="1")
+																	span.form-radio-name cm
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="2")
+																	span.form-radio-name m
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="3")
+																	span.form-radio-name in
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="4")
+																	span.form-radio-name ft
+															li.dropdown__list-item
+																label.form-radio-label
+																	input(type="radio" name="pipeRough_u" value="5")
+																	span.form-radio-name yd
+							button.open-hide-btn.ml-auto.mt-20(type="button")
+								i.plus-minus
+								span.hide-btn-txt.medi-15 Показать дополнительные опции
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Скорость воды
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_wtrVelo" data-out="wtrVelo" data-cat="velocity" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_wtrVelo_u" value="0" checked)
+															span.form-radio-name m/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_wtrVelo_u" value="1")
+															span.form-radio-name km/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_wtrVelo_u" value="2")
+															span.form-radio-name ft/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_wtrVelo_u" value="3")
+															span.form-radio-name mile/h
+								.calculator-result-row.form-item-group
+									.form-label
+										span Потери давления
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_pressLoss" data-out="pressLoss" data-cat="dPress" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") bar
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="0")
+															span.form-radio-name kPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="1")
+															span.form-radio-name MPa
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="2")
+															span.form-radio-name psi
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="3" checked)
+															span.form-radio-name bar
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="4")
+															span.form-radio-name kg/cm²
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_pressLoss_u" value="5")
+															span.form-radio-name mmHg
+								.calculator-result-row.form-item-group
+									.form-label
+										span Эквивалентная длина прямого участка трубы
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_equivLen" data-out="equivLen" data-cat="length" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="0")
+															span.form-radio-name mm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="1")
+															span.form-radio-name cm
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="2" checked)
+															span.form-radio-name m
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="3")
+															span.form-radio-name in
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="4")
+															span.form-radio-name ft
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_equivLen_u" value="5")
+															span.form-radio-name yd
+	-var title = "Потеря давления воды через трубопровод";

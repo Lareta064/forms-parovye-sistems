@@ -45,15 +45,33 @@
     return { V: S.satVapor(Pabs).v, T: Ts };
   }
 
-  // Скорость, эквивалентная длина и потери давления для конкретного диаметра.
-  function velAndLoss(d, ms, V, eta, pipeLen, fit, eps) {
-    var v = ms / 3600 * V / (Math.pow(d / 2, 2) * Math.PI); // м/с
+  // Гидравлика для известной скорости v (м/с): Re, трение, эквивалентная длина, потери давления.
+  // Универсально для любого флюида (V=уд. объём=1/ρ, eta=динам. вязкость Па·с).
+  function hydraulics(d, v, V, eta, pipeLen, fit, eps) {
     var Re = v * d / (V * eta);
     var lam = colebrook(Re, eps / d);
-    var leq = pipeLen + fittingsLength(d, lam, fit); // эквивалентная длина (труба + фитинги)
+    var leq = pipeLen + fittingsLength(d, lam, fit);
     var dp = lam * leq * v * v / (2 * d * V); // Па
     return { v: v, dp: dp, lam: lam, Re: Re, leq: leq };
   }
+  // Скорость по массовому расходу (кг/ч) + потери (для пара).
+  function velAndLoss(d, ms, V, eta, pipeLen, fit, eps) {
+    var v = ms / 3600 * V / (Math.pow(d / 2, 2) * Math.PI);
+    return hydraulics(d, v, V, eta, pipeLen, fit, eps);
+  }
+  function pipeArea(d) { return Math.pow(d / 2, 2) * Math.PI; }
+
+  // ---- Свойства воды и газов ----
+  // Удельный объём воды V (м³/кг) по T(К), p(МПа) — из IAPWS-IF97 область 1.
+  function waterV(Pabs, Tk) { return steam().region1(Pabs, Tk).v; }
+  // Динамическая вязкость воды (Па·с) по T(К). Корреляция 2.414e-5·10^(247.8/(T-140)).
+  function waterVisc(Tk) { return 2.414e-5 * Math.pow(10, 247.8 / (Tk - 140)); }
+  // Плотность воздуха (кг/м³): идеальный газ, R_возд=287.05 Дж/(кг·К). P в Па.
+  function airRho(Ppa, Tk) { return Ppa / (287.05 * Tk); }
+  // Динамическая вязкость воздуха (Па·с) — формула Сазерленда.
+  function airVisc(Tk) { return 1.716e-5 * Math.pow(Tk / 273.15, 1.5) * (273.15 + 110.4) / (Tk + 110.4); }
+  // Плотность произвольного газа (кг/м³): ρ=P·M/(R·T), M г/моль, P в Па.
+  function gasRho(Ppa, Mgmol, Tk) { return Ppa * (Mgmol / 1000) / (8.31446 * Tk); }
 
   var CALC = {};
 
@@ -390,6 +408,50 @@
   }
   CALC['11350'] = function (inp) { return stallPoint({ t1: inp.lqdInTemp, t2: inp.lqdOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
   CALC['11360'] = function (inp) { return stallPoint({ t1: inp.airInTemp, t2: inp.airOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
+
+  // ===== ВОДА: гидравлика трубопроводов (13110–13150) =====
+  // Температура воды по умолчанию (нет ввода на этих страницах) — калибровать по TLV.
+  var WATER_T = 293.15; // 20 °C
+  function waterProps(Pabs) { var V = waterV(Pabs, WATER_T); return { V: V, eta: waterVisc(WATER_T) }; }
+
+  // 13110 — подбор трубы по допустимым потерям (вода). Qw в м³/ч, pw в МПа абс.
+  CALC['13110'] = function (inp) {
+    var PIPES = pipes(), wp = waterProps(inp.wtrPress), eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var Qs = inp.wtrFlow / 3600, list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000, v = Qs / pipeArea(d);
+      var r = hydraulics(d, v, wp.V, wp.eta, inp.pipeLen, inp.fittings, eps);
+      if (r.dp <= inp.allowPressLoss) { chosen = { pipe: list[i], d: d, r: r }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000, vv = Qs / pipeArea(dd); chosen = { pipe: last, d: dd, r: hydraulics(dd, vv, wp.V, wp.eta, inp.pipeLen, inp.fittings, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, wtrVelo: chosen.r.v, pressLoss: chosen.r.dp, equivLen: chosen.r.leq, exceeded: exceeded };
+  };
+
+  // 13120 — подбор трубы по скорости (вода).
+  CALC['13120'] = function (inp) {
+    var PIPES = pipes(), wp = waterProps(inp.wtrPress || 0.101325), eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var Qs = inp.wtrFlow / 3600, list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000, v = Qs / pipeArea(d);
+      if (v <= inp.upperVelo) { chosen = { pipe: list[i], d: d, r: hydraulics(d, v, wp.V, wp.eta, inp.pipeLen, inp.fittings, eps) }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000, vv = Qs / pipeArea(dd); chosen = { pipe: last, d: dd, r: hydraulics(dd, vv, wp.V, wp.eta, inp.pipeLen, inp.fittings, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, wtrVelo: chosen.r.v, pressLoss: chosen.r.dp, equivLen: chosen.r.leq, exceeded: exceeded };
+  };
+
+  // 13130 — потери давления и скорость в заданной трубе (вода).
+  CALC['13130'] = function (inp) {
+    var wp = waterProps(inp.wtrPress || 0.101325), eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var v = inp.wtrFlow / 3600 / pipeArea(inp.pipeInDiam);
+    var r = hydraulics(inp.pipeInDiam, v, wp.V, wp.eta, inp.pipeLen, inp.fittings, eps);
+    return { wtrVelo: r.v, pressLoss: r.dp, equivLen: r.leq };
+  };
+
+  // 13140 — скорость воды в трубе. 13150 — расход воды по скорости.
+  CALC['13140'] = function (inp) { return { wtrVelo: inp.wtrFlow / 3600 / pipeArea(inp.pipeInDiam) }; };
+  CALC['13150'] = function (inp) { return { wtrFlowRate: inp.wtrVelo * pipeArea(inp.pipeInDiam) * 3600 }; };
 
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
