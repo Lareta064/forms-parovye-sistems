@@ -409,6 +409,39 @@
   CALC['11350'] = function (inp) { return stallPoint({ t1: inp.lqdInTemp, t2: inp.lqdOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
   CALC['11360'] = function (inp) { return stallPoint({ t1: inp.airInTemp, t2: inp.airOutTemp, stmPress: inp.stmPress, stmTemp: inp.stmTemp, backPress: inp.backPress, oversur: inp.oversur }); };
 
+  // ===== ВОДА: клапаны и сопла (13200/13300/13400) =====
+  // Несжимаемый поток (IEC 60534). Qw(м³/ч)=0.0865·Cv·√(Δp/SG), p в кПа.
+  // Кавитация при Δp ≥ FL²·(p1−FF·Pv): Qw=0.0865·Cv·FL·√((p1−FF·Pv)/SG).
+  var WV_FL = 0.9, WATER_PC_KPA = 22064;
+  function waterValveFlow(Cv, p1k, p2k, SG, PvK) {
+    var FF = 0.96 - 0.28 * Math.sqrt(PvK / WATER_PC_KPA);
+    var dpCh = WV_FL * WV_FL * (p1k - FF * PvK), dp = p1k - p2k;
+    if (dp < dpCh) return 0.0865 * Cv * Math.sqrt(dp / SG);
+    return 0.0865 * Cv * WV_FL * Math.sqrt((p1k - FF * PvK) / SG);
+  }
+  function waterSG_Pv(Pabs, Tk) {
+    var S = steam();
+    return { SG: (1 / S.region1(Pabs, Tk).v) / 1000, Pv: S.Psat(Tk) * 1000 }; // Pv в кПа
+  }
+  // 13200 — расход воды через клапан по Cv.
+  CALC['13200'] = function (inp) {
+    var w = waterSG_Pv(inp.wtrPrimPress, inp.wtrTemp);
+    return { wtrFlowRate: waterValveFlow(inp.cvValue, inp.wtrPrimPress * 1000, inp.wtrSecondPress * 1000, w.SG, w.Pv) };
+  };
+  // 13300 — Cv по расходу воды (обратная 13200, линейна по Cv).
+  CALC['13300'] = function (inp) {
+    var w = waterSG_Pv(inp.wtrPrimPress, inp.wtrTemp);
+    var per = waterValveFlow(1, inp.wtrPrimPress * 1000, inp.wtrSecondPress * 1000, w.SG, w.Pv);
+    return { cvValue: per > 0 ? inp.wtrFlowRate / per : NaN };
+  };
+  // 13400 — расход воды через сопло/орифис. Cv = C·(do/4.654)², do в мм.
+  CALC['13400'] = function (inp) {
+    var w = waterSG_Pv(inp.wtrPrimPress, inp.wtrTemp);
+    var C = (inp.dischargeCoeff != null && !isNaN(inp.dischargeCoeff)) ? inp.dischargeCoeff : 0.70;
+    var CvEq = C * Math.pow(inp.orificeDiam * 1000 / 4.654, 2);
+    return { wtrFlowRate: waterValveFlow(CvEq, inp.wtrPrimPress * 1000, inp.wtrSecondPress * 1000, w.SG, w.Pv) };
+  };
+
   // ===== ВОДА: гидравлика трубопроводов (13110–13150) =====
   // Температура воды по умолчанию (нет ввода на этих страницах) — калибровать по TLV.
   var WATER_T = 293.15; // 20 °C
@@ -452,6 +485,72 @@
   // 13140 — скорость воды в трубе. 13150 — расход воды по скорости.
   CALC['13140'] = function (inp) { return { wtrVelo: inp.wtrFlow / 3600 / pipeArea(inp.pipeInDiam) }; };
   CALC['13150'] = function (inp) { return { wtrFlowRate: inp.wtrVelo * pipeArea(inp.pipeInDiam) * 3600 }; };
+
+  // ===== ВОЗДУХ / ГАЗ: гидравлика (14110–14160) =====
+  // Состояние воздуха: V(м³/кг), eta(Па·с). Pabs в МПа.
+  function airState(Pabs, Tk) { var rho = airRho(Pabs * 1e6, Tk); return { V: 1 / rho, eta: airVisc(Tk) }; }
+  // Приведённый (нормальный) объёмный расход из фактического: Qn = Qa·(Pabs/0.101325)·(273.15/T).
+  function normalFlow(Qactual, Pabs, Tk) { return Qactual * (Pabs / 0.101325) * (273.15 / Tk); }
+
+  function airSizeBy(inp, byVelo) {
+    var PIPES = pipes(), st = airState(inp.airPress, inp.airTemp);
+    var eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var Qs = inp.airFlow / 3600, list = PIPES[inp.pipeGrade] || PIPES[7], chosen = null;
+    for (var i = 0; i < list.length; i++) {
+      var d = list[i].id / 1000, v = Qs / pipeArea(d);
+      var r = hydraulics(d, v, st.V, st.eta, inp.pipeLen, inp.fittings, eps);
+      var ok = byVelo ? (v <= inp.upperVelo) : (r.dp <= inp.allowPressLoss);
+      if (ok) { chosen = { pipe: list[i], d: d, r: r }; break; }
+    }
+    var exceeded = false;
+    if (!chosen) { var last = list[list.length - 1], dd = last.id / 1000, vv = Qs / pipeArea(dd); chosen = { pipe: last, d: dd, r: hydraulics(dd, vv, st.V, st.eta, inp.pipeLen, inp.fittings, eps) }; exceeded = true; }
+    return { pipeSize: formatSize(inp.pipeGrade, chosen.pipe), pipeInDiam: chosen.d, airVelo: chosen.r.v, pressLoss: chosen.r.dp, equivLen: chosen.r.leq, exceeded: exceeded };
+  }
+  CALC['14110'] = function (inp) { return airSizeBy(inp, false); };
+  CALC['14120'] = function (inp) { return airSizeBy(inp, true); };
+  CALC['14130'] = function (inp) {
+    var st = airState(inp.airPress, inp.airTemp), eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var v = inp.airFlow / 3600 / pipeArea(inp.pipeInDiam);
+    var r = hydraulics(inp.pipeInDiam, v, st.V, st.eta, inp.pipeLen, inp.fittings, eps);
+    return { airVelo: r.v, pressLoss: r.dp, equivLen: r.leq };
+  };
+  // 14140 — газ: ρ из мол. массы, вязкость задаётся пользователем (мПа·с).
+  CALC['14140'] = function (inp) {
+    var V = 1 / gasRho(inp.gasPress * 1e6, inp.molecular, inp.gasTemp), eta = inp.gasVisc / 1000; // мПа·с->Па·с
+    var eps = inp.pipeRough != null ? inp.pipeRough : 0.05e-3;
+    var v = inp.gasFlow / 3600 / pipeArea(inp.pipeInDiam);
+    var r = hydraulics(inp.pipeInDiam, v, V, eta, inp.pipeLen, inp.fittings, eps);
+    return { gasVelo: r.v, pressLoss: r.dp, equivLen: r.leq };
+  };
+  // 14150 — скорость воздуха. 14160 — расход воздуха (фактический + приведённый).
+  CALC['14150'] = function (inp) { return { airVelo: inp.airFlow / 3600 / pipeArea(inp.pipeInDiam) }; };
+  CALC['14160'] = function (inp) {
+    var Qa = inp.airVelo * pipeArea(inp.pipeInDiam) * 3600; // м³/ч факт.
+    return { airFlowRate: Qa, airFlowRateN: normalFlow(Qa, inp.airPress, inp.airTemp) };
+  };
+
+  // ===== ВОЗДУХ: клапаны и сопла (14200/14300/14400) =====
+  // Сжимаемый поток, константа 4.17 (vs 2.73 для пара). Qa в Nм³/ч. p в кПа абс.
+  var AIR_FXT = 0.72; // Fγ·xT для воздуха (Fγ=1.0, xT=0.72) — сверено с TLV
+  function airValveFlowN(Cv, p1k, p2k, Tk) {
+    var dp = p1k - p2k; if (dp < 0) dp = 0;
+    var x = dp / p1k;
+    // формула TLV даёт Nм³/мин (с /60); SI=Nм³/ч => ·60, факторы сокращаются
+    if (x < AIR_FXT) return 4.17 * Cv * p1k * (1 - x / (3 * AIR_FXT)) * Math.sqrt(x / Tk);
+    return (2 / 3) * 4.17 * Cv * p1k * Math.sqrt(AIR_FXT / Tk);
+  }
+  CALC['14200'] = function (inp) {
+    return { airFlowRateN: airValveFlowN(inp.cvValue, inp.airPrimPress * 1000, inp.airSecondPress * 1000, inp.airTemp) };
+  };
+  CALC['14300'] = function (inp) {
+    var per = airValveFlowN(1, inp.airPrimPress * 1000, inp.airSecondPress * 1000, inp.airTemp);
+    return { cvValue: per > 0 ? inp.airFlowRateN / per : NaN };
+  };
+  CALC['14400'] = function (inp) {
+    var C = (inp.dischargeCoeff != null && !isNaN(inp.dischargeCoeff)) ? inp.dischargeCoeff : 0.70;
+    var CvEq = C * Math.pow(inp.orificeDiam * 1000 / 4.654, 2);
+    return { airFlowRateN: airValveFlowN(CvEq, inp.airPrimPress * 1000, inp.airSecondPress * 1000, inp.airTemp) };
+  };
 
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {

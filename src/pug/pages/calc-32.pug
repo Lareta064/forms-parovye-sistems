@@ -1,0 +1,310 @@
+extends ../layouts/layout-white.pug
+
+block content
+	main.calc-main.calculator-single
+		.container-1440
+			.grid-column-left
+				.grid-column-sidebar
+					.sidebar-title.txt-center
+						.font-20 Инженерный калькулятор
+					include ../blocks/_acc-menu
+					+calcMenu('calc-32')
+
+				.grid-column-main.grid-column-calc
+					.grid-column-head
+						p.breadcrumb Тут компонент breadcrumbs
+						h1.h-30 Расход воздуха в трубопроводе
+
+					form.calculator-form.custom-form(data-calc="14160")
+						.calculator-form__head
+							.semi-24 Начальные данные
+						.calculator-form__body
+							.calculator-fieldset.form-two-cols
+								.form-item-group
+									.form-label
+										span Класс трубопровода
+									.dropdown(data-var="pipeGrade" data-type="grade")
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DIN 2448
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="0")
+														span.form-radio-name JIS-SGP
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="1")
+														span.form-radio-name JIS-STPG Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="2")
+														span.form-radio-name JIS-STPG Sch60
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="3")
+														span.form-radio-name JIS-STPG Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="4")
+														span.form-radio-name ANSI Sch40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="5")
+														span.form-radio-name ANSI Sch80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="6")
+														span.form-radio-name ANSI Sch160
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeGrade_o" value="7" checked)
+														span.form-radio-name DIN 2448
+								.form-item-group
+									.form-label
+										span Диаметр трубопровода
+									.dropdown(data-var="pipeSize" data-type="size")
+										button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") DN6
+										.dropdown__list
+											ul
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="0" checked)
+														span.form-radio-name DN6
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="1")
+														span.form-radio-name DN8
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="2")
+														span.form-radio-name DN10
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="3")
+														span.form-radio-name DN15
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="4")
+														span.form-radio-name DN20
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="5")
+														span.form-radio-name DN25
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="6")
+														span.form-radio-name DN32
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="7")
+														span.form-radio-name DN40
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="8")
+														span.form-radio-name DN50
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="9")
+														span.form-radio-name DN65
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="10")
+														span.form-radio-name DN80
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="11")
+														span.form-radio-name DN100
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="12")
+														span.form-radio-name DN125
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="13")
+														span.form-radio-name DN150
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="14")
+														span.form-radio-name DN200
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="15")
+														span.form-radio-name DN250
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="16")
+														span.form-radio-name DN300
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="17")
+														span.form-radio-name DN350
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="18")
+														span.form-radio-name DN400
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="19")
+														span.form-radio-name DN450
+												li.dropdown__list-item
+													label.form-radio-label
+														input(type="radio" name="pipeSize_o" value="20")
+														span.form-radio-name DN500
+								.form-item-group
+									.form-label Давление воздуха
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="airPress" data-var="airPress" data-cat="pressureAbs" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") barG
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="0")
+															span.form-radio-name kPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="1")
+															span.form-radio-name MPa abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="2")
+															span.form-radio-name psi abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="3")
+															span.form-radio-name bar abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="4")
+															span.form-radio-name kg/cm² abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="5")
+															span.form-radio-name mmHg abs
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="6")
+															span.form-radio-name kPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="7")
+															span.form-radio-name MPaG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="8")
+															span.form-radio-name psig
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="9" checked)
+															span.form-radio-name barG
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="10")
+															span.form-radio-name kg/cm²G
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airPress_u" value="11")
+															span.form-radio-name mmHgG
+								.form-item-group
+									.form-label Температура воздуха
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="airTemp" data-var="airTemp" data-cat="temp" inputmode="decimal" value="20")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="0" checked)
+															span.form-radio-name °C
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="1")
+															span.form-radio-name °F
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airTemp_u" value="2")
+															span.form-radio-name K
+								.form-item-group
+									.form-label Скорость воздуха
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="airVelo" data-var="airVelo" data-cat="velocity" inputmode="decimal" value="0")
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m/s
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airVelo_u" value="0" checked)
+															span.form-radio-name m/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airVelo_u" value="1")
+															span.form-radio-name km/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airVelo_u" value="2")
+															span.form-radio-name ft/s
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="airVelo_u" value="3")
+															span.form-radio-name mile/h
+						.calculator-form__footer.flex-column.flex-center
+							button.form-button(type="submit") Рассчитать
+							button.w-auto.btn-clear-form(type="reset") Очистить
+						.calculator-form__result
+							p.semi-24 Результат:
+							.calculator-result-block
+								p.medi-16(data-result-note)
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход воздуха (текущий)
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_airFlowRate" data-out="airFlowRate" data-cat="volFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/min
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRate_u" value="0" checked)
+															span.form-radio-name m³/min
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRate_u" value="1")
+															span.form-radio-name m³/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRate_u" value="2")
+															span.form-radio-name L/min
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRate_u" value="3")
+															span.form-radio-name ft³/min
+								.calculator-result-row.form-item-group
+									.form-label
+										span Расход воздуха (приведённый, Nм³)
+									.form-item.form-item--measure
+										input.form-inp.form-inp--measure(type="text" name="r_airFlowRateN" data-out="airFlowRateN" data-cat="volFlow" inputmode="decimal" readonly)
+										.dropdown.dropdown--measure
+											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/min
+											.dropdown__list
+												ul
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRateN_u" value="0" checked)
+															span.form-radio-name m³/min
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRateN_u" value="1")
+															span.form-radio-name m³/h
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRateN_u" value="2")
+															span.form-radio-name L/min
+													li.dropdown__list-item
+														label.form-radio-label
+															input(type="radio" name="r_airFlowRateN_u" value="3")
+															span.form-radio-name ft³/min
+	-var title = "Расход воздуха в трубопроводе";
