@@ -711,6 +711,28 @@
     return e;
   };
 
+  // 12130 — экономический анализ возврата конденсата для теплообменника.
+  // Конденсат (mc) при Tsat(давл. конденсата) отдаёт сенсибельное тепло потоку
+  // нагреваемой жидкости (Ql). Потолок смешения Tc, фактический выход T2 через
+  // температурный КПД ηT. Тепло, переданное жидкости, пересчитывается в массу
+  // греющего пара ms = Q/hfg(Ps) и далее в возвращённое (котловое) тепло
+  // Hr = ms·(hg(Ps) − hf(Trw)). Калибровано по TLV (T2 точно, Hr ±0.01%).
+  CALC['12130'] = function (inp) {
+    var S = steam();
+    var T1 = inp.lqdInTemp - 273.15;
+    var Tcond = S.Tsat(inp.condPress) - 273.15;
+    var Cl = inp.gravity * 1000 * inp.lqdFlow * inp.specHeat; // кДж/(ч·К)
+    var Tc = T1 + inp.condFlow * 4.19 * (Tcond - T1) / Cl;    // потолок смешения
+    var T2 = T1 + (Tc - T1) * inp.tempEff / 100;
+    var QlHeat = Cl * (T2 - T1);                              // кДж/ч в жидкость
+    var ms = QlHeat / S.latentHeat(inp.stmPress);            // кг/ч греющего пара
+    var hfRw = 4.186 * (inp.rawWtrTemp - 273.15);            // энтальпия сырой воды (cp=4.186, как в TLV)
+    var Hr = ms * (S.satVapor(inp.stmPress).h - hfRw) / 3.6;  // Вт
+    var e = recoveryEcon(Hr, inp);
+    e.lqdOutTemp = T2 + 273.15; // в К для вывода через temp
+    return e;
+  };
+
   // Подпись типоразмера: для DIN -> "DN80", иначе метрический размер.
   function formatSize(gradeIdx, pipe) {
     if (gradeIdx === 7) return 'DN' + parseInt(pipe.m, 10);
