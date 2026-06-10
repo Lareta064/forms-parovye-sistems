@@ -96,14 +96,25 @@
     if (msg) msg.textContent = 'Ни одна труба сортамента не укладывается в допустимые потери — показан наибольший типоразмер.';
   }
 
+  // Символ единицы для конкретного radio (по тексту его .form-radio-name).
+  function radioUnit(radio) {
+    var lbl = radio.closest('label');
+    var name = lbl && lbl.querySelector('.form-radio-name');
+    return name ? name.textContent.trim() : '';
+  }
+
   // Пересчёт поля результата при смене его единицы измерения.
+  // Единицу берём из самого сработавшего radio (его .checked выставляется нативно
+  // до любых слушателей), а не из текста кнопки dropdown — иначе ловим гонку:
+  // обработчик движка регистрируется раньше dropdown.js и читает ещё старую подпись.
   function bindOutputUnitChange(form) {
     form.querySelectorAll('[data-out][data-cat]').forEach(function (el) {
       var grp = groupOf(el);
       grp.querySelectorAll('.dropdown--measure input').forEach(function (radio) {
         radio.addEventListener('change', function () {
           if (el.dataset.si === undefined) return;
-          setFieldText(el, formatNum(window.Units.fromSI(parseFloat(el.dataset.si), el.getAttribute('data-cat'), unitSymbol(grp))));
+          var sym = radioUnit(this) || unitSymbol(grp);
+          setFieldText(el, formatNum(window.Units.fromSI(parseFloat(el.dataset.si), el.getAttribute('data-cat'), sym)));
         });
       });
     });
@@ -148,11 +159,58 @@
     update();
   }
 
+  // ----- Память значений между калькуляторами -----
+  // Введённые значения (+ выбранная единица) сохраняются по data-var в localStorage,
+  // чтобы при переходе на другой калькулятор общие поля (давление пара и т.п.) были
+  // уже предзаполнены. Запоминаем только текстовые поля ввода; размер/класс трубы
+  // (радио-группы) и синхронизируемый с размером pipeInDiam не трогаем.
+  var MEM_KEY = 'calcFieldMemory';
+  function memSkip(el) {
+    var dt = el.getAttribute('data-type');
+    if (dt === 'grade' || dt === 'select' || dt === 'size') return true;
+    var name = el.getAttribute('data-var');
+    return name === 'pipeInDiam' || name.indexOf('fit.') === 0;
+  }
+  function loadMem() { try { return JSON.parse(localStorage.getItem(MEM_KEY)) || {}; } catch (e) { return {}; } }
+  function saveMem(m) { try { localStorage.setItem(MEM_KEY, JSON.stringify(m)); } catch (e) {} }
+  // Выбрать в группе поля единицу по её символу (радио + нативно снимет выбор с соседей).
+  function setGroupUnit(grp, sym) {
+    if (!sym) return;
+    grp.querySelectorAll('.dropdown--measure input[type="radio"]').forEach(function (r) {
+      if (radioUnit(r) === sym) r.checked = true;
+    });
+  }
+  function rememberField(el) {
+    if (memSkip(el)) return;
+    var raw = (el.value || '').trim();
+    if (raw === '') return;
+    var mem = loadMem();
+    mem[el.getAttribute('data-var')] = { v: raw, u: el.getAttribute('data-cat') ? unitSymbol(groupOf(el)) : '' };
+    saveMem(mem);
+  }
+  function restoreFields(form) {
+    var mem = loadMem();
+    form.querySelectorAll('input[data-var]').forEach(function (el) {
+      if (memSkip(el)) return;
+      var rec = mem[el.getAttribute('data-var')];
+      if (!rec || rec.v == null || rec.v === '') return;
+      if (rec.u) setGroupUnit(groupOf(el), rec.u); // до инициализации dropdown.js — подпись кнопки подхватится
+      el.value = rec.v;
+    });
+  }
+  function bindMemory(form) {
+    form.querySelectorAll('input[data-var]').forEach(function (el) {
+      if (memSkip(el)) return;
+      el.addEventListener('input', function () { rememberField(el); });
+      groupOf(el).querySelectorAll('.dropdown--measure input[type="radio"]').forEach(function (r) {
+        r.addEventListener('change', function () { rememberField(el); });
+      });
+    });
+  }
+
   function initForm(form) {
     var code = form.getAttribute('data-calc');
     if (!window.CALC || !window.CALC[code]) return;
-    bindOutputUnitChange(form);
-    bindDiamSync(form);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       try {
@@ -161,6 +219,11 @@
         if (window.console) console.error('Ошибка расчёта ' + code, err);
       }
     });
+    // Память не должна ломать расчёт — изолируем в try/catch.
+    try { restoreFields(form); } catch (e) { if (window.console) console.warn('restoreFields', e); }
+    bindOutputUnitChange(form);
+    bindDiamSync(form);
+    try { bindMemory(form); } catch (e) { if (window.console) console.warn('bindMemory', e); }
   }
 
   // ----- Конвертор единиц: форма [data-convert="<категория>"] -----
