@@ -51,10 +51,10 @@
       var cat = el.getAttribute('data-cat');
       // Фитинги и прочие безразмерные счётчики
       if (name.indexOf('fit.') === 0) {
-        inp.fittings[name.slice(4)] = raw === '' ? 0 : parseFloat(raw);
+        inp.fittings[name.slice(4)] = raw === '' ? 0 : U.parseNum(raw);
         return;
       }
-      if (!cat) { inp[name] = raw === '' ? null : parseFloat(raw); return; }
+      if (!cat) { inp[name] = raw === '' ? null : U.parseNum(raw); return; }
       // Необязательная температура: пусто -> null (использовать насыщение)
       if (raw === '') { inp[name] = null; return; }
       inp[name] = U.toSI(raw, cat, unitSymbol(groupOf(el)));

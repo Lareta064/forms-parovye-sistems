@@ -12,6 +12,13 @@
 (function () {
   'use strict';
 
+  // Разбор числа из поля ввода: принимаем и точку, и запятую как десятичный разделитель
+  // (пользователи вводят "14,5"); пробелы-разделители тысяч игнорируем.
+  function parseNum(value) {
+    if (typeof value !== 'string') value = String(value == null ? '' : value);
+    return parseFloat(value.replace(/\s+/g, '').replace(',', '.'));
+  }
+
   var ATM = 0.101325; // атмосферное давление, МПа
 
   // Абсолютное/манометрическое давление -> МПа абс.  {f: множитель в МПа, off: добавка (атм для манометрических)}
@@ -75,7 +82,7 @@
   var volFlow = { 'm³/h': 1, 'l/h': 0.001, 'gal/h': 0.00378541, 'GPM': 0.227125, 'm³/min': 60, 'l/min': 0.06, 'L/min': 0.06, 'CFM': 1.69901, 'ft³/min': 1.69901 };
 
   function toSI(value, category, symbol) {
-    var v = parseFloat(value);
+    var v = parseNum(value);
     if (isNaN(v)) return NaN;
     symbol = (symbol || '').trim();
     switch (category) {
@@ -162,7 +169,7 @@
     return t ? Object.keys(t) : [];
   }
 
-  var Units = { toSI: toSI, fromSI: fromSI, ATM: ATM, list: list };
+  var Units = { toSI: toSI, fromSI: fromSI, ATM: ATM, list: list, parseNum: parseNum };
   if (typeof window !== 'undefined') window.Units = Units;
   if (typeof module !== 'undefined' && module.exports) module.exports = Units;
 })();

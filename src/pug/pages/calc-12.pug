@@ -51,7 +51,7 @@ block content
 								.form-item-group
 									.form-label Расход воздуха (текущий)
 									.form-item.form-item--measure
-										input.form-inp.form-inp--measure(type="text" name="current_rashod_vozduha" data-var="airFlow" data-cat="volFlow" inputmode="decimal" value="(0)")
+										input.form-inp.form-inp--measure(type="text" name="current_rashod_vozduha" data-var="airFlow" data-cat="volFlow" inputmode="decimal" placeholder="0")
 										.dropdown.dropdown--measure
 											button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") m³/min
 											.dropdown__list
@@ -113,7 +113,7 @@ block content
 													.tooltip-text
 														p Температура пара :<br/>Для перегретого пара введите темпетаруру выше, чем температура насыщения
 											.form-item.form-item--measure
-												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" value="(99.9743)")
+												input.form-inp.form-inp--measure(type="text" name="current_temperatura_para" data-var="stmTemp" data-cat="temp" inputmode="decimal" placeholder="99.9743")
 												.dropdown.dropdown--measure
 													button.dropdown__button(type="button" aria-haspopup="listbox" aria-expanded="false") °C
 													.dropdown__list
